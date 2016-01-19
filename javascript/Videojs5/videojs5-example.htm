@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- VideoJS-->
+	<link href="http://vjs.zencdn.net/5.0.0/video-js.css" rel="stylesheet">
+	<script src="http://vjs.zencdn.net/5.0.0/video.js"></script>
+	<!---->
+
+	<!-- SmartPlugin -->
+	<script src="http://smartplugin.youbora.com/5.0/js/videojs5/5.1.0/sp.min.js"></script>
+	<!---->
+</head>
+
+<body>
+	<h1>VideoJS5 Video</h1>
+	<video id="video1" class="video-js vjs-default-skin" controls preload="none" width="640" height="264" poster="http://media.w3.org/2010/05/sintel/poster.png">
+
+		<source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4'>
+
+		<p class="vjs-no-js">To view this video please enable JavaScript.</p>
+	</video>
+
+	<script>
+		videojs('video1', {
+			plugins: {
+				youbora: {
+
+					//Account code and enable YOUBORA Analytics
+					accountCode: "QA",
+
+					// View parameters
+					username: "uservjs5",
+					transactionCode: "vjs5",
+
+					// Media Info
+					media: {
+						title: 'titleTest',
+						isLive: false	
+					},
+
+					// Media and device extra info
+					properties: {
+						filename: "test",
+						content_id: "test",
+						content_metadata: {
+							genre: "test",
+							language: "test",
+							year: "test",
+							cast: "test",
+							director: "test",
+							owner: "test",
+							parental: "test",
+							price: "test",
+							rating: "test",
+							audioType: "test",
+							audioChannels: "test"
+						},
+						transaction_type: "test",
+						quality: "test",
+						content_type: "test",
+						device: {
+							manufacturer: "test",
+							type: "test",
+							year: "test",
+							firmware: "test"
+						}
+					},
+
+					// Optional features
+					httpSecure: true,
+
+					//Extraparams
+					extraParams: {
+						param1: 'param1',
+						param2: 'param2'
+					}
+				}
+			}
+		});
+	</script>
+</body>
+
+</html>
