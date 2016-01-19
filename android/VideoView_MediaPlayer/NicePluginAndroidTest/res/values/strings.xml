@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NicePluginAndroidTest</string>
+    <string name="not_provisioned">Device Not Provisioned</string>
+    <string name="play">Play</string>
+    <string name="stop">Stop</string>
+    <string name="constraints">Constraints</string>
+    <string name="acquire_rights">Acquire Rights</string>
+    <string name="remove_rights">Remove Rights</string>
+    <string name="show_rights">Show Rights</string>
+
+</resources>
