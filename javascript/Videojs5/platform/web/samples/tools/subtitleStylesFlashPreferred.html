@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:tp="http://player.theplatform.com/" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-language" content="en" />
+	<title>Subtitle Font Overrides</title>
+
+	<meta name="tp:PreferredRuntimes" content="Flash,Universal" />
+	<meta name="tp:PreferredFormats" content="F4M,M3U,MPEG4,FLV"/>
+
+	<!-- ************************************************ -->
+	<!-- This is the Feed Url for the videos on this page -->
+	<!-- ************************************************ -->
+	<!-- This is the site stylesheet and doesn't care about the PDK -->
+	<link rel="stylesheet" href="../css/global.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../css/video.css" type="text/css" media="screen" />
+
+	<script type="text/javascript" src="../../pdk/tpPdk.js"></script>
+
+	<!-- RELEASE URL INPUT ITEMS -->
+	<!-- releaseUrl input css -->
+	<style type="text/css">
+		.inputVal {
+			position:absolute;
+			top: 391px;
+			left: 5px;
+		}
+	</style>
+	<script type="text/javascript">
+		function setReleaseCall()
+		{
+			var val = document.getElementById('url').value;
+			$pdk.controller.setReleaseURL(val);
+		}
+
+		function apply()
+		{
+			var fontSize = document.getElementById("fontSize").value ? Number(document.getElementById("fontSize").value) : Number.NaN;
+			var fontColor = document.getElementById("fontColor").value ? document.getElementById("fontColor").value : null;
+			var fontFamily = document.getElementById("fontFamily").value ? document.getElementById("fontFamily").value : null;
+			var opacity = document.getElementById("opacity").value ? Number(document.getElementById("opacity").value) : Number.NaN;
+			var fontEdge = document.getElementById("fontEdge").value ? document.getElementById("fontEdge").value : null;
+			var fontEdgeColor = document.getElementById("fontEdgeColor").value ? document.getElementById("fontEdgeColor").value : null;
+			var backgroundColor = document.getElementById("backgroundColor").value ? document.getElementById("backgroundColor").value : null;
+			var padding = document.getElementById("padding").value ? Number(document.getElementById("padding").value) : Number.NaN;
+			var bold = document.getElementById("bold").checked;
+			var italic = document.getElementById("italic").checked;
+			var underline = document.getElementById("underline").checked;
+			var textAlign = document.getElementById("textAlign").value ? document.getElementById("textAlign").value : null;
+			var textAlignVertical = document.getElementById("textAlignVertical").value ? document.getElementById("textAlignVertical").value : null;
+			var backgroundOpacity = document.getElementById("backgroundOpacity").value ? Number(document.getElementById("backgroundOpacity").value) : Number.NaN;
+
+			var style = {
+				globalDataType: "com.theplatform.pdk.data::SubtitleStyle",
+				fontFamily: fontFamily,
+				fontSize: fontSize,
+				fontColor: fontColor,
+				fontEdge: fontEdge,
+                fontEdgeColor: fontEdgeColor,
+				backgroundColor: backgroundColor,
+				opacity: opacity,
+				padding: padding,
+				bold: bold,
+				italic: italic,
+				underline: underline,
+				textAlign: textAlign,
+				textAlignVertical: textAlignVertical,
+				backgroundOpacity: backgroundOpacity
+			};
+
+			$pdk.controller.setSubtitleStyle(style);
+
+			// this is supposed to update the view by throwing the last cuepoint with updated styles...
+			if (cuepoint)
+			{
+				cuepoint.data.style = style;
+				$pdk.controller.dispatchEvent(cuepoint);
+			}
+		}
+
+		function load(e)
+		{
+
+			if (e.data)
+			{
+				document.getElementById("fontSize").value = (isNaN(e.data.fontSize) ? "" : e.data.fontSize);
+				document.getElementById("fontColor").value = e.data.fontColor;
+				document.getElementById("fontFamily").value = e.data.fontFamily;
+				document.getElementById("fontEdge").value = e.data.fontEdge;
+                document.getElementById("fontEdgeColor").value = e.data.fontEdgeColor;
+				document.getElementById("backgroundColor").value = e.data.backgroundColor;
+				document.getElementById("opacity").value = (isNaN(e.data.opacity) ? "" : e.data.opacity);
+				document.getElementById("padding").value = (isNaN(e.data.padding) ? "" : e.data.padding);
+				document.getElementById("bold").checked = Boolean(e.data.bold);
+				document.getElementById("italic").checked = Boolean(e.data.italic);
+				document.getElementById("underline").checked = Boolean(e.data.underline);
+				document.getElementById("textAlign").value = e.data.textAlign;
+				document.getElementById("textAlignVertical").value = e.data.textAlignVertical;
+				document.getElementById("backgroundOpacity").value = (isNaN(e.data.backgroundOpacity) ? "" : e.data.backgroundOpacity);
+			}
+		}
+
+		function clearStyles()
+		{
+			 var style = {
+				globalDataType: "com.theplatform.pdk.data::SubtitleStyle"
+			 };
+
+			 $pdk.controller.setSubtitleStyle(style);
+		}
+
+		var cuepoint;
+
+		function cue(e)
+		{
+			cuepoint = e;
+		}
+
+		$pdk.controller.addEventListener("OnGetSubtitleStyle", load);
+		$pdk.controller.addEventListener("OnSubtitleCuePoint", cue);
+		$pdk.controller.getSubtitleStyle();
+
+	</script>
+</head>
+<body>
+	<div id="player" class="tpPlayer"
+		tp:fp.bgcolor="0x131313"
+		tp:wmode="opaque"
+		tp:logLevel="debug"
+		tp:enableDynamicSubtitleFonts="true"
+		tp:allowFullScreen="true"
+		tp:skinUrl="../../pdk/skins/cinematic/cinematic.json"
+		tp:plugin1="type=Format|URL=../../pdk/swf/akamaiHD.swf|priority=4|hosts=stgzeri01.qa.testlab.com"
+		tp:emailServiceURL="http://player.theplatform.com/m/3JHsmB/demo/select/{releasePid}"
+		tp:playerUrl="http://player.theplatform.com/p/3JHsmB/demo/select/{releasePid}"
+		tp:autoPlay="false"
+		tp:embeddedPlayerHTML="&lt;embed src=&quot;http://player.theplatform.com/p/3JHsmB/demo/embed/select/{releasePid}&quot; width=&quot;311&quot; height=&quot;252&quot; type=&quot;application/x-shockwave-flash&quot; allowFullScreen=&quot;true&quot; bgcolor=&quot;#131313&quot; /&gt;"
+		tp:backgroundColor="0x131313"
+		tp:controlBackgroundColor="0x131313"
+		tp:controlColor="0xBEBEBE"
+		tp:controlFrameColor="0x545759"
+		tp:controlHoverColor="0xBEBEBE"
+		tp:controlSelectedColor="0x00CCFF"
+		tp:frameColor="0x545759"
+		tp:pageBackgroundColor="0x131313"
+		tp:playProgressColor="0x00CCFF"
+		tp:scrubberColor="0xBEBEBE"
+		tp:scrubberFrameColor="0x00CCFF"
+		tp:scrubTrackColor="0xBEBEBE"
+		tp:textBackgroundColor="0x383838"
+		tp:textColor="0xBEBEBE"
+		tp:loadProgressColor="0x5D9070"
+		tp:layoutUrl="../../data/metaLayout.xml">
+	</div>
+
+	<div class="inputVal" style="font:8pt Verdana;color:#000000">
+		Public URL: <input style="width:400px;font:8pt Verdana;color:#BEBEBE;background-color:#131313" type="text" name="url" id="url" value="http://link.theplatform.com/s/PDKVMS/1mu0xmY1f3gG"/>&nbsp;<button onclick="setReleaseCall();" style="width:40px;font:8pt Verdana;color:#BEBEBE;background-color:#131313">Play</button>
+
+		<table>
+			<tr><td>Font Family:</td><td><select name="fontFamily" id="fontFamily">
+					<option value=""></option>
+					<option value="arial">Arial</option>
+					<option value="arial black">Arial Black</option>
+					<option value="Courier New">Courier</option>
+					<option value="georgia">Georgia</option>
+					<option value="impact">Impact</option>
+					<option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+					<option value="palatino">Palatino</option>
+					<option value="tahoma">Tahoma</option>
+					<option value="times new roman">Times New Roman</option>
+				</select></td></tr>
+			<tr><td>Font Size:</td><td><input type="text" name="fontSize" id="fontSize" value=""/>%</td></tr>
+			<tr><td>Font Color:</td><td><input type="text" name="fontColor" id="fontColor" value=""/></td></tr>
+			<tr><td>Font Edge:</td><td><select name="fontEdge" id="fontEdge">
+					<option value=""></option>
+					<option value="none">None</option>
+					<option value="uniform">Uniform</option>
+					<option value="raised">Raised</option>
+					<option value="depressed">Depressed</option>
+					<option value="dropshadow">DropShadow</option>
+				</select></td></tr>
+			<tr><td>Font Edge Color:</td><td><input type="text" name="fontEdgeColor" id="fontEdgeColor" value=""/></td></tr>
+			<tr><td>Text Align:</td><td><select name="textAlign" id="textAlign">
+					<option value=""></option>
+					<option value="left">Left</option>
+					<option value="center">Center</option>
+					<option value="right">Right</option>
+				</select></td></tr>
+			<tr><td>Vertical Align:</td><td><select name="textAlignVertical" id="textAlignVertical">
+					<option value=""></option>
+					<option value="top">Top</option>
+					<option value="middle">Middle</option>
+					<option value="bottom">Bottom</option>
+				</select></td></tr>
+			<tr><td>BG Color:</td><td><input type="text" name="backgroundColor" id="backgroundColor" value=""/></td></tr>
+			<tr><td>Opacity:</td><td><input type="text" name="opacity" id="opacity" value=""/></td></tr>
+			<tr><td>Background Opacity:</td><td><input type="text" name="backgroundOpacity" id="backgroundOpacity" value=""/></td></tr>
+			<tr><td>Padding:</td><td><input type="text" name="padding" id="padding" value=""/>%</td></tr>
+			<tr><td>Bold:</td><td><input type="checkbox" name="bold" id="bold" value=""/></td></tr>
+			<tr><td>Italic:</td><td><input type="checkbox" name="italic" id="italic" value=""/></td></tr>
+			<tr><td>Underline:</td><td><input type="checkbox" name="underline" id="underline" value=""/></td></tr>
+		</table>
+		<button onclick="apply();">Apply</button>
+		<button onclick="clearStyles();">Clear</button>
+		</div>
+</body>
+</html>

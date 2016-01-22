@@ -1,0 +1,56 @@
+<project name="SMILPlugin SWC-SWF Builder" default="SMILPlugin" basedir="./">
+
+	<import file="../../../build/ant.macros.xml" />
+
+	<loadproperties srcFile="${user.home}/local.properties"/>
+	<loadproperties srcFile="build.properties"/>
+		
+	<taskdef resource="flexTasks.tasks" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar" />
+	<taskdef name="mxmlc" classname="flex.ant.MxmlcTask" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar" />
+	
+	<patternset id="libs">
+		<include name="tpController.swc" />
+		<include name="tpPlayerController.swc" />
+	</patternset>
+
+	<pdk.modified swc="${bin.dir}/${bin.swc}"/>
+
+	<target name="SMILPlugin" if="modified">
+		<ant dir="." target="compileSwc" />
+		<ant dir="." target="compileSwf" />
+	</target>
+	
+	<target name="compileSwc">
+		<echo message="- Building ${bin.swc} - ${lib.dir}"/>
+
+		<pdk.getClassesFromSource src="${src.dir}" />
+		
+		<!-- deleting binary file so we will know if the build failed next time -->
+		<!-- pulse might not like this, but pulse builds clean anyway, so using failonerror -->			
+		<delete file="${bin.dir}/${bin.swc}" failonerror="false" />
+		<compc output="${bin.dir}/${bin.swc}" include-classes="${classes}" fork="true" debug="${swc.debug}">
+			<source-path path-element="${src.dir}"/>
+			<compiler.include-libraries dir="${lib.dir}" append="true">
+				<patternset refId="libs" />
+			</compiler.include-libraries>
+		</compc>
+		<copy file="${bin.dir}/${bin.swc}" todir="${lib.dir}/plugins"/>
+	</target>
+
+	<target name="compileSwf">
+		<!-- deleting binary file so we will know if the build failed next time -->
+		<!-- pulse might not like this, but pulse builds clean anyway, so using failonerror -->			
+		<delete file="${bin.dir}/${bin.swf}" failonerror="false" />
+     	<mxmlc fork="true" debug="${swf.debug}" file="${src.dir}/${src.main}" 
+			output="${bin.dir}/${bin.swf}">
+        		
+    		<compiler.external-library-path dir="${lib.dir}" append="true">
+				<patternset refId="libs" />
+    		</compiler.external-library-path>
+
+			<compiler.source-path path-element="${src.dir}/" />
+     	</mxmlc>
+		<copy file="${bin.dir}/${bin.swf}" todir="${web.dir}/swf"/>
+	</target>
+	
+</project>

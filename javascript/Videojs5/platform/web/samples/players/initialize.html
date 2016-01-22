@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:tp="http://player.theplatform.com/" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-language" content="en" />
+
+	<meta name="tp:PreferredRuntimes" content="Universal" /> 
+	<meta name="tp:PreferredFormats" content="MPEG4" /> 
+	
+	<!-- Here is where we tell the PDK to wait until we give the word, -->
+	<meta name="tp:initialize" content="false" />
+
+	<title>PDK :: Delayed initialization</title>
+	
+	<script type="text/javascript">
+		// Set to debug to enable debug logging with HTML5 components
+		//var tpLogLevel = "debug";
+	</script>
+
+	<script type="text/javascript" src="../../pdk/tpPdk.js"></script> 
+	<!-- When we delay initialization, we can't use the PDK's version of jQuery because it isn't loaded yet. -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<!-- Many thanks to http://malsup.com/jquery/cycle/lite/ for the simple cycle implementation. -->
+	<script type="text/javascript" src="../js/jquery.cycle.lite.js"></script>
+
+	<!-- PDK Cinematic skin css -->
+	<link rel="stylesheet" href="../../pdk/skins/cinematic/main.css" type="text/css" media="screen" />
+
+   	<!-- This is the site stylesheet that arranges the elements. -->
+	<link rel="stylesheet" href="../css/global.css" type="text/css" media="screen" />
+   	<link rel="stylesheet" href="../css/initialize.css" type="text/css" media="screen" />
+
+	<script>
+		// The feed from which we'll retrieve the top five items.
+		//var feedUrl = "http://feed.theplatform.com/f/3JHsmB/TpW4aioBvs6N?form=json&range=0-5";
+		var feedUrl = "http://feed.theplatform.com/f/GRF28B/KGUxALyvLi1E?form=json&range=0-5";
+
+		// This function processes the feed server response and creates the 
+		// list of preview media titles (with their underlying playback URLs).
+		function processFeedResponse(data, textStatus, jqXHR)
+		{
+			var _data = JSON.parse(data);
+			if (_data.entryCount > 0) setupTitles(_data.entries);				
+		}
+		
+		// This function turns the array of media from the 
+		// feeds server into clickable preview items for playback.
+		function setupTitles(releases)
+		{
+			var w = $("#playerStart").innerWidth();
+			var h = $("#playerStart").innerHeight();
+			// Ask the selector service for a preview payload that includes 
+			// a preview image that best fits the dimensions we want.
+			var urlPrevewParams = "&format=preview&width=" + w + "&height=" + h;
+			for (var inx = 0; inx < releases.length; inx++)
+			{
+				var opts = {url: releases[inx].media$content[0].plfile$url + urlPrevewParams, success: processSelectorRequest};
+				$.ajax(opts);				
+			}
+		}
+		
+		// This method processes preview information from the selector service
+		// and populates the playback area with a preview image.
+		function processSelectorRequest(data, textStatus, jqXHR)
+		{
+			var _data = JSON.parse(data);
+			var selectorUrl = this.url.split("?")[0];
+			decoratePlayer(_data.defaultThumbnailUrl, selectorUrl, _data.title);
+		}
+		
+		// Set the clickable player items with their preview images
+		function decoratePlayer(imgUrl, releaseUrl, title)
+		{
+			$("<div>")
+			.addClass("preview")
+			.attr({"tp:url": releaseUrl})
+			.append("<img class=\"vidItem\" src=\"" + imgUrl + "\"></img>",
+				"<img class=\"overlay\" src=\"../images/customOverlay.png\"></img>",
+				"<div class=\"title\">" + title + "</div>")
+			.appendTo("#playerStart");	
+		}
+		
+		// Anytime a user clicks a preview overlay, 
+		// this function initiates playback.
+		function previewClick()
+		{	
+			// Grab the selector URL from the parent DIV
+			var url = $(this).parent().attr("tp:url");
+			// Use that URL to start the PDK			
+			if (url != null) startPdk(url);
+		}
+
+		// Toggle visibility of the parent DIV elements and start playback. 
+		function startPdk(url)
+		{
+			var player = new Player("player");
+			// Set the player component with a release URL.  		
+			player.releaseUrl = url;
+			// Attach our changes to the existing player configuration.
+			player.bind();
+			// Hide the preview divs.
+			$("#playerStart, #start").hide();
+
+			// To deal with older IE's slowness
+			// we're doing a setTimeout here
+			setTimeout(function() {
+				// Initialize the PDK
+				$pdk.initialize();
+				// Show the playback divs
+				$("#started, #player").show();
+			}, 100);
+		}
+		
+		// Set up our page with important event listeners.
+		$(document).ready(
+			function()
+			{
+				// When the page load is ready, retrieve and process the feed content.
+				var opts = {url: feedUrl, success: processFeedResponse};
+				$.ajax(opts);
+				
+				// Event listeners for the preview playback overlay.
+				$('#playerStart').on("click", ".overlay", previewClick);
+				
+				// Start the preview slider after a few seconds
+				var cycleOpts = {
+					delay: 0,
+					timeout: 2500,
+					speed: 1000,
+					fx: 'custom', 
+					cssBefore: { left: 600 }, 
+					animIn:  { left: 0 }, 
+					animOut: { left: -560 }
+					};				
+
+				window.setTimeout(function(){$('#playerStart').cycle(cycleOpts);}, 2000);
+			}
+		);	    
+		
+		// A little help for IE
+		(function( $ ) 
+		{
+			if ( window.XDomainRequest ) 
+			{
+				$.ajaxTransport(function( s ) 
+				{
+					if ( s.crossDomain && s.async ) 
+					{					
+						if ( s.timeout ) 
+						{
+							s.xdrTimeout = s.timeout;
+							delete s.timeout;
+						}
+					var xdr;
+					return {
+						send: function( _, complete ) 
+						{
+							function callback( status, statusText, responses, responseHeaders ) 
+							{
+								xdr.onload = xdr.onerror = xdr.ontimeout = $.noop;
+								xdr = undefined;
+								complete( status, statusText, responses, responseHeaders );
+							}
+							xdr = new XDomainRequest();
+							xdr.open( s.type, s.url );
+							xdr.onload = function() 
+							{
+								callback( 200, "OK", { text: xdr.responseText }, "Content-Type: " + xdr.contentType );
+							};
+							xdr.onerror = function() 
+							{
+								callback( 404, "Not Found" );
+							};
+							if ( s.xdrTimeout ) {
+								xdr.ontimeout = function() 
+								{
+									callback( 0, "timeout" );
+								};
+								xdr.timeout = s.xdrTimeout;
+							}
+							xdr.send( ( s.hasContent && s.data ) || null );
+						},
+						abort: function() 
+						{
+							if ( xdr ) 
+							{
+								xdr.onerror = $.noop();
+								xdr.abort();
+							}
+						}
+					};
+				}
+			});
+		}
+	})( $ );
+	</script>
+</head>
+<body>
+	<div id="header">
+		<a href="http://www.theplatform.com/"><img class="tp-logo" src="../../images/thePlatformLarge.png" /></a>
+		<a href="http://www.theplatform.com/products/product_detail/type/player_dev_kit/"><img class="pdk-logo" src="../../images/pdk.png" /></a>
+		<h1>thePlatform</h1>
+		<h2>Player Dev Kit</h2>
+		<h3>Initialize Sample</h3>
+	</div>
+	<br/>
+	<div id="holder-video">
+	<div id="playerStart">
+	</div>
+	<div id="player" class="tpPlayer"
+		tp:wmode="opaque"
+        tp:fp.bgcolor="0x131313"
+		tp:logLevel="warn"
+		tp:allowFullScreen="true"
+		tp:autoPlay="true"
+		tp:layoutUrl="../../data/metaLayout_initialize.xml"
+		tp:plugin0="type=adcomponent|URL=../../pdk/swf/SMIL.swf|priority=3"
+		tp:showTitle="true"
+		tp:emailServiceURL="http://player.theplatform.com/m/3JHsmB/demo/select/{releasePid}"
+		tp:playerUrl="http://player.theplatform.com/p/3JHsmB/demo/select/{releasePid}"
+		tp:embeddedPlayerHTML="&lt;embed src=&quot;http://player.theplatform.com/p/3JHsmB/demo/embed/select/{releasePid}&quot; width=&quot;311&quot; height=&quot;252&quot; type=&quot;application/x-shockwave-flash&quot; allowFullScreen=&quot;true&quot; bgcolor=&quot;#131313&quot; /&gt;"
+		tp:RSSURL="http://feed.theplatform.com/f/3JHsmB/TpW4aioBvs6N?form=rss"
+		tp:backgroundColor="0x131313"
+		tp:controlBackgroundColor="0x131313"
+		tp:controlColor="0xF2F2F2"
+		tp:controlFrameColor="0xE0E0E0"
+		tp:controlHoverColor="0xFFFFFF"
+		tp:controlSelectedColor="0x00CCFF"
+		tp:frameColor="0xE0E0E0"
+		tp:loadProgressColor="0x7C7C7C"
+		tp:pageBackgroundColor="0x131313"
+		tp:playProgressColor="0xE0E0E0"
+		tp:scrubberColor="0xF2F2F2"
+		tp:scrubberFrameColor="0xF2F2F2"
+		tp:scrubTrackColor="0x131313"
+		tp:textBackgroundColor="0x383838"
+		tp:textColor="0xF2F2F2">
+	</div>  
+  </div>
+ <p id="start">Click the Play button to replace the preview with a player component.</p>
+ <p id="started">This player component was initialized and loaded only after your mouse click.</p>
+</body>
+</html>

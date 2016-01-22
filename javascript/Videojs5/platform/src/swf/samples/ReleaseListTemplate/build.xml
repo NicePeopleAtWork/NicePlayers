@@ -1,0 +1,37 @@
+<project name="SWF Builder" default="ReleaseListTemplate" basedir="./">
+
+	<import file="../../../build/ant.macros.xml" />
+
+	<loadproperties srcFile="${user.home}/local.properties"/>
+	<loadproperties srcFile="build.properties"/>
+		
+	<taskdef resource="flexTasks.tasks" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar" />
+	<taskdef name="mxmlc" classname="flex.ant.MxmlcTask" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar" />
+	
+	<target name="buildClean" depends="clean,ReleaseListTemplate" />
+
+	<patternset id="libs">
+		<include name="tpController.swc" />
+	</patternset>
+
+	<pdk.modified swc="" swf="${destfile}"/>
+
+	<!-- deleting binary file so we will know if the build failed next time -->
+	<!-- pulse might not like this, but pulse builds clean anyway, so using failonerror -->			
+	<delete file="${destfile}" failonerror="false" />
+	<target name="ReleaseListTemplate" if="modified">
+     		<mxmlc fork="true" file="${sourcefile}" 
+			output="${destfile}" debug="${app.debug}">
+        		
+    			<compiler.external-library-path append="true" dir="${lib.dir}">
+    				<patternset refId="libs" />
+    			</compiler.external-library-path>     		
+			<compiler.source-path path-element="${basedir}/src" />
+     		</mxmlc>
+	</target>
+		
+	<target name="clean">
+		<delete file="${bin.dir}/${bin.file}" />
+	</target>
+	
+</project>

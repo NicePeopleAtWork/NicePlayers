@@ -1,0 +1,140 @@
+<project name="PDK Ant Macros" >
+
+	<!-- Define PDK_HOME -->
+	<path id="current">
+		<pathelement location="${basedir}" />
+	</path>
+	<pathconvert property="PDK_HOME" pathsep=" " refid="current">
+		<chainedmapper>
+			<regexpmapper from="^(.*[\/\${file.separator}])src[\/\\](.*)$$" to="\1" />
+		</chainedmapper>
+	</pathconvert>
+
+	<!-- Define Functions -->
+	<!-- libsModified: determines if the src has modified since last build -->
+	<macrodef name="pdk.libsModified">
+		<attribute name="lib" />
+		<attribute name="swcs" />
+		<sequential>
+		    <pathconvert property="libset.notempty" setonempty="false">
+				<fileset dir="@{lib}">
+					<patternset refId="@{swcs}" />
+			    </fileset>
+			</pathconvert>
+
+		    <pathconvert property="fileset.notempty" pathsep=", " setonempty="false">
+				<fileset dir="@{lib}">
+			        <modified />
+					<patternset refId="@{swcs}" />
+			    </fileset>
+				<mapper type="flatten" />
+			</pathconvert>
+			
+			<condition property="libs.modified" value="true">
+				<and>
+					<isset property="libset.notempty" />
+			   		<isset property="fileset.notempty"/>
+				</and>
+			</condition>
+
+			<condition property="output" value="true" else="false">
+				<isset property="libs.modified" />
+			</condition>
+		</sequential>
+	</macrodef>
+
+	<!-- srcModified: determines if the src has modified since last build -->
+	<macrodef name="pdk.srcModified">
+		<attribute name="src" />
+		<attribute name="swc" />
+		<attribute name="swf" default="" />
+		<sequential>
+		    <pathconvert property="srcfileset.notempty" pathsep=", " setonempty="false" >
+				<fileset dir="@{src}">
+			        <modified />
+			    </fileset>
+				<mapper type="flatten" />
+			</pathconvert>
+
+		    <pathconvert property="buildfileset.notempty" pathsep=", " setonempty="false" >
+				<fileset dir="${basedir}">
+					<include name="build.properties" />
+					<include name="build.xml" />
+			        <modified />
+			    </fileset>
+				<mapper type="flatten" />
+			</pathconvert>
+						
+			<condition property="src.modified" value="true"> 
+				<or>
+				   	<isset property="srcfileset.notempty"/>
+					<not>
+						<available file="@{swc}" />
+					</not>
+					<not>
+						<or>
+							<equals arg1="@{swf}" arg2="" />
+							<available file="@{swf}" />
+						</or>
+				  	</not>
+					<isset property="buildfileset.notempty" />
+				</or>
+			</condition>
+		</sequential>
+	</macrodef>
+
+
+	<!-- getClassesFromSource: returns all the classes in the src dir, by translating filepaths to package/class names -->
+	<macrodef name="pdk.getClassesFromSource">
+		<attribute name="src" />
+		<sequential>
+			<fileset id="sources" dir="@{src}">
+				<include name="**/*.as"/>
+			</fileset>
+			<pathconvert property="classes" pathsep=" " refid="sources">
+				<chainedmapper>
+					<regexpmapper from="^.*[\/\${file.separator}]src[\/\${file.separator}](.*)$$" to="\1" />
+					<mapper type="package" from="*.as" to="*" />
+				</chainedmapper>
+			</pathconvert>
+			<!--echo message="classes is set to = ${classes}"/-->
+		</sequential>
+	</macrodef>
+
+	<macrodef name="pdk.modified">
+		<attribute name="swc" default="${basedir}/bin/${bin.file}" />
+		<attribute name="swf" default="" />
+		<sequential>
+   			<pdk.srcModified src="${src.dir}" swc="@{swc}" swf="@{swf}" />
+			<pdk.libsModified lib="${lib.dir}" swcs="libs" />
+			<condition property="modified" value="true"> 
+				<or>
+			   		<isset property="libs.modified"/>
+					<isset property="src.modified"/>
+				</or>
+			</condition>
+			<condition property="output" value="true" else="false">
+				<isset property="modified" />
+			</condition>   
+
+			<basename file="@{swf}" property="swffilename" />
+			<basename file="@{swc}" property="swcfilename" />
+			<condition property="filename" value="${swcfilename}" else="${swffilename}">
+				<not><equals arg1="@{swc}" arg2="" /></not>
+			</condition>   
+
+			<condition property="fileset.notempty" value="">
+				<not><isset property="fileset.notempty"/></not>
+			</condition>
+
+			<condition property="srcfileset.notempty" value="">
+				<not><isset property="srcfileset.notempty"/></not>
+			</condition>
+			
+            <echo message="'${filename}' Needs Compile: ${output}" />
+			<echo message="Modified libs: ${fileset.notempty}" />
+			<echo message="Modified srcs: ${srcfileset.notempty}" />
+		</sequential>
+	</macrodef>
+
+</project>

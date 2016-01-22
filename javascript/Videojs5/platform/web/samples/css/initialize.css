@@ -1,0 +1,103 @@
+html {
+	background: #FFF;
+	font-family: helvetica;
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+h1 {
+	font-size: 18px;
+	padding: 0;
+}
+
+h2 {
+	font-size: 12px;
+	margin: 2px;
+	padding: 0;
+}
+
+h3 {
+	font-size: 11px;
+	margin: 2px;
+	padding: 0;
+}
+
+#holder-video {
+	width: 790px;
+	height: 320px;
+	background: #333;
+	padding: 4px;
+	text-align: center;
+}
+
+#player, #playerStart {
+	width: 560px;
+	height: 320px;	
+	background: black;
+	color: white;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#player, #started {
+	display: none;
+}
+
+#playerStart {
+	position: relative;
+	overflow: hidden;	
+}
+
+.overlay {
+	position: absolute;
+	width: 160px;
+	height:160px;
+	border: 0px;
+	top: 50%;
+	left: 50%;
+	opacity: 0.5;
+	cursor:pointer;
+	margin-left: -80px;
+	margin-top: -80px;
+}
+
+.overlay:hover {
+	opacity: 1.0;
+}
+
+.overlay img {
+    margin: 12px 13px;
+}
+
+.title {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+}
+
+.vidItem , .preview {
+	height: auto;
+	width: 100%; 
+}
+
+.preview {
+	left: 600px;
+	position: relative;
+}
+
+.preview:first-child {
+	left: 0px;
+}
+
+p {
+	text-align: center;
+	width: 790px;
+}

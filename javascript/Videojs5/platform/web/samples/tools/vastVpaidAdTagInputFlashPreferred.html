@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:tp="http://player.theplatform.com/" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-language" content="en" />
+	<title>VAST/VPAID Ad Tag Input</title>
+
+	<meta name="tp:PreferredRuntimes" content="Flash,Universal"/>
+	<meta name="tp:PreferredFormats" content="F4M,M3U,MPEG4,FLV"/>
+
+	<script type="text/javascript" src="../../pdk/tpPdk.js"></script>
+
+	<style type="text/css">
+		.tpPlayer{
+			float: left;
+			width: 480px;
+			height: 360px;
+		}
+
+		.tpClipInfo{
+			border: 1px solid black;
+			width: 302px;
+			height: 306px;
+		}
+
+		.InfoContainer{
+			margin-left:  5px;
+			float: left;
+		}
+
+		.InputContainer{
+			font: 11pt sans-serif;
+			position:absolute;
+			top: 391px;
+			left: 5px;
+		}
+	</style>
+	<script type="text/javascript">
+        tpLogLevel="debug";
+
+		function loadVastURL(){
+			var val = document.getElementById('vast_url').value;
+			val = val.split("&").join("&amp;").split("<").join("&lt;").split(">").join("&gt;");
+			var smil = "<smil xmlns='http://www.w3.org/2005/SMIL21/Language'><body><seq><ref src='" + val + "' type='application/vast+xml' no-skip='true' tags='preroll'></ref><video src='http://ne.edgecastcdn.net/0008B0/mps/PDK_Demo/1/342/ghostriderspiritofvengeance.m4v'></video></seq></body></smil>"
+			$pdk.controller.setSmil(smil);
+		}
+	</script>
+</head>
+<body>
+	<div id="player" class="tpPlayer"
+		tp:fp.bgcolor="0x131313"
+        tp:wmode="direct"
+        tp:logLevel="debug"
+		tp:allowFullScreen="true"
+		tp:skinUrl="../../pdk/skins/glass/glass.json"
+		tp:plugin1="type=adcomponent|URL=../../pdk/js/plugins/vast.js|priority=3|hosts=ad.doubleclick.net|enableVPAID=true"
+		tp:plugin2="type=adcomponent|URL=../../pdk/swf/vast.swf|priority=3|hosts=ad.doubleclick.net|enableVPAID=true"
+		tp:plugin3="type=adcomponent|URL=../../pdk/swf/vpaid.swf|priority=3"
+		tp:emailServiceURL="http://player.theplatform.com/m/3JHsmB/demo/select/{releasePid}"
+		tp:playerURL="http://player.theplatform.com/m/3JHsmB/demo/select/{releasePid}"
+		tp:embeddedPlayerHTML="&lt;embed src=&quot;http://player.theplatform.com/m/3JHsmB/demo/embed/select/{releasePid}&quot; width=&quot;311&quot; height=&quot;252&quot; type=&quot;application/x-shockwave-flash&quot; allowFullScreen=&quot;true&quot; bgcolor=&quot;#131313&quot; /&gt;"
+		tp:backgroundColor="0x131313"
+		tp:controlBackgroundColor="0x131313"
+        tp:useStageVideo="true"
+		tp:controlColor="0xBEBEBE"
+		tp:controlFrameColor="0x545759"
+		tp:controlHoverColor="0xBEBEBE"
+		tp:controlSelectedColor="0x00CCFF"
+		tp:frameColor="0x545759"
+		tp:pageBackgroundColor="0x131313"
+		tp:playProgressColor="0x00CCFF"
+		tp:scrubberColor="0xBEBEBE"
+		tp:scrubberFrameColor="0x00CCFF"
+		tp:scrubTrackColor="0xBEBEBE"
+		tp:textBackgroundColor="0x383838"
+		tp:textColor="0xBEBEBE"
+		tp:loadProgressColor="0x5D9070"
+		tp:layoutUrl="../../data/metaLayout.xml">
+	</div>
+	<div class="InfoContainer">
+		Companion:
+		<div id="info" class="tpClipInfo"
+			tp:showMetadata="true"
+			tp:showTitle="true"
+			tp:showDescription="true"
+			tp:showCopyright="true"
+			tp:backgroundColor="0x000000"
+			tp:titleColor="0xFFFFFF"
+			tp:descriptionColor="0xFFFFFF">
+		</div>
+	</div>
+
+	<div class="InputContainer">
+		<label for="smil">VAST URL: </label>
+		<input style="width:400px;" type="text" name="smil" id="vast_url" value="http://demo.theplatform.com/pdk/data/vast/vastWithVpaid.xml">
+		<button onclick="loadVastURL();">Test URL</button>
+	</div>
+</body>
+</html>
