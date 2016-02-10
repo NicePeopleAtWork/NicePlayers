@@ -17,9 +17,7 @@ $YB.plugins.Html5.prototype = new $YB.plugins.Generic;
 $YB.plugins.Html5.prototype.registerListeners = function() {
     var context = this;
 
-    // Remember: 'this.player' is a reference to the player/video tag.
     this.player.addEventListener("play", function() {
-        // Once the event is fired, we call hist event handler
         context.playHandler();
     });
 
