@@ -43,14 +43,6 @@
         this.player.addEventListener("ended", function(e) {
             context.onEnded();
         });
-
-        this.player.addEventListener("error", function(e) {
-            context.onError(3001, "PLAY_FAILURE");
-        });
-
-        this.player.addEventListener("seeking", function(e) {
-            context.onSeeking();
-        });
     };
     </script>
 </head>
