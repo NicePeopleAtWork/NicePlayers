@@ -33,15 +33,15 @@
         });
 
         this.player.addEventListener("playing", function(e) {
-            context.onPlaying();
+            context.playingHandler();
         });
 
         this.player.addEventListener("pause", function(e) {
-            context.onPause();
+            context.pauseHandler();
         });
 
         this.player.addEventListener("ended", function(e) {
-            context.onEnded();
+            context.endedHandler();
         });
     };
     </script>
