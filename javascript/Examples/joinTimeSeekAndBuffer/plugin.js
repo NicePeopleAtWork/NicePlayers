@@ -5,9 +5,6 @@ $YB.plugins.Html5 = function(playerId, options) {
 
     // This method will start the library logic.
     this.init(playerId, options);
-
-    // Register the listeners.
-    this.registerListeners();
 };
 
 // Inherit from generic plugin
