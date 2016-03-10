@@ -1,0 +1,31 @@
+
+    function onMediaSourceCreated(result) {
+        if (result.status === AdaptiveStreaming.AdaptiveMediaSourceCreationStatus.success) {
+
+            WinJS.log && WinJS.log("AdaptiveMediaSource.createFromUriAsync completed with status: " + result.status + " - " + mapAdaptiveMediaSourceCreationStatus(result.status), "sample", "status");
+            mediaSource = result.mediaSource;
+            //PASSING THE MEDIASOURCE TO YOUBORA
+            SmartPlugin.setAdaptativeMediaSource(mediaSource,url.absoluteUri);
+            attachMediaSource();
+
+        } else {
+            var errorString = "";
+            var httpResponseMessage = result.httpResponseMessage;
+
+            if (httpResponseMessage != null) {
+                errorString = " (HTTP response: " + httpResponseMessage.statusCode + " - " + httpResponseMessage.reasonPhrase;
+
+                if (httpResponseMessage.isSuccessStatusCode &&
+                    result.status == AdaptiveStreaming.AdaptiveMediaSourceCreationStatus.unsupportedManifestContentType &&
+                    httpResponseMessage.content != null) {
+                    errorString += "; Content-Type: " + httpResponseMessage.content.headers.contentType;
+                }
+
+                errorString += ")";
+            }
+            var errorMsg = mapAdaptiveMediaSourceCreationStatus(result.status);
+            //INFORM YOUBORA ABOUT THE ERROR
+            SmartPlugin.sendError(errorMsg, result.status, url.absoluteUri);
+            WinJS.log && WinJS.log("Failed to create adaptive media source: " + mapAdaptiveMediaSourceCreationStatus(result.status) + errorString, "sample", "error");
+        }
+    }
