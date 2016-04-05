@@ -10,20 +10,56 @@
 	<div id="video1"></div>
     <script type="text/javascript">
 		var options = {
-			//Account parameters
-			accountCode: 'nicedev',
-			enableAnalytics: true,
-			//View parameters
-			username: 'dev',
-			transactionCode: "transactionTest",
-			//Optional features
-			parseCDNNodeHost: true,
-			httpSecure: false,
-			network: {
-				ip: "1.1.1.1",
-				isp: "ISPTest"
-			}
+		 			
+		 			//Account code and enable YOUBORA Analytics
+                    accountCode: "QA",
 
+                    // View parameters
+                    username: "uservJWP7",
+                    transactionCode: "transJWP7",
+
+                    // Media Info
+                    media: {
+                        title: 'titleTest',
+                        isLive: false   
+                    },
+
+                    // Media and device extra info
+                    properties: {
+                        filename: "test",
+                        content_id: "test",
+                        content_metadata: {
+                            genre: "test",
+                            language: "test",
+                            year: "test",
+                            cast: "test",
+                            director: "test",
+                            owner: "test",
+                            parental: "test",
+                            price: "test",
+                            rating: "test",
+                            audioType: "test",
+                            audioChannels: "test"
+                        },
+                        transaction_type: "test",
+                        quality: "test",
+                        content_type: "test",
+                        device: {
+                            manufacturer: "test",
+                            type: "test",
+                            year: "test",
+                            firmware: "test"
+                        }
+                    },
+
+                    // Optional features
+                    httpSecure: true,
+                    
+                    //Extraparams
+                    extraParams: {
+                        param1: 'param1',
+                        param2: 'param2'
+                    } 
 	    },
 
 		plugin = {
