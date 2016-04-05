@@ -1,66 +1,116 @@
-<script>
-	var options = {
-		//Account parameters
-		accountCode: 'accountTest',
-		enableAnalytics: true,
-		//View parameters
-		username: 'dev'
-		transactionCode: "transactionTest",
-		//Optional features
-		parseCDNNodeHost: false,
-		httpSecure: false,
-		network: {
-			ip: "1.1.1.1",
-			isp: "ISPTest"
-		}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JWPlayer 7</title>
+    <meta content="authenticity_token" name="csrf-param" />
+    <script src="http://p.jwpcdn.com/7/beta/2/jwplayer.js"> </script>
+    <script type="text/javascript">jwplayer.key="Owmy+U4JnLEIqwyRXmCiRcluVGH2JPCc4KhpJA==";</script>
+</head>
+<body>
+	<div id="video1"></div>
+    <script type="text/javascript">
+		var options = {
+		 			
+		 			//Account code and enable YOUBORA Analytics
+                    accountCode: "QA",
 
-    },
+                    // View parameters
+                    username: "uservJWP7",
+                    transactionCode: "transJWP7",
 
-	plugin = {
-        "/5.0/js/jwplayer7/5.1.0/sp.min.js": options
-   	};
+                    // Media Info
+                    media: {
+                        title: 'titleTest',
+                        isLive: false   
+                    },
 
-	jwplayer ("[PLAYER REFERENCE]").setup({
-        title: "Player_title",
-        file: "http://file.mp4",
-        image: "http://image.jpg",
-        youbora: {
-			// Media info
-			media: {
-				title: "titleTest",
-				cdn: "cdnTest",
-				duration: 3600,
-				isLive: false,
-				resource: "http://yourhost.com/yourmedia.m3u8"
-			},
+                    // Media and device extra info
+                    properties: {
+                        filename: "test",
+                        content_id: "test",
+                        content_metadata: {
+                            genre: "test",
+                            language: "test",
+                            year: "test",
+                            cast: "test",
+                            director: "test",
+                            owner: "test",
+                            parental: "test",
+                            price: "test",
+                            rating: "test",
+                            audioType: "test",
+                            audioChannels: "test"
+                        },
+                        transaction_type: "test",
+                        quality: "test",
+                        content_type: "test",
+                        device: {
+                            manufacturer: "test",
+                            type: "test",
+                            year: "test",
+                            firmware: "test"
+                        }
+                    },
 
-			// Media and device extra info
-			properties: {
-				filename: "test.m3u8",
-				content_id: "contentTest",
-				content_metadata: {
-					genre: "genreTest",
-					language: "languageTest",
-					year: "yearTest",
-					cast: "castTest",
-					director: "directorTest",
-					owner: "ownerTest",
-					parental: "parentalTest",
-					price: "priceTest",
-					rating: "ratingTest",
-					audioType: "typeTest",
-					audioChannels: "channelTest"
+                    // Optional features
+                    httpSecure: true,
+                    
+                    //Extraparams
+                    extraParams: {
+                        param1: 'param1',
+                        param2: 'param2'
+                    } 
+	    },
+
+		plugin = {
+	        "http://smartplugin.youbora.com/5.0/js/jwplayer7/5.1.0/sp.min.js": options
+	   	};
+
+		jwplayer ("video1").setup({
+			title: "JWPlayer7 MP4",
+			file: "http://media.w3.org/2010/05/sintel/trailer.mp4",
+            //file: "http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch1/appleman.m3u8",
+            image: "http://support-static.jwplayer.com/images/jellies.jpg",
+	        youbora: {
+				// Media info
+				media: {
+					title: "titleTest",
+					cdn: "Amazon",
+					duration: 3600,
+					isLive: false,
+					resource: "http://deslasexta.antena3.com/mp_series1/2012/09/10/00001.mp4"
 				},
-				transaction_type: "transactionTest",
-				quality: "qualityTest",
-				content_type: "contentTest",
-				device: {
-					manufacturer: "manufacturerTest",
-					type: "typeTest",
-					year: "yearTest",
-					firmware: "firmwareTest"
-				}
+
+				// Media and device extra info
+				properties: {
+					filename: "test.mp4",
+					content_id: "contentTest",
+					content_metadata: {
+						genre: "genreTest",
+						language: "languageTest",
+						year: "yearTest",
+						cast: "castTest",
+						director: "directorTest",
+						owner: "ownerTest",
+						parental: "parentalTest",
+						price: "priceTest",
+						rating: "ratingTest",
+						audioType: "typeTest",
+						audioChannels: "channelTest"
+					},
+					transaction_type: "transactionTest",
+					quality: "qualityTest",
+					content_type: "contentTest",
+					device: {
+						manufacturer: "manufacturerTest",
+						type: "typeTest",
+						year: "yearTest",
+						firmware: "firmwareTest"
+					}
+				},
+
 			},
-		}		
-	})
+			plugins: plugin	
+		})
+
 </script>
