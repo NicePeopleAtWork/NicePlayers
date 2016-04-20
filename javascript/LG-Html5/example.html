@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="http://pre.smartplugin.youbora.com/samples/devices/lg/HTML5Player/css/player.css" />
+    <script src="http://pre.smartplugin.youbora.com/samples/devices/lg/HTML5Player/js/jquery-1.8.2.min.js"></script>
+    <script src="http://pre.smartplugin.youbora.com/samples/devices/lg/HTML5Player/js/keycode.js"></script>
+    <script src="http://pre.smartplugin.youbora.com/samples/devices/lg/HTML5Player/js/videoplayer.js"></script>
+    <script src="http://pre.smartplugin.youbora.com/samples/devices/lg/HTML5Player/js/jquery-ui.js"></script>
+    <script src="http://smartplugin.youbora.com/5.0/js/lg-html5/5.1.0/sp.min.js" youbora-debug="4"></script>
+    <title>Video Player</title>
+</head>
+
+<body>
+    <div class="playerLayout">
+        <!--Video in HTML-->
+        <video id="video" style="background-color: gray;" width="1280" height="720"></video>
+        <script>
+        $('document').ready(function() {
+            if (typeof $YB.plugins.LgHtml5 != "undefined") {
+                var options = {
+                    // Account code and enable YOUBORA Analytics
+                    accountCode: 'accountTest',
+                    enableAnalytics: true,
+
+                    //View parameters
+                    username: 'userTest',
+                    transactionCode: 'transactionTest',
+
+                    // Media Info
+                    media: {
+                        title: "html5 basic video",
+                        cdn: "AKAMAI",
+                        isLive: false,
+                        duration: "120"
+                    },
+
+                    // Properties
+                    properties: {
+                        content_id: "b",
+                        content_metadata: {
+                            genre: "d",
+                            language: "e",
+                            year: "f",
+                            cast: "g",
+                            director: "h",
+                            owner: "i",
+                            parental: "j",
+                            price: "k",
+                            rating: "l",
+                            audioType: "m",
+                            audioChannels: "n"
+                        }
+                    },
+                    
+                    //Optional Features
+                    httpSecure:true,
+                    parseHLS: true,
+                    parseCDNNodeHost: true,
+                    network: {
+                       ip: "1.1.1.1",
+                       isp: "iesepé"
+                    },
+
+                    //Extraparams
+                    extraParams: {
+                        param1: "1",
+                        param2: "2"
+                    }
+                };
+
+                var plugin = new $YB.plugins.LgHtml5('video', options)
+            }
+
+        })
+        </script>
+        <div class="playerBottom">
+            <div class="playerButtonLayout">
+                <div class="progressBarLayout">
+                    <div class="progressBar">
+                        <div id="progressBg" class="progress progressBg"></div>
+                        <div id="progressBuffer" class="progress progressBuffer"></div>
+                        <div id="progressBarStatus" class="progress progressBarStatus"></div>
+                        <div id="progressBarClick" class="progress progressBarClick"></div>
+                        <div class="runningTime"> <span id="remainingTime"></span> <span id="totalTime"></span> </div>
+                    </div>
+                    <div class="runningMovieInfo">
+                        <div class="runningMovieName"> </div>
+                        <div class="runningMovieType"></div>
+                    </div>
+                </div>
+                <div id="buttonLayout">
+                    <ul>
+                        <li id="stop" class="stopButton"><img src="http://pre.smartplugin.youbora.com/samples/devices/lg/HTML5Player/images/player_btn_icon/movie_btn_icon_stop_n.png" alt="stopBtn" class="center" /></li>
+                        <li id="play" class="playButton"><img src="http://pre.smartplugin.youbora.com/samples/devices/lg/HTML5Player/images/player_btn_icon/movie_btn_icon_play_n.png" alt="playBtn" class="center" /></li>
+                        <li id="rewind" class="rewindButton"><img src="http://pre.smartplugin.youbora.com/samples/devices/lg/HTML5Player/images/player_btn_icon/movie_btn_icon_rewind_n.png" alt="rewindBtn" class="center" /></li>
+                        <li id="forward" class="forwardButton"><img src="http://pre.smartplugin.youbora.com/samples/devices/lg/HTML5Player/images/player_btn_icon/movie_btn_icon_forward_n.png" alt="forwardBtn" class="center" /></li>
+                        <li id="option" class="optionButton">
+                            <div class="imgTextCenter"> <img src="http://pre.smartplugin.youbora.com/samples/devices/lg/HTML5Player/images/player_btn_icon/movie_btn_icon_option_n.png" alt="optionBtn" /> <b class="textCenter">Option</b> </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="ballCoverage">
+                <div id="progressBall" class="progressBallInitial"> </div>
+            </div>
+        </div>
+        <div class="keyHelp">
+            <div class="backKey"></div>
+            <div class="exitKey"></div>
+        </div>
+    </div>
+</body>
+
+</html>
