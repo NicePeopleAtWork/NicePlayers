@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=">
+    <title>Youtube Player</title>
+    <script src="http://smartplugin.youbora.com/5.0/js/youtube/5.1.0/sp.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>Youtube YOUBORA Plugin</h1>
+            <div id="player"></div>
+        </div>
+    </div>
+	<script type="text/javascript">
+		var options = {
+			// Account code and enable YOUBORA Analytics
+			accountCode: "qamini",
+			enableAnalytics: true,
+			//View parameters
+			username: "userTest",
+			transactionCode: "transactionTest",
+			// Media info
+			media: {
+				title: "titleTest",
+				isLive: true
+			},
+			// Media and device extra info
+			properties: {
+				filename: "test.m3u8",
+				content_id: "contentTest",
+				content_metadata: {
+					genre: "genreTest",
+					language: "languageTest",
+					year: "yearTest",
+					cast: "castTest",
+					director: "directorTest",
+					owner: "ownerTest",
+					parental: "parentalTest",
+					price: "priceTest",
+					rating: "ratingTest",
+					audioType: "typeTest",
+					audioChannels: "channelTest"
+				},
+				transaction_type: "transactionTest",
+				quality: "qualityTest",
+				content_type: "contentTest",
+				device: {
+					manufacturer: "manufacturerTest",
+					type: "typeTest",
+					year: "yearTest",
+					firmware: "firmwareTest"
+				}
+			},
+			// Optional features
+			httpSecure: false,
+			network: {
+				ip: "1.1.1.1",
+				isp: "ISPTest"
+			}
+		};
+		
+		// App helpers
+		var player;
+		var playerId = 'player';
+		var playerCode = 'M7lc1UVf-VE';
+		
+		// YOUTUBE Player setup
+		var YTtag = document.createElement('script');
+		YTtag.src = "https://www.youtube.com/iframe_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(YTtag, firstScriptTag);
+
+		function loadPlayer(videoId, playerId) {
+			player = new YT.Player(playerId, {
+				height: '390',
+				width: '640',
+				videoId: videoId,
+				events: {
+					'onReady': onPlayerReady,
+				}
+			});
+
+			// Plugin declaration
+			if (typeof $YB !== undefined) {
+				youbora = new $YB.plugins.Youtube(player, options);
+			}
+		}
+		
+		function onYouTubeIframeAPIReady() {
+			loadPlayer(playerCode, playerId);
+		}
+
+		function onPlayerReady(event) {
+			event.target.playVideo();
+			player.mute();
+		}
+	</script>
+</body>
+
+</html>
