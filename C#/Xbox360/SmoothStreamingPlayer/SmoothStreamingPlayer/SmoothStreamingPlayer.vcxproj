@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Xbox 360">
+      <Configuration>Debug</Configuration>
+      <Platform>Xbox 360</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Xbox 360">
+      <Configuration>Release</Configuration>
+      <Platform>Xbox 360</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Submission|Xbox 360">
+      <Configuration>Submission</Configuration>
+      <Platform>Xbox 360</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BD65B71F-C79C-4F50-9949-C49EF6CA2A57}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+    <SccProjectName>
+    </SccProjectName>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <!-- Defaults for the debugger flavor which we don't own the default property page for -->
+  <!-- user updates to this go to the vcxproj.user file so we can't unconditionally set them here -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Release' and '$(DebuggerFlavor)' == ''">
+    <DebuggerFlavor>Xbox360ManagedDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug' and '$(DebuggerFlavor)' == ''">
+    <DebuggerFlavor>Xbox360ManagedDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Submission' and '$(DebuggerFlavor)' == ''">
+    <DebuggerFlavor>Xbox360Debugger</DebuggerFlavor>
+  </PropertyGroup>
+  <!-- Map Configuration to host version -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <RuntimeConfiguration>Release</RuntimeConfiguration>
+    <DependencyConfiguration>Release</DependencyConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <RuntimeConfiguration>Profile</RuntimeConfiguration>
+    <DependencyConfiguration>Debug</DependencyConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Submission'">
+    <RuntimeConfiguration>Submission</RuntimeConfiguration>
+    <DependencyConfiguration>Release</DependencyConfiguration>
+    <BuildCertification>true</BuildCertification>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup>
+    <BuildLogFile>$(ProjectDir)Logs\$(Configuration)\BuildLog.txt</BuildLogFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Platform)'=='Xbox 360'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Platform)'=='Xbox 360'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)\Platforms\Xbox 360\Microsoft.Xbox360.Adk.NGen.props" Condition="exists('$(VCTargetsPath)\Platforms\Xbox 360\Microsoft.Xbox360.Adk.NGen.props')" />
+    <Import Project="$(VCTargetsPath)\Platforms\Xbox 360\Microsoft.Xbox360.Adk.Application.props" Condition="exists('$(VCTargetsPath)\Platforms\Xbox 360\Microsoft.Xbox360.Adk.Application.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <ConfigurationFilePath>$(ProjectDir)ConfigFiles\$(Configuration)\</ConfigurationFilePath>
+    <ReferencePath>$(DevEnvDir);$(ReferencePath)</ReferencePath>
+    <ADKPath>$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Xbox 360 ADK@InstallPath)</ADKPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <!-- PlayReady Settings -->
+    <UsesPlayReady>true</UsesPlayReady>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
+    <!-- NGen Settings -->
+    <EnableNGen>false</EnableNGen>
+    <BaseAddressPath>$(ConfigurationFilePath)</BaseAddressPath>
+    <MachineConfigPath>$(ConfigurationFilePath)</MachineConfigPath>
+    <HostConfigPath>$(ConfigurationFilePath)</HostConfigPath>
+    <XCoreClrPath>$(ADKPath)Tools</XCoreClrPath>
+    <XexCachePath>$(OutDir)NGenOutput;$(ADKPath)NativeImages</XexCachePath>
+    <XFrameworkPath>$(ADKPath)Runtime</XFrameworkPath>
+    <XSymbolsPath>$(ADKPath)Symbols;$(ADKPath)NativeImages</XSymbolsPath>
+    <NGenOutputDir>$(Configuration)\NGenOutput</NGenOutputDir>
+    <DeployDir>$(OutDir)Deploy\</DeployDir>
+    <CopyDependenciesToOutput>true</CopyDependenciesToOutput>
+    <AdditionalNGenArgs>
+    </AdditionalNGenArgs>
+    <!-- Dash Package Settings -->
+    <BuildDashPkg>false</BuildDashPkg>
+    <AppCategories>0x00000001</AppCategories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
+    <!-- NGen Settings -->
+    <EnableNGen>false</EnableNGen>
+    <BaseAddressPath>$(ConfigurationFilePath)</BaseAddressPath>
+    <MachineConfigPath>$(ConfigurationFilePath)</MachineConfigPath>
+    <HostConfigPath>$(ConfigurationFilePath)</HostConfigPath>
+    <XCoreClrPath>$(ADKPath)Tools</XCoreClrPath>
+    <XexCachePath>$(OutDir)NGenOutput;$(ADKPath)NativeImages</XexCachePath>
+    <XFrameworkPath>$(ADKPath)Runtime</XFrameworkPath>
+    <XSymbolsPath>$(ADKPath)Symbols;$(ADKPath)NativeImages</XSymbolsPath>
+    <NGenOutputDir>$(Configuration)\NGenOutput</NGenOutputDir>
+    <DeployDir>$(OutDir)Deploy\</DeployDir>
+    <CopyDependenciesToOutput>true</CopyDependenciesToOutput>
+    <AdditionalNGenArgs>
+    </AdditionalNGenArgs>
+    <!-- Dash Package Settings -->
+    <BuildDashPkg>false</BuildDashPkg>
+    <AppCategories>0x00000001</AppCategories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Submission|Xbox 360'">
+    <!-- NGen Settings -->
+    <EnableNGen>true</EnableNGen>
+    <BaseAddressPath>$(ConfigurationFilePath)</BaseAddressPath>
+    <MachineConfigPath>$(ConfigurationFilePath)</MachineConfigPath>
+    <HostConfigPath>$(ConfigurationFilePath)</HostConfigPath>
+    <XCoreClrPath>$(ADKPath)Tools</XCoreClrPath>
+    <XexCachePath>$(OutDir)NGenOutput;$(ADKPath)NativeImages</XexCachePath>
+    <XFrameworkPath>$(ADKPath)Runtime</XFrameworkPath>
+    <XSymbolsPath>$(ADKPath)Symbols;$(ADKPath)NativeImages</XSymbolsPath>
+    <NGenOutputDir>$(Configuration)\NGenOutput</NGenOutputDir>
+    <DeployDir>$(OutDir)Deploy\</DeployDir>
+    <CopyDependenciesToOutput>true</CopyDependenciesToOutput>
+    <AdditionalNGenArgs>
+    </AdditionalNGenArgs>
+    <!-- Dash Package Settings -->
+    <BuildDashPkg>false</BuildDashPkg>
+    <AppCategories>0x00000001</AppCategories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
+    <NMakeOutput>$(DeployDir)default.xex</NMakeOutput>
+    <RemoteRoot>devkit:\$(SolutionName)\$(Configuration)</RemoteRoot>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
+    <NMakeOutput>$(DeployDir)default.xex</NMakeOutput>
+    <RemoteRoot>devkit:\$(SolutionName)\$(Configuration)</RemoteRoot>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Submission|Xbox 360'">
+    <NMakeOutput>$(DeployDir)default.xex</NMakeOutput>
+    <RemoteRoot>devkit:\$(SolutionName)\$(Configuration)</RemoteRoot>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
+    <Deploy>
+      <DeploymentType>CopyToHardDrive</DeploymentType>
+      <DeploymentFiles>$(RemoteRoot)=$(DeployDir)</DeploymentFiles>
+      <ExcludedFromBuild>false</ExcludedFromBuild>
+    </Deploy>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
+    <Deploy>
+      <DeploymentType>CopyToHardDrive</DeploymentType>
+      <DeploymentFiles>$(RemoteRoot)=$(DeployDir)</DeploymentFiles>
+      <ExcludedFromBuild>false</ExcludedFromBuild>
+    </Deploy>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Submission|Xbox 360'">
+    <Deploy>
+      <DeploymentType>CopyToHardDrive</DeploymentType>
+      <DeploymentFiles>$(RemoteRoot)=$(DeployDir)</DeploymentFiles>
+      <ExcludedFromBuild>false</ExcludedFromBuild>
+    </Deploy>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="$(ADKPath)\Databases\Database.xmplr" />
+    <None Include="$(ADKPath)\Databases\NuiIdentity.bin.be" />
+    <None Include="$(ADKPath)\Databases\nuisp1031p" />
+    <None Include="$(ADKPath)\Databases\nuisp1033p" />
+    <None Include="$(ADKPath)\Databases\nuisp1036p" />
+    <None Include="$(ADKPath)\Databases\nuisp1040p" />
+    <None Include="$(ADKPath)\Databases\nuisp1041p" />
+    <None Include="$(ADKPath)\Databases\nuisp2057p" />
+    <None Include="$(ADKPath)\Databases\nuisp2058p" />
+    <None Include="$(ADKPath)\Databases\nuisp3081p" />
+    <None Include="$(ADKPath)\Databases\nuisp3082p" />
+    <None Include="$(ADKPath)\Databases\nuisp3084p" />
+    <None Include="SegoeXbox-Black.ttf" />
+    <None Include="SegoeXbox-Bold.ttf" />
+    <None Include="SegoeXbox-Light.ttf" />
+    <None Include="SegoeXbox-Regular.ttf" />
+    <None Include="SegoeXbox-Semibold.ttf" />
+    <None Include="SegoeXbox-Semilight.ttf" />
+    <None Include="XenonCLatin.ttf" />
+    <None Include="XenonJKLatin.ttf" />
+    <None Include="bg.jpg" />
+    <None Include="SplashScreenImage.jpg" />
+    <None Include="ConfigFiles\Debug\baseaddrs.xml" />
+    <None Include="ConfigFiles\Debug\HostConfig.xml" />
+    <None Include="ConfigFiles\Debug\machine.config" />
+    <None Include="ConfigFiles\Release\baseaddrs.xml" />
+    <None Include="ConfigFiles\Release\HostConfig.xml" />
+    <None Include="ConfigFiles\Release\machine.config" />
+    <None Include="ConfigFiles\Submission\baseaddrs.xml" />
+    <None Include="ConfigFiles\Submission\HostConfig.xml" />
+    <None Include="ConfigFiles\Submission\machine.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmoothStreamingPlayerApplication\SmoothStreamingPlayerApplication.csproj">
+      <Project>{337a5c01-5f34-40bd-8f0b-011c25726ea5}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Xbox 360 ADK\Microsoft.Xbox360.Adk.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

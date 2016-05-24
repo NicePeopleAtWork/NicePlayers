@@ -1,0 +1,163 @@
+﻿<navigation:Page x:Class="SmoothStreamingPlayerApplication.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+    xmlns:xbox="clr-namespace:Microsoft.Xbox.Controls;assembly=Microsoft.Xbox"
+    mc:Ignorable="d"
+    d:DesignHeight="720" d:DesignWidth="1280">
+    <navigation:Page.Resources>
+        <LinearGradientBrush x:Key="PrimaryTileBackgroundBrush" StartPoint="0.0011151,-0.00173214" EndPoint="0.961127,0.958279">
+            <GradientStop Color="#FF3770BC" Offset="0"/>
+            <GradientStop Color="#FF234676" Offset="1"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="ApplicationBackgroundBrush" StartPoint="0.0011151,-0.00173214" EndPoint="0.961127,0.958279">
+            <GradientStop Color="#FFE9E9E9" Offset="0"/>
+            <GradientStop Color="#FFC6C6C6" Offset="1"/>
+        </LinearGradientBrush>
+    </navigation:Page.Resources>
+
+
+    <Grid x:Name="LayoutRoot" Background="{StaticResource ApplicationBackgroundBrush}">
+        
+        <TextBlock x:Name="PageTitle" 
+                   FontFamily="Segoe UI Light" 
+                   FontSize="25" 
+                   HorizontalAlignment="Left" 
+                   VerticalAlignment="Top" 
+                   Margin="140,110,0,0" 
+                   Width="600"
+                   Text="Smooth Streaming and PlayReady Sample" 
+                   Foreground="Black"/>
+        
+        <Grid x:Name="ButtonsGrid" Background="Transparent" Margin="50,0,50,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="Button_BigBuckBunny"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Width="280"
+                    Height="300"
+                    HorizontalAlignment="Center" 
+                    d:LayoutOverrides="Width" 
+                    Background="{StaticResource PrimaryTileBackgroundBrush}"
+                    Click="Button_BigBuckBunny_Click">
+                    <Button.Content>
+                        <StackPanel Orientation="Vertical">
+                        <TextBlock FontFamily="Segoe UI Light" FontSize="16"  HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap">
+                                <Run Text="Big Buck Bunny Clip" FontSize="24"  FontWeight="Normal" Foreground="White"/>
+                                <LineBreak/>
+                                <LineBreak/>
+                                <Run Text="1280x720, VC1 Video, WMA Pro Audio" Foreground="White"/>
+                                <LineBreak/>
+                                <Run Text="~ 10 min" Foreground="White"/>
+                                <LineBreak/>
+                                <Run Text="No DRM protection" Foreground="White"/>
+                                <LineBreak/>
+                                <LineBreak/>
+                                <LineBreak/>
+                                <Run Text="http://mediadl.microsoft.com/mediadl/iisnet/smoothmedia/Experience/BigBuckBunny_720p.ism/Manifest" FontSize="16" Foreground="White"/>
+                            </TextBlock>
+                        </StackPanel>
+                    </Button.Content>
+            </Button>
+
+            <Button x:Name="Button_PlayReady_SuperSpeedway" 
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Width="280"
+                    Height="300"
+                    HorizontalAlignment="Center" 
+                    d:LayoutOverrides="Width" 
+                    Background="{StaticResource PrimaryTileBackgroundBrush}"
+                    Click="Button_PlayReady_SuperSpeedway_Click">
+                    <Button.Content>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock FontFamily="Segoe UI Light" FontSize="16"  HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap">
+                                <Run Text="Super Speedway" FontSize="24"  FontWeight="Normal" Foreground="White"/>
+                                <LineBreak/>
+                                <LineBreak/>
+                                <Run Text="1280x720, H.264 Video, AACL Audio" Foreground="White"/>
+                                <LineBreak/>
+                                <Run Text="~ 2 min" Foreground="White"/>
+                                <LineBreak/>
+                                <Run Text="DRM protected using PlayReady" Foreground="White"/>
+                                <LineBreak/>
+                                <Run Text="Using non-persistent license (in-memory license)" Foreground="White"/>
+                                <LineBreak/>
+                                <LineBreak/>
+                                <Run Text="http://playready.directtaps.net/smoothstreaming/SSWSS720H264PR/SuperSpeedway_720.ism/Manifest" FontSize="16" Foreground="White"/>
+                            </TextBlock>
+                        </StackPanel>
+                    </Button.Content>
+            </Button>
+
+            <Button x:Name="Button_PlayReady_ToTheLimit"
+                    Grid.Row="0"
+                    Grid.Column="2"
+                    Width="280"
+                    Height="300"
+                    HorizontalAlignment="Center" 
+                    d:LayoutOverrides="Width" 
+                    Background="{StaticResource PrimaryTileBackgroundBrush}"
+                    Click="Button_PlayReady_ToTheLimit_Click">
+                <Button.Content>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock FontFamily="Segoe UI Light" FontSize="16"  HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap">
+                                <Run Text="To The Limit" FontSize="24"  FontWeight="Normal" Foreground="White"/>
+                                <LineBreak/>
+                                <LineBreak/>
+                                <Run Text="1280x720, VC1 Video, WMA Pro Audio" Foreground="White"/>
+                                <LineBreak/>
+                                <Run Text="~ 2 min" Foreground="White"/>
+                                <LineBreak/>
+                                <Run Text="DRM protected using PlayReady" Foreground="White"/>
+                                <LineBreak/>
+                                <Run Text="Uses key rotation license" Foreground="White"/>
+                                <LineBreak/>
+                                <Run Text="The root license is pre-delivered" Foreground="White"/>
+                                <LineBreak/>
+                                <Run Text="The leaf license rotates every 30 seconds" Foreground="White"/>
+                                <LineBreak/>
+                                <LineBreak/>
+                                <Run Text="http://playready.directtaps.net/PR2_00/media/PIFF1.3/Ch00_KeyRotation_30seconds/To_The_Limit_720.ism/Manifest" FontSize="16" Foreground="White"/>
+                        </TextBlock>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+            
+            <Button x:Name="Button_PlayReady_LicenseAcquisition" 
+                    Grid.Row="0"
+                    Grid.Column="3"
+                    Width="280"
+                    Height="300"
+                    HorizontalAlignment="Center" 
+                    d:LayoutOverrides="Width" 
+                    Background="{StaticResource PrimaryTileBackgroundBrush}"
+                    Click="Button_PlayReady_LicenseAcquisition_Click">
+                <Button.Content>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock FontFamily="Segoe UI Light" FontSize="16"  HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="Wrap">
+                            <Run Text="Get Root License for " FontSize="24"  FontWeight="Normal" Foreground="White"/>
+                            <Run Text="To The Limit" FontStyle="Italic"  FontSize="24"  FontWeight="Normal" Foreground="White"/>
+                            <LineBreak/>
+                            <Run x:Name="TextRun_LicenseAcquisition_Result"  Text="" FontSize="24"  FontWeight="Normal" Foreground="Crimson"/>
+                        </TextBlock>
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+        </Grid>
+
+        <xbox:Feedback Margin="0,520,30,0"/>
+    </Grid>
+</navigation:Page>

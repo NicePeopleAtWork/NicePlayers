@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xex>
+  <!-- Arbitrary string rich presence -->
+  <privilege id="36"/>
+  <!-- Supports Deep Link -->
+  <privilege id="41"/>
+
+  <!-- Supported media types from which the executable can run -->
+  <mediatypes>
+    <cd/>
+    <harddisk/>
+    <network/>
+    <livepackage/>
+    <mu/>
+    <ram/>
+  </mediatypes>
+
+  <!-- Use compressed image format -->
+  <format>
+    <compressed/>
+  </format>
+</xex>

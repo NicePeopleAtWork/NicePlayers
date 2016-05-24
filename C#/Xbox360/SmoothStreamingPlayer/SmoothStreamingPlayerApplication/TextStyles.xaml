@@ -1,0 +1,61 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- ////////////////////////////////////////////////// -->
+    <!-- Brushes -->
+
+    <SolidColorBrush x:Key="XboxBackgroundBrush" Color="#FF75BA44"/>
+    <SolidColorBrush x:Key="XboxForegroundBrush" Color="#FF333333"/>
+
+    <!-- ////////////////////////////////////////////////// -->
+    <!-- System Fonts -->
+    <FontFamily x:Key="XboxFontFamilyDefault">Xbox JK</FontFamily>
+    <FontFamily x:Key="XboxFontFamilyRegular">Segoe Xbox Regular</FontFamily>
+    <FontFamily x:Key="XboxFontFamilyBlack">Segoe Xbox Black</FontFamily>
+    <FontFamily x:Key="XboxFontFamilyBold">Segoe Xbox Bold</FontFamily>
+    <FontFamily x:Key="XboxFontFamilyLight">Segoe Xbox Light</FontFamily>
+    <FontFamily x:Key="XboxFontFamilySemibold">Segoe Xbox Semibold</FontFamily>
+    <FontFamily x:Key="XboxFontFamilySemilight">Segoe Xbox Semilight</FontFamily>
+
+    <!-- ////////////////////////////////////////////////// -->
+    <!-- Font Sizes  (Placeholder Values)     -->
+    <sys:Double x:Key="XboxFontSizeDefault">28</sys:Double>
+    <sys:Double x:Key="XboxFontSizeTitle">44</sys:Double>
+    <sys:Double x:Key="XboxFontSizeSubTitle">24</sys:Double>
+    <sys:Double x:Key="XboxFontSizePivotHeader">33</sys:Double>
+    <sys:Double x:Key="XboxFontSizeItemTitle">20</sys:Double>
+    <sys:Double x:Key="XboxFontSizeItemSubTitle">16</sys:Double>
+
+    <!-- ////////////////////////////////////////////////// -->
+    <!-- TextBlock Styles (Placeholder Definitions) -->
+    <Style x:Key="XboxTextBlockBaseStyle" TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="{StaticResource XboxFontFamilyDefault}"/>
+        <Setter Property="FontSize" Value="{StaticResource XboxFontSizeDefault}"/>
+        <Setter Property="Foreground" Value="{StaticResource XboxForegroundBrush}"/>
+    </Style>
+
+    <Style x:Key="XboxTextTitleStyle" TargetType="TextBlock" BasedOn="{StaticResource XboxTextBlockBaseStyle}">
+        <Setter Property="FontFamily" Value="{StaticResource XboxFontFamilyLight}"/>
+        <Setter Property="FontSize" Value="{StaticResource XboxFontSizeTitle}"/>
+    </Style>
+
+    <Style x:Key="XboxTextSubTitleStyle" TargetType="TextBlock" BasedOn="{StaticResource XboxTextBlockBaseStyle}">
+        <Setter Property="FontSize" Value="{StaticResource XboxFontSizeSubTitle}"/>
+    </Style>
+
+    <Style x:Key="XboxTextPivotHeaderStyle" TargetType="TextBlock" BasedOn="{StaticResource XboxTextBlockBaseStyle}">
+        <Setter Property="FontFamily" Value="{StaticResource XboxFontFamilyLight}"/>
+        <Setter Property="FontSize" Value="{StaticResource XboxFontSizePivotHeader}"/>
+    </Style>
+
+    <Style x:Key="XboxTextItemTitleStyle" TargetType="TextBlock" BasedOn="{StaticResource XboxTextBlockBaseStyle}">
+        <Setter Property="FontSize" Value="{StaticResource XboxFontSizeItemTitle}"/>
+        <Setter Property="TextOptions.TextHintingMode" Value="Animated"/>
+    </Style>
+
+    <Style x:Key="XboxTextItemSubTitleStyle" TargetType="TextBlock" BasedOn="{StaticResource XboxTextBlockBaseStyle}">
+        <Setter Property="FontSize" Value="{StaticResource XboxFontSizeItemSubTitle}"/>
+        <Setter Property="TextOptions.TextHintingMode" Value="Animated"/>
+    </Style>
+</ResourceDictionary>

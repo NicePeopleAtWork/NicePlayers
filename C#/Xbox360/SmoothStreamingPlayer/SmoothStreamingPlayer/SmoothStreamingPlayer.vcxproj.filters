@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Files to NGen">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>dll;exe</Extensions>
+    </Filter>
+    <Filter Include="Nui Databases">
+      <UniqueIdentifier>{8ABFB25B-E8C2-477D-BB9B-1F59DB6EC55E}</UniqueIdentifier>
+      <Extensions>be;xmplr</Extensions>
+    </Filter>
+    <Filter Include="Fonts">
+      <UniqueIdentifier>{A209FF3F-C47E-4728-A225-A7D58A07F4B2}</UniqueIdentifier>
+      <Extensions>ttf</Extensions>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{D189E824-D55A-4BCD-A453-56A0370A40F9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config\Debug">
+      <UniqueIdentifier>{4D975FAF-4174-447A-9E43-33759246F09C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config\Release">
+      <UniqueIdentifier>{7ADB402D-5383-4B75-BD62-27AA5692F1FC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config\Submission">
+      <UniqueIdentifier>{FAD444CA-22F0-47C1-B2EC-6757D22F5546}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SegoeXbox-Black.ttf">
+      <Filter>Fonts</Filter>
+    </None>
+    <None Include="SegoeXbox-Bold.ttf">
+      <Filter>Fonts</Filter>
+    </None>
+    <None Include="SegoeXbox-Light.ttf">
+      <Filter>Fonts</Filter>
+    </None>
+    <None Include="SegoeXbox-Regular.ttf">
+      <Filter>Fonts</Filter>
+    </None>
+    <None Include="SegoeXbox-Semibold.ttf">
+      <Filter>Fonts</Filter>
+    </None>
+    <None Include="SegoeXbox-Semilight.ttf">
+      <Filter>Fonts</Filter>
+    </None>
+    <None Include="XenonCLatin.ttf">
+      <Filter>Fonts</Filter>
+    </None>
+    <None Include="XenonJKLatin.ttf">
+      <Filter>Fonts</Filter>
+    </None>
+    <None Include="bg.jpg" />
+    <None Include="SplashScreenImage.jpg" />
+    <None Include="ConfigFiles\Release\baseaddrs.xml">
+      <Filter>Config\Release</Filter>
+    </None>
+    <None Include="ConfigFiles\Release\HostConfig.xml">
+      <Filter>Config\Release</Filter>
+    </None>
+    <None Include="ConfigFiles\Release\machine.config">
+      <Filter>Config\Release</Filter>
+    </None>
+    <None Include="ConfigFiles\Submission\baseaddrs.xml">
+      <Filter>Config\Submission</Filter>
+    </None>
+    <None Include="ConfigFiles\Submission\HostConfig.xml">
+      <Filter>Config\Submission</Filter>
+    </None>
+    <None Include="ConfigFiles\Submission\machine.config">
+      <Filter>Config\Submission</Filter>
+    </None>
+    <None Include="ConfigFiles\Debug\HostConfig.xml">
+      <Filter>Config\Debug</Filter>
+    </None>
+    <None Include="ConfigFiles\Debug\machine.config">
+      <Filter>Config\Debug</Filter>
+    </None>
+    <None Include="ConfigFiles\Debug\baseaddrs.xml">
+      <Filter>Config\Debug</Filter>
+    </None>
+    <None Include="$(ADKPath)\Databases\nuisp1031">
+      <Filter>Nui Databases</Filter>
+    </None>
+    <None Include="$(ADKPath)\Databases\nuisp1033">
+      <Filter>Nui Databases</Filter>
+    </None>
+    <None Include="$(ADKPath)\Databases\nuisp1036">
+      <Filter>Nui Databases</Filter>
+    </None>
+    <None Include="$(ADKPath)\Databases\nuisp1040">
+      <Filter>Nui Databases</Filter>
+    </None>
+    <None Include="$(ADKPath)\Databases\nuisp1041">
+      <Filter>Nui Databases</Filter>
+    </None>
+    <None Include="$(ADKPath)\Databases\nuisp2057">
+      <Filter>Nui Databases</Filter>
+    </None>
+    <None Include="$(ADKPath)\Databases\nuisp2058">
+      <Filter>Nui Databases</Filter>
+    </None>
+    <None Include="$(ADKPath)\Databases\nuisp3081">
+      <Filter>Nui Databases</Filter>
+    </None>
+    <None Include="$(ADKPath)\Databases\nuisp3082">
+      <Filter>Nui Databases</Filter>
+    </None>
+    <None Include="$(ADKPath)\Databases\nuisp3084">
+      <Filter>Nui Databases</Filter>
+    </None>
+    <None Include="$(ADKPath)\Databases\Database.xmplr">
+      <Filter>Nui Databases</Filter>
+    </None>
+    <None Include="$(ADKPath)\Databases\NuiIdentity.bin.be">
+      <Filter>Nui Databases</Filter>
+    </None>
+  </ItemGroup>
+</Project>

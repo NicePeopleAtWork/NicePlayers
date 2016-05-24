@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Deployment xmlns="http://schemas.microsoft.com/xbox/2011/deployment" AppPlatformVersion="1">
+    <App>
+        <VideoConfigurations>
+            <VideoConfiguration>
+                <Width>640</Width>
+                <Height>480</Height>
+                <SplashScreen>SplashScreenImage.jpg</SplashScreen>
+            </VideoConfiguration>
+            <VideoConfiguration>
+                <Width>1280</Width>
+                <Height>720</Height>
+                <SplashScreen>SplashScreenImage.jpg</SplashScreen>
+            </VideoConfiguration>
+        </VideoConfigurations>
+    </App>
+</Deployment>

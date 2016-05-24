@@ -1,0 +1,14 @@
+﻿Build started 24/05/2016 14:46:24.
+     1>Project "C:\PC\Code\NPAW.X360\NPAW.Youbora.Xbox360\SmoothStreamingPlayer\SmoothStreamingPlayer\SmoothStreamingPlayer.vcxproj" on node 2 (clean target(s)).
+     1>CoreClean:
+         Directory "Debug\NGenOutput" doesn't exist. Skipping.
+         Removing directory "C:\PC\Code\NPAW.X360\NPAW.Youbora.Xbox360\SmoothStreamingPlayer\SmoothStreamingPlayer\Debug\Deploy\".
+         Directory "C:\PC\Code\NPAW.X360\NPAW.Youbora.Xbox360\SmoothStreamingPlayer\SmoothStreamingPlayer\Debug\Supplement\" doesn't exist. Skipping.
+         Removing directory "C:\PC\Code\NPAW.X360\NPAW.Youbora.Xbox360\SmoothStreamingPlayer\SmoothStreamingPlayer\Debug\".
+       CoreCppClean:
+         Creating directory "Debug\".
+     1>Done Building Project "C:\PC\Code\NPAW.X360\NPAW.Youbora.Xbox360\SmoothStreamingPlayer\SmoothStreamingPlayer\SmoothStreamingPlayer.vcxproj" (clean target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.05

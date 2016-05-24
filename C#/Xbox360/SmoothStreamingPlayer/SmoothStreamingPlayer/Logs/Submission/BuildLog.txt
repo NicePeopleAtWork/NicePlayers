@@ -1,0 +1,14 @@
+﻿Build started 24/05/2016 14:53:49.
+     1>Project "C:\PC\Code\NPAW.X360\NPAW.Youbora.Xbox360\SmoothStreamingPlayer\SmoothStreamingPlayer\SmoothStreamingPlayer.vcxproj" on node 2 (clean target(s)).
+     1>CoreClean:
+         Removing directory "Submission\NGenOutput".
+         Removing directory "C:\PC\Code\NPAW.X360\NPAW.Youbora.Xbox360\SmoothStreamingPlayer\SmoothStreamingPlayer\Submission\Deploy\".
+         Removing directory "C:\PC\Code\NPAW.X360\NPAW.Youbora.Xbox360\SmoothStreamingPlayer\SmoothStreamingPlayer\Submission\Supplement\".
+         Removing directory "C:\PC\Code\NPAW.X360\NPAW.Youbora.Xbox360\SmoothStreamingPlayer\SmoothStreamingPlayer\Submission\".
+       CoreCppClean:
+         Creating directory "Submission\".
+     1>Done Building Project "C:\PC\Code\NPAW.X360\NPAW.Youbora.Xbox360\SmoothStreamingPlayer\SmoothStreamingPlayer\SmoothStreamingPlayer.vcxproj" (clean target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.11

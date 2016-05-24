@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<baseaddrs>
+  <!-- The following assembly may not be rebased. -->
+  <baseaddr addr="80000000" size="02000000" name="SystemReserved_64K" />
+  <!-- The following assembly may not be rebased. -->
+  <!-- Note: The size of 'default.xex' will increase as your spa file increases.  You may need to adjust this size accordingly. -->
+  <baseaddr addr="82000000" size="00850000" name="default" />
+  <!-- Available:   A90000 bytes in range 82850000 - 832E0000 -->
+  <!-- The following assembly may not be rebased. -->
+  <baseaddr addr="832E0000" size="00670000" name="CLRCodeCacheDLL_2" />
+  <!-- Available:    20000 bytes in range 83950000 - 83970000 -->
+  <baseaddr addr="83970000" size="00A50000" name="mscorlib" />
+  <!-- Available:   6E0000 bytes in range 843C0000 - 84AA0000 -->
+  <!-- The following assembly may not be rebased. -->
+  <baseaddr addr="84AA0000" size="00440000" name="xcoreclr" />
+  <!-- Available:   BB0000 bytes in range 84EE0000 - 85A90000 -->
+  <!-- The following assembly may not be rebased. -->
+  <baseaddr addr="85A90000" size="00670000" name="CLRCodeCacheDLL_0" />
+  <!-- Available:    A0000 bytes in range 86100000 - 861A0000 -->
+  <!-- The following assembly may not be rebased. -->
+  <baseaddr addr="861A0000" size="00670000" name="CLRCodeCacheDLL_1" />
+  <!-- Available:    20000 bytes in range 86810000 - 86830000 -->
+  <baseaddr addr="86830000" size="00390000" name="Microsoft.Xbox" />
+  <!-- Available:   260000 bytes in range 86BC0000 - 86E20000 -->
+  <baseaddr addr="86E20000" size="00180000" name="System.Net" />
+  <!-- Available:    60000 bytes in range 86FA0000 - 87000000 -->
+  <baseaddr addr="87000000" size="00180000" name="Microsoft.Xbox.Services" />
+  <!-- Available:   120000 bytes in range 87180000 - 872A0000 -->
+  <baseaddr addr="872A0000" size="00160000" name="System" />
+  <!-- Available:    80000 bytes in range 87400000 - 87480000 -->
+  <baseaddr addr="87480000" size="000A0000" name="Microsoft.Advertising" />
+  <!-- Available:    50000 bytes in range 87520000 - 87570000 -->
+  <baseaddr addr="87570000" size="00180000" name="Microsoft.Xbox.Core" />
+  <!-- Available:    90000 bytes in range 876F0000 - 87780000 -->
+  <baseaddr addr="87780000" size="00050000" name="System.Windows.RuntimeHost" />
+  <!-- Available:    60000 bytes in range 877D0000 - 87830000 -->
+  <baseaddr addr="87830000" size="000C0000" name="System.Xml.Linq" />
+  <!-- Available:    50000 bytes in range 878F0000 - 87940000 -->
+  <baseaddr addr="87940000" size="00050000" name="Microsoft.Xbox.Storage" />
+  <!-- Available:    20000 bytes in range 87990000 - 879B0000 -->
+  <baseaddr addr="879B0000" size="00130000" name="System.Core" />
+  <!-- Available:    B0000 bytes in range 87AE0000 - 87B90000 -->
+  <baseaddr addr="87B90000" size="00090000" name="System.Windows.Controls.Navigation" />
+  <!-- Available:   3E0000 bytes in range 87C20000 - 88000000 -->
+  <!-- The following assembly may not be rebased. -->
+  <baseaddr addr="88000000" size="00070000" name="xadvertising" />
+  <!-- Available:   690000 bytes in range 88070000 - 88700000 -->
+  <!-- The following assembly may not be rebased. -->
+  <baseaddr addr="88700000" size="002C0000" name="agcore" />
+  <!-- Available:   740000 bytes in range 889C0000 - 89100000 -->
+  <!-- The following assembly may not be rebased. -->
+  <baseaddr addr="89100000" size="007B0000" name="npctrl" />
+  <!-- Available:   A30000 bytes in range 898B0000 - 8A2E0000 -->
+  <baseaddr addr="8A2E0000" size="00710000" name="System.Xml" />
+  <!-- Available:   240000 bytes in range 8A9F0000 - 8AC30000 -->
+  <baseaddr addr="8AC30000" size="00980000" name="System.Windows" />
+  <!-- Available:   A50000 bytes in range 8B5B0000 - 8C000000 -->
+  <baseaddr addr="92970000" size="004AD000" name="Microsoft.Web.Media.SmoothStreaming" />
+  <!-- Available:   B80000 bytes in range 92E20000 - 939A0000 -->
+  <!-- The following assembly may not be rebased. -->
+  <baseaddr addr="939A0000" size="0013F000" name="xclrjit" />
+  <!-- Available:   520000 bytes in range 93AE0000 - 94000000 -->
+  <!-- The following assembly may not be rebased. -->
+  <baseaddr addr="94000000" size="001BB000" name="cordacwks" />
+  <baseaddr addr="941C0000" size="07430000" name="AutoAddressRange" />
+  <!-- The following assembly may not be rebased. -->
+  <baseaddr addr="9B5F0000" size="00390000" name="playready" />
+  <!-- Available:   680000 bytes in range 9B980000 - 9C000000 -->
+  <!-- The following assembly may not be rebased. -->
+  <baseaddr addr="9C000000" size="04000000" name="SystemReserved_4K" />
+</baseaddrs>
