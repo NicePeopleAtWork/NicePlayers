@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="http://releases.flowplayer.org/6.0.5/skin/minimalist.css">
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://releases.flowplayer.org/6.0.5/flowplayer.min.js"></script>
+    <!--youbora-->
+    <script src="http://pre.smartplugin.youbora.com/src/v5/plugins/flowplayer/last-build/sp.min.js"></script>
+</head>
+
+<body>
+    <div class="flowplayer" id="vid1">
+        <video type="application/x-mpegURL" src="http://deslasexta.antena3.com/mp_series1/2012/09/10/00001.mp4">
+        </video>
+    </div>
+    <script>
+
+        $('document').ready(function() {
+            if (typeof $YB != "undefined") {
+                window.youbora = new $YB.plugins.Flowplayer("vid1", {
+                        // options
+                        parseHLS: true,
+                        parseCDNNodeHost: true,
+                        httpSecure: false,
+
+                        // Main properties
+                        accountCode: "qamini",
+                        username: "qases",
+                        transactionCode: "q-ases",
+
+                        // params defined
+                        network: {
+                            cdn: "",
+                            ip: "ipÃ©",
+                            isp: "iesepÃ©"
+                        },
+
+                        // Media Info
+                        media: {
+                            title: "Sintel-LIVE",
+                            duration: "10800"
+                           // isLive: true,
+
+                        },
+
+                        // properties
+                        properties: {
+                            filename: "a",
+                            content_id: "b",
+                            content_metadata: {
+                                title: "c",
+                                genre: "d",
+                                language: "e",
+                                year: "f",
+                                cast: "g",
+                                director: "h",
+                                owner: "i",
+                                duration: "h",
+                                parental: "js",
+                                price: "k",
+                                rating: "x",
+                                audioType: "k",
+                                audioChannels: "z"
+                            },
+                            transaction_type: "x",
+                            quality: "k",
+                            content_type: "w",
+                            device: {
+                                manufacturer: "y",
+                                type: "v",
+                                year: "x",
+                                firmware: "z"
+                            }
+                        },
+
+                        //extraparams
+                        extraParams: {
+                            param1: "param1",
+                            param2: "param2",
+                            param3: undefined,
+                            param4: undefined,
+                            param5: undefined,
+                            param6: undefined,
+                            param7: undefined,
+                            param8: undefined,
+                            param9: undefined,
+                            param10: undefined
+                        }
+                });
+
+            };
+        });
+    </script>
+    <script src="http://pre.smartplugin.youbora.com/src/v5/util/inspector/inspector.js"></script>
+</body>
+
+</html>
