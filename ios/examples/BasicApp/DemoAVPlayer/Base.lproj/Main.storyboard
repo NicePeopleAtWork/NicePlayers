@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pxn-tp-EtC" userLabel="PlayerView">
+                                <rect key="frame" x="0.0" y="263" width="600" height="337"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Pxn-tp-EtC" secondAttribute="height" multiplier="16:9" id="c4I-hy-9sY"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3h-8M-ckH">
+                                <rect key="frame" x="285" y="28" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5nV-1I-IhV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsL-Or-mVa">
+                                <rect key="frame" x="284" y="66" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Os1-Ot-eqL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Pxn-tp-EtC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="25x-dW-oxX"/>
+                            <constraint firstItem="YsL-Or-mVa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6g8-R6-oBn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Pxn-tp-EtC" secondAttribute="bottom" id="9EM-3H-9dj"/>
+                            <constraint firstItem="W3h-8M-ckH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="bwV-LV-QwB"/>
+                            <constraint firstItem="W3h-8M-ckH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iuF-7d-CFO"/>
+                            <constraint firstItem="YsL-Or-mVa" firstAttribute="top" secondItem="W3h-8M-ckH" secondAttribute="bottom" constant="8" id="ntn-Ki-diZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Pxn-tp-EtC" secondAttribute="trailing" id="rLD-RY-Crg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playerView" destination="Pxn-tp-EtC" id="4GY-nv-uti"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
