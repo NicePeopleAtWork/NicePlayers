@@ -12,7 +12,7 @@
 
 <body>
     <div class="flowplayer" id="vid1">
-        <video type="application/x-mpegURL" src="http://deslasexta.antena3.com/mp_series1/2012/09/10/00001.mp4">
+        <video type="application/x-mpegURL" src="http://yourhost.com/yourmedia.m3u8">
         </video>
     </div>
     <script>
@@ -20,59 +20,58 @@
         $('document').ready(function() {
             if (typeof $YB != "undefined") {
                 window.youbora = new $YB.plugins.Flowplayer("vid1", {
-                        // options
-                        parseHLS: true,
-                        parseCDNNodeHost: true,
-                        httpSecure: false,
-
-                        // Main properties
-                        accountCode: "qamini",
-                        username: "qases",
-                        transactionCode: "q-ases",
-
-                        // params defined
-                        network: {
-                            cdn: "",
-                            ip: "ipÃƒÂ©",
-                            isp: "iesepÃƒÂ©"
-                        },
-
-                        // Media Info
+                        // Account code and enable YOUBORA Analytics
+                        accountCode: "accountTest",
+                        enableAnalytics: true,
+                        
+                        //View parameters
+                        username: "userTest",
+                        transactionCode: "transactionTest",
+                        
+                        // Media info
                         media: {
-                            title: "Sintel-LIVE",
-                            duration: "10800"
-                           // isLive: true,
-
+                            title: "titleTest",
+                            duration: "durationTest",
+                            isLive: true,
+                            resource: "http://yourhost.com/yourmedia.m3u8",
+                            cdn: "CDN_TEST",
                         },
 
-                        // properties
+                        // Media and device extra info
                         properties: {
-                            filename: "a",
-                            content_id: "b",
+                            filename: "test.m3u8",
+                            content_id: "contentTest",
                             content_metadata: {
-                                title: "c",
-                                genre: "d",
-                                language: "e",
-                                year: "f",
-                                cast: "g",
-                                director: "h",
-                                owner: "i",
-                                duration: "h",
-                                parental: "js",
-                                price: "k",
-                                rating: "x",
-                                audioType: "k",
-                                audioChannels: "z"
+                            genre: "genreTest",
+                            language: "languageTest",
+                            year: "yearTest",
+                            cast: "castTest",
+                            director: "directorTest",
+                            owner: "ownerTest",
+                            parental: "parentalTest",
+                            price: "priceTest",
+                            rating: "ratingTest",
+                            audioType: "typeTest",
+                            audioChannels: "channelTest"
                             },
-                            transaction_type: "x",
-                            quality: "k",
-                            content_type: "w",
+                            transaction_type: "transactionTest",
+                            quality: "qualityTest",
+                            content_type: "contentTest",
                             device: {
-                                manufacturer: "y",
-                                type: "v",
-                                year: "x",
-                                firmware: "z"
+                            manufacturer: "manufacturerTest",
+                            type: "typeTest",
+                            year: "yearTest",
+                            firmware: "firmwareTest"
                             }
+                        },
+
+                        // Optional features
+                        parseHLS: false,
+                        parseCDNNodeHost: false,
+                        httpSecure: undefined,
+                        network: {
+                            ip: "1.1.1.1",
+                            isp: "ISPTest"
                         },
 
                         //extraparams
