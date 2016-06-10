@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>thePlatform | HTML5 Video Player</title>
+    <!-- thePlatform PDK -->
+    <meta name="tp:PreferredRuntimes" content="HTML5" />
+    <script src="../lib/theplatformpdk/web/pdk/tpPdk.js"></script>
+    <!-- Youbora -->
+    <script src="http://smartplugin.youbora.com/v5/javascript/theplatform/5.3.0/sp.min.js"></script>
+</head>
+
+<body>
+    <!-- PLAYER INSTANTIATION -->
+    <script src="http://player.theplatform.com/p/TrK7XC/F2KxS7M0XMEL?form=javascript" type="text/javascript"></script>
+    <!-- PLUGIN INSTANTIATION -->
+    <script type="text/javascript">
+    var youbora = new $YB.plugins.ThePlatform({
+        			// Account code and enable YOUBORA Analytics
+					accountCode: "accountTest",
+					enableAnalytics: true,
+
+					//View parameters
+					username: "userTest",
+					transactionCode: "transactionTest",
+
+					// Media info
+					media: {
+					    title: "titleTest",
+					    duration: "3600",
+					    isLive: true,
+					    resource: "http://yourhost.com/yourmedia.m3u8",
+					    cdn: "AKAMAI"
+					},
+					// Media and device extra info
+					properties: {
+					    filename: "test.m3u8",
+					    content_id: "contentTest",
+					    content_metadata: {
+						genre: "genreTest",
+						language: "languageTest",
+						year: "yearTest",
+						cast: "castTest",
+						director: "directorTest",
+						owner: "ownerTest",
+						parental: "parentalTest",
+						price: "priceTest",
+						rating: "ratingTest",
+						audioType: "typeTest",
+						audioChannels: "channelTest"
+					    },
+					    transaction_type: "transactionTest",
+					    quality: "qualityTest",
+					    content_type: "contentTest",
+					    device: {
+						manufacturer: "manufacturerTest",
+						type: "typeTest",
+						year: "yearTest",
+						firmware: "firmwareTest"
+					    }
+					},
+					// Optional features
+					parseHLS: false,
+					parseCDNNodeHost: false,
+					httpSecure: false,
+					network: {
+					    ip: "1.1.1.1",
+					    isp: "ISPTest"
+					}
+			});
+</script>
+</body>
+
+</html>
