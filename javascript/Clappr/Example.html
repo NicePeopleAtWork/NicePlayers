@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Clappr</title>
+    <!-- Clappr -->
+    <script src="http://cdn.clappr.io/0.2.52/clappr.min.js"></script>
+    <!-- Youbora -->
+    <script src="http://smartplugin.youbora.com/v5/javascript/clappr/5.3.0/sp.min.js"></script>
+</head>
+
+<body>
+    <div id="player"></div>
+    <script>
+    var player = new Clappr.Player({
+        source: {
+            source: "http://yourhost.com/yourmedia.m3u8"
+        },
+        parentId: "#player",
+        preload: 'none'
+    });
+
+    if (typeof $YB != "undefined") {
+        var youbora = new $YB.plugins.Clappr(player, {
+            accountCode: "qamini",
+            enableAnalytics: true,
+
+            username: 'dev',
+            transactionCode: "transactionTest",
+
+            parseHLS: true,
+            parseCDNNodeHost: true,
+            httpSecure: true,
+
+            network: {
+               ip: "1.1.1.1",
+               isp: "ISPTest"
+            },
+
+            media: {
+                title: "All Options Active", 
+                duration: "3600", 
+                isLive: false, 
+                resource: "http://yourhost.com/yourmedia.m3u8", 
+                cdn: "AKAMAI"
+            },
+
+            properties: { 
+                filename: "test.m3u8", 
+                content_id: "contentTest", 
+                content_metadata: { 
+                    genre: "genreTest", 
+                    language: "languageTest", 
+                    year: "yearTest",
+                    cast: "castTest", 
+                    director: "directorTest", 
+                    owner: "ownerTest", 
+                    parental: "parentalTest", 
+                    price: "priceTest", 
+                    rating: "ratingTest", 
+                    audioType: "typeTest", 
+                    audioChannels: "channelTest" 
+                }, 
+                transaction_type: "transactionTest", 
+                quality: "qualityTest", 
+                content_type: "contentTest", 
+                device: { 
+                    manufacturer: "manufacturerTest", 
+                    type: "typeTest", 
+                    year: "yearTest", 
+                    firmware: "firmwareTest" 
+                } 
+            },
+            extraParams: {
+                param1: "one",
+                param2: "two",
+                param3: undefined,
+                param4: undefined,
+                param5: undefined,
+                param6: undefined,
+                param7: undefined,
+                param8: undefined,
+                param9: undefined,
+                param10: undefined
+            },   
+
+        });
+    }
+    </script>
+</body>
+
+</html>
