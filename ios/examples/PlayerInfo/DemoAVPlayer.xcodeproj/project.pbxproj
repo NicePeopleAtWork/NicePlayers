@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E16A6FD1CFDA3050099BF75 /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E16A6FB1CFDA2FE0099BF75 /* YouboraLib.framework */; };
-		4E16A6FE1CFDA3050099BF75 /* YouboraLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E16A6FB1CFDA2FE0099BF75 /* YouboraLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4E87E0071CF7365D003E01C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E87E0061CF7365D003E01C2 /* main.m */; };
 		4E87E00A1CF7365D003E01C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E87E0091CF7365D003E01C2 /* AppDelegate.m */; };
 		4E87E0101CF7365D003E01C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E87E00E1CF7365D003E01C2 /* Main.storyboard */; };
@@ -17,6 +15,7 @@
 		4E87E01D1CF73681003E01C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E87E01C1CF73681003E01C2 /* ViewController.m */; };
 		4E87E01F1CF73689003E01C2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E87E01E1CF73689003E01C2 /* Info.plist */; };
 		4EC8F1731CF83D6B0011FB0E /* CustomAVPlayerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8F1721CF83D6B0011FB0E /* CustomAVPlayerPlugin.m */; };
+		4ECD7D871D26848C008EAEAE /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ECD7D861D26848C008EAEAE /* YouboraLib.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,7 +25,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4E16A6FE1CFDA3050099BF75 /* YouboraLib.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -34,7 +32,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4E16A6FB1CFDA2FE0099BF75 /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YouboraLib.framework; sourceTree = "<group>"; };
 		4E87E0021CF7365D003E01C2 /* DemoAVPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoAVPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E87E0061CF7365D003E01C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4E87E0081CF7365D003E01C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -47,6 +44,7 @@
 		4E87E01E1CF73689003E01C2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EC8F1711CF83D6B0011FB0E /* CustomAVPlayerPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAVPlayerPlugin.h; sourceTree = "<group>"; };
 		4EC8F1721CF83D6B0011FB0E /* CustomAVPlayerPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAVPlayerPlugin.m; sourceTree = "<group>"; };
+		4ECD7D861D26848C008EAEAE /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YouboraLib.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E16A6FD1CFDA3050099BF75 /* YouboraLib.framework in Frameworks */,
+				4ECD7D871D26848C008EAEAE /* YouboraLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +62,7 @@
 		4E87DFF91CF7365D003E01C2 = {
 			isa = PBXGroup;
 			children = (
+				4ECD7D861D26848C008EAEAE /* YouboraLib.framework */,
 				4E87E0041CF7365D003E01C2 /* DemoAVPlayer */,
 				4E87E0031CF7365D003E01C2 /* Products */,
 			);
@@ -80,7 +79,6 @@
 		4E87E0041CF7365D003E01C2 /* DemoAVPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				4E16A6FB1CFDA2FE0099BF75 /* YouboraLib.framework */,
 				4E87E0081CF7365D003E01C2 /* AppDelegate.h */,
 				4E87E0091CF7365D003E01C2 /* AppDelegate.m */,
 				4E87E00B1CF7365D003E01C2 /* ViewController.h */,

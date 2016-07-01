@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E53F7A31CFDA3450083C1A8 /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E53F7A11CFDA3400083C1A8 /* YouboraLib.framework */; };
-		4E53F7A41CFDA3450083C1A8 /* YouboraLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4E53F7A11CFDA3400083C1A8 /* YouboraLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4E4CB4981D2683AE00F64A29 /* YouboraLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4CB4971D2683AE00F64A29 /* YouboraLib.framework */; };
 		4E87E0071CF7365D003E01C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E87E0061CF7365D003E01C2 /* main.m */; };
 		4E87E00A1CF7365D003E01C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E87E0091CF7365D003E01C2 /* AppDelegate.m */; };
 		4E87E0101CF7365D003E01C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E87E00E1CF7365D003E01C2 /* Main.storyboard */; };
@@ -26,7 +25,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4E53F7A41CFDA3450083C1A8 /* YouboraLib.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -34,7 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4E53F7A11CFDA3400083C1A8 /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YouboraLib.framework; sourceTree = "<group>"; };
+		4E4CB4971D2683AE00F64A29 /* YouboraLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YouboraLib.framework; sourceTree = "<group>"; };
 		4E87E0021CF7365D003E01C2 /* DemoAVPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoAVPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E87E0061CF7365D003E01C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4E87E0081CF7365D003E01C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E53F7A31CFDA3450083C1A8 /* YouboraLib.framework in Frameworks */,
+				4E4CB4981D2683AE00F64A29 /* YouboraLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +62,7 @@
 		4E87DFF91CF7365D003E01C2 = {
 			isa = PBXGroup;
 			children = (
+				4E4CB4971D2683AE00F64A29 /* YouboraLib.framework */,
 				4E87E0041CF7365D003E01C2 /* DemoAVPlayer */,
 				4E87E0031CF7365D003E01C2 /* Products */,
 			);
@@ -80,7 +79,6 @@
 		4E87E0041CF7365D003E01C2 /* DemoAVPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				4E53F7A11CFDA3400083C1A8 /* YouboraLib.framework */,
 				4E87E0081CF7365D003E01C2 /* AppDelegate.h */,
 				4E87E0091CF7365D003E01C2 /* AppDelegate.m */,
 				4E87E00B1CF7365D003E01C2 /* ViewController.h */,
