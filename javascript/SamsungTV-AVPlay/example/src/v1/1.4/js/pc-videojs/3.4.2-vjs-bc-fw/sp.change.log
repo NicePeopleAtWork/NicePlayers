@@ -1,0 +1,7 @@
+22-09-2015 - Biel	- YOUB-728	- Jointime simplify calculation without considering the buffedAds. Now, when the ads are finished, join BUFFER_BEGIN fired. The 2 above workarounds for safari now no longer exist.
+22-09-2015 - Biel	- YOUB-728	- For Safari:909 abs() prevent on Safari negative jointime
+22-09-2015 - Biel	- YOUB-728	- For Safari:909 we need bufferTimeTotal, otherwise, with adsTimeTotal, sends negative jointime
+22-09-2015 - Biel	- YOUB-728	- Add new flag isErrorSent to sent only 1 error before /start
+22-09-2015 - Biel	- YOUB-728	- In method reset(), remove if(isStartSent)
+22-09-2015 - Biel	- YOUB-728	- In method setBufferEvent(), to fix buffetTimeTotal remove adsTimeTotal
+22-09-2015 - Biel	- YOUB-728	- Add !seeking to prevent bufferUnderun

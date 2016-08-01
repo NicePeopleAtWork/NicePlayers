@@ -1,0 +1,25 @@
+{
+    "tags": {
+        "allowUnknownTags": true
+    },
+    "source": {
+        "include": "../libs/src/"
+    },
+    "opts": {
+        "destination": "./private_html/", // same as -d
+        "readme": "README.md"
+    },
+    "plugins": [],
+    "templates": {
+        "default": {
+            "useLongnameInNav": true,
+            "layoutFile": "layout.tmpl",
+            "outputSourceFiles": true,
+            "staticFiles": {
+                "include": [
+                    "./static"
+                ]
+            }
+        }
+    }
+}

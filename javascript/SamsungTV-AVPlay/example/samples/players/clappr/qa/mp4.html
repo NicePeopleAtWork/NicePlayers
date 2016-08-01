@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Clappr</title>
+    <!-- Clappr -->
+    <script src="//cdn.clappr.io/0.2.56/clappr.min.js"></script>
+    <!-- Youbora -->
+    <script src="/src/v5/plugins/clappr/last-build/sp.min.js"></script>
+</head>
+
+<body>
+    <div id="player"></div>
+    <script>
+    var player = new Clappr.Player({
+        source: {
+            source: "http://deslasexta.antena3.com/mp_series1/2012/09/10/00001.mp4"
+        },
+        parentId: "#player",
+        autoPlay: true,
+    });
+
+    if (typeof $YB != "undefined") {
+        var youbora = new $YB.plugins.Clappr(player, {
+            accountCode: "qamini",
+
+            username: 'dev',
+            transactionCode: "transactionTest",
+
+            parseHLS: true,
+            parseCDNNodeHost: true,
+            httpSecure: false,
+
+            network: {
+                ip: "1.1.1.1",
+                isp: "ISPTest"
+            },
+
+            media: {
+                title: "A3"
+            },
+
+            properties: {
+                prop: "custom"
+            }
+        });
+    }
+    </script>
+    <script src="/src/v5/util/inspector/inspector.js"></script>
+</body>
+
+</html>

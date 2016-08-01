@@ -1,0 +1,21 @@
+[{
+    "name": "Buffer",
+    "since": "5.3.0",
+    "status": "SUPPORTED",
+    "comments": "Nicebuffer"
+}, {
+    "name": "Resource",
+    "since": "5.3.0",
+    "status": "LIMITATION",
+    "comments": "Resource is always the URL of the first chunk, even if it is an Ad Preroll."
+}, {
+    "name": "Duration",
+    "since": "5.3.0",
+    "status": "LIMITATION",
+    "comments": "If the video starts with a preroll, duration is sent in joinTime."
+}, {
+    "name": "Ads",
+    "since": "5.3.0",
+    "status": "SUPPORTED",
+    "comments": "Ignoring ads already integrated"
+}]

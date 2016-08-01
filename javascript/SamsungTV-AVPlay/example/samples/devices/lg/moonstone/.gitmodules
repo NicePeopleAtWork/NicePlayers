@@ -1,0 +1,12 @@
+[submodule "enyo"]
+	path = enyo
+	url = ../../enyojs/enyo.git
+[submodule "lib/layout"]
+	path = lib/layout
+	url = ../../enyojs/layout.git
+[submodule "lib/moonstone"]
+	path = lib/moonstone
+	url = ../../enyojs/moonstone.git
+[submodule "lib/spotlight"]
+	path = lib/spotlight
+	url = ../../enyojs/spotlight.git

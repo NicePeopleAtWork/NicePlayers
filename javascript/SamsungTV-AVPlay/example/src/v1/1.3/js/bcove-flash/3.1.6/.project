@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>Youbora-BrightCove-SmartPlugin-3.1.6</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.flexbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>bin-release1</name>
+			<type>2</type>
+			<location>C:/Users/nice/Desktop</location>
+		</link>
+		<link>
+			<name>bin-release2</name>
+			<type>2</type>
+			<location>C:/inetpub/wwwroot/brightcove/balancer</location>
+		</link>
+		<link>
+			<name>bin-release3</name>
+			<type>2</type>
+			<location>C:/Program Files (x86)/Apache Software Foundation/Apache2.2/htdocs/1.3/js/libs</location>
+		</link>
+		<link>
+			<name>bin-release4</name>
+			<type>2</type>
+			<location>C:/Program Files (x86)/Apache Software Foundation/Apache2.2/htdocs/1.2/js/libs</location>
+		</link>
+		<link>
+			<name>bin-release5</name>
+			<type>2</type>
+			<location>C:/Users/nice/Desktop</location>
+		</link>
+	</linkedResources>
+</projectDescription>

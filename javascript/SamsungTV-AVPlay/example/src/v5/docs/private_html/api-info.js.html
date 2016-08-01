@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: api-info.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="main">
+
+        <h1 class="page-title">Source: api-info.js</h1>
+
+        
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @license
+ * Youbora InfoApi
+ * Copyright NicePopleAtWork &lt;http://nicepeopleatwork.com/>
+ */
+
+/** Info API is in charge to retrieve information from OPTIONS, plugins or adnalyzers using getXXX functions (ie: getResource).
+ *
+ * @class
+ * @memberof $YB
+ * @param {$YB.plugins.Generic} plugin The plugin from where it was called.
+ */
+
+$YB.api.Info = function(plugin) { // constructor
+    this.plugin = plugin;
+
+    /** Last bitrate calculated. */
+    this.lastBitrate = 0;
+    /** Last ad bitrate calculated. */
+    this.lastAdBitrate = 0;
+}
+
+/**
+ * Tries to get the resource of the video.
+ * The order is {@link $YB.resourceParser#realResource} > {@link $YB.data.Options} > plugin.getResource() > "unknown".
+ * @return {string} Resource or "unknown".
+ */
+$YB.api.Info.prototype.getResource = function() {
+    try {
+        if (this.plugin.resourceParser &amp;&amp; this.plugin.resourceParser.realResource) {
+            return this.plugin.resourceParser.realResource;
+        } else if (typeof this.plugin.data.media.resource != "undefined") {
+            return this.plugin.data.media.resource;
+        } else {
+            return this.plugin.getResource();
+        }
+    } catch (err) {
+        $YB.warn(err);
+        return "unknown";
+    }
+};
+
+
+
+/**
+ * Tries to get the mediaduration of the video from {@link $YB.data.Options} > plugin.getMediaDuration().
+ * @return {number} Duration in seconds (rounded) or 0;
+ */
+$YB.api.Info.prototype.getMediaDuration = function() {
+    try {
+        var res = 0;
+        if (typeof this.plugin.data.media.duration != "undefined") {
+            res = this.plugin.data.media.duration;
+        } else {
+            res = this.plugin.getMediaDuration();
+        }
+
+        return Math.round($YB.utils.parseNumber(res, 0));
+    } catch (err) {
+        $YB.warn(err);
+        return 0;
+    }
+};
+
+/**
+ * Tries to get if the video is Live.
+ * The order is {@link $YB.data.Options} > plugin.getIsLive() > false.
+ * @return {boolean} True if live, false if vod.
+ */
+$YB.api.Info.prototype.getIsLive = function() {
+    try {
+        if (typeof this.plugin.data.media.isLive != "undefined") {
+            return this.plugin.data.media.isLive;
+        } else {
+            return this.plugin.getIsLive();
+        }
+    } catch (err) {
+        $YB.warn(err);
+        return false;
+    }
+};
+
+/**
+ * Tries to get the player version from plugin.getPlayerVersion().
+ * @return {string} PlayerVersion or "".
+ */
+$YB.api.Info.prototype.getPlayerVersion = function() {
+    try {
+        return this.plugin.getPlayerVersion();
+    } catch (err) {
+        $YB.warn(err);
+        return "";
+    }
+};
+
+/**
+ * Tries to get the title from {@link $YB.data.Options} > plugin.getTitle().
+ * @return {string} Title or empty string.
+ */
+$YB.api.Info.prototype.getTitle = function() {
+    try {
+        if (typeof this.plugin.data.media.title != "undefined") {
+            return this.plugin.data.media.title;
+        } else {
+            return this.plugin.getTitle();
+        }
+    } catch (err) {
+        $YB.warn(err);
+        return "";
+    }
+};
+
+/**
+ * Tries to get the rendition of the video from plugin.getRendition().
+ * @return {number|string} Rendition of the media.
+ */
+$YB.api.Info.prototype.getRendition = function() {
+    try {
+        if (typeof this.plugin.data.media.rendition != "undefined") {
+            return this.plugin.data.media.rendition;
+        } else {
+            return this.plugin.getRendition();
+        }
+    } catch (err) {
+        $YB.warn(err);
+        return '';
+    }
+};
+
+/**
+ * Tries to get the bitrate of the video with plugin.getBitrate().
+ * @return {number} Bitrate or -1.
+ */
+$YB.api.Info.prototype.getBitrate = function() {
+    try {
+        var res = Math.round(this.plugin.getBitrate());
+
+        // Chrome workarround
+        if (res == -1 &amp;&amp; this.plugin.tag &amp;&amp; typeof this.plugin.tag.webkitVideoDecodedByteCount != "undefined") {
+            var bitrate = this.plugin.tag.webkitVideoDecodedByteCount;
+            if (this.lastBitrate) {
+                bitrate = Math.round(((this.plugin.tag.webkitVideoDecodedByteCount - this.lastBitrate) / 5) * 8);
+            }
+            this.lastBitrate = this.plugin.tag.webkitVideoDecodedByteCount;
+            res = bitrate;
+        }
+
+        return $YB.utils.parseNumber(res, -1);
+    } catch (err) {
+        $YB.warn(err);
+        return -1;
+    }
+};
+
+/**
+ * Tries to get the throughput of the video with plugin.getThroughput().
+ * @return {number} Throughput or -1.
+ */
+$YB.api.Info.prototype.getThroughput = function() {
+    try {
+        return $YB.utils.parseNumber(Math.round(this.plugin.getThroughput()), -1);
+    } catch (err) {
+        $YB.warn(err);
+        return -1;
+    }
+};
+
+/**
+ * Tries to get the total bytes loaded from the video from plugin.getTotalBytes().
+ * @return {number} Total Bytes or null;
+ */
+$YB.api.Info.prototype.getTotalBytes = function() {
+    try {
+        return $YB.utils.parseNumber(this.plugin.getTotalBytes(), null);
+    } catch (err) {
+        $YB.warn(err);
+        return null;
+    }
+};
+
+/**
+ * Tries to get the playhead of the video.
+ * The order is {@link $YB.data.Options} > adnalyzer.getMediaPlayhead() > plugin.getPlayhead() > 0.
+ * @return {number} Playhead in seconds or 0
+ */
+$YB.api.Info.prototype.getPlayhead = function() {
+    try {
+        var res = this.plugin.getPlayhead();
+
+        if (this.plugin.adnalyzer &amp;&amp; this.plugin.adnalyzer.getMediaPlayhead() !== null) {
+            res = this.plugin.adnalyzer.getMediaPlayhead();
+        }
+
+        return $YB.utils.parseNumber(res, 0);
+    } catch (err) {
+        $YB.warn(err);
+        return 0;
+    }
+};
+
+
+/**
+ * Tries to get the playhead of the ad from adnalyzer.getAdPlayhead().
+ * @return {number} Playhead in seconds or 0
+ */
+$YB.api.Info.prototype.getAdPlayhead = function() {
+    try {
+        return $YB.utils.parseNumber(this.plugin.adnalyzer.getAdPlayhead(), 0);
+    } catch (err) {
+        $YB.warn(err);
+        return 0;
+    }
+};
+
+/**
+ * Tries to get the bitrate of the ad with adnalyzer.getAdBitrate().
+ * @return {number} Bitrate or -1.
+ */
+$YB.api.Info.prototype.getAdBitrate = function() {
+    try {
+        var res = Math.round(this.plugin.adnalyzer.getAdBitrate());
+
+        // Chrome workarround
+        if (res == -1 &amp;&amp; this.plugin.adnalyzer.tag &amp;&amp; typeof this.plugin.adnalyzer.tag.webkitVideoDecodedByteCount != "undefined") {
+            var bitrate = this.plugin.adnalyzer.tag.webkitVideoDecodedByteCount;
+            if (this.lastAdBitrate) {
+                bitrate = Math.round(((this.plugin.adnalyzer.tag.webkitVideoDecodedByteCount - this.lastAdBitrate) / 5) * 8);
+            }
+            this.lastAdBitrate = this.plugin.adnalyzer.tag.webkitVideoDecodedByteCount;
+            res = bitrate;
+        }
+
+        return $YB.utils.parseNumber(res, -1);
+    } catch (err) {
+        $YB.warn(err);
+        return -1;
+    }
+};
+
+/**
+ * Tries to get the resource of the ad.
+ * The order is {@link $YB.data.Options} > adnalyzer.getAdResource() > "".
+ * @return {string} Resource or empty string.
+ */
+$YB.api.Info.prototype.getAdResource = function() {
+    try {
+        if (typeof this.plugin.data.ads.resource != 'undefined') {
+            return this.plugin.data.ads.resource;
+        } else {
+            return this.plugin.adnalyzer.getAdResource();
+        }
+    } catch (err) {
+        $YB.warn(err);
+        return "";
+    }
+};
+
+/**
+ * Tries to get the position of the roll (pre, mid, post) of the ad from adnalyzer.getAdPosition().
+ * The order is {@link $YB.data.Options} > adnalyzer.getPosition() > "unknown".
+ * @return {string} Position (pre, mid, post) or 'unknown';
+ */
+$YB.api.Info.prototype.getAdPosition = function() {
+    try {
+        if (typeof this.plugin.data.ads.position != 'undefined') {
+            return this.plugin.data.ads.position;
+        } else {
+            return this.plugin.adnalyzer.getAdPosition();
+        }
+    } catch (err) {
+        $YB.warn(err);
+        return 'unknown';
+    }
+};
+
+/**
+ * Tries to get the title of the ad, from {@link $YB.data.Options} > adnalyzer.getAdTitle();
+ * The order is {@link $YB.data.Options} > adnalyzer.getTitle() > "".
+ * @return {string} Title of the ad or "";
+ */
+$YB.api.Info.prototype.getAdTitle = function() {
+    try {
+        if (typeof this.plugin.data.ads.title != 'undefined') {
+            return this.plugin.data.ads.title;
+        } else {
+            return this.plugin.adnalyzer.getAdTitle();
+        }
+    } catch (err) {
+        $YB.warn(err);
+        return '';
+    }
+};
+
+/**
+ * Tries to get the mediaduration of the ad from {@link $YB.data.Options} > adnalyzer.getAdDuration().
+ * @return {number} Duration in seconds (rounded) or 0;
+ */
+$YB.api.Info.prototype.getAdDuration = function() {
+    try {
+        res = 0;
+        if (typeof this.plugin.data.ads.duration != "undefined") {
+            res = this.plugin.data.ads.duration;
+        } else {
+            res = Math.round(this.plugin.adnalyzer.getAdDuration());
+        }
+
+        return $YB.utils.parseNumber(res, 0);
+    } catch (err) {
+        $YB.warn(err);
+        return 0;
+    }
+};
+
+/**
+ * Tries to get the ads player version from adnalyzer.getAdPlayerVersion().
+ * @return {string} AdPlayerVersion or "".
+ */
+$YB.api.Info.prototype.getAdPlayerVersion = function() {
+    try {
+        return this.plugin.adnalyzer.getAdPlayerVersion();
+    } catch (err) {
+        $YB.warn(err);
+        return null;
+    }
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    </div>
+
+    <nav>
+        <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="$YB.adnalyzers.Generic.html">$YB.adnalyzers.Generic</a></li><li><a href="$YB.api.Ads.html">$YB.api.Ads</a></li><li><a href="$YB.api.Info.html">$YB.api.Info</a></li><li><a href="$YB.api.Ping.html">$YB.api.Ping</a></li><li><a href="$YB.api.Video.html">$YB.api.Video</a></li><li><a href="$YB.comm.AjaxRequest.html">$YB.comm.AjaxRequest</a></li><li><a href="$YB.comm.Communication.html">$YB.comm.Communication</a></li><li><a href="$YB.data.Options.html">$YB.data.Options</a></li><li><a href="$YB.plugins.Generic.html">$YB.plugins.Generic</a></li><li><a href="$YB.services.ResourceParser.html">$YB.services.ResourceParser</a></li><li><a href="$YB.utils.Buffer.html">$YB.utils.Buffer</a></li><li><a href="$YB.utils.Chrono.html">$YB.utils.Chrono</a></li></ul><h3>Namespaces</h3><ul><li><a href="$YB.html">$YB</a></li><li><a href="$YB.adnalyzers.html">$YB.adnalyzers</a></li><li><a href="$YB.api.html">$YB.api</a></li><li><a href="$YB.comm.html">$YB.comm</a></li><li><a href="$YB.data.html">$YB.data</a></li><li><a href="$YB.plugins.html">$YB.plugins</a></li><li><a href="$YB.services.html">$YB.services</a></li><li><a href="$YB.utils.html">$YB.utils</a></li></ul>
+    </nav>
+
+    <div class="clear"></div>
+    <footer>
+        Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Fri Apr 22 2016 09:34:52 GMT+0200 (CEST)
+    </footer>
+
+    <script> prettyPrint(); </script>
+    <script src="scripts/linenumber.js"> </script>
+</body>
+</html>

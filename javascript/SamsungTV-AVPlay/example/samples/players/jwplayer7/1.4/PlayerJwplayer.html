@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JWPlayer V6 - Nice264Plugins</title>
+
+		<script type="text/javascript" src="jquery-1.9.0.min.js"></script>
+		<script type="text/javascript" src="http://smartplugin.youbora.com/1.1/js/libs/youbora-data.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="http://smartplugin.youbora.com/1.1/sp/spyoubora.js"></script>
+
+		<script type="text/javascript" src="jwplayer.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+
+	<body>
+		<div id="video_player"></div>
+		<script type="text/javascript">
+			jwplayer("video_player").setup({
+				autostart: "false",
+				repeat: "false",
+				// PLAYLIST videos from NicePeople
+				playlist: [{
+                                	file: "http://nws.nice264.com/ivod/NPAWPlug/SS_16_9_404p_750_MP30/e4d4571917f41a969464.mp4/playlist.m3u8",
+                                    title: "Large Movie Test (NPAWPlug)",
+                                  	 image: "http://nws.nice264.com/image/nicetv/8ec3374ea05ef76e3a84.jpg"
+                                },{
+                                    file: "rtmp://nws.nice264.com:1935/niceVodSecBalancer/31f13b240d6eaf5c2d4ef221810cceed/179b826007/81df075c8366169030ea_03a89c5f80a7c51e94aef839706a7d3a/mp4:81df075c8366169030ea_03a89c5f80a7c51e94aef839706a7d3a.mp4",
+                                    title: "Large Movie Test (NPAWPlug)",
+                                    image: "http://nws.nice264.com/image/nicetv/8ec3374ea05ef76e3a84.jpg"
+                                }],
+				plugins: {
+					"http://smartplugin.youbora.com/1.1/js/all-jwplayer/sp.js" :youboraData
+					//"http://plugins.nice264.com/jwplayer6/Nice264Plugins.js": youboraData
+					
+				}
+			})
+            youboraData.setAccountCode('victorfill');
+            youboraData.setUsrename('jwPlayerTest');
+            youboraData.setService('http://nqs.nice264.com');
+            youboraData.setContentId('testsContetId');
+            youboraData.setLive(false);
+
+            youboraData.setProperties({
+                filename: "File Name",
+                content_id: "Content Id", 
+                content_metadata: { 
+                    title: "Title", 
+                    genre: "Genre", 
+                    language: "Language", 
+                    year: "Year", 
+                    cast: "Cast", 
+                    director: "Director", 
+                    owner: "Owner", 
+                    duration: "Duration", 
+                    parental: "Parental", 
+                    price: "Price",
+                    rating: "Rating",
+                    audioType: "Audio type", 
+                    audioChannels: "Audio channels"
+                },
+                transaction_type: "Transaction Types", 
+                quality: "Quality", 
+                content_type: "Content Type", 
+                device: { 
+                    manufacturer: "Manufacturer", 
+                    type: "Type", 
+                    year: "Year", 
+                    firmware: "Firmware" 
+                }
+            }); 
+            youboraData.setExtraParam(1, 'extraparam1');
+            youboraData.setExtraParam(2, 'extraparam2');
+            youboraData.setExtraParam(3, 'extraparam3');
+            youboraData.setExtraParam(4, 'extraparam4');
+            youboraData.setExtraParam(5, 'extraparam5');
+            youboraData.setExtraParam(6, 'extraparam6');
+            youboraData.setExtraParam(7, 'extraparam7');
+            youboraData.setExtraParam(8, 'extraparam8');
+            youboraData.setExtraParam(9, 'extraparam9');
+            youboraData.setExtraParam(10, 'extraparam10');
+ 
+            youboraData.setCDNNodeData(true);
+            youboraData.setResumeProperties({
+                resumeEnabled:   true,
+                resumeService:   "http://pc.youbora.com/resume/", 
+                playTimeService: "http://pc.youbora.com/playTime/",    
+                resumeCallback:  function(secs) { console.log('Resume Callback: ' + secs); }              
+            }); 
+
+            youboraData.setConcurrencyProperties({
+                enabled: true,
+                concurrencyService: "http://pc.youbora.com/cping/", 
+                concurrencyCode: "testCode", 
+                concurrencyMaxCount: 1,
+                concurrencyRedirectUrl: function(secs) { console.log('Max Concurrecy! Exit Now !!!'); },
+                concurrencyIpMode: false 
+            });   
+            youboraData.setBalanceProperties({
+                balanceType:"balanced", 
+                enabled:    true,
+                service:    "http://smartswitch.youbora.com/",
+                zoneCode:   "default",
+                originCode: "pdl",
+                niceNVA:    "1400775385000",
+                niceNVB:    "1398183395000",
+                token:      "9c32f41a92a31b6a83dd82b612ff73a5", 
+                niceTokenIp: null
+            });   
+
+			jwplayer("video_player").setup({
+				autostart: "false",
+				repeat: "false",
+				// PLAYLIST videos from NicePeople
+				playlist: [{
+                	file: "http://nws.nice264.com/ivod/NPAWPlug/SS_16_9_404p_750_MP30/e4d4571917f41a969464.mp4/playlist.m3u8",
+                    title: "Large Movie Test (NPAWPlug)",
+                  	 image: "http://nws.nice264.com/image/nicetv/8ec3374ea05ef76e3a84.jpg"
+                },{
+                    file: "rtmp://nws.nice264.com:1935/niceVodSecBalancer/31f13b240d6eaf5c2d4ef221810cceed/179b826007/81df075c8366169030ea_03a89c5f80a7c51e94aef839706a7d3a/mp4:81df075c8366169030ea_03a89c5f80a7c51e94aef839706a7d3a.mp4",
+                    title: "Large Movie Test (NPAWPlug)",
+                    image: "http://nws.nice264.com/image/nicetv/8ec3374ea05ef76e3a84.jpg"
+                }],
+				plugins: {
+					"http://smartplugin.youbora.com/1.2/js/all-jwplayer/sp.js":youboraData
+					//"http://plugins.nice264.com/jwplayer6/Nice264Plugins.js": youboraData
+					
+				}
+			})
+		</script>
+	</body>
+</html>
+

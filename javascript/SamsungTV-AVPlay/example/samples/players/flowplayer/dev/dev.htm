@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="//releases.flowplayer.org/6.0.5/skin/minimalist.css">
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//releases.flowplayer.org/6.0.5/flowplayer.min.js"></script>
+    <!--youbora-->
+    <script src="/src/v5/libs/last-build/youboralib.js" youbora-debug="4"></script>
+    <script src="/src/v5/plugins/flowplayer/last-build/plugin.js"></script>
+</head>
+
+<body>
+    <div class="flowplayer" id="vid1" style="width: 640px;">
+        <video>
+            <source type="video/webm" src="//stream.flowplayer.org/drive.webm">
+            <source type="video/mp4" src="//stream.flowplayer.org/drive.mp4">
+        </video>
+    </div>
+    <script>
+    if (typeof $YB != "undefined") {
+        var options = {
+            accountCode: 'nicetv',
+            username: 'dev'
+        }
+
+        $('document').ready(function() {
+            window.youbora = new $YB.plugins.Flowplayer("vid1", options);
+        });
+    }
+    </script>
+    <script src="/src/v5/util/inspector/inspector.js"></script>
+</body>
+
+</html>

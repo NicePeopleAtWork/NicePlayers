@@ -1,0 +1,1 @@
+25-09-2015	-	YOUB-294	- Jordi Aguilar		- Finished first version. NOTE: The plugin does a nasty workarround in event setting that may interfere in future versions of the player. Also, thanks to that, the plugin won't work in Multiplayer.

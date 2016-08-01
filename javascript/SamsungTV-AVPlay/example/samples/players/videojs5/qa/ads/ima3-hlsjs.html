@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- VideoJS -->
+    <link href="http://vjs.zencdn.net/5.10.2/video-js.css" rel="stylesheet">
+    <script src="http://vjs.zencdn.net/5.10.2/video.js"></script>
+    <!---->
+    <!-- HLS -->
+    <script src="../../../hlsjs/lib/hls.min.js"></script>
+    <script src="../../lib/hlsjs-1.0.0/hlsjs.js"></script>
+    <!---->
+    <!-- IMA3 -->
+    <link href="../../lib/ads-3.2.0/videojs.ads.css" rel="stylesheet" type="text/css">
+    <link href="../../lib/ima-0.4.0/videojs.ima.css" rel="stylesheet" type="text/css">
+    <script src="http://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+    <script src="../../lib/ads-3.2.0/videojs.ads.js"></script>
+    <script src="../../lib/ima-0.4.0/videojs.ima.js"></script>
+    <style>
+    .vjs-ad-playing.vjs-ad-playing .vjs-control-bar {
+        display: none;
+    }
+    </style>
+    <!---->
+    <!-- YouboraLib -->
+    <script src="/src/v5/plugins/videojs5/last-build/sp.min.js"></script>
+    <!---->
+</head>
+
+<body>
+    <h1>VideoJS5 Video</h1>
+    <video id="video1" class="video-js vjs-default-skin" controls preload="none" width="640" height="264" poster="http://media.w3.org/2010/05/sintel/poster.png">
+        <source src="http://c.brightcove.com/services/mobile/streaming/index/master.m3u8?videoId=3747024716001&pubId=2564185535001" type='application/x-mpegURL'>
+        <p class="vjs-no-js">To view this video please enable JavaScript.</p>
+    </video>
+    <script>
+    var plugins = {
+        youbora: {
+            //Account code and enable YOUBORA Analytics
+            accountCode: "qamini",
+
+            // View parameters
+            username: "uservjs5",
+            transactionCode: "vjs5",
+
+            // Media Info
+            media: {
+                title: 'hls bcove ima',
+                isLive: false
+            },
+
+            // Media and device extra info
+            properties: {
+                filename: "test",
+                content_id: "test",
+                content_metadata: {
+                    genre: "test",
+                    language: "test",
+                    year: "test",
+                    cast: "test",
+                    director: "test",
+                    owner: "test",
+                    parental: "test",
+                    price: "test",
+                    rating: "test",
+                    audioType: "test",
+                    audioChannels: "test"
+                },
+                transaction_type: "test",
+                quality: "test",
+                content_type: "test",
+                device: {
+                    manufacturer: "test",
+                    type: "test",
+                    year: "test",
+                    firmware: "test"
+                }
+            },
+
+            // Optional features
+            httpSecure: true,
+
+            //Extraparams
+            extraParams: {
+                param1: 'param1',
+                param2: 'param2'
+            }
+        }
+    };
+
+    window.player = videojs('video1', {
+        plugins: plugins
+    });
+
+    // IMA3
+    player.ima({
+        id: 'video1',
+        adTagUrl: 'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&' +
+            'iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&' +
+            'impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&' +
+            'cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&' +
+            'vid=short_onecue&correlator='
+    }, player.ima.start);
+
+    player.one('click', function() {
+        player.ima.initializeAdDisplayContainer();
+        player.ima.requestAds();
+        player.play();
+    });
+    </script>
+    <script src="/src/v5/util/inspector/inspector.js"></script>
+</body>
+
+</html>

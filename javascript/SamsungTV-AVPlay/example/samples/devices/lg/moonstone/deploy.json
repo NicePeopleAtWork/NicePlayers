@@ -1,0 +1,6 @@
+{
+	"enyo": "./enyo",
+	"packagejs": "./package.js",
+	"assets": ["./appinfo.json", "./icon.png", "./largeIcon.png", "./app_bg_1920x1080.png", "./app_bg2_1920x1080.png", "./index.html", "./assets"],
+	"libs": ["./lib/moonstone", "./lib/layout", "./lib/spotlight"]
+}

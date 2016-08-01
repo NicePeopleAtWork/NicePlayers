@@ -1,0 +1,87 @@
+html {
+	background: #FFF;
+	font-family: helvetica;
+}
+
+body {
+	margin: 5px;	
+}
+
+img {
+	border: 0;
+}
+
+.container {
+	width: 800px;
+	clear: both;
+	background-repeat: repeat;
+}
+
+#play-video {
+	float: left;
+	width: 800px;	
+	clear: both;
+	margin: 0 0 5px 0;	
+}
+
+#browse-video {
+	float: left;
+	width: 790px;
+	clear: both;
+}
+
+#info {
+	float: left;
+	width: 498px;
+	height: 62px;
+	margin: 0 0 5px 0;
+}
+
+#info3 {
+	float: left;
+	width: 302px;
+	height: 252px;
+	margin: 0 0 5px 0;
+}
+
+#info2 {
+	float: left;
+	width: 302px;
+	height: 62px;
+}
+
+#player {
+	float: left;
+	width: 800px;
+	height: 483px;
+	margin: 0 6px 0 0;
+}
+
+#categorylist {
+	float: left;
+	width: 140px;
+	height: 230px;
+	position: relative;
+	margin: 0 5px 0 0;
+	z-index: 1;
+    overflow: visible !important;
+    overflow: hidden;
+}
+
+#navigation {  
+	width: 488px;
+	height: 20px; 
+	float: left;
+	z-index: 6;
+}
+
+#releaselist {
+	margin-right: auto;
+	float: left;
+	width: 488px;
+	height: 211px;
+	position: relative;
+	z-index: 2;
+}
+
+

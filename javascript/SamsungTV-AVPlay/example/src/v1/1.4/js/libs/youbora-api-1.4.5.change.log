@@ -1,0 +1,2 @@
+11/11/15	- Jordi Aguilar		- Created new version (1.4.5)
+								- Added timemark to /data requests, some iOS devices cached /data and returned the same view code for different players.

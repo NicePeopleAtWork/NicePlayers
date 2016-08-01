@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JWPlayer V6 HTTPS</title>
+    <!--Plugin JWplayer-->
+    <!-- <meta property="og:video:type" content="application/x-shockwave-flash" /> -->
+    <script type="text/javascript" src="http://46.31.56.216/LABwebtv/external/jwplayer.js"></script>
+    <script type="text/javascript">
+    jwplayer.key = "owjSR8c/7I9hpJE6q3pMfF7WCnpX7vnjjIu2t26n0i4=";
+    </script>
+    <!--Plugins Youbora-->
+    <script type='text/javascript' language='javascript' src='http://smartplugin.youbora.com/1.3/js/libs/youbora-data.js'></script>
+    <script type='text/javascript' language='javascript' src='http://smartplugin.youbora.com/1.3/js/libs/youbora-api.js'></script>
+    <!-- <script src="http://smartplugin.youbora.com/1.3/js/all-jwplayer/3.1.2/sp.js"></script> -->
+</head>
+
+<body>
+    <h1> HTTPS JWP6 test </h1>
+    <div id="myElement"></div>
+    <script type="text/javascript">
+    var live = 0;
+
+    youboraData.setEnableAnalytics(true);
+    youboraData.setAccountCode('nicetest');
+    youboraData.setUsername('user1');
+    youboraData.setHttpSecure(true);
+
+
+    var playerInstance = jwplayer("myElement");
+    playerInstance.setup({
+        playlist: [{
+            file: 'http://media.w3.org/2010/05/sintel/trailer.mp4',
+            live: true,
+            properties: {
+                filename: "http://media.w3.org/2010/05/sintel/trailer.mp4",
+                content_id: "Content Id",
+                content_metadata: {
+                    title: "Sintel"
+                },
+                transaction_type: "Transaction Types",
+                quality: "Quality",
+                content_type: "Content Type",
+                device: {
+                    manufacturer: "Manufacturer",
+                    tpe: "Type",
+                    year: "Year",
+                    firmware: "Firmware"
+                }
+            }
+        }],
+        width: 640,
+        height: 500,
+        listbar: {
+            position: 'bottom',
+            size: 160
+        },
+        plugins: {
+            "http://smartplugin.youbora.com/1.3/js/all-jwplayer/3.1.5/sp.js": youboraData
+        },
+        events: {
+            onPlaylistItem: function(e) {
+                this.plugins.sp.stop();
+                youboraData.setProperties(this.getPlaylistItem().properties);
+                youboraData.setLive(this.getPlaylistItem().live);
+            }
+        }
+    });
+    </script>
+</body>
+
+</html>

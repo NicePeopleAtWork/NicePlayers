@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "/home/nicepeople/NicePeopleAtWork/PAM-Free"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/home/nicepeople/NicePeopleAtWork/PAM-Free-Pre"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/home/nicepeople/NicePeopleAtWork/SmartNicePlugins/pluginsSample"
+		}
+	]
+}

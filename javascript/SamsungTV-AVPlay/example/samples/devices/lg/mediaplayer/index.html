@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/player.css" />
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/keycode.js"></script>
+    <script src="js/videoplayer.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="/src/v5/plugins/lg-mediaplayer/last-build/sp.min.js" youbora-debug="4"></script>
+    <script>
+    $YB.remoteLog = function(msg) {
+        document.getElementById('console').innerHTML += msg;
+    };
+
+    $YB.remoteLog.forced = true;
+    </script>
+    <title>Video Player</title>
+</head>
+
+<body>
+    <div class="playerLayout">
+        <div style="background: rgba(255,255,255,20); color: black;" id="console"></div>
+        <!--Example of media object in HTML-->
+        <div id="videoHolder">
+            <object type="application/x-netcast-av" width="1280" height="720" id="video"></object>
+        </div>
+        <div class="playerBottom">
+            <div class="playerButtonLayout">
+                <div class="progressBarLayout">
+                    <div class="progressBar">
+                        <div id="progressBg" class="progress progressBg"></div>
+                        <div id="progressBuffer" class="progress progressBuffer"></div>
+                        <div id="progressBarStatus" class="progress progressBarStatus"></div>
+                        <div id="progressBarClick" class="progress progressBarClick"></div>
+                        <div class="runningTime"> <span id="remainingTime"></span> <span id="totalTime"></span> </div>
+                    </div>
+                    <div class="runningMovieInfo">
+                        <div class="runningMovieName"> </div>
+                        <div class="runningMovieType"></div>
+                    </div>
+                </div>
+                <div id="buttonLayout">
+                    <ul>
+                        <li id="stop" class="stopButton"><img src="images/player_btn_icon/movie_btn_icon_stop_n.png" alt="stopBtn" class="center" /></li>
+                        <li id="play" class="playButton"><img src="images/player_btn_icon/movie_btn_icon_play_n.png" alt="playBtn" class="center" /></li>
+                        <li id="rewind" class="rewindButton"><img src="images/player_btn_icon/movie_btn_icon_rewind_n.png" alt="rewindBtn" class="center" /></li>
+                        <li id="forward" class="forwardButton"><img src="images/player_btn_icon/movie_btn_icon_forward_n.png" alt="forwardBtn" class="center" /></li>
+                        <li id="option" class="optionButton">
+                            <div class="imgTextCenter"> <img src="images/player_btn_icon/movie_btn_icon_option_n.png" alt="optionBtn" /> <b class="textCenter">Option</b> </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="ballCoverage">
+                <div id="progressBall" class="progressBallInitial"> </div>
+            </div>
+        </div>
+        <div class="keyHelp">
+            <div class="backKey"></div>
+            <div class="exitKey"></div>
+        </div>
+    </div>
+</body>
+
+</html>

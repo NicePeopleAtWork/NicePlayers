@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<head>
+</head>
+
+<body>
+    <!-- Brightcove Videojs -->
+    <video data-video-id="4712872493001" data-account="2564185535001" data-player="4kkhYYi3x" data-embed="default" class="video-js" id="video1" controls></video>
+    <script src="//players.brightcove.net/2564185535001/4kkhYYi3x_default/index.min.js"></script>
+    <!---->
+    <!-- YouboraLib -->
+    <script src="/src/v5/plugins/videojs4/last-build/sp.min.js"></script>
+    <!---->
+    <script>
+    var player = videojs('video1');
+    player.youbora({
+        accountCode: 'qamini',
+        username: 'qa',
+        transactionCode: 'transcode',
+
+        // params defined
+        network: {
+            ip: "1.1.1.1",
+            isp: "ISPa"
+        },
+
+        ads: {
+            expected: true,
+            campaign: 'Campagna'
+        },
+
+        // properties
+        properties: {
+            content_metadata: {
+                genre: "a",
+                year: "b",
+                cast: "c",
+                director: "d",
+                owner: "e",
+                parental: "f",
+                price: "g",
+                rating: "h",
+                audioType: "i",
+                audioChannels: "j",
+                language: "es"
+            },
+            transaction_type: "k",
+            quality: "l",
+            content_type: "m",
+            device: {
+                manufacturer: "n",
+                type: "o",
+                year: "p",
+                firmware: "q"
+            }
+        },
+
+        // extraparams
+        extraParams: {
+            param1: "param1",
+            param2: "param2"
+        }
+    });
+    </script>
+    <script src="/src/v5/util/inspector/inspector.js"></script>
+</body>

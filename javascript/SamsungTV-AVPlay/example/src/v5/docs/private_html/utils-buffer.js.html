@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: utils-buffer.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="main">
+
+        <h1 class="page-title">Source: utils-buffer.js</h1>
+
+        
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @license
+ * Youbora Buffer
+ * Copyright NicePopleAtWork &lt;http://nicepeopleatwork.com/>
+ */
+
+/**
+ * This class automatically calculates buffers, checking incoherence between playhead of the video and the time spent.
+ * If you want to calculate the buffers manually, do not use this class.
+ *
+ * @class
+ * @memberof $YB
+ * @param {Object} api The api from where it was called.
+ * @param {Object} [options] Object with custom options.
+ * @param {number} [options.interval=800] How many ms between checks.
+ * @param {number} [options.threshold=400] The ammount of ms accepted without calling a buffer (Minibuffer).
+ * @param {boolean} [options.skipMiniBuffer=true] Skip the minibuffers.
+ *
+ * @prop {$YB.utils.Chrono} chrono Chrono instance.
+ */
+$YB.utils.Buffer = function(api, options) {
+    try {
+        this.api = api;
+
+        if (api instanceof $YB.api.Video) {
+            this.isAd = false;
+        } else if (api instanceof $YB.api.Ads) {
+            this.isAd = true;
+        }
+
+        this.chrono = new $YB.utils.Chrono();
+
+        this.options = options || {};
+        this.options.interval = this.options.interval || 800;
+        this.options.threshold = this.options.threshold || 400;
+        this.options.skipMiniBuffer = this.options.skipMiniBuffer || true;
+
+        this.timer = null;
+        this.lastPlayhead = 0;
+
+        this.autostart = false;
+    } catch (err) {
+        $YB.error(err);
+    }
+};
+
+/**
+ * Starts the autobuffer
+ */
+$YB.utils.Buffer.prototype.start = function() {
+    try {
+        if (this.timer === null) {
+            var context = this;
+            this.lastPlayhead = 0;
+            this.chrono.start();
+            this.timer = setInterval(function() {
+                try {
+                    if (!context.isAd) {
+                        context._checkBuffer();
+                    } else {
+                        context._checkAdBuffer();
+                    }
+                } catch (err) {
+                    $YB.error(err);
+                }
+            }, this.options.interval);
+        }
+    } catch (err) {
+        $YB.error(err);
+    }
+};
+
+/**
+ * Stops the autobuffer
+ */
+$YB.utils.Buffer.prototype.stop = function() {
+    try {
+        clearInterval(this.timer);
+        this.timer = null;
+        return this.chrono.stop();
+    } catch (err) {
+        $YB.error(err);
+    }
+};
+
+/**
+ * Asynchronus call to check buffer status
+ * @private
+ */
+$YB.utils.Buffer.prototype._checkBuffer = function() {
+    try {
+        if (this.api.plugin.isJoinSent &amp;&amp; !this.api.plugin.isPaused &amp;&amp; !this.api.plugin.isSeeking &amp;&amp; !this.api.plugin.isShowingAds) {
+            var api = this.api;
+
+            this._checkPlayhead(this.api.plugin.infoApi.getPlayhead(), this.api.plugin.isBuffering, function() {
+                api.sendBufferStart()
+            }, function() {
+                api.sendBufferEnd();
+            });
+        }
+    } catch (err) {
+        $YB.error(err);
+    }
+};
+
+/**
+ * Asynchronus call to check Ad buffer status
+ * @private
+ */
+$YB.utils.Buffer.prototype._checkAdBuffer = function() {
+    try {
+        if (this.api.adnalyzer.isAdJoinSent &amp;&amp; !this.api.adnalyzer.isAdPaused) {
+            var api = this.api;
+
+            this._checkPlayhead(this.api.adnalyzer.plugin.infoApi.getAdPlayhead(), this.api.adnalyzer.isAdBuffering, function() {
+                api.sendAdBufferStart()
+            }, function() {
+                api.sendAdBufferEnd();
+            });
+        }
+    } catch (err) {
+        $YB.error(err);
+    }
+};
+
+/**
+ * Asynchronus call to check Ad buffer status
+ * @private
+ * @param {number} currentPlayhead Current playhead
+ * @param {function} cbStart Callback if buffer must start.
+ * @param {function} cbEnd Callback if buffer must end.
+ */
+$YB.utils.Buffer.prototype._checkPlayhead = function(currentPlayhead, isBuffering, cbStart, cbEnd) {
+    try {
+        var diffPlayhead = Math.abs((this.lastPlayhead * 1000) - (currentPlayhead * 1000));
+        if (diffPlayhead > this.options.threshold) { // Video is playing
+            this.lastPlayhead = currentPlayhead;
+            if (isBuffering &amp;&amp; (!this.options.skipMiniBuffer || this.chrono.stop() > (this.options.interval * 1.1))) {
+                cbEnd();
+            }
+
+        } else if (this.lastPlayhead &amp;&amp; !isBuffering &amp;&amp; diffPlayhead &lt; this.options.threshold) { // Video is buffering
+            cbStart();
+        }
+    } catch (err) {
+        $YB.error(err);
+    }
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    </div>
+
+    <nav>
+        <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="$YB.adnalyzers.Generic.html">$YB.adnalyzers.Generic</a></li><li><a href="$YB.api.Ads.html">$YB.api.Ads</a></li><li><a href="$YB.api.Info.html">$YB.api.Info</a></li><li><a href="$YB.api.Ping.html">$YB.api.Ping</a></li><li><a href="$YB.api.Video.html">$YB.api.Video</a></li><li><a href="$YB.comm.AjaxRequest.html">$YB.comm.AjaxRequest</a></li><li><a href="$YB.comm.Communication.html">$YB.comm.Communication</a></li><li><a href="$YB.data.Options.html">$YB.data.Options</a></li><li><a href="$YB.plugins.Generic.html">$YB.plugins.Generic</a></li><li><a href="$YB.services.ResourceParser.html">$YB.services.ResourceParser</a></li><li><a href="$YB.utils.Buffer.html">$YB.utils.Buffer</a></li><li><a href="$YB.utils.Chrono.html">$YB.utils.Chrono</a></li></ul><h3>Namespaces</h3><ul><li><a href="$YB.html">$YB</a></li><li><a href="$YB.adnalyzers.html">$YB.adnalyzers</a></li><li><a href="$YB.api.html">$YB.api</a></li><li><a href="$YB.comm.html">$YB.comm</a></li><li><a href="$YB.data.html">$YB.data</a></li><li><a href="$YB.plugins.html">$YB.plugins</a></li><li><a href="$YB.services.html">$YB.services</a></li><li><a href="$YB.utils.html">$YB.utils</a></li></ul>
+    </nav>
+
+    <div class="clear"></div>
+    <footer>
+        Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Fri Apr 22 2016 09:34:52 GMT+0200 (CEST)
+    </footer>
+
+    <script> prettyPrint(); </script>
+    <script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="lib/hls.min.js"></script>
+    <script src="/src/v5/plugins/hlsjs/5.3.0/sp.min.js"></script>
+</head>
+
+<body>
+    <video id="video" controls style="width: 720px;"></video>
+    <script>
+    if (Hls.isSupported()) {
+        var player = new Hls();
+
+        var youbora = new $YB.plugins.Hlsjs(player, {
+            accountCode: 'qamini'
+        });
+
+        player.attachMedia(document.getElementById('video'));
+        player.on(Hls.Events.MEDIA_ATTACHED, function() {
+            player.loadSource("http://www.streambox.fr/playlists/x36xhzz/x36xhzz.m3u8");
+        });
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+[{
+    "name": "Buffer",
+    "since": "5.2.0",
+    "status": "SUPPORTED",
+    "comments": "Native with MediaPlayerLibrary, otherwise Nicebuffer"
+}, {
+    "name": "Bitrate",
+    "since": "5.2.0",
+    "status": "LIMITATION",
+    "comments": "Only MP4/MP2T videos using MediaPlayerLibrary"
+}, {
+    "name": "Pause",
+    "since": "5.2.0",
+    "status": "LIMITATION",
+    "comments": "If you pause long enought, when you hit resume the player starts buffering/seeking."
+}]

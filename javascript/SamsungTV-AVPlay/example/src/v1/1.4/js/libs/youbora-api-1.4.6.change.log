@@ -1,0 +1,2 @@
+26/11/15	- Jordi Aguilar		- Created new version (1.4.6)
+								- Added callback to HLSParser when it can't open a file. This will assure continuity.

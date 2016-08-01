@@ -1,0 +1,7 @@
+20-07-2015 - Biel	- YOUB-457	- KnownBug: /errorCode send large error message into totalBytes.
+20-07-2015 - Biel	- YOUB-457	- KnownBug: On iOS (iPad), /joinTime send it with 0s after 3 pings. 
+07-07-2015 - Biel	- YOUB-416	- The method sendErrorWithParameters was sending parameters of sendAdvancedError()
+					- YOUB-416	- sendStart was sending when (currentTime > 0). At the time /start, currentTime will never be >0
+02-07-2015 - Biel	- 			- 508: SmartPlugin.setBufferEvent(...) appears broken in two lines!!!!
+02-07-2015 - Biel	- 			- Change sendAdvancedError() to sendErrorWithParameters()
+01-07-2015 - Biel 	- YOUB-243 	- In method SmartPlugin.reset(), comment SmartPlugin.apiClass = new YouboraCommunication

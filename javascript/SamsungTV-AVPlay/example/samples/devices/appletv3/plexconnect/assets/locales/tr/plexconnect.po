@@ -1,0 +1,698 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plex Connect\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-30 18:25:13+0000\n"
+"PO-Revision-Date: 2015-06-01 12:00+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+""
+
+msgid "ATV firmware version 5.1 or higher required. Please think about updating."
+msgstr "ATV 5.1 veya üstü sürüm gereklidir. Lütfen Güncelleyin."
+
+
+msgid "Actor View"
+msgstr "Oyuncu"
+
+
+msgid "Actors"
+msgstr "Oyuncular"
+
+
+msgid "Albums"
+msgstr ""
+
+
+msgid "All Movies"
+msgstr "Filmler"
+
+
+msgid "All Photos"
+msgstr "Resimler"
+
+
+msgid "All Shows"
+msgstr "Diziler"
+
+
+msgid "All Videos"
+msgstr "Tüm Videolar"
+
+
+msgid "Aperture"
+msgstr "Açıklık"
+
+
+msgid "Appearance"
+msgstr "Görünüm"
+
+
+msgid "Artists"
+msgstr ""
+
+
+msgid "Audio"
+msgstr "Ses"
+
+
+msgid "Audio Boost %"
+msgstr "Ses Kuvvetlendirme %"
+
+
+msgid "Audio Playlist"
+msgstr ""
+
+
+msgid "Audio Track"
+msgstr "Ses İzi"
+
+
+msgid "Audio/Subs"
+msgstr "Ses/Altyazılar"
+
+
+msgid "Authors"
+msgstr "Yazarlar"
+
+
+msgid "By Collection"
+msgstr "Derlemeye Göre"
+
+
+msgid "By Content Rating"
+msgstr "İçerik Değerlendirmesine Göre"
+
+
+msgid "By Country"
+msgstr "Ülkeye Göre"
+
+
+msgid "By First Letter"
+msgstr "İlk Harfine Göre"
+
+
+msgid "By Folder"
+msgstr "Klasöre Göre"
+
+
+msgid "By Rating"
+msgstr "Reytinge göre"
+
+
+msgid "By Resolution"
+msgstr "Çözünürlüğe Göre"
+
+
+msgid "By Year"
+msgstr "Yıla Göre"
+
+
+msgid "Camera Make"
+msgstr "Kamera Yapımı"
+
+
+msgid "Camera Model"
+msgstr "Kamera Modeli"
+
+
+msgid "Change All Posters"
+msgstr ""
+
+
+msgid "Change Fanart"
+msgstr ""
+
+
+msgid "Change Poster"
+msgstr ""
+
+
+msgid "Channel Search"
+msgstr "Kanal Arama"
+
+
+msgid "Channels"
+msgstr "Kanallar"
+
+
+msgid "Clock Position"
+msgstr "Zaman Pozisyonu"
+
+
+msgid "Collections"
+msgstr "Derlemeler"
+
+
+msgid "Decade"
+msgstr ""
+
+
+msgid "Decades"
+msgstr "Onyıllar"
+
+
+msgid "Details"
+msgstr "Ayrıntılar"
+
+
+msgid "Director"
+msgstr "Yönetmen"
+
+
+msgid "Directors"
+msgstr "Yönetmenler"
+
+
+msgid "Discover"
+msgstr "Keşfet"
+
+
+msgid "Duration Format"
+msgstr "Süre Biçimi"
+
+
+msgid "Enter the MyPlex password for {0}."
+msgstr "{0} İçin MyPLex Şifresini Girin."
+
+
+msgid "Enter the PlexHome user pin for {0}."
+msgstr ""
+
+
+msgid "Episodes"
+msgstr "Bölümler"
+
+
+msgid "Extras"
+msgstr ""
+
+
+msgid "Failed"
+msgstr "Başarısız"
+
+
+msgid "Fanart"
+msgstr ""
+
+
+msgid "Fanart Lower Blur"
+msgstr ""
+
+
+msgid "Flatten Season"
+msgstr "Sezonları Düzleştir"
+
+
+msgid "Forum"
+msgstr "Forum"
+
+
+msgid "General Appearance"
+msgstr ""
+
+
+msgid "Genre"
+msgstr "Tür"
+
+
+msgid "Genres"
+msgstr "Türler"
+
+
+msgid "Home Video Navigation Bar"
+msgstr ""
+
+
+msgid "Home Video Options"
+msgstr "Ev Video Seçenekleri"
+
+
+msgid "Home Video View"
+msgstr "Ev Video Görünümü"
+
+
+msgid "Home Videos"
+msgstr ""
+
+
+msgid "Homepage"
+msgstr "Ana Sayfa"
+
+
+msgid "ISO"
+msgstr "Eş"
+
+
+msgid "Length"
+msgstr "Süre"
+
+
+msgid "Lens"
+msgstr "Mercek"
+
+
+msgid "Library"
+msgstr "Kütüphanem"
+
+
+msgid "Main Navigation Bar"
+msgstr ""
+
+
+msgid "Mark as Unwatched"
+msgstr "İzlememiş Olarak İşaretle"
+
+
+msgid "Mark as Watched"
+msgstr "İzlenmiş Olarak İşaretle"
+
+
+msgid "Miscellaneous"
+msgstr ""
+
+
+msgid "More"
+msgstr "Daha"
+
+
+msgid "More..."
+msgstr "Daha..."
+
+
+msgid "Movie Navigation Bar"
+msgstr "Film Gezinti Çubuğu"
+
+
+msgid "Movie Options"
+msgstr "Film Ayarları"
+
+
+msgid "Movie View"
+msgstr "Film"
+
+
+msgid "Movies"
+msgstr "Film"
+
+
+msgid "Music"
+msgstr ""
+
+
+msgid "Music Navigation Bar"
+msgstr ""
+
+
+msgid "Music Options"
+msgstr ""
+
+
+msgid "Music View"
+msgstr ""
+
+
+msgid "MyPlex Password"
+msgstr "MyPlex Şifre"
+
+
+msgid "MyPlex Sign In"
+msgstr "MyPlex Giriş"
+
+
+msgid "MyPlex Sign Out"
+msgstr "MyPlex Çıkış"
+
+
+msgid "MyPlex Username"
+msgstr "MyPlex Kullanıcı Adı"
+
+
+msgid "No Plex Channels Available"
+msgstr "Kanal Yok."
+
+
+msgid "No Plex Library Sections Available"
+msgstr "Kütüphane Yok"
+
+
+msgid "No Plex Playlists Available"
+msgstr ""
+
+
+msgid "No Seasons"
+msgstr "Bölüm Yok"
+
+
+msgid "No Unwatched Shows"
+msgstr "İzlenmemiş Dizi Yok"
+
+
+msgid "No Unwatched Shows."
+msgstr "İzlenmemiş Dizi Yok."
+
+
+msgid "No episodes"
+msgstr "Bölüm Yok"
+
+
+msgid "None"
+msgstr "Hiçbiri"
+
+
+msgid "Now Playing"
+msgstr ""
+
+
+msgid "Off"
+msgstr ""
+
+
+msgid "On Deck"
+msgstr "Hazırda"
+
+
+msgid "Overscan Adjust"
+msgstr "Tarama Ayarı"
+
+
+msgid "PIL/Pillow not installed"
+msgstr ""
+
+
+msgid "Photo"
+msgstr "Resim"
+
+
+msgid "Photo Transcoder Action"
+msgstr "Fotoğraf Dijital Biçim Aksiyonu"
+
+
+msgid "Play"
+msgstr "Oynat"
+
+
+msgid "Playlists"
+msgstr ""
+
+
+msgid "Plex Channels"
+msgstr "Plex Kanalları"
+
+
+msgid "Plex Home Users"
+msgstr ""
+
+
+msgid "Plex Library"
+msgstr "Plex Kütüphanesi"
+
+
+msgid "Plex Media Server"
+msgstr "Plex Media Sunucusu"
+
+
+msgid "Plex Media Server: No Items Available"
+msgstr "Plex Media Sunucusu: Boş"
+
+
+msgid "Plex Media Server: No Tracks Available"
+msgstr ""
+
+
+msgid "Plex Playlists"
+msgstr ""
+
+
+msgid "PlexConnect"
+msgstr "PlexConnect"
+
+
+msgid "PlexHome User PIN"
+msgstr ""
+
+
+msgid "Poster Titles"
+msgstr "Afiş Başlıkları"
+
+
+msgid "PrePlay Bottom Shelf"
+msgstr ""
+
+
+msgid "Producers"
+msgstr "Yapımcı"
+
+
+msgid "Recently Added"
+msgstr "Yakında Eklendi"
+
+
+msgid "Recently Aired"
+msgstr "Yakında Yayınlandı"
+
+
+msgid "Recently Released"
+msgstr "Yeni Çıkan"
+
+
+msgid "Recently Viewed"
+msgstr "Yakında Görüntülenen"
+
+
+msgid "Recently Viewed Episodes"
+msgstr "Son Görüntülenen Bölümler"
+
+
+msgid "Recently Viewed Shows"
+msgstr "Yakında Görüntülenen Diziler"
+
+
+msgid "Refresh"
+msgstr "Yenile"
+
+
+msgid "Related Movies"
+msgstr ""
+
+
+msgid "Remote Bitrate"
+msgstr "Uzaktaki Kalite"
+
+
+msgid "Search"
+msgstr "Arama"
+
+
+msgid "Season View"
+msgstr "Sezon"
+
+
+msgid "Select Fanart"
+msgstr ""
+
+
+msgid "Select Poster"
+msgstr ""
+
+
+msgid "Select Posters"
+msgstr ""
+
+
+msgid "Select Tracks"
+msgstr "İz Seçin"
+
+
+msgid "Settings"
+msgstr "Ayarlar"
+
+
+msgid "Shared Libraries"
+msgstr "Paylaşılan Kütüphaneler"
+
+
+msgid "Show Clock"
+msgstr "Saati Göster"
+
+
+msgid "Show End Time"
+msgstr "Bitiş Zamanını Göster"
+
+
+msgid "Show Photos"
+msgstr "Resimleri Göster"
+
+
+msgid "Show Unwatched Count"
+msgstr "İzlenmemiş Sayısını Göster"
+
+
+msgid "Shows"
+msgstr "Diziler"
+
+
+msgid "Shuffle"
+msgstr ""
+
+
+msgid "Shutter Speed"
+msgstr "Perde Hızı"
+
+
+msgid "Sign Out"
+msgstr ""
+
+
+msgid "SlideShow"
+msgstr "SlaytGösterisi"
+
+
+msgid "Studio"
+msgstr "Stüdyo"
+
+
+msgid "Subs"
+msgstr "Altyazılar"
+
+
+msgid "Subtitle Renderer"
+msgstr "Altyazı çeviricisi"
+
+
+msgid "Subtitle Size %"
+msgstr "Altyazı Boyutu %"
+
+
+msgid "Subtitle Track"
+msgstr "Altyazı"
+
+
+msgid "Switch Home User"
+msgstr ""
+
+
+msgid "Synopsis hidden."
+msgstr "Saklı Özet."
+
+
+msgid "TV Show Navigation Bar"
+msgstr "Dizi Gezinti Çubuğu"
+
+
+msgid "TV Show Options"
+msgstr "Dizi Ayarları"
+
+
+msgid "TV Show View"
+msgstr "Dizi"
+
+
+msgid "TV Shows"
+msgstr ""
+
+
+msgid "TheMovieDB: No Trailer Info available"
+msgstr "TheMovieDB: Tanıtım Filmi Mevcut Değil"
+
+
+msgid "Time Format"
+msgstr "Zaman Biçimi"
+
+
+msgid "To sign in to MyPlex, enter your Email address, username or Plex forum username."
+msgstr "MyPLex'e giriş yapabilmeniz için, önce E-posta adresinizi, kullanıcı adınızı veya  Plex Forum adınızı girin."
+
+
+msgid "Trailer"
+msgstr "Tanıtım Filmi"
+
+
+msgid "Transcoder"
+msgstr "Dijital Biçim Dönüştürücü"
+
+
+msgid "Transcoder Action"
+msgstr "Dijital Biçim Hareketi"
+
+
+msgid "Transcoder Quality"
+msgstr "Dijital Biçim Kalitesi"
+
+
+msgid "Unwatched"
+msgstr "İzlenmemiş"
+
+
+msgid "Unwatched Synopsis"
+msgstr "İzlenmemiş Özet"
+
+
+msgid "Version"
+msgstr "Sürüm"
+
+
+msgid "Video"
+msgstr "Görüntü"
+
+
+msgid "Video Player OSD"
+msgstr "Görüntü Oynatıcı OSD"
+
+
+msgid "Video Playlist"
+msgstr ""
+
+
+msgid "Video Playlist: No Items Available"
+msgstr ""
+
+
+msgid "View Show"
+msgstr "Dizi"
+
+
+msgid "Wiki/Docs"
+msgstr "Wiki/Belge"
+
+
+msgid "Writers"
+msgstr "Yazar"
+
+
+msgid "Year"
+msgstr "Yıl"
+
+
+msgid "refreshing"
+msgstr "yenileniyor"
+
+
+msgid "remote"
+msgstr "uzaktan"
+
+
+msgid "{0:0d}x{1:02d} {2}"
+msgstr "{0:0d}x{1:02d} {2}"
+
+
+msgid "{0:d} Minutes"
+msgstr "{0:d}  Dakika"
+
+
+msgid "{0:d}:{1:0>2d}"
+msgstr ""
+
+
+msgid "{0:d}hr {1:d}min"
+msgstr "{0:d}saat {1:d}dakika"
+
+
+msgid "{0} unwatched"
+msgstr "{0} İzlenmemiş"
+
+

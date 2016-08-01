@@ -1,0 +1,14 @@
+20-10-15	Jordi Aguilar		BC workarrounds deleted.
+								Plugin ready for CastLabs
+								Bitrate retrieved
+								Resource shows manifest instead of blob
+								
+26-10-15	Jordi Aguilar		Fixed bug with Resource
+								Changed /start from 'play' event to 'loadstart' event
+								Changed the use of currentTime (errors with live) to absoluteTime (it will solve problems with buffers, pings, etc...)
+								Fixed bug with double /stop/start at video change
+								Using last version of NiceBuffer code
+								
+27-10-15	Jordi Aguilar		Fixed joinTime bugs with safari and firefox
+								Added try-catches
+								

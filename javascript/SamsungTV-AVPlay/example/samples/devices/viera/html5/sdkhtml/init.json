@@ -1,0 +1,15 @@
+{
+  "rendering_size"    :{
+          "width"     : 1280,
+          "height"    : 720,
+  },
+  "keyboard"          :{
+          "use"       :true,
+          "color"     :"BLACK"
+  },
+  "mode"              : "free",
+  "user_agent"        : "",
+  "console_log"       :true,
+  "allowed_domain"    :[
+                       ],
+}

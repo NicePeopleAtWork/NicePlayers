@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JWPlayer 7 - MULTIPLAYER</title>
+    <meta content="authenticity_token" name="csrf-param" />
+    <script src="jwplayer-7.2.4/jwplayer.js"></script>
+    <script type="text/javascript">
+    jwplayer.key = "T6MatRxWammykFGZao3kalmbgK8YhSDR1U6MEg==";
+    </script>
+    <!-- Youbora -->
+    <script type="text/javascript" src="/src/v1/1.4/js/libs/multiplayer/youbora-data.min.js?debug=true"></script>
+    <script type="text/javascript" src="/src/v1/1.4/js/libs/youbora-api-1.4.5.js"></script>
+</head>
+
+<body>
+    <div id="video_container1"></div>
+    <div id="video_container2"></div>
+    <script type="text/javascript">
+    var plugin = {};
+
+    if (typeof YouboraData != "undefined" && typeof YouboraCommunication != "undefined") {
+        plugin = {
+            "http://smartplugin.youbora.com/1.4/js/jwplayer/3.2.1/sp.min.js": {}
+        };
+
+
+        var yd = youboraDataMap.get("video_container1");
+        //yd.setDebug(true);
+        yd.setEnableAnalytics(true);
+        yd.setEnableBalancer(false);
+        yd.setTransaction("Trans A");
+        yd.setCDN("CACHENET");
+        yd.setISP("ISP A");
+        yd.setIP("1.1.1.1");
+        yd.setExtraParam(1, "a-param 1");
+        yd.setParseHLS(true);
+        yd.setContentId("new");
+        yd.setResumeEnabled(false);
+        yd.setConcurrencyCode("newCode");
+        yd.setConcurrencyMaxCount(1);
+        yd.setConcurrencyRedirectUrl("http://www.google.es");
+        yd.concurrencyProperties.enabled = false;
+        yd.setAccountCode("QA");
+        yd.setUsername('demosite jwplayer a');
+        yd.setService('http://nqs.nice264.com');
+        yd.setLive(true);
+        yd.setProperties({
+            filename: "http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch1/appleman.m3u8",
+            content_id: "fc642fcbbf910bb50ffb",
+            content_metadata: {
+                title: "A",
+                genre: "Animation",
+                language: "English",
+                year: "2011",
+                cast: "",
+                director: "",
+                owner: "nicepeopleatwork",
+                duration: "0",
+                parental: "",
+                price: "0.0",
+                rating: "",
+                audioType: "",
+                audioChannels: ""
+            },
+            transaction_type: "rental",
+            quality: "SD",
+            content_type: "movie",
+            device: {
+                manufacturer: "JWPlayer7",
+                type: "Browser",
+                year: "2014",
+                firmware: ""
+            }
+        });
+        yd.setHttpSecure(false);
+
+        // Segundo player
+
+
+        var yd = youboraDataMap.get("video_container2");
+        //yd.setDebug(true);
+        yd.setEnableAnalytics(true);
+        yd.setEnableBalancer(false);
+        yd.setTransaction("Trans B");
+        yd.setCDN("AKAMAI");
+        yd.setISP("ISP B");
+        yd.setIP("2.2.2.2");
+        yd.setExtraParam(1, "b-param 1");
+        yd.setContentId("new");
+        yd.setResumeEnabled(false);
+        yd.setConcurrencyCode("newCode");
+        yd.setConcurrencyMaxCount(1);
+        yd.setConcurrencyRedirectUrl("http://www.google.es");
+        yd.concurrencyProperties.enabled = false;
+        yd.setAccountCode("QA");
+        yd.setUsername('demosite jwplayer b');
+        yd.setService('http://nqs.nice264.com');
+        yd.setLive(false);
+        yd.setProperties({
+            filename: "http://media.w3.org/2010/05/sintel/trailer.mp4",
+            content_id: "fc642fcbbf910bb50ffb",
+            content_metadata: {
+                title: "B",
+                genre: "Animation",
+                language: "English",
+                year: "2011",
+                cast: "",
+                director: "",
+                owner: "nicepeopleatwork",
+                duration: "120",
+                parental: "",
+                price: "0.0",
+                rating: "",
+                audioType: "",
+                audioChannels: ""
+            },
+            transaction_type: "rental",
+            quality: "SD",
+            content_type: "movie",
+            device: {
+                manufacturer: "JWPlayer7",
+                type: "Browser",
+                year: "2014",
+                firmware: ""
+            }
+        });
+        yd.setHttpSecure(false);
+    }
+
+
+    jwplayer("video_container1").setup({
+        file: "http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch1/appleman.m3u8",
+        image: "http://support-static.jwplayer.com/images/jellies.jpg",
+        autostart: true,
+        plugins: plugin
+    });
+
+    jwplayer("video_container2").setup({
+        playlist: [{
+            file: "http://media.w3.org/2010/05/sintel/trailer.mp4",
+            image: "http://support-static.jwplayer.com/images/jellies.jpg"
+        }, {
+            file: "http://cdn.s1.eu.nice264.com/converted_work6/0082c06e504b0a422bf1_6815f2deeb179c29748af42f8cd5ce95.mp4",
+            image: "http://support-static.jwplayer.com/images/jellies.jpg"
+        }],
+
+        plugins: plugin
+    });
+    </script>
+</body>
+
+</html>

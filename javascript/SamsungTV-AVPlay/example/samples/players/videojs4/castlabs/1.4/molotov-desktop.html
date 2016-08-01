@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>castLabs DASH Everywhere Player Integration example</title>
+
+	<link href="http://vjs.zencdn.net/4.12.15/video-js.css" rel="stylesheet">
+	<script src="http://vjs.zencdn.net/4.12.15/video.js"></script>
+	<script src="cldasheverywhere.min.js"></script>
+
+	<script src="http://smartplugin.youbora.com/1.4/js/libs/youbora-data-1.4.1.js"></script>
+	<script src="http://smartplugin.youbora.com/1.4/js/libs/youbora-api-1.4.3.min.js"></script>
+	<script src="http://smartplugin.youbora.com/1.4/js/videojs/3.4.4-vjs-cl/sp.min.js"></script>
+
+	<style>
+		.vjs-default-skin .vjs-audiotracks-button:before {
+			content: "\e600";
+			/* cog icon */
+		}
+		
+		.vjs-default-skin .vjs-texttracks-button:before {
+			content: "\e00c";
+			/* subtitles icon */
+		}
+	</style>
+
+</head>
+
+<body>
+	<video id="vid" class="video-js vjs-default-skin vjs-big-play-centered" preload="auto" width="720px" height="405px">
+	</video>
+
+	<script>
+		var config, options, player;
+
+		config = {
+			"flashFile": "dashas/dashas.swf",
+			"customData": {
+				"userId": "sandbox",
+				"sessionId": "default",
+				"merchant": "molotov"
+			},
+			"assetId": "tv5monde",
+			"variantId": "",
+			"sendCustomData": true,
+			"authenticationToken": null,
+			"widevineLicenseServerURL": "https://lic.drmtoday.com/license-proxy-widevine/cenc/",
+			"accessLicenseServerURL": "https://lic.drmtoday.com/flashaccess/LicenseTrigger/v1",
+			"techs": ['dashjs', 'dashas'],
+			"debug": false
+		};
+
+		options = {
+			accountCode: 'molotovdev',
+			username: 'your@username',
+			isLive: true, // or false
+			debug: false,
+			transaction: 'transactionCode',
+			httpSecure: false,
+			cdn: 'MOLOTOV', // just an example
+			extraparam1: 'Extraparam1',
+			extraparam2: 'Extraparam2',
+			contentId: 'contentId',
+			properties: {
+				filename: "filename",
+				content_id: "Content Id",
+				content_metadata: {
+					title: "France2",
+					genre: "Genre",
+					language: "Language",
+					year: "Year",
+					cast: "Cast",
+					director: "Director",
+					owner: "Owner",
+					duration: "Duration", // It has been agreed that you will set up this value 
+					parental: "Parental",
+					price: "Price",
+					rating: "Rating",
+					audioType: "Audio type",
+					audioChannels: "Audio channels"
+				},
+				transaction_type: "Transaction Types",
+				quality: "Quality",
+				content_type: "Content Type",
+				device: {
+					manufacturer: "Manufacturer",
+					type: "Type",
+					year: "Year",
+					firmware: "Firmware"
+				}
+			}
+		};
+
+		player = videojs('vid', {
+			plugins: {
+				audiotracks: {
+					title: 'Languages'
+				},
+				texttracks: {
+					title: 'Subtitles'
+				}
+			},
+
+			autoplay: true,
+			controls: true,
+			dasheverywhere: config,
+			techOrder: ['dasheverywhere', 'youbora']
+		});
+
+		if (typeof player.youbora != "undefined") {  //this line is just to make sure the order of js loading does not affect
+			player.youbora(options);
+		}
+
+		player.loadVideo("http://live.mlflux.net/public/tv5monde/tv5monde.isml/tv5monde.mpd", {});
+
+		setTimeout("test()", 120000);
+
+		function test() {
+			options2 = {
+				accountCode: 'molotovdev',
+				username: 'your@username',
+				isLive: true, //
+				debug: false,
+				transaction: 'transactionCode',
+				httpSecure: false,
+				cdn: 'LIMELIGH',
+				extraparam1: 'Extraparam1',
+				extraparam2: 'Extraparam2',
+				contentId: 'contentId',
+				properties: {
+					filename: "filename",
+					content_id: "Content Id",
+					content_metadata: {
+						title: "tv5monde",
+						genre: "Genre",
+						language: "Language",
+						year: "Year",
+						cast: "Cast",
+						director: "Director",
+						owner: "Owner",
+						duration: "Duration",
+						parental: "Parental",
+						price: "Price",
+						rating: "Rating",
+						audioType: "Audio type",
+						audioChannels: "Audio channels"
+					},
+					transaction_type: "Transaction Types",
+					quality: "Quality",
+					content_type: "Content Type",
+					device: {
+						manufacturer: "Manufacturer",
+						type: "Type",
+						year: "Year",
+						firmware: "Firmware"
+					}
+				}
+			};
+			player.youbora.reset();  //this line is necessary (again)
+			player.youbora.setProperties(options2);
+			player.loadVideo("http://live.mlflux.net/public/france2/france2.isml/france2.mpd", {});
+		}
+	</script>
+	<div class="clear: both; width: 100%">
+		<div id="console" class="float:left"></div>
+		<div id="console2" class="float:right"></div>
+	</div>
+</body>
+
+</html>

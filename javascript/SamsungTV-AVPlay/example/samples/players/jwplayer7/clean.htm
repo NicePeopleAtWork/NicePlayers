@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JWPlayer 7</title>
+	<meta content="authenticity_token" name="csrf-param" />
+
+	<script src="lib/jwplayer.js"></script>
+	<script type="text/javascript">jwplayer.key = "T6MatRxWammykFGZao3kalmbgK8YhSDR1U6MEg==";</script>
+
+</head>
+<body>
+
+	<div id="video1"></div>
+
+	<script type="text/javascript">
+		jwplayer("video1").setup({
+			playlist: [
+				{
+					file: "http://media.w3.org/2010/05/sintel/trailer.mp4",
+					image: "http://support-static.jwplayer.com/images/jellies.jpg"
+				},
+				{
+					file: "http://cdn.s1.eu.nice264.com/converted_work6/0082c06e504b0a422bf1_6815f2deeb179c29748af42f8cd5ce95.mp4",
+					image: "http://support-static.jwplayer.com/images/jellies.jpg"
+				}
+			]
+		});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+html,
+body,
+section {
+    background-color: #f6f6f6;
+}
+
+nav {
+    width: 25%;
+    border: 0;
+}

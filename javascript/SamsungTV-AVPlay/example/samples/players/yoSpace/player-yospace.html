@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>YOSPACE</title>
+	<script src="/samples/players/yoSpace/libs/yoplayer/yoplayer-4.1-10.js"></script>
+	<script src="/src/v1/1.4/js/libs/youbora-data-1.4.1.js"></script>
+	<script src="/src/v1/1.4/js/libs/youbora-api-1.4.3.js"></script>
+	<script src="/src/v1/1.4/js/yospace/2.0.0/sp.js"></script>
+	<script src="/src/v1/1.4/js/yospace/2.0.0/debug_plugin.js"></script>
+
+
+	<script>
+		var options = {
+			accountCode: 'nicetv',
+			username: null,
+			isLive: true,
+			debug: true,
+			transaction: null,
+			httpSecure: false,
+			isp: null,
+			cdn: null,
+			extraparam1: null,
+			extraparam2: null,
+			contentId: 'contentId',
+			trackAdvertisement: true,
+			balanceProperties: {
+				balanceType: "balance",
+				enabled: false,
+				service: "http://smartswitch.youbora.com/",
+				zoneCode: "default",
+				originCode: "test",
+				niceNVA: "1400775385000",
+				niceNVB: "1398183395000",
+				token: "9c32f41a92a31b6a83dd82b612ff73a5",
+				niceTokenIp: null
+			},
+			concurrencyProperties: {
+				enabled: true,
+				concurrencyService: "http://pc.youbora.com/cping/",
+				concurrencyCode: "testcode",
+				concurrencyMaxCount: 2,
+				concurrencyRedirectUrl: function () {
+					document.location.href = "http://www.google.es/";
+				},
+				concurrencyIpMode: false
+			},
+			resumeProperties: {
+				resumeEnabled: false,
+				resumeService: "http://pc.youbora.com/resume/",
+				playTimeService: "http://pc.youbora.com/playTime/",
+				resumeCallback: function (secs) {
+					alert("Resume: " + secs)
+				},
+			}
+		};
+
+		var plugins = [];
+		if (typeof SmartPlugin === "function") {
+			plugins.push(new SmartPlugin(options));
+		}
+
+		var pl = $YOPLAYER('yoPlayer', {
+			'plugins': plugins,
+			'player': '/players/yoSpace/libs/yoplayer/yoplayer-4.1-10.swf',
+			'unique': 'unique',
+			'poster': 'http://nicepeopleatwork.com/uploads/20141010/pic_02.png',
+			'logging': function (message) {
+				console.log(message);
+			},
+			'live': true,
+			'file': 'http://csm-e.cds1.yospace.com/csm/live/111227613.m3u8',
+			'autoplay': true
+		});
+	</script>
+</head>
+
+<body>
+
+	<div id="yoPlayer"></div>
+
+</body>
+
+</html>

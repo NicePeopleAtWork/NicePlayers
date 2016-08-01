@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>castLabs DASH Everywhere Player Integration example</title>
+
+	<!-- Loading Video.js CDN-hosted Scripts from videojs.com -->
+
+	<link href="http://vjs.zencdn.net/4.11.4/video-js.css" rel="stylesheet">
+
+	<script src="http://vjs.zencdn.net/4.11.4/video.js"></script>
+	<style>
+		.vjs-default-skin .vjs-audiotracks-button:before {
+			content: "\e600";
+			/* cog icon */
+		}
+
+		.vjs-default-skin .vjs-texttracks-button:before {
+			content: "\e00c";
+			/* subtitles icon */
+		}
+	</style>
+
+	<script src="cldasheverywhere.min.js"></script>
+
+	<script src="/src/v1/1.4/js/libs/youbora-data-1.4.1.min.js"></script>
+	<script src="/src/v1/1.4/js/libs/youbora-api-1.4.3.min.js"></script>
+	<script src="/src/v1/1.4/js/pc-videojs/3.4.3/sp.js"></script>
+
+
+</head>
+
+<body>
+	<video id="vid" class="video-js vjs-default-skin vjs-big-play-centered" preload="auto" width="640px" height="480px">
+	</video>
+	<script>
+		//Init player
+		var config, player, options;
+		var config = {
+			"customData": {
+				"userId": "purchase",
+				"sessionId": "p0",
+				"merchant": "six"
+			},
+			"widevineHeader": {
+				"provider": "castlabs",
+				"contentId": "fkj3ljaSdfalkr3j",
+				"trackType": "",
+				"policy": ""
+			},
+			"assetId": "big_buck_bunny2",
+			"variantId": "",
+			"authenticationToken": null,
+			"widevineLicenseServerURL": "https://lic.staging.drmtoday.com/license-proxy-widevine/cenc/",
+			"accessLicenseServerURL": "https://lic.staging.drmtoday.com/flashaccess/LicenseTrigger/v1",
+			"playReadyLicenseServerURL": "https://lic.staging.drmtoday.com/license-proxy-headerauth/drmtoday/RightsManager.asmx",
+			"silverlightFile": "./dashcs/dashcs.xap",
+			"flashFile": './dashas/dashas.swf',
+			"techs": ['dashjs', 'dashas', 'dashcs']
+		};
+
+		var options = {
+			accountCode: 'qamini',
+			username: 'videojsplugin',
+			isLive: true,
+			debug: true,
+			transaction: 'transactionCode',
+			httpSecure: true,
+			isp: '',
+			cdn: '',
+			ip: '',
+			extraparam1: 'Extraparam1',
+			extraparam2: 'Extraparam2',
+			contentId: 'contentId',
+			properties: {
+				filename: "filename",
+				content_id: "Content Id",
+				content_metadata: {
+					title: "Big Buck Bunny",
+					genre: "Genre",
+					language: "Language",
+					year: "Year",
+					cast: "Cast",
+					director: "Director",
+					owner: "Owner",
+					duration: "Duration",
+					parental: "Parental",
+					price: "Price",
+					rating: "Rating",
+					audioType: "Audio type",
+					audioChannels: "Audio channels"
+				},
+				transaction_type: "Transaction Types",
+				quality: "Quality",
+				content_type: "Content Type",
+				device: {
+					manufacturer: "Manufacturer",
+					type: "Type",
+					year: "Year",
+					firmware: "Firmware"
+				}
+			},
+			balanceProperties: {
+				balanceType: "balance",
+				enabled: false,
+				service: "http://smartswitch.youbora.com/",
+				zoneCode: "default",
+				originCode: "test",
+				niceNVA: "1400775385000",
+				niceNVB: "1398183395000",
+				token: "9c32f41a92a31b6a83dd82b612ff73a5",
+				niceTokenIp: null
+			},
+			concurrencyProperties: {
+				enabled: false,
+				concurrencyService: "http://pc.youbora.com/cping/",
+				concurrencyCode: "testcode",
+				concurrencyMaxCount: 1,
+				concurrencyRedirectUrl: function () {
+					document.location.href = "http://www.google.es/";
+				},
+				concurrencyIpMode: false
+			},
+			resumeProperties: {
+				resumeEnabled: false,
+				resumeService: "http://pc.youbora.com/resume/",
+				playTimeService: "http://pc.youbora.com/playTime/",
+				resumeCallback: function (secs) {
+					alert("Resume: " + secs)
+				},
+			}
+		};
+
+		player = videojs('vid', {
+			plugins: {
+				audiotracks: {
+					title: 'Languages'
+				},
+				texttracks: {
+					title: 'Subtitles'
+				},
+				youbora: options
+			},
+			autoplay: true,
+			controls: true,
+			dasheverywhere: config,
+			techOrder: ['dasheverywhere', 'youbora']
+		});
+
+		//Play protected video
+		player.loadVideo("http://demo.castlabs.com/media/bbb_abr/Manifest.mpd", {});
+
+		//Play unprotected video
+		/*
+  player.loadVideo("http://demo.castlabs.com/media/bbb_abr_unenc/Manifest.mpd", {
+    assetId: "",
+    variantId: ""
+  });
+*/
+	</script>
+</body>
+
+</html>

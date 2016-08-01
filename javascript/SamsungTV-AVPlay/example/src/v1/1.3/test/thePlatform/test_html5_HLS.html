@@ -1,0 +1,124 @@
+<html>
+
+	<head>
+		<title>Test Template</title>
+		<h4>Test for thePlatform HTML5</h4>
+		<script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+		<script type="text/javascript" src="../testUtils.js"></script>
+		<script type="text/javascript" src="http://pre.smartplugin.youbora.com/1.3/js/libs/youbora-data.js"></script>
+		<script type="text/javascript" src="http://pre.smartplugin.youbora.com/1.3/js/libs/youbora-api.js"></script>
+		<meta name="tp:PreferredRuntimes" content="HTML5" /> 
+		<script type="text/javascript" src="http://pre.smartplugin.youbora.com/players/platform/web/pdk/tpPdk.js"></script>
+		<script>
+			loadLibraries();
+		</script>
+	</head>
+
+	<body>
+
+		<div id="destinationSet">
+			<div style="margin-top:15px">Destination</div>
+			<select id="destination">
+				<option id="Debug">Debug</option>
+				<option id="Production">Production</option>
+			</select>
+		<div>
+		<div id="testTypeSet" style="position: absolute; top: 47px; left: 110px;">
+
+		<div>TestType</div>
+			<select id="testType">
+				<option id="A">A</option>
+				<option id="B">B</option>
+				<option id="C">C</option>
+				<option id="D">D</option>
+				<option id="E">E</option>
+				<option id="F">F</option>
+				<option id="G">G</option>
+				<option id="H">H</option>
+				<option id="I">I</option>
+			</select>
+		</div>
+		<div id="technologySet" style="position: absolute; top: 47px; left: 180px;">
+		<div>Technology</div>
+			<select id="technology">
+				<option id="html5">HTML5</option>
+			</select>
+		</div>
+		<div id="testCodeSet" style="position: absolute; top: 47px; left: 280px;" >
+			<div>TestCode</div>
+			<input type="text" id="testCode"></input>
+		</div>
+		<div id="resourceSet" style="position: absolute; top: 47px; left: 450px;" >
+			<div>ResourceType</div>
+			<select id="resource" disabled>
+				<option value="http://pmd307425def.download.theplatform.com.edgesuite.net/Nice_People_At_Work_Development_Account/872/627/tears_of_steel_1080p__071698.mp4">MP4</option>
+			</select>
+		</div>
+		<div id="pluginVersionSet" style="position: absolute; top: 47px; left: 550px;" >
+			<div>PluginVersion</div>
+			<select id="pluginVersion" disabled>
+				<option value="2.1.0">2.1.0</option>
+			</select>
+		</div>
+		<div style="margin-bottom:20px"></div>
+		<button id="play">Play</button>
+		<button id="pause">Pause</button>
+		<button id="stop">Stop</button>
+		<button id="seekfw">SeekForward</button>
+		<button id="seekbd">SeekBackwards</button>
+		<button id="forceError">ForceError</button>
+
+
+		<script>
+			player="bcove";
+			//prepareTestEnvironment();
+			
+			$( "#play" ).click(function() {
+				$pdk.controller._functions.clickPlayButton.default();
+			});
+			$( "#pause" ).click(function() {
+			  $pdk.controller.pause();
+			});
+			$( "#stop" ).click(function() {
+				$pdk.controller.seekToPercentage(100);
+			});
+			$( "#seekfw" ).click(function() {
+				$pdk.controller.seekToPercentage(85);
+			});
+			$( "#seekbd" ).click(function() {
+				$pdk.controller.seekToPercentage(0);
+			});
+			$( "#forceError" ).click(function() {
+				var val = "http://mirrorblender.top-ix.org/movies/sintel-1024-surround.mp42";
+		        var smil = "<smil xmlns='http://www.w3.org/2005/SMIL21/Language'><body><ref src='" + val + "'/></body></smil>"
+		        $pdk.controller.setSmil(smil);
+			});
+
+		</script><div id="divDebugger" style="background-color:#000; color:#2BFF00; width: 250px; float: right; padding: 10px; min-height: 400px; position: relative; z-index: 9999; overflow-y: scroll"></div>
+		<script type="text/javascript" src="http://player.theplatform.com/p/TrK7XC/joja4g9LL7WV/select/GiSUk_B9Yy9M?form=javascript"></script>
+		
+		
+		
+		<script>
+			var technology = getTechnology();
+			if(technology ==""){
+				technology = "html5";
+			}else{
+				technology = technology.toLowerCase();
+			}
+		       
+		    var player =  new Player("player");
+			player.pluginYoubora1="type=custom|url=http://pre.smartplugin.youbora.com/1.3/js/thePlatform/"+youboraData.pluginVersion['thePlatformHtml5']+"/sp.js|priority=1";
+			player.pluginYoubora2="type=custom|url=http://pre.smartplugin.youbora.com/1.3/js/thePlatform_flash/"+youboraData.pluginVersion['thePlatformFlash']+"/SmartPlugin.swf?youboraData="+encodeURIComponent(JSON.stringify(youboraData))+"|priority=1";
+			//	player.pluginYoubora2="type=custom|url=http://192.168.2.220/SmartPlugin.swf?youboraData="+encodeURIComponent(JSON.stringify(youboraData))+"|priority=1";
+			player.bind();
+			
+
+
+		</script>
+		
+		
+	
+	</body>
+
+</html>

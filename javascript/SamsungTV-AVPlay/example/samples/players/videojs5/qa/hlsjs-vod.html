@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- VideoJS -->
+    <link href="http://vjs.zencdn.net/5.10.2/video-js.css" rel="stylesheet">
+    <script src="http://vjs.zencdn.net/5.10.2/video.js"></script>
+    <!---->
+    <!-- HLS -->
+    <script src="../../hlsjs/lib/hls.min.js"></script>
+    <script src="../lib/hlsjs-1.0.0/hlsjs.js"></script>
+    <!-- -->
+    <!-- YouboraLib -->
+    <script src="/src/v5/plugins/videojs5/last-build/sp.min.js"></script>
+    <!---->
+</head>
+
+<body>
+    <h1>VideoJS5 Video</h1>
+    <video id="video1" width=960 height=540 class="video-js vjs-default-skin" controls>
+        <source src="http://www.streambox.fr/playlists/x36xhzz/x36xhzz.m3u8" type="application/x-mpegURL">
+    </video>
+    <script>
+    var player = videojs('video1');
+    if (player.youbora) {
+        player.youbora({
+
+            //Account code and enable YOUBORA Analytics
+            accountCode: "qamini",
+
+            // View parameters
+            username: "uservjs5",
+            transactionCode: "vjs5",
+
+            // Media Info
+            media: {
+                title: 'hls vod',
+                isLive: false
+            },
+
+            // Media and device extra info
+            properties: {
+                filename: "test",
+                content_id: "test",
+                content_metadata: {
+                    genre: "test",
+                    language: "test",
+                    year: "test",
+                    cast: "test",
+                    director: "test",
+                    owner: "test",
+                    parental: "test",
+                    price: "test",
+                    rating: "test",
+                    audioType: "test",
+                    audioChannels: "test"
+                },
+                transaction_type: "test",
+                quality: "test",
+                content_type: "test",
+                device: {
+                    manufacturer: "test",
+                    type: "test",
+                    year: "test",
+                    firmware: "test"
+                }
+            },
+
+            // Optional features
+            httpSecure: true,
+            parseHLS: true,
+
+            //Extraparams
+            extraParams: {
+                param1: 'param1',
+                param2: 'param2'
+            }
+        })
+    };
+    </script>
+    <script src="/src/v5/util/inspector/inspector.js"></script>
+</body>
+
+</html>

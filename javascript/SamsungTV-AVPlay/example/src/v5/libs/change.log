@@ -1,0 +1,125 @@
+~ Version 5.3.01:
+28/07/16	Jordi Aguilar	- Solved a problem with rendition, not being saved when sent in the start.
+13/07/16	Jordi Aguilar	- Rendition must have a value before registering as changed.
+08/06/16	Jordi Aguilar	- Fixed Adnalyzer-related bugs
+
+~ Version 5.3:
+25/05/16	Jordi Aguilar	- $YB.plugins.map will now track all plugins created to have them tracked.
+25/05/16	Jordi Aguilar	- Logs reworked to accept infinite params.
+25/05/16	Jordi Aguilar	- All logs will now show the level of the message.
+25/05/16	Jordi Aguilar	- RemoteLog now fires even if debugLevel is not high enought.
+31/05/16	Jordi Aguilar	- Fixed a bug with playheadmonitor closing seeks too early.
+31/05/16	Jordi Aguilar	- Fixed a bug sending error code as error message.
+
+
+~ Version 5.3-RC:
+19/05/16	Jordi Aguilar	- Removed API components, created infoManager & viewManager to substitute them.
+19/05/16	Jordi Aguilar	- Improved the workarround based on playhead to detect buffers, now it also detects seek.
+19/05/16	Jordi Aguilar	- Improved workflow, inline with recent refactors in ios and c#.
+
+
+~ Version 5.2.01:
+29/04/16	Jordi Aguilar	- Removed services totally from lib.
+29/04/16	Jordi Aguilar	- Added bufferDuration, adBufferDuration and seekDuration to pings
+17/05/16	Jordi Aguilar	- If Chromecast is detected, webkitVideoDecodedByteCount bitrate workarround is disabled
+
+
+~ Version 5.2 (BROKEN):
+13/04/16	Jordi Aguilar	- Retries messages are now warnings. Wrong FastData message is now error.
+14/04/16	Jordi Aguilar	- AdStart and GenericAdStart will close previous buffers and seeks.
+19/04/16	Jordi Aguilar	- adThroughput removed.
+22/04/16	Jordi Aguilar	- SS, Resumer and Concurrency default config removed from Options (BROKEN).
+
+
+~ Version 5.2-RC: 	(Changes added when refactoring alongside iOS)
+06/04/16	Jordi Aguilar	- Default debugLevel raised to 2. Will now show warnings by default.
+06/04/16	Jordi Aguilar	- plainConsole mode won't repeat string messages anymore.
+07/04/16	Jordi Aguilar	- httpSecure no longer mandatory in devices, it will use http:// as default if non-http protocols are found (ie, file:///)
+07/04/16	Jordi Aguilar	- Removed getFirstDefined to improve performance.
+07/04/16	Jordi Aguilar	- Removed datamap.
+07/04/16	Jordi Aguilar	- Created getXXXX functions in generic plugin returning default values.
+07/04/16	Jordi Aguilar	- Created Info API
+
+
+~ Version 5.1.03:
+23/03/16	Jordi Aguilar	- $YB.api, $YB.comm and $YB.data namespaces created. report.js renamed to utils-report.js.
+23/03/16	Jordi Aguilar	- errorLevel renamed to debugLevel.
+23/03/16	Jordi Aguilar	- Generic Plugin and Adnalyzer init() function will now return this.player and this.ads respectively.
+31/03/16	Jordi Aguilar	- Added resetNumbers() to api.Ads to reset between playlists. sendStop from api.Video will automatically call it.
+
+
+~ Version 5.1.02:
+01/03/16	Jordi Aguilar	- Removed playerVersion from data, should be returned from each plugin.
+01/03/16	Jordi Aguilar	- Created Generic Adnalyzer.
+01/03/16	Jordi Aguilar	- Adnalyzers will now be built-in into SP files.
+07/03/16	Jordi Aguilar	- Modified CDN Node host headers for Akamai.
+09/03/16	Jordi Aguilar	- Added position+number to every Ad call.
+09/03/16	Jordi Aguilar	- Added adPause+adResume
+09/03/16	Jordi Aguilar	- With error level 3+, API will inform about bufferStart and seekStart even if they are not sent to backend.
+09/03/16	Jordi Aguilar	- AdStart will send a seekEnd
+10/03/16	Jordi Aguilar	- startJoinAdHandler will use previous joinTime or buffer to calculate joinTime duration.
+16/03/16	Jordi Aguilar	- Lib will support adnalyzers getMediaPlayhead in case the method obtaining it changes during an ad.
+17/03/16	Jordi Aguilar	- Added genericAdStartHandler + genericAdEndHandler to generic plugin (and send genericAdStart/end to video api).
+17/03/16	Jordi Aguilar	- If any adnalyzer is in use, the functions above will be unavailable and will rise a warning if used.
+17/03/16	Jordi Aguilar	- Added isShowingAds flag in generic plugin. Adnalyzers and genericAdStart/Stop will set this.
+18/03/16	Jordi Aguilar	- Removed Bitrate y Throughput de Data.
+18/03/16	Jordi Aguilar	- Ads object in Data is now documented.
+
+
+~ Version 5.1.01:
+15/02/16	Jordi Aguilar	- Added getTitle to videoApi
+18/02/16	Jordi Aguilar	- Data changed from XML to JSONP
+18/02/16	Jordi Aguilar	- VideoAPI will store last playhead sent.
+18/02/16	Jordi Aguilar	- listenAllEvents now accepts a custom report function as third parameter.
+18/02/16	Jordi Aguilar	- Moved CDN from network to media ($YB.Data).
+19/02/16	Jordi Aguilar	- Removed Concurrency, Resume and Smarswitch. They will come in a separated library.
+19/02/16	Jordi Aguilar	- Default resource is now "unknown".
+
+
+~ Version 5.1:
+04/02/16	Jordi Aguilar	- Finished refactorization and Generic Plugin.
+04/02/16	Jordi Aguilar	- Device ID added.
+08/02/16	Jordi Aguilar	- Added listenAllEvents to library.
+08/02/16	Jordi Aguilar	- Added TotalBytes support.
+10/02/16	Jordi Aguilar	- Changed default system from 'demosite' to 'nicetest'.
+
+
+~ Version 5.1-RC:
+27/01/16	Jordi Aguilar	- Added totalBytes support.
+27/01/16	Jordi Aguilar	- Added totalBytes and playerVersion to Data.media object.
+27/01/16	Jordi Aguilar	- Added generic functions to plugins: playHandler, playingHandler, pauseHandler...
+27/01/16	Jordi Aguilar	- Plugins based on 5.0.X wont work with 5.1.
+
+
+~ Version 5.0.002:
+18/01/16	Jordi Aguilar	- AjaxRequest will now store the params as an object, so they can be changed if request is delayed by a preloader.
+18/01/16	Jordi Aguilar	- Reworked ResourceParser delaying /start calls.
+19/01/16	Jordi Aguilar	- Fixed referer not beign sent in /error calls.
+20/01/16	Jordi Aguilar	- Improved ParseHLS Regex.
+
+
+~ Version 5.0.001:
+11/01/16	Jordi Aguilar	- Throughtput and Bitrate will be sent as -1 if they are 0.
+14/01/16	Jordi Aguilar	- ParseHLS: fixed a bug that will ignore .m3u8 files with parameters. ie: 'video.m3u8?paramId=1354654'.
+
+
+~ Version 5.0:
+17/12/15	Jordi Aguilar	- Created 5.0 version
+17/12/15	Jordi Aguilar	- Created new errorLevel to expose NQS responses
+17/12/15	Jordi Aguilar	- Added rendition and entity changing in pings
+21/12/15	Jordi Aguilar	- Added Throughtput in each ping.
+
+
+~ Branch: 2.0-AppleTv3
+01/12/15	Jordi Aguilar	- Created special version that supports appleTV OS (2nd and 3rd gen).
+
+
+~ Version 2.0:
+10/11/15	Jordi Aguilar	- Created 2.0 version
+18/11/15	Jordi Aguilar	- Created AdnalyzerApi class
+25/11/15	Jordi Aguilar	- Removed Math.Round from yapi.getPlayhead(), playheads will be sent as doubles.
+25/11/15	Jordi Aguilar	- Moved autoBuffer start to handleJoin for optimization.
+
+
+~ Version 2.0-RC:
+06/11/15	Jordi Aguilar	- Created 2.0-ReleaseCandidate

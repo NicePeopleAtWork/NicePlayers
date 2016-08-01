@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JWPlayer V6 - Nice264Plugins</title>
+
+		<script type="text/javascript" src="http://pre.smartplugin.youbora.com/src/v1/1.3/js/libs/youbora-data.js"></script>
+		<script type="text/javascript" src="http://pre.smartplugin.youbora.com/src/v1/1.3/sp/spyoubora.js?preProduction=true"></script>
+		<script type="text/javascript" src="jwplayer/jwplayer.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+	</head>
+
+	<body>
+		<div id="video_player"></div>
+		<script type="text/javascript">
+
+			var system = "demosite";
+
+				var zonecode = "default";
+				var origincode = "pdl";
+				var niceNVA = "3600";
+				var niceNVB = "0";
+
+				var tokenServiceHost = "http://dbb2.nice264.com/niceTokenService/balancedURL.php";
+
+					var xmlHttp = new XMLHttpRequest();
+					xmlHttp.addEventListener("load", function(httpEvent) {
+
+					try{
+
+						var responseJson			= httpEvent.target.response;
+						var response 				= JSON.parse( responseJson);
+
+						var nva 					= response.nva;
+						var nvb 					= response.nvb;
+						var token 					= response.token;
+
+						youboraData.setZoneCode("default");
+						youboraData.setBalanceOriginCode(origincode);
+						youboraData.setBalanceNVA(nva);
+						youboraData.setBalanceNVB(nvb);
+						youboraData.setBalanceType("balance");
+						youboraData.setBalanceToken(token);
+						//youboraData.setBalanceService(tokenServiceHost);
+						youboraData.setBalanceService("http://smartswitch.youbora.com");
+					}catch(err){
+						console.log(err);
+					}
+				}, false);
+
+				var urlDataWithCode = tokenServiceHost + "?nva="  + niceNVA +
+																"&nvb=" 	   + niceNVB +
+																"&system="   + system +
+																"&originCode="   + origincode +
+																"&zoneCode="   + zonecode +
+																"&filepath="   + "http://cdn.s1.eu.nice264.com/converted_work6/0082c06e504b0a422bf1_6815f2deeb179c29748af42f8cd5ce95.mp4";
+				xmlHttp.open("GET", urlDataWithCode , true);
+				xmlHttp.send();
+
+				function callback(){
+					alert("Callback de resume");
+				}
+				youboraData.setDebug(true);
+				youboraData.setEnableAnalytics(true);
+				youboraData.setEnableBalancer(false);
+
+				youboraData.setContentId("new");
+				youboraData.setResumeEnabled(false);
+				youboraData.setResumeCallback(callback);
+
+				youboraData.setConcurrencyCode("newCode");
+				youboraData.setConcurrencyMaxCount(1);
+				youboraData.setConcurrencyRedirectUrl("http://www.google.es");
+				youboraData.concurrencyProperties.enabled=false;
+
+				youboraData.setAccountCode(system);
+				youboraData.setUsername('demosite jwplayer');
+				youboraData.setService('http://nqs.nice264.com');
+				youboraData.setLive(false);
+				youboraData.setProperties({
+					filename: "SS_16_9_404p_1100_MP30/fc642fcbbf910bb50ffb.mp4",
+					content_id: "fc642fcbbf910bb50ffb",
+					content_metadata: {
+						title: "Big Buck Bunny",
+						genre: "Animation",
+						language: "English",
+						year: "2011",
+						cast: "",
+						director: "",
+						owner: "nicepeopleatwork",
+						duration: "09:27",
+						parental: "",
+						price: "0.0�",
+						rating: "",
+						audioType: "",
+						audioChannels: ""
+					},
+					transaction_type: "rental",
+					quality: "SD",
+					content_type: "movie",
+					device: {
+						manufacturer: "JWPlayer6",
+						type: "Browser",
+						year: "2014",
+						firmware: ""
+					}
+				});
+				youboraData.setHttpSecure(true);
+
+			jwplayer("video_player").setup({
+				autostart: "false",
+				repeat: "false",
+				// PLAYLIST videos from NicePeople
+				playlist: [{
+                                    file: "rtmp://nws.nice264.com:1935/niceVodSecBalancer/31f13b240d6eaf5c2d4ef221810cceed/179b826007/81df075c8366169030ea_03a89c5f80a7c51e94aef839706a7d3a/mp4:81df075c8366169030ea_03a89c5f80a7c51e94aef839706a7d3a.mp4",
+                                    title: "Large Movie Test (NPAWPlug)",
+                                    image: "http://nws.nice264.com/image/nicetv/8ec3374ea05ef76e3a84.jpg"
+                                }],
+				plugins: {
+					"http://pre.smartplugin.youbora.com/src/v1/1.3/js/all-jwplayer/3.1.2/sp.js" :youboraData
+				}
+			})
+
+
+
+		</script>
+	</body>
+</html>

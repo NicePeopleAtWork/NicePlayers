@@ -1,0 +1,11 @@
+{
+    "type": "plugin",
+    "name": "jwplayer7",
+    "ver": "5.1.1",
+    "libVer": "5.2",
+    "adnalyzers": {
+        "jwplayer7-ads": "1.0.0"
+    },
+    "built": "Fri May 06 2016",
+    "flags": "broken"
+}

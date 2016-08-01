@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>castLabs DASH Everywhere Chromecast Integration example</title>
+<script src="cldashjs.min.js"></script>
+</head>
+<body>
+<div>
+  <video id="vid" style="width:100%;height:100%;top:0px;left:0px;right:0px;bottom:0px;position:fixed;" src="" />
+</div>
+<script type="text/javascript">
+  var config = {
+    "widevineLicenseServerURL": "https://lic.staging.drmtoday.com/license-proxy-widevine/cenc/",
+    "autoplay": true,
+    "sendCustomData": true,
+    "widevineHeader": {
+      "provider": "castlabs",
+      "contentId": "fkj3ljaSdfalkr3j",
+      "trackType": "",
+      "policy": ""
+    },
+    "ABRParameters": {
+      "qualitySwitchThreshold": 5000,
+      "bandwidthSafetyFactor" : 2,
+      "minBufferLength": 10,
+      "maxBufferLength": 15
+    }
+  };
+
+  var player = new MediaPlayer(new castLabsDashJS.classes.DRMtodayContext(config));
+</script>
+</body>
+</html>

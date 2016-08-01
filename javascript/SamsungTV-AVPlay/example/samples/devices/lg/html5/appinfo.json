@@ -1,0 +1,11 @@
+{
+    "id": "com.youbora.html5player",
+    "version": "0.0.1",
+    "vendor": "npaw",
+    "type": "web",
+    "main": "index.html",
+    "title": "HTML5Player",
+    "icon": "icon.png",
+    "largeIcon": "largeIcon.png",
+    "uiRevision": 2
+}

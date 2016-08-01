@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Yourbora BC Testing</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="main.css">
+
+	<!-- Javascript -->
+    <!-- YouBora -->
+    <script type="text/javascript" src="/src/v1/1.3/js/libs/youbora-data.js"></script>
+    <script type="text/javascript" src="/src/v1/1.3/js/libs/youbora-api.js"></script>
+    <!-- JQuery -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+	<script type="text/javascript">
+        if (typeof console === "undefined" || typeof console.log === "undefined") {
+            console = {};
+            console.log = function(msg) {
+                alert(msg);
+            };
+        } else {
+            console.log = function() {};
+        }
+
+
+
+        youboraData.setAccountCode('QA');
+        youboraData.setCDNNodeData(false);
+        //youboraData.setUsername('Ray Balhorn');
+        //youboraData.setContentId('<content_id>');
+        //youboraData.setTransaction('<transaction>');
+        youboraData.setLive(true);
+        //youboraData.setCdn(<cdn>);
+        //youboraData.setIsp(<isp>);
+        //youboraData.setIp(<ip>);
+        youboraData.setProperties({
+            filename: "my_new_stream.m3u8",
+            content_id: "my id",
+            content_metadata: {
+                title: "My New Stream",
+                genre: "General Conference",
+                language: "eng",
+                //year: "<Year>",
+                //cast: "<Cast>",
+                //director: "<Director>",
+                //owner: "<Owner>",
+                //duration: "<Duration>", parental: "<Parental>",
+                //price: "<Price>",
+                //rating: "<Rating>",
+                //audioType: "<Audiotype>", audioChannels: "<AudioChannels>"
+            },
+            //transaction_type: "<TransactionTypes>",
+            //quality: "<Quality>",
+            //content_type: "<ContentType>",
+            /*device: {
+￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼                manufacturer: "<Manufacturer>",
+                type: "<Type>",
+                year: "<Year>",
+                firmware: "<Firmware>"
+￼￼￼￼￼￼￼             } */
+        });
+        /*youboraData.setResumeProperties({
+            resumeEnabled: <enable_Resume>,
+            resumeService: "http://pc.youbora.com/resume/",
+            playTimeService: "http://pc.youbora.com/playTime/",
+            resumeCallback: function(){your_function();}
+        });*/
+        /*youboraData.setConcurrencyProperties({
+            enabled: <enable_Concurrency>,
+            concurrencyService: "http://pc.youbora.com/cping/",
+            concurrencyCode: "<concurrency_Code>",
+            concurrencyMaxCount: <Max_Count>,
+            concurrencyRedirectUrl: function(){your_function();},
+            concurrencyIpMode: <boolean_IpMode>
+        });*/
+        youboraData.setExtraParam(1, '001');
+        youboraData.setExtraParam(2, '2015 General Conference');
+        /*youboraData.setExtraParam(3, 'extraparam3');
+        youboraData.setExtraParam(4, 'extraparam4');
+        youboraData.setExtraParam(5, 'extraparam5');
+        youboraData.setExtraParam(6, 'extraparam6');
+        youboraData.setExtraParam(7, 'extraparam7');
+        youboraData.setExtraParam(8, 'extraparam8');
+        youboraData.setExtraParam(9, 'extraparam9');
+        youboraData.setExtraParam(10,'extraparam10');*/
+
+        /*youboraData.setBalanceProperties({
+            balanceType: "balanced",
+            enabled: <enable_Smartswitch>,
+            service: "http://smartswitch.youbora.com/",
+            zoneCode: "<zone_Code>",
+￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼            originCode:
+            niceNVA:
+            niceNVB:
+            token:
+            niceTokenIp: null
+￼￼￼￼￼￼￼￼        });*/
+</script>
+
+</head>
+
+<body>
+<!-- Start of Brightcove Player -->
+
+<div style="display:none"></div>
+
+<!--
+By use of this code snippet, I agree to the Brightcove Publisher T and C
+found at https://accounts.brightcove.com/en/terms-and-conditions/.
+-->
+
+<script language="JavaScript" type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+
+<object id="myExperience4384155679001" class="BrightcoveExperience">
+  <param name="bgcolor" value="#FFFFFF" />
+  <param name="width" value="640" />
+  <param name="height" value="360" />
+  <param name="playerID" value="1000308747001" />
+  <param name="playerKey" value="AQ~~,AAAAjP0hwEk~,MIOCBvNtNJkVQK4gXtoeAI4PmrqCkCVP" />
+  <param name="isVid" value="true" />
+  <param name="isUI" value="true" />
+  <param name="dynamicStreaming" value="true" />
+
+  <param name="@videoPlayer" value="4382073783001" />
+
+  <param name="forceHTML" value="false" />
+  <param name="includeAPI" value="true" />
+
+    <!-- Youbora -->
+    <param name="accountCode" value="QA" />
+    <!--<param name="username" value="<username>" />-->
+    <param name="transaction" value="BC Flash" />
+    <param name="live" value="true" />
+    <!--<param name="contentId" value="<contentId>" />
+    <param name="cdn" value="<cdn_code>" />
+    <param name="isp" value="<isp_string>" />
+    <param name="ip" value="<ip_string>" />-->
+    <param name="propertyMetaTitle" value="twozerofour" />
+    <!--<param name="resumeEnabled" value="<resume_flag>" />
+    <param name="resumeCallback" value="<function_name>" />
+    <param name="concurrencyEnabled" value="<concurrency_flag>" />
+    <param name="concurrencyCode" value="<concurrency_code>" />
+    <param name="concurrencyMaxCount" value="<max_count>" />
+    <param name="concurrencyRedirectUrl" value="<your_url>" />
+    <param name="concurrencyIpMode" value="<mode_flag>" />-->
+    <param name="track" value="001" />
+    <param name="product" value="2015 General Conference" />
+    <!--<param name="extraparam3" value="<ep3>" />
+    <param name="extraparam4" value="<ep4>" />
+    <param name="extraparam5" value="<ep5>" />
+    <param name="extraparam6" value="<ep6>" />
+    <param name="extraparam7" value="<ep7>" />
+    <param name="extraparam8" value="<ep8>" />
+    <param name="extraparam9" value="<ep9>" />
+    <param name="extraparam10" value="<ep10>" />-->
+    <!--<param name="balanceEnabled" value="<smartswitch_flag>" />
+    <param name="balanceType" value="balance" />
+    <param name="balanceService" value="http://smartswitch.youbora.com" /> <param name="balanceZoneCode" value="default" />
+    <param name="balanceOriginCode" value="<origin_code>" />
+    <param name="balanceNVA" value="<nva>" />
+    <param name="balanceNVB" value="<nvb>" />
+    <param name="balanceToken" value="<token>" />-->
+
+</object>
+
+<script type='text/javascript' language='javascript' src='/1.3/js/pc-bcove/3.2.0/sp.js'></script>
+
+<script type="text/javascript">
+    function testfunction(secs) { alert('Resume: ' + secs); }
+</script>
+
+<!--
+This script tag will cause the Brightcove Players defined above it to be created as soon
+as the line is read by the browser. If you wish to have the player instantiated only after
+the rest of the HTML is processed and the page load is complete, remove the line.
+-->
+<script type="text/javascript">brightcove.createExperiences();</script>
+
+<!-- End of Brightcove Player -->
+<script>
+    $('document').ready(function(){
+        SmartPlugin.Init();
+    });
+</script>
+
+</body>
+</html>

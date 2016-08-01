@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)http://devices.totalchannel.tv/smarttv/LG/TotalChannel/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>TotalChannel</title>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="./TotalChannel_files/styles.css" type="text/css">
+
+<!-- Plugins -->
+</head><body id="body" onload="Main.onLoad();" onkeydown="TVA.keyDown(event);" onunload="Main.unload();" class="bbq1 lg"><object type="application/x-netcast-info" id="deviceInfo" width="0" height="0"></object>
+<object type="application/oipfDrmAgent" id="oipfDrm" width="0" height="0"></object>
+
+<script type="text/javascript" src="./TotalChannel_files/all_1.js"></script>
+
+<script type="text/javascript" src="./TotalChannel_files/all_2.js"></script>
+
+<!-- Spy Youbora -->
+<script type="text/javascript" charset="utf-8" src="./TotalChannel_files/youbora-data.js"></script>
+<script>if(youboraData && youboraData.setAccountCode) youboraData.setAccountCode(TVA.OTT.ACODE);</script>
+<script>if(youboraData && youboraData.setEnableAnalytics) youboraData.setEnableAnalytics(true);</script>
+<script type="text/javascript" language="javascript" src="./TotalChannel_files/spyoubora.js"></script>
+
+<!-- Load JS helper -->
+<script type="text/javascript" src="./TotalChannel_files/loader.js"></script>
+
+
+
+<div class="page">
+
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- BOOKMARK VERSION -->
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<div class="bookmark hide-this">Ver.<br><span id="bookmarkVersion">1.7.1*</span></div>
+<script>
+    try {
+        var bVer = document.getElementById("bookmarkVersion");
+        if(bVer && bVer.innerHTML.indexOf("VX#")>0) {
+            TVA.putInnerHTML(bVer,"1.7.X");
+        }
+    } catch(e) {}
+</script>
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- MESSAGES  -->
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<div id="messages-frame" class="messages hide-this"><div id="ventana" class="ventana">
+	<div class="wrapperlogin">
+        <div class="logoregistro"></div>
+        <br>
+        <div class="separador"></div>
+        <br><br>
+        <div class="wrapperform">
+        	<div class="texto-azul" id="login-title">Si ya eres usuario...</div>
+            <div class="texto-blanco" id="login-subtitle">Accede a tu cuenta</div>
+            <div class="loginmodulo">
+            	<!--<form action="#" method="post">-->
+
+                <div class="login-select-div hide-this">
+                    <label for="login-select" id="login-select-label">Proveedor</label><br>
+                    <input onclick="PopUp.loginSelectKeyHandler();" onfocus="Keyboard.input=this;PopUp.setHover(this.id);PopUp.loginSelectKeyHandler();" onmouseover="Keyboard.input=this;PopUp.setHover(this.id);PopUp.focusHover();PopUp.loginSelectKeyHandler();" type="text" cols="29" rows="8" name="login-select" id="login-select" class="login-select" value=""> </div>
+                    <div class="login-select-info hide-this">
+                        Pulsa &lt; ( Izquierda )  o &gt; ( Derecha ) para seleccionar el proveedor de la lista.
+                    </div>
+                </div>
+
+                <div>
+                    <label for="login-name" id="login-name-label">Usuario o email</label><br>
+                    <input onclick="Keyboard.moveCursor(true);" onfocus="Keyboard.input=this;PopUp.setHover(this.id);Keyboard.moveCursor(true);" onmouseover="Keyboard.input=this;PopUp.setHover(this.id);PopUp.focusHover();Keyboard.moveCursor(false);" type="text" name="login-name" id="login-name" class="login-name hover login-input-focus" value="" tabindex="1">
+                    <br>
+                    <input type="hidden" name="login-mail" id="login-mail" value="">
+                </div>
+
+                <div>
+                    <label for="login-pass" id="login-pass-label">Contraseña</label><br>
+                    <input onclick="Keyboard.moveCursor(true);" onfocus="Keyboard.input=this;PopUp.setHover(this.id);Keyboard.moveCursor(true);" onmouseover="Keyboard.input=this;PopUp.setHover(this.id);PopUp.focusHover();Keyboard.moveCursor(false);" type="password" cols="29" rows="8" name="login-pass" id="login-pass" class="login-pass" value="">
+                </div>
+
+                <div class="condiciones hide-this">
+                        <div><input type="checkbox" class="checkbox" id="condiciones-checkox-check" checked="false">
+                        <label id="condiciones-checkbox-label" for="condiciones-checkox-check"><span class="checkbox-span" id="condiciones-checkox" onmouseover="Keyboard.input=this;PopUp.setHover(this.id);PopUp.focusHover();">×</span></label>
+                        He leído y acepto las <a id="condiciones-uso" onmouseover="PopUp.setHover(this.id);" onclick="PopUp.showDiv(true);">condiciones de uso</a> y<br></div>
+                        <div><a id="condiciones-politica" onmouseover="PopUp.setHover(this.id);" onclick="PopUp.showDiv(true);">política de privacidad</a>&nbsp;<span id="CHECKBOXTXT"></span></div>
+                    </div>
+
+					<div class="botones">
+                        <div class="btncancelar" id="login-registro-btncancelar" onclick="PopUp.loadPairing(false,true);" onmouseover="PopUp.setHover(this.id);">Cancelar</div>
+                        <div class="btnentrar" id="login-registro-btnentrar" onclick="PopUp.doLogin();" onmouseover="PopUp.setHover(this.id);">Entrar</div>
+                        <div class="limpiar"></div>
+                   	</div>
+                <br>&nbsp;<br>&nbsp;<br>&nbsp;
+				<!--</form>-->
+            </div>
+        </div>
+        
+        <!-- teclado -->
+        
+            <div id="keyboarddiv" class="tecladologin">
+                <span id="1_0" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="q1à" umask="Q1À">q</span>
+                <span id="1_1" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="w2è" umask="W2È">w</span>
+                <span id="1_2" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="e3ì" umask="E3Ì">e</span>
+                <span id="1_3" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="r4ò" umask="R4Ò">r</span>
+                <span id="1_4" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="t5ù" umask="T5Ù">t</span>
+                <span id="1_5" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="y6á" umask="Y6Á">y</span>
+                <span id="1_6" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="u7é" umask="U7É">u</span>
+                <span id="1_7" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="i8í" umask="I8Í">i</span>
+                <span id="1_8" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="o9ó" umask="O9Ó">o</span>
+                <span id="1_9" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="p0ú" umask="P0Ú">p</span>
+                <br><br>
+                <span id="2_0" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="a-ä" umask="A-Ä">a</span>
+                <span id="2_1" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="s@ë" umask="S@Ë">s</span>
+                <span id="2_2" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="d#ï" umask="D#Ï">d</span>
+                <span id="2_3" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="f$ö" umask="F$Ö">f</span>
+                <span id="2_4" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="g%ü" umask="G%Ü">g</span>
+                <span id="2_5" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="h&amp;â" umask="H&amp;Â">h</span>
+                <span id="2_6" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="j/ê" umask="J/Ê">j</span>
+                <span id="2_7" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="k*î" umask="K*Î">k</span>
+                <span id="2_8" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="l&lt;ô" umask="L&lt;Ô">l</span>
+                <span id="2_9" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="ñ&gt;û" umask="Ñ&gt;Û">ñ</span>
+                <br><br>
+                <span id="3_0" class="keyboard icon-shift" onclick="return Keyboard.shift();"><span class="icon-shift-status"></span>&nbsp;</span>
+                <span id="3_1" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="z¡[" umask="Z¡[">z</span>
+                <span id="3_2" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="x!]" umask="X!]">x</span>
+                <span id="3_3" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="c¿{" umask="C¿{">c</span>
+                <span id="3_4" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="v?}" umask="V?}">v</span>
+                <span id="3_5" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="b(|" umask="B(|">b</span>
+                <span id="3_6" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="n)+" umask="N)+">n</span>
+                <span id="3_7" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="m_-" umask="M_-">m</span>
+                <span id="3_8" class="keyboard icon-del" onclick="return Keyboard.del();">&nbsp;</span>
+                <br><br>
+                <span id="4_0" class="keyboard changebtn" onclick="return Keyboard.changeMask();">#12</span>
+                <span id="4_1" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask="@;+" umask="@;+">@</span>
+                <span id="4_2" class="keyboard key spacebar" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask=" " umask=" ">&nbsp;</span>
+                <span id="4_7" class="keyboard key" onclick="return Keyboard.onClick(&#39;#&#39;+this.id);" mask=".:-" umask=".:-">.</span>
+                <span id="4_8" class="keyboard okbtn" onclick="return Keyboard.loseFocus(true);">OK</span>
+                <br>
+        	</div>
+        
+        <!-- fin teclado -->
+
+        <div class="limpiar"></div>
+        <div class="salirlogin salirlogin-login">
+            <ul class="salir">
+                <li onclick="PopUp.pairingHandler(TVA.tvKey.KEY_1);" class="vercontrasena vercontrasena-img">&nbsp;</li><li onclick="PopUp.pairingHandler(TVA.tvKey.KEY_1);" class="vercontrasena salir-li-txt" id="vercontrasena-li">Mostrar contraseña</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li onclick="PopUp.pairingHandler(TVA.tvKey.KEY_2);" class="keyboard-shift keyboard-shift-img">&nbsp;</li><li onclick="PopUp.pairingHandler(TVA.tvKey.KEY_2);" class="keyboard-shift salir-li-txt" id="keyboard-shift-li">Mayúsculas</li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li onclick="PopUp.pairingHandler(TVA.tvKey.KEY_RETURN);" class="salir-img">&nbsp;</li><li onclick="PopUp.pairingHandler(TVA.tvKey.KEY_RETURN);" class="salir-li-txt">Salir</li>
+            </ul>
+        </div>
+
+
+        <!-- inicio condiciones uso -->
+
+        <div id="condicionesdiv" class="condicionesdiv hide-this">
+        <div class="condicionesusotexto" id="CONDICIONESTXT"><h3>CONDICIONES DE USO DE OVER THE TOP INTERNET TELEVISION,S.L.</h3><br> <br> <font class="bold">ACEPTACIÓN:</font><br> <br> Este sitio web es propiedad de OVER THE TOP INTERNET TELEVISION SL, con domicilio social en Av. Diagonal 177- Planta 12, Barcelona 08018, provista de CIF B-66250192 e inscrita en el Registro Mercantil de Barcelona, al Tomo 44.234, Folio 173, Sección 8, hoja número B 450480.<br> <br> Es importante que leas con atención todos los términos y Condiciones de Uso contenidos a continuación.<u>Mediante el mero acceso o uso a este sitio web, adquieres la condición de "Usuario" y consientes dichos términos y Condiciones de Uso. Si estás en desacuerdo, por favor no uses la web o Plataforma de OVER THE TOP INTERNET TELEVISION SL ni te registres en la misma</u>.<br> <br> Nos reservamos la posibilidad de modificar estas Condiciones de Uso en cualquier momento por razones legales, por motivos técnicos o por cambios en la prestación de los servicios de OVER THE TOP INTERNET TELEVISION SL, en adelante OTT Internet TV SL, o en la normativa, así como modificaciones que pudieran derivarse de códigos tipo aplicables o, en su caso, por decisiones corporativas. Cuando esto ocurra lo publicaremos en la Web y/o te avisaremos de ello a través de nuestra Plataforma, y si continúas utilizando los servicios de OTT Internet TV SL, entenderemos que has aceptado las modificaciones introducidas. Si no estuvieras de acuerdo con las modificaciones efectuadas, deberás dejar de utilizar la Plataforma.<br> <br> Te recomendamos no obstante que visites periódicamente las Condiciones de Uso para comprobar si existen actualizaciones. Puedes consultar siempre que lo desees la versión vigente en el apartado Condiciones de Uso que permanecerán disponibles en la Web.<br> <br> Estas Condiciones de Uso podrán ser completadas por OTT Internet TV SL a través de condiciones particulares que regulen el uso de determinados servicios o productos (ya sean gratuitos o ya sean de pago) que se puedan ofrecer a través de la Plataforma. En efecto, el acceso a ciertos contenidos y la utilización de algunos servicios o productos pueden encontrarse sometidos a determinadas condiciones particulares, que, según los casos, sustituirán, completarán y/o modificarán las presentes Condiciones de Uso de OTT Internet TV SL y, en caso de contradicción, prevalecerán los términos de las condiciones particulares sobre los estipulados en estas Condiciones de Uso.<br> <br> Estos términos y Condiciones de Uso serán de aplicación a los usuarios de la web o Plataforma de OTT Internet TV SL. No obstante, te advertimos de que la web o Plataforma de OTT Internet TV SL podría contener links o enlaces a websites de terceros. En este sentido, OTT Internet TV SL no asume ninguna responsabilidad por el contenido, políticas de privacidad o prácticas de estos terceros, tal y como se indicará a continuación. Adicionalmente, OTT Internet TV SL no podrá censurar o editar el contenido de cualquier sitio web de terceros. Mediante el uso de este sitio web, consientes en mantener indemne a OTT Internet TV SL de cualquier tipo de responsabilidad derivado del uso por tu parte del sitio web de cualquier tercero.<br> <br> <font class="bold">ACCESO A LA WEB Y REGISTRO:</font><br> <br> El acceso a la Web es libre y gratuito. No obstante, para poder acceder a determinados servicios de OTT Internet TV SL será indispensable que te registres a través de nuestra Plataforma, mediante la cumplimentación de los oportunos formularios.<br> <br> Te informamos de que para registrarte en OTT Internet TV SL tienes que ser mayor de 14 años y sólo podrás contratar nuestros servicios como cliente si eres mayor de edad.<br> <br> El equipo de OTT Internet TV SL puede ponerse en contacto contigo, en cualquier momento, para que demuestres tu edad real aportándonos fotocopia de tu DNI o un documento equivalente. Si no se nos facilita esa información dentro del plazo que se te indique, desde OTT Internet TV SL nos reservamos el derecho a bloquear o cancelar tu cuenta.<br> <br> Los datos del DNI o del documento que se aporte serán utilizados única y exclusivamente por el personal autorizado de OTT Internet TV SL para realizar esta tarea de identificación, o, en su caso, para realizar tareas de facturación de los servicios o productos que contrates.<br> <br> Si somos informados de que un menor de edad está registrado como usuario y/o cliente en OTT Internet TV SL incumpliendo lo dispuesto en los párrafos anteriores, adoptaremos las medidas necesarias y podremos eliminar o bloquear la cuenta de ese usuario y/o cliente.<br> <br> Te pedimos que cualquier abuso o vulneración de las presentes Condiciones de Uso que detectes y, en particular, aquéllos que afecten a menores, nos lo reportes de inmediato.<br> <br> Como Usuario, aceptas que OTT Internet TV SL pueda utilizar y/o almacenar la información facilitada por tu parte o por tu banco (datos personales, datos de tu red, preferencias y si finalmente contratas el servicio, datos bancarios). También nos autorizas para que podamos recoger ciertos datos estáticos de tu configuración de red, que nos permitan identificarla. Todos estos datos, nos ayudarán para personalizar el servicio y para poder prestarte algunos servicios específicos, tanto de contenidos, como de publicidad, así como para configurarte el servicio de alertas (tanto de sistema, como de grabaciones) y comunicados de novedades y estrenos de contenidos.<u>Te sugerimos en este punto que leas con atención nuestra Política de Privacidad y protección de datos (ver aviso legal específico)</u>.<br> <br> En tu condición de usuario, te comprometes a hacer un uso diligente del código de usuario y de la clave de acceso facilitadas en el momento de efectuar el registro en nuestra Plataforma. En este sentido, te comprometes a mantenerlas en secreto y a comunicar a OTT Internet TV SL cualquier pérdida, revelación a terceros o robo de las mismas en el menor plazo de tiempo posible, con el fin de que OTT Internet TV SL pueda desactivarlas. Queda expresamente prohibido compartir las cuentas de usuario y nos reservamos el derecho de tomar cuantas medidas estén a nuestro alcance para evitarlo y restringir el servicio en caso de que se constate que esto ha ocurrido.<br> <br> <font class="bold">DESCRIPCIÓN DEL SERVICIO:</font><br> <br> OTT Internet TV SL pone a disposición de cualquier usuario que se registre en su Plataforma y que disponga de una conexión de banda ancha a Internet, la opción de seleccionar y visualizar distintos canales de televisión y contenidos audiovisuales de terceros en el territorio español.<br> <br> Como usuario, tendrás opción de disfrutar del servicio en la modalidad "Prueba Gratis", si la opción comercial que selecciones recoge esta posibilidad, de acuerdo a las condiciones establecidas en cada momento y publicadas y detalladas en la web o site comercial asociados. Es necesario que te registres para poder disfrutar del servicio en esta modalidad y aceptar las Condiciones de Uso, así como nuestra Política de Privacidad. En esta modalidad, podrás disfrutar del servicio durante el período máximo establecido en la promoción comercial correspondiente, salvo que expresamente indiquemos lo contrario en la descripción del servicio publicada en la web.<br> <br> Como usuario puedes tener acceso a nuestra Plataforma y a los contenidos comercializados a través de la misma utilizando equipos o dispositivos autorizados de conexión, tales como Media Centers, Set-Top Boxes, y televisores, o bien a través de dispositivos SmartTV, inclusive plataformas móviles, televisores, consolas, tablets y PC, así como a través de plataformas que integran servicios Over The Top de las principales marcas disponibles en el mercado en cada momento. En la web o site comercial asociado se facilitará siempre un listado actualizado de los dispositivos sobre los cuales se puede disfrutar de cada paquete de servicio.<br> <br> Del mismo modo, se facilitará siempre vía web un listado y detalle actualizado de los paquetes y productos comerciales ofertados y disponibles sobre cada dispositivo.<br> <br> En cada uno de los paquetes comerciales y para cada uno de los canales que se incluyen en la oferta comercial concreta, te informamos de que se incluyen todas modalidades de acceso a los contenidos audiovisuales (salvo que se indique lo contrario en la descripción del paquete comercial correspondiente), así como distintos servicios editoriales de nuestra Plataforma, entre ellas y sin perjuicio de cualquier otra modalidad que se ofrezca en el futuro:<br> <br> <font class="bold">1. <u>Televisión en directo</u></font>: te permite visualizar en directo  y a través de la conexión de banda ancha a internet, el mismo contenido que el/los canal/es retransmiten libremente o a través de las plataformas de TV de pago tradicionales. Accediendo a la información de cada paquete contratado, hallarás el número de canales disponibles (si se añaden otros), así como el detalle de los mismos.<br> <br> <font class="bold">2. <u>Servicio Network PVR</u></font>: te permite programar grabaciones en  la Guía de Programación prevista para los siguientes días. Podrás siempre solicitar que se grabe un programa que se emita en cualquiera de los canales que se emiten en la plataforma y desde cualquier dispositivo. Las grabaciones no se podrán reproducir desde dispositivos portables si no te encuentras en tu hogar, salvo que explícitamente se indique en la descripción del paquete contratado. Por lo tanto, es imprescindible que nos definas cuál será tu punto de acceso habitual en el momento del registro de la cuenta de usuario para que designemos ese sitio como tu punto de acceso autorizado (MiRed). En algunos casos y bajo determinadas circunstancias puntuales, nos reservamos el derecho de ajustar o modificar las condiciones de uso de este servicio. El número de horas de grabación, así como el número de grabaciones simultáneas que te permitimos, estará especificado en todo momento en la descripción del paquete comercial disponible en nuestra web. Por otra parte, las grabaciones tendrán una duración limitada, por lo que deberás tenerlo en cuenta para disfrutar del servicio. El sistema te avisará de ciertos eventos relevantes, tales como avisos de caducidad, alertas de disponibilidad de los contenidos grabados, necesidad de borrado por limitaciones de espacio, etc. El sistema te ofrece un servicio de alertas básico activado en el momento de registro, pero podrás configurarlo a tu medida, accediendo a la zona de MiPerfil.<br> <br> <font class="bold">3. <u>Servicio Catch Up TV</u></font>: te permite seleccionar y visualizar a través de la conexión de banda ancha a internet, contenidos en diferido de los emitidos en directo por los canales de TV y que la plataforma referencia como piezas independientes a través de los diferentes motores de recomendación de la plataforma. La duración y la accesibilidad de estos contenidos son limitadas y están en todo caso sujeta a los derechos de explotación que le han sido licenciados a OTT Internet TV SL por parte de los titulares de contenidos.<br> <br> <font class="bold">4. <u>Servicio de Recomendaciones de Consumo de Contenidos  y Contenido Editorial Relacional</u></font>: el sistema configurará distintos grados y modalidades de recomendación de consumo de contenidos y pondrá a tu disposición la correspondiente selección, tanto en las interfaces de servicio en las distintas aplicaciones, como en envíos programados a tu cuenta de correo. Así mismo, incluimos también un servicio editorial que te permite estar informado de las novedades de los contenidos que se emiten en cada canal, así como de datos relevantes del sector, de las productoras, actores y personajes, así como de los canales de televisión y distribuidoras de dichos contenidos, que te será enviado a tu correo y también se mostrará en otros formatos y medidas en algunas interfaces de servicio en cada dispositivo (secciones de Destacados, Sliders promocionales, Secciones más Vistas más Valoradas TotalFan, etc.). El sistema te ofrece un servicio de básico activado en el momento de registro, pero podrás configurarlo a tu medida, accediendo a la zona de MiPerfil.<br> <br> <font class="bold">5. <u>Servicio DTA</u></font> (Dynamic Targetted Advertising): la plataforma incluirá en algunos contenidos, cierta publicidad en distintos formatos, que pondrá a tu disposición en función de tu perfil de uso y consumo de contenidos. A medida que se recaben datos sobre tus preferencias, este servicio se irá personalizando y adaptando. Este servicio no es configurable por el usuario.<br> <br> OTT Internet TV SL se reserva el derecho de limitar el número máximo de horas de consumo de visualización de video a 20 horas en los paquetes TotalChannel Pack Premium, paquete TotalChannel DUO y a 40 horas en el paquete TotalChannel Pack Premium XL, a su pleno criterio con el fin de poder garantizar la calidad de servicio. En caso de que adopte esta medida, se le comunicará al usuario la tarifa o paquete comercial recomendado para satisfacer sus hábitos de consumo.<br> <br> El usuario podrá visualizar los contenidos desde cualquier dispositivo habilitado, pero en ningún caso se le permite más de una visualización simultánea. El número posible de dispositivos vinculables estará especificado en la descripción del servicio en la web.<br> <br> Cualquier cambio efectuado en la zona Mi Perfil del apartado "Notificaciones" se hará efectivo en un plazo de 72h.<br> <br> <font class="bold"><u>CONDICIONES DE CONTRATACIÓN</u></font><br> <br> Como Usuario, tendrás siempre acceso y, en todo caso con carácter previo al proceso de contratación de nuestros servicios, a la Descripción del Servicio y Condiciones de Contratación. Asimismo, antes de completar el proceso de compra, podrás visualizar el precio final a pagar por el Servicio, con el correspondiente desglose.<br> <br> Durante el proceso de contratación se te indicarán los medios técnicos para identificar y corregir los errores en la introducción de tus datos.Todo el proceso de contratación se realizará en lengua española.<br> <br> Todo el proceso de contratación se realizará en lengua española.<br> <br> Una vez contratado el Servicio, en cualquiera de sus modalidades, podrás visualizar una página de confirmación.Una vez contratado el Servicio, en cualquiera de sus modalidades, podrás visualizar una página de confirmación.<br> <br> Dentro de las 24 horas siguientes a la contratación, OTT Internet TV SL te remitirá mediante email confirmatorio de los productos o servicios contratados a OTT Internet TV SL. Dicho email, así como estas condiciones es susceptible de archivarse e imprimirse. De igual forma, te informamos de que OTT Internet TV SL archivará los documentos electrónicos que formalicen el servicio contratado. Finalmente, te informamos de que podrás descargarte online la factura desde nuestra Web, sí así lo deseas.<br> <br> El precio de compra de los servicios deberá ser abonado, mediante tarjeta de crédito o débito, asociada a una cuenta bancaria de una persona con domicilio en España.<br> <br> Una vez contratado el servicio, el pago del mismo se realizará por mensualidades anticipadas. En el caso de que así nos lo indiques, mediante marcación en la casilla correspondiente, la renovación del servicio se realizará automáticamente cada mes y, en consecuencia, cada mes se efectuará el cargo correspondiente en la cuenta bancaria que nos facilites.<br> <br> OTT Internet TV SL no abonará el precio del mes en curso, una vez iniciada la prestación del servicio. No obstante, podrás cancelar y darte de baja en el servicio para el mes siguiente, siempre y cuando tú mismo acced con tus credenciales lo indiques en tu cuenta eliminando el tic de renovación automática con 24 horas de antelación a la fecha que te facturamos.<br> <br> Asimismo, te informamos de que OTT Internet TV SL se reserva la facultad de sustituir servicios obsoletos por versiones actualizadas del mismo, con la eventual actualización del precio, lo cual te será notificado oportunamente.<br> <br> OTT Internet TV SL no se responsabiliza en relación con la confidencialidad y seguridad de la información y datos que proporciones con ocasión del pago de tus compras y suscripciones electrónicas mediante tarjeta de crédito o débito, en la medida en que el tratamiento de dicha información y datos no se encuentre, en exclusiva, bajo el control de OTT Internet TV SL.<br> <br> Sin perjuicio de lo anterior, te informamos de que OTT Internet TV SL procura instalar todos los medios de seguridad a su alcance para evitar la pérdida, mal uso, alteración, acceso no autorizado y robo de los datos facilitados.<br> <br> <font class="bold">PROPIEDAD INTELECTUAL E INDUSTRIAL:</font><br> <br> Todos los contenidos ofrecidos en la Plataforma, incluyendo la propia web, obras audiovisuales, textos, sinopsis, fotografías o ilustraciones, logos, marcas, grafismos, diseños, interfaces, etc., pertenecen a OTT Internet TV SL o han sido licenciados a OTT Internet TV SL por los terceros titulares de los derechos sobre dicho contenido y están protegidos por derechos de propiedad intelectual e industrial.<br> <br> Puedes utilizar la Plataforma y los contenidos publicados en ella de forma no exclusiva, sólo para tu uso privado (uso doméstico), y en cada caso según las condiciones de uso de cada contenido, dependiendo de si solo eres visitante de la página web, usuario registrado en período de "Prueba Gratis" o ya cliente que ha contratado nuestros servicios.<br> <br> No está permitido el uso comercial de los contenidos, ni copiar, almacenar o descargar, distribuir, publicar, enviar, transformar, utilizar cualquier técnica de ingeniería inversa, descompilar los contenidos o parte de los mismos, o realizar cualquier uso de medios o procedimientos distintos de los que se ponen a tu disposición en la Plataforma para utilizar los contenidos de forma distinta a la autorizada por OTT Internet TV SL.<br> <br> Tampoco puedes suprimir o manipular las indicaciones de copyright u otros créditos que identifiquen a los titulares de derechos de los contenidos que encuentres en la Plataforma ni los dispositivos técnicos de protección, las huellas digitales, marcas de agua, o cualquier otra medida tecnológica o mecanismo de protección o información incorporado a los contenidos ofrecidos en la Plataforma.<br> <br> Si imprimes, copias o descargas cualquier parte de nuestra web incumpliendo estos términos de uso, tu derecho a usar nuestra web cesará inmediatamente y estarás obligado, a nuestra elección, a devolver o destruir todas las copias de los materiales que hayas realizado. Lo anterior se entiende sin perjuicio de cualquier otra consecuencia legal.<br> <br> Las marcas, nombres comerciales o signos distintivos son titularidad de OTT Internet TV SL, sin que pueda entenderse que el acceso a nuestro portal o sitio web atribuya ningún derecho sobre las citadas marcas, nombres comerciales y/o signos distintivos.<br> <br>  Se hace constar que, al publicar contenidos (tales como "videos"o "comentarios") en los foros y secciones habilitadas para ello en nuestra Plataforma, estás concediendo a OTT Internet TV SL una licencia sobre los derechos de propiedad intelectual y/o industrial que en su caso pudieran corresponderte sobre tales contenidos. Dicha licencia no es exclusiva y abarca la totalidad de los derechos y modalidades de explotación de tales contenidos (incluyendo, de forma no limitativa, la reproducción, distribución, comunicación pública y transformación, por cualquier medio y en cualquier forma o soporte, tangible o intangible, con inclusión expresa de Internet), para todo el mundo y durante toda su vida legal, sin derecho a percibir por ello remuneración alguna.<br> <br> Excepción hecha de los datos de carácter personal que OTT Internet TV SL pueda recoger de acuerdo con lo establecido en nuestra Política de Privacidad, cualesquiera informaciones, ideas o materiales, de cualquier naturaleza, que sean remitidos a OTT Internet TV SL por el usuario, serán considerados públicos y no confidenciales y podrán ser utilizados libremente y sin cargo alguno por OTT Internet TV SL, así como por cualquiera de sus matrices o filiales, en los términos descritos en el párrafo anterior.<br> <br> Como usuario de nuestra Plataforma, al suministrar informaciones o contenidos en este sentido y con las consecuencias descritas en los dos párrafos anteriores, garantizas que no estás vulnerando ningún derecho de terceros, ni infringiendo ninguna disposición legal o reglamentaria, asumiendo de forma plena y exclusiva, cualquier responsabilidad que pudiera derivarse del suministro de tales informaciones o contenidos y de las consecuencias que se derivan de dicho suministro con arreglo a los dos párrafos anteriores.<br> <br> Por lo tanto, OTT Internet TV SL no se hace responsable respecto a posibles infracciones de derechos de propiedad intelectual y/o industrial de terceros ocasionados por los contenidos suministrados por terceros.Por lo tanto, OTT Internet TV SL no se hace responsable respecto a posibles infracciones de derechos de propiedad intelectual y/o industrial de terceros ocasionados por los contenidos suministrados por terceros.<br> <br> <font class="bold">EXCLUSIÓN DE RESPONSABILIDAD:</font><br> <br> <font class="bold">De los contenidos</font><br> <br> El acceso a nuestra Plataforma no implica la obligación por parte de OTT Internet TV SL de comprobar la veracidad, exactitud, adecuación, idoneidad, exhaustividad y actualidad de los contenidos titularidad terceros suministrada a través de nuestra plataforma.<br> <br> <font class="bold">De la calidad del servicio</font><br> <br> Por supuesto, estamos realizando nuestros mayores esfuerzos para asegurar la continuidad, seguridad y calidad de nuestra Plataforma en base al estado actual de la técnica. Sin embargo, no podemos garantizar la disponibilidad permanente y la continuidad del funcionamiento de la Plataforma, ni la ausencia de virus u otros elementos dañinos que puedan producir alteraciones en tu sistema informático (corresponde al Usuario, en todo caso, la disponibilidad de herramientas adecuadas para la detección y desinfección de programas informáticos dañinos), ni tampoco la repercusión que la calidad de la conexión a internet de los usuarios pueda tener en el servicio, la fiabilidad, utilidad, veracidad, exactitud, exhaustividad y actualidad de la información contenida en la web. Por lo tanto, no nos hacemos responsables en caso de que cualquiera de estas circunstancias ocurra.<br> <br> <font class="bold">De la disponibilidad del Servicio</font><br> <br> En relación con lo anterior, te informamos de que el acceso a la Plataforma requiere de servicios y suministros de terceros, incluidos el transporte a través de redes de telecomunicaciones cuya fiabilidad, calidad, continuidad y funcionamiento no corresponde a OTT Internet TV SL. Por consiguiente, los servicios proveídos a través de nuestra Plataforma pueden ser suspendidos, cancelados o resultar inaccesibles.<br> <br> De otra parte, te informamos de que determinados contenidos pueden ser objeto de bloqueo, a requerimiento de los titulares de los mismos, sin que OTT Internet TV SL pueda responsabilizarse de la eventual repercusión de la calidad o disponibilidad del Servicio.<br> <br> OTT Internet TV SL no se responsabiliza de los daños o perjuicios de cualquier tipo producidos en el Usuario que traigan causa de fallos o desconexiones en las redes de telecomunicaciones que produzcan la suspensión, cancelación o interrupción del servicio del Portal durante la prestación del mismo o con carácter previo.<br> <br> Finalmente, te informamos de que OTT Internet TV SL podrá eliminar, con carácter excepcional, algunos de los canales incluidos en el paquete que contrates, en el caso de perder los derechos de explotación sobre el mismo. En estos casos, OTT Internet TV SL hará todo lo posible por que el canal eliminado sea sustituido por otro de similares características, con el fin de que se vea afectado, lo mínimo posible, la calidad del Servicio contratado.<br> <br> <font class="bold">Del contenido publicado por los usuarios</font><br> <br> No controlamos el contenido publicado por los usuarios en las zonas públicas de nuestra Plataforma y no asumimos responsabilidad alguna por estos contenidos. No obstante, OTT Internet TV SL se reserva la posibilidad de supervisar y/o moderar cualquier contenido publicado por los usuarios en la Plataforma y, en caso de que sean ofensivos, atentatorios contra los derechos humanos, inapropiados, difamatorios o susceptibles de vulnerar cualquier derecho de terceros, de editarlo o eliminarlo.<br> <br> En este sentido, si tienes conocimiento de la existencia de ese tipo información o contenido en OTT Internet TV SL que pueda ser indebido ponte en contacto con nosotros enviando un correo electrónico a <em>soporte@totalchannel.com</em><br> <br> <font class="bold">POLÍTICA DE COOKIES:</font><br> <br> Te informamos de que OTT Internet TV SL podrá utilizar cookies durante la prestación del servicio del Portal. Mediante el acceso a este sitio web, das tu consentimiento para ello. Las cookies son procedimientos automáticos de recogida de información relativa a las preferencias determinadas por un usuario durante su visita a una determinada página web. Esta información se registra en pequeños archivos que son guardados en los equipos informáticos del usuario correspondiente de forma imperceptible. Cada vez que el usuario vuelve a acceder al sitio web en cuestión estos archivos se activan automáticamente de manera que se configura el sitio web con las preferencias señaladas en anteriores visitas.<br> <br> En definitiva, las cookies son ficheros físicos de información personal alojados en el propio terminal del usuario y asociados inequívocamente a este terminal. Gracias a las cookies OTT Internet TV SL te puede reconocer después de haber accedido por primera vez a nuestra plataforma y obtiene así información sobre la frecuencia de las visitas, los contenidos más vistos u otros datos, todo ello con el fin de optimizar y mejorar tu experiencia y la plataforma en general. Las cookies no pueden leer los archivos cookie creados por otros proveedores.<br> <br> El Usuario tiene la posibilidad de configurar su programa navegador de manera que se impida la creación de archivos cookie o se advierta del momento en que esto ocurre. Por lo tanto, OTT Internet TV SL te recomienda que revises las instrucciones o manuales de tu navegador y/o dispositivo de acceso para ampliar esta información ya que, según lo indicado, tienes la posibilidad de configurar tu navegador o el dispositivo de acceso para impedir su instalación. No obstante, determinados servicios de OTT Internet TV SL no podrán ser prestados de forma óptima sin tener instaladas las cookies.<br> <br> Concretamente estamos utilizando las Cookies para las finalidades que a continuación te exponemos, si en un futuro utilizamos otras con el propósito de ofrecerte más y mejores servicios, te informaremos de ello.<br> <br> Las Cookies propias de OTT Internet TV SL para acceder a nuestros servicios tienen como finalidad:<br> <br> 1. Recopilar información sobre tu navegación por OTT Internet TV SL. Nos sirven, por ejemplo, para recordarte una sesión iniciada con anterioridad, o incluso para identificarte en algunas ocasiones como un usuario anónimo.<br> <br> 2. Gestionar meta-datos (datos sobre los datos) y no tus datos personales.<br> <br> 3. Proporcionarnos información sobre los contenidos cuya visualización solicitas para facilitar dicha visualización y gestionar la configuración de tu perfil de usuario; también para adaptar y configurar el motor de recomendaciones y contenidos relacionados con tus preferencias y la publicidad segmentada asociada con tu perfil de usuario.<br> <br> 4. Otorgarnos información tecnológica para poder tramitar tus solicitudes como puedan ser licencias necesarias de otro software necesario para que funcione la Plataforma correctamente.<br> <br> <br>Puedes obtener más información sobre nuestras Cookies accede aquí: www.totalchannel.com/politica-de-cookies<br> <font class="bold">LINKS:</font><br> <br> <font class="bold">De los contenidos y servicios enlazados a través del Portal:</font><br> <br> El servicio de acceso a esta web podrá incluir dispositivos técnicos de enlace, directorios e incluso instrumentos de búsqueda que te permiten como Usuario acceder a otras páginas y portales de Internet (en adelante, "Sitios Enlazados"). En estos casos, OTT Internet TV SL actúa como prestador de servicios de intermediación de conformidad con el artículo 17 de la Ley 34/2002, de 12 de julio, de Servicios de la Sociedad de la Información y el Comercio Electrónico (LSSI) y sólo será responsable de los contenidos y servicios suministrados en los Sitios Enlazados en la medida en que tenga conocimiento efectivo de la ilicitud y no haya desactivado el enlace con la diligencia debida.<br> <br> En el supuesto de que consideres que existe un Sitio Enlazado con contenidos ilícitos o inadecuados podrás comunicárselo a OTT Internet TV SL, sin que en ningún caso esta comunicación conlleve la obligación de retirar el correspondiente enlace.<br> <br> En ningún caso, la existencia de Sitios Enlazados debe presuponer la existencia de acuerdos con los responsables o titulares de los mismos, ni la recomendación, promoción o identificación de OTT Internet TV SL con las manifestaciones, contenidos o servicios provistas.<br> <br> OTT Internet TV SL no conoce los contenidos y servicios de los Sitios Enlazados y por tanto no se hace responsable por los daños producidos por la ilicitud, calidad, desactualización, indisponibilidad, error e inutilidad de los contenidos y/o servicios de los Sitios Enlazados ni por cualquier otro daño que no sea directamente imputable a OTT Internet TV SL.<br> <br> <font class="bold">Introducción de enlaces al Portal:</font><br> <br> Si quieres introducir enlaces desde tus propias páginas web a nuestro portal, deberás cumplir con las condiciones que se detallan a continuación sin que el desconocimiento de las mismas evite las responsabilidades derivadas de la Ley:<br> <br> El enlace únicamente vinculará con la home page o página principal de nuestro portal de internet pero no podrá reproducirla de ninguna forma (deep links, inline links, hot links, copia de los textos, gráficos, etc.).<br> <br> Quedará en todo caso prohibido, de acuerdo con la legislación aplicable  y vigente en cada momento, establecer deep links así como frames o marcos de cualquier tipo que envuelvan a nuestro portal o permitan la visualización de los Contenidos a través de direcciones de Internet distintas a las de nuestro portal y, en cualquier caso, cuando se visualicen conjuntamente con contenidos ajenos a nuestro portal de forma que: (I) produzca, o pueda producir, error, confusión o engaño en los usuarios sobre la verdadera procedencia de los Contenidos; (II) suponga un acto de comparación o imitación desleal; (III) sirva para aprovechar la reputación de la marca y prestigio de OTT Internet TV SL; o (IV) de cualquier otra forma resulte prohibido por la legislación vigente.<br> <br> No se realizarán desde la página que introduce el enlace ningún tipo de manifestación falsa, inexacta o incorrecta sobre OTT Internet TV SL, sus empleados, proveedores, clientes o sobre la calidad de los servicios que comercializa.<br> <br> En ningún caso, se expresará en la página donde se ubique el enlace que OTT Internet TV SL ha prestado su consentimiento para la inserción del enlace o que de otra forma patrocina, colabora, verifica o supervisa los servicios del remitente.<br> <br> Está prohibida la utilización de cualquier marca denominativa, gráfica o mixta o cualquier otro signo distintivo de OTT Internet TV SL dentro de la página del remitente salvo en los casos permitidos por la ley o expresamente autorizados por OTT Internet TV SL y siempre que se permita, en estos casos, un enlace directo con nuestro portal en la forma establecida en esta cláusula.<br> <br> La página que establezca el enlace deberá cumplir fielmente con la ley y no podrá en ningún caso disponer o enlazar con contenidos propios o de terceros que: (I) sean ilícitos, nocivos o contrarios a la moral y a las buenas costumbres (pornográficos, violentos, racistas, etc.); (II) induzcan o puedan inducir en el usuario la falsa concepción de que OTT Internet TV SL suscribe, respalda, se adhiere o de cualquier manera apoya, las ideas, manifestaciones o expresiones, lícitas o ilícitas, del remitente; (III) resulten inapropiados o no pertinentes con la actividad de OTT Internet TV SL en atención al lugar, contenidos y temática de la página web del remitente.<br> <br> OTT Internet TV SL no tiene facultad ni medios humanos y técnicos para conocer, controlar ni aprobar toda la información, contenidos, productos o servicios facilitados por otros sitios web que tengan establecidos enlaces con destino a nuestra web. En este sentido, OTT Internet TV SL no asume ningún tipo de responsabilidad por cualquier aspecto relativo a la página web que establece ese enlace, en concreto, a título enunciativo y no limitativo, sobre su funcionamiento acceso, datos, información, archivos, calidad y fiabilidad de sus productos y servicios, sus propios enlaces y/o cualquiera de sus contenidos en general.<br> <br> <font class="bold">POLÍTICA DE PRIVACIDAD:</font><br> <br> Para poder ser usuario registrado o cliente de los servicios de OTT Internet TV SL es necesario que, previamente, leas atentamente nuestra Política de Privacidad. En este sentido, te invitamos a que leas con atención nuestro aviso legal específico en materia de Política de Privacidad.<br> <br> <font class="bold">GENERAL:</font><br> <br> Puedes contactar con nosotros enviando un correo electrónico a <em>soporte@totalchannel.com</em>.<br> <br> Si incumples estas Condiciones de Uso, OTT Internet TV SL podrá suspender o cancelar tu perfil automáticamente sin previo aviso, y, en ningún caso, tal suspensión o cancelación te daría derecho a reclamación y/o indemnización alguna. A estos efectos, te informamos que OTT Internet TV SL podrá poner en conocimiento y colaborar oportunamente con las autoridades policiales y judiciales competentes si detectase cualquier infracción de la legislación vigente o si tuviera sospecha de la comisión de algún delito.<br> <br> Los encabezamientos de las distintas cláusulas son sólo informativos, y no afectarán, calificarán o ampliarán la interpretación de las Condiciones de Uso.<br> <br> En el caso de existir discrepancia entre lo establecido en las presentes Condiciones de Uso y las condiciones particulares de cada servicio específico, prevalecerá lo dispuesto en éstas últimas.<br> <br> El no ejercicio o ejecución por parte de OTT Internet TV SL de cualquier derecho o disposición contenida en estas Condiciones de Uso no constituirá una renuncia al mismo, salvo reconocimiento y acuerdo por escrito por su parte.<br> <br> En el caso de que cualquier disposición o disposiciones de estas Condiciones de Uso fuera(n) considerada(s) nula(s) o inaplicable(s), en su totalidad o en parte, por cualquier Juzgado, Tribunal u órgano administrativo competente, dicha nulidad o inaplicación no afectará a las otras disposiciones de estas Condiciones de Uso.<br> <br> <font class="bold">LEY APLICABLE Y JURISDICCIÓN</font><br> <br> Estas Condiciones de Uso se rigen por la ley española y serán competentes los Juzgados y Tribunales de Barcelona, para cuantas cuestiones puedan derivarse del uso de la Plataforma y de sus Condiciones de Uso.<br> <br></div>
+        <div class="flechas">
+            <div class="flechaup" id="condiciones-up" onclick="PopUp.pairingHandler(TVA.tvKey.KEY_ENTER);" onmouseover="Commons.setHover(id);">&nbsp;</div>
+            <div class="flechadown" id="condiciones-down" onclick="PopUp.pairingHandler(TVA.tvKey.KEY_ENTER);" onmouseover="Commons.setHover(id);">&nbsp;</div>
+        </div>
+        </div>
+
+        <!-- fin condiciones uso -->
+
+        <!-- inicio privacidad -->
+
+        <div id="politicadiv" class="condicionesdiv hide-this">
+            <div class="condicionesusotexto" id="PPRIVTXT"><h3>POLÍTICA DE PRIVACIDAD DE OVER THE TOP INTERNET TELEVISION SL</h3><br> <br> Esta Política de Privacidad (junto con las Condiciones de Uso y otros documentos referenciados en las mismas), establece las bases sobre las que, en caso de que recabemos o nos facilites datos personales durante tu experiencia en OVER THE TOP INTERNET TELEVISION SL, en adelante OTT Internet TV SL,&nbsp; ya sea a través de la dirección URL www.totalchannel.com (en adelante "la Web") o por otros medios digitales, soportes o dispositivos habilitados por OTT Internet TV SL (en su conjunto, "la Plataforma"), OTT Internet TV SL te garantiza el cumplimiento de la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal (en adelante, LOPD) y su normativa de desarrollo.<br> <br> Cuando sea necesario que nos facilites o accedamos a tus datos personales, ya sea para poner a disposición todas las facilidades de nuestra Plataforma al registrarte como usuario o como cliente de nuestros servicios, deberás leer esta Política de Privacidad y, en su caso, darnos tu consentimiento para que podamos tratar tus datos.<br> <br> <font class="bold">Recogida de los datos</font><br> <br> A través de la Plataforma, OTT Internet TV SL puede recabar distintos tipos de datos personales, es decir, determinada información que por sus características nos permitirá identificarte, y se incorpora al fichero cuyo responsable es OTT Internet TV SL.<br> <br> Te informamos de que almacenamos los datos personales que nos facilitas cuando te registras en nuestra Plataforma para acceder a los servicios prestados por OTT Internet TV SL, en cualquiera de sus modalidades.<br> <br> Te agradecemos que los datos personales que nos remitas a través de la opción de registro sean veraces, completos, exactos y en todo caso, que estén actualizados.<br> <br> OTT Internet TV SL te comunica además, que la no cumplimentación de los datos personales requeridos en el apartado Regístrate podrá impedirnos gestionar adecuadamente el servicio de OTT Internet TV SL.<br> <br> Por último, te recordamos que para registrarte en OTT Internet TV SL tienes que ser mayor de 14 años, y sólo podrás contratar nuestros servicios como cliente si eres mayor de edad. Por eso, OTT Internet TV SL se reserva la facultad de solicitarte una fotocopia de tu D.N.I. u otro documento que acredite tu edad, en cuyo caso el equipo de OTT Internet TV SL te garantiza que los datos personales que nos facilites para acreditar tu edad, no serán utilizados para otra finalidad que no sea la de confirmar tu edad.<br> <br> <font class="bold">Finalidad del tratamiento de los datos</font><br> <br> OTT Internet TV SL trata tus datos personales para identificarte como usuario, darte acceso a OTT Internet TV SL y poner a tu disposición todas las facilidades para la prestación de los servicios que ofrecemos. Para asegurar el buen uso de la Plataforma y nuestros servicios, OTT Internet TV SL podrá conservar ciertos datos mínimos de sus usuarios por un tiempo limitado tras la cancelación de su perfil.<br> <br> Antes de utilizar un nuevo servicio de OTT Internet TV SL, recuerda leer las Condiciones de Uso y si hay alguna condición específica de ese servicio, en ellas podrás ver si se tratan especialmente tus datos personales.<br> <br> Según lo indicado, los datos se recaban y serán tratados con la finalidad de facilitar el acceso a los contenidos ofrecidos a través de la plataforma; así como la de prestar, gestionar, informar y mejorar los servicios y/o contenidos ofrecidos; adecuar dichos servicios a las preferencias y gustos de los usuarios. Asimismo podrán ser tratados para realizar acciones publicitarias o promocionales y mantenerle informado sobre otros productos o servicios propios o de terceros, así como facilitarte información y noticias del sector y de los servicios que pueden ofrecerte, por correo electrónico o cualquier otro sistema de comunicación electrónica similar.<br> <br> Al aceptar la presente Política de Privacidad, das tu consentimiento y nos autorizas a llevar a cabo el tratamiento de tus datos personales con las finalidades descritas anteriormente.<br> <br> No obstante, si no quieres que te enviemos publicidad sobre otros productos o servicios que pudieran ser de tu interés o que podamos ceder tus datos a terceros que indirectamente colaboran con OTT Internet TV SL podrás indicarlo en el formulario de confirmación de la cuenta.<br> <br> <font class="bold">Cesión de información</font><br> <br> A los efectos de lo previsto en los artículos 11 y 34.e) LOPD, consientes expresamente que tus datos puedan ser comunicados a cualquiera de las empresas del grupo al que pertenece OTT Internet TV SL, así como a terceros que colaboren directa o indirectamente en nuestra actividad, tratándose de una cesión a terceros, quienes podrán comunicarse contigo en relación con nuestros productos o servicios, con la finalidad que dicha intervención posibilite optimizar nuestra relación comercial contigo.<br> <br> Mediante la aceptación de lo dispuesto en el presente aviso legal y política de privacidad, consientes expresamente la utilización de tus datos, de conformidad con lo dispuesto en el artículo 27 LOPD, relativo a la comunicación de la primera cesión de datos.<br> <br> Asimismo, te informamos expresamente de que OTT Internet TV SL no acepta, ni recoge en sus ficheros, ni tampoco tratará de ningún modo, cualquier dato personal que no proceda directamente de su titular. En este sentido, te recordamos que solo puedes facilitarnos datos personales de tu propia titularidad y no de terceras personas, cuentes o no cuente con la autorización de éstas.<br> <br> <font class="bold">Privacidad y seguridad en el tratamiento de los datos de carácter personal</font><br> <br> OTT Internet TV SL se compromete a tratar de forma absolutamente confidencial tus datos de carácter personal, haciendo uso de los mismos exclusivamente para las finalidades indicadas. OTT Internet TV SL te informa de que tiene implantadas las medidas de seguridad de índole técnica y organizativas necesarias que garanticen la seguridad de tus datos de carácter personal y eviten su alteración, pérdida, tratamiento y/o acceso no autorizado, habida cuenta del estado de la tecnología, la naturaleza de los datos almacenados y los riesgos a que están expuestos, ya provengan de la acción humana o del medio físico o natural. Todo ello de conformidad con lo previsto en el artículo 9 LOPD y en el Real Decreto 1720/2007, de 21 de diciembre, por el que se aprueba el Reglamento de desarrollo de la Ley 15/1999, de 13 de diciembre, de protección de datos de carácter personal.<br> <br> <font class="bold">El ejercicio de tus derechos</font><br> <br> El consentimiento para la comunicación de datos de carácter personal es revocable en cualquier momento, si bien no tendrá efectos retroactivos, conforme a lo que dispone el artículo 6 y 11 LOPD.&nbsp;<br> <br> Podrás ejercer, si lo deseas, tu derecho de acceso, rectificación, cancelación y oposición al tratamiento de tus datos personales, en los términos y condiciones previstos en la propia LOPD, dirigiendo tu solicitud por correo a nuestra sede social en España "OTT Internet TV SL, S.L., Av. Diagonal 177 - Planta 12, Barcelona 08018", o bien contactando con nosotros en el correo electrónico: <em>soporte@totalchannel.com</em><br> <br> <font class="bold">Información de otros sitios web</font><br> <br> Periódicamente, este sitio web de OTT Internet TV SL podrá ofrecer enlaces a otros sitios web. Te recomendamos revisar cuidadosamente las políticas de privacidad y protección de datos en los mismos ya que pueden diferir de la regulación de OTT Internet TV SL.<br> <br></div>
+            <div class="flechas">
+                <div class="flechaup" id="politica-up" onclick="PopUp.pairingHandler(TVA.tvKey.KEY_ENTER);" onmouseover="Commons.setHover(id);">&nbsp;</div>
+                <div class="flechadown" id="politica-down" onclick="PopUp.pairingHandler(TVA.tvKey.KEY_ENTER);" onmouseover="Commons.setHover(id);">&nbsp;</div>
+            </div>
+        </div>
+
+        <!-- fin privacidad -->
+
+
+    </div>
+
+</div>
+<div id="messages-container" class="messages">
+    <div id="popup-message-container" class="message focus hide-this">
+        <div class="messages-icon"></div>
+        <div id="popup-message-text" class="messages-text"></div>
+        <div id="pairing-codes" class="pairing-codes hide-this"></div>
+        <div id="voting" class="voting hide-this">
+            <div id="voting-stars" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);">
+                <div id="voting-stars-inner">
+                    <span id="voting-stars-stars" class="stars stars3" data-stars="" data-programid=""></span>
+
+                    <div class="voting-star" onmouseover="PopUp.setVotingDetails(null, 1);"></div>
+                    <div class="voting-star" onmouseover="PopUp.setVotingDetails(null, 2);"></div>
+                    <div class="voting-star" onmouseover="PopUp.setVotingDetails(null, 3);"></div>
+                    <div class="voting-star" onmouseover="PopUp.setVotingDetails(null, 4);"></div>
+                    <div class="voting-star" onmouseover="PopUp.setVotingDetails(null, 5);"></div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+            <p>Utiliza las flechas &lt; &gt; del mando para puntuar</p>
+        </div>
+        <div id="messages-actions" class="messages-actions">
+            <div id="ok-popup-message" class="messages-button ok-button" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="PopUp.keyHandler(TVA.tvKey.KEY_ENTER);">&nbsp;</div>
+            <div id="option1-popup-message" class="messages-button option-button hide-this" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="PopUp.keyHandler(TVA.tvKey.KEY_ENTER);">&nbsp;</div>
+            <div id="option2-popup-message" class="messages-button option-button hide-this" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="PopUp.keyHandler(TVA.tvKey.KEY_ENTER);">&nbsp;</div>
+            <div id="option3-popup-message" class="messages-button option-button hide-this" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="PopUp.keyHandler(TVA.tvKey.KEY_ENTER);">&nbsp;</div>
+            <div id="cancel-popup-message" class="messages-button cancel-button" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="PopUp.keyHandler(TVA.tvKey.KEY_ENTER);">&nbsp;</div>
+        </div>
+        <div id="messages-image" class="messages-image hide-this"></div>
+        <div id="messages-step" class="messages-step hide-this"></div>
+        <div id="messages-image-left" class="messages-image-left hide-this" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="PopUp.keyHandler(TVA.tvKey.KEY_LEFT);" style="left: 3px; top: 334px;"></div>
+        <div id="messages-image-right" class="messages-image-right hide-this" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="PopUp.keyHandler(TVA.tvKey.KEY_RIGHT);" style="left: 1225px; top: 334px;"></div>
+    </div>
+</div>
+
+
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- HEADER -->
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+<div id="header" class="header">
+    <div id="page-logo" class="page-logo">
+        <img src="./TotalChannel_files/logo-header.png" alt="">
+    </div>
+    <div id="main-menu" class="main-menu">
+        <ul class="header-list">
+            <li id="header0" class="header-important header-menu active" onmouseover="Header.setPage(this.id, 0);" onmouseout="Commons.offHover(this.id);" onclick="Header.keyHandler(TVA.tvKey.KEY_ENTER);">HOME
+            </li>
+            <li id="header1" class="header-important header-menu" onmouseover="Header.setPage(this.id, 1);" onmouseout="Commons.offHover(this.id);" onclick="Header.keyHandler(TVA.tvKey.KEY_ENTER);">TV DIRECTO
+            </li>
+            <li id="header2" class="header-important header-menu" onmouseover="Header.setPage(this.id, 2);" onmouseout="Commons.offHover(this.id);" onclick="Header.keyHandler(TVA.tvKey.KEY_ENTER);">GUÍA TV
+            </li>
+            <li id="header3" class="header-important header-menu header-myrecordings" onmouseover="Header.setPage(this.id, 3);" onmouseout="Commons.offHover(this.id);" onclick="Header.keyHandler(TVA.tvKey.KEY_ENTER);">MIS GRABACIONES
+            </li>
+            <li id="header4" class="header-menu" onmouseover="Header.setPage(this.id, 4);" onmouseout="Commons.offHover(this.id);" onclick="Header.keyHandler(TVA.tvKey.KEY_ENTER);" data-page-idx="0" data-id="0c2517884ca772f3" data-name="Series">SERIES</li>
+            <li id="header5" class="header-menu" onmouseover="Header.setPage(this.id, 5);" onmouseout="Commons.offHover(this.id);" onclick="Header.keyHandler(TVA.tvKey.KEY_ENTER);" data-page-idx="1" data-id="837178ef2fce0149" data-name="Cine">CINE</li>
+            <li id="header6" class="header-menu" onmouseover="Header.setPage(this.id, 6);" onmouseout="Commons.offHover(this.id);" onclick="Header.keyHandler(TVA.tvKey.KEY_ENTER);" data-page-idx="2" data-id="70e36827f496c165" data-name="Deportes">DEPORTES</li>
+            <li id="header7" class="header-menu" onmouseover="Header.setPage(this.id, 7);" onmouseout="Commons.offHover(this.id);" onclick="Header.keyHandler(TVA.tvKey.KEY_ENTER);" data-page-idx="3" data-id="3fed4a382b223891" data-name="Otros">OTROS</li>
+            <li id="header8" class="header-menu hidden-header-element" onmouseover="Header.setPage(this.id, 8);" onmouseout="Commons.offHover(this.id);" onclick="Header.keyHandler(TVA.tvKey.KEY_ENTER);">&nbsp;
+            </li>
+            <li id="header9" class="header-important hide-this header-menu-totalfan header-menu" onmouseover="Header.setPage(this.id, 9);" onmouseout="Commons.offHover(this.id);" onclick="Header.keyHandler(TVA.tvKey.KEY_ENTER);">&nbsp;
+            </li>
+            <li id="header10" class="header-important header-menu header-menu-last" onmouseover="Header.setPage(this.id, 10);" onmouseout="Commons.offHover(this.id);" onclick="Header.keyHandler(TVA.tvKey.KEY_ENTER);">REGISTRAR<hr>ENTRAR
+            </li>
+            <li id="header11" class="header-important header-menu header-menu-help hide-this" onmouseover="Header.setPage(this.id, 11);" onmouseout="Commons.offHover(this.id);" onclick="Header.keyHandler(TVA.tvKey.KEY_ENTER);">AYUDA</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- liveplayer Container-->
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+<div id="liveplayer-container" class="liveplayer-container hide-this">
+    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- video-player -->
+    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <div id="video-player" class="video-player">
+    </div>
+    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <!--Live player channel side panel -->
+    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <div id="side-panel-container-video" class="side-panel-container hide-this ">
+        <div id="side-panel-container-overlay-video" class="overlay"></div>
+        <!-- hide this if you don not want the modal-->
+        <div id="side-panel-channels-video" class="side-panel-full"> <!-- the class for  mytv: side-panel-mytv -->
+            <div class="side-panel">
+                <div id="side-panel-scroll-up-video" class="side-panel-scroll-up" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="SidePanel.previous(true);"></div>
+                <div class="side-panel-scroll">
+                    <table id="side-panel-table-video">
+
+                    </table>
+                </div>
+                <div id="side-panel-scroll-down-video" class="side-panel-scroll-down" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="SidePanel.next(true);"></div>
+                <div class="side-panel-info side-panel-info-video"><span>AHORA EN EMISIÓN</span><span>PROGRAMA SIGUIENTE</span></div>
+            </div>
+        </div>
+    </div>
+    <div id="liveplayer-details-container" class="liveplayer-details-container">
+        <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+        <!--Live player info -->
+        <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+        <div id="top-panel" class="top-panel">
+
+        </div>
+
+        <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+        <!--Live player controls -->
+        <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+        <div id="player-controls" class="player-controls" onmouseover="VideoControls.mouseover();">
+            <div class="time-line">
+                <div id="elapsed-time" class="elapsed-time"></div>
+            </div>
+            <div id="video-container-controls" class="buttons">
+                <div class="controls-button play" id="player-controls0" onmouseover="VideoControls.actualControl = 0; Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="VideoControls.keyHandler(TVA.tvKey.KEY_ENTER);"></div>
+                <div class="controls-button stop" id="player-controls1" onmouseover="VideoControls.actualControl = 1; Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="VideoControls.keyHandler(TVA.tvKey.KEY_ENTER);"></div>
+                <div class="controls-button prev trickmode" id="player-controls2" onmouseover="VideoControls.actualControl = 2; Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="VideoControls.keyHandler(TVA.tvKey.KEY_ENTER);"></div>
+                <div class="controls-button rew trickmode" id="player-controls3" onmouseover="VideoControls.actualControl = 3; Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="VideoControls.keyHandler(TVA.tvKey.KEY_ENTER);"></div>
+                <div class="controls-button ffw trickmode" id="player-controls4" onmouseover="VideoControls.actualControl = 4; Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="VideoControls.keyHandler(TVA.tvKey.KEY_ENTER);"></div>
+                <div class="controls-button next trickmode" id="player-controls5" onmouseover="VideoControls.actualControl = 5; Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="VideoControls.keyHandler(TVA.tvKey.KEY_ENTER);"></div>
+            </div>
+            <h3 class="time">
+                <div id="video-info" class="video-info hide-this">
+                    <div id="video-audio-info" class="hide-this"><div class="video-txt-span video-audio-txt-span"></div><div class="video-info-span"></div></div>
+                    <div id="video-subt-info" class="hide-this"><div class="video-txt-span video-subt-txt-span"></div><div class="video-info-span"></div></div>
+                </div>
+                <span id="video-buffering" class="video-buffering hide-this"></span>
+                <span id="video-drm" class="current-drm"></span>
+                <span id="video-current-time" class="current">00:00</span>
+                <span id="video-division" class="division">/</span>
+                <span id="video-total-time" class="total">00:00</span>
+            </h3>
+        </div>
+    </div>
+    <div id="subtitles" class="subtitles">&nbsp;</div>
+    <div id="mousecatcherTop" class="hide-this" onmouseover="VideoControls.mouseover();"></div>
+    <div id="mousecatcherBottom" class="hide-this" onmouseover="VideoControls.mouseover();"></div>
+</div>
+
+
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- MAIN CONTAINER-->
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+<div id="main-container" class="main-container">
+
+
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!--SIDE PANEL -->
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+<div id="side-panel-container" class="side-panel-container hide-this">
+    <div id="side-panel-container-overlay" class="overlay"></div>
+    <!-- hide this if you do not want the modal-->
+    <div id="side-panel-describe" class="side-panel-full"> <!-- the class for mytv: side-panel-mytv -->
+        <div class="side-panel">
+            <div id="side-panel-scroll-up" class="side-panel-scroll-up" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="SidePanel.previous(true);"></div>
+            <div class="side-panel-scroll">
+                <table id="side-panel-table">
+                </table>
+            </div>
+            <div id="side-panel-scroll-down" class="side-panel-scroll-down" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="SidePanel.next(true);"></div>
+            <div class="side-panel-bg"></div>
+            <div class="side-panel-info"><span>AHORA EN EMISIÓN</span><span>PROGRAMA SIGUIENTE</span></div>
+        </div>
+    </div>
+</div>
+
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- SLIDER (store, fanpage, home, datasheet) -->
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+<div id="sliders" class="sliders active">
+
+    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- MAIN SLIDER -->
+    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <div id="big-slider" class="big-slider" onmouseover="Slider.setFocus(true);">
+        <span id="prev-big-slider" class="prev" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="Slider.previous(true);">&nbsp;</span>
+        <span id="next-big-slider" class="next" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="Slider.next(true);">&nbsp;</span>
+
+        <div id="slider-container"><div id="slider0" class="info-slide " data-eventid="0e99a5ff3e097138" data-programid="3e01f63df72b9553"><div class="big-slider-info" onclick="Slider.moreInfo();"><span class="channel">AXN HD</span><h1 class="series">Castle</h1><h2 class="chapter">Santa Claus malo</h2><h3 class="description">2014 - Serie | T7 Ep. 10</h3><h3 class="schedule">Lunes 21 de Diciembre  22:15 - 23:15</h3></div><div class="bg-default"></div><img class="bg-image resized" src="./TotalChannel_files/02152815.jpg" onload="Home.loadPromoImg(0);$(this).show();" onerror="Home.loadPromoImg(0);$(this).hide();" alt=""></div><div id="slider1" class="info-slide hide-this" data-eventid="d22b6b7b7fb59bab" data-programid="79031b0bdd7ba120"><div class="big-slider-info" onclick="Slider.moreInfo();"><span class="channel">AXN HD</span><h1 class="series">Blindspot</h1><h2 class="chapter">Evil Handmade Instrument</h2><h3 class="description">2015 - Serie | T1 Ep. 10</h3><h3 class="schedule">Martes 22 de Diciembre  22:15 - 23:13</h3></div><div class="bg-default"></div><img class="bg-image resized" data-src="http://cloudfront-static.totalchannel.tv/epgres/OTT_PromoBg/2015/10/21173965.jpg" id="home-promo-1" src="./TotalChannel_files/21173965.jpg" onload="$(this).show();" onerror="$(this).hide();" alt=""></div><div id="slider2" class="info-slide hide-this" data-eventid="43ee9a451e2c64b3" data-programid="b4a5d36fba0eaf5d"><div class="big-slider-info" onclick="Slider.moreInfo();"><span class="channel">FOX  HD</span><h1 class="series">Hawai 5.0</h1><h2 class="chapter">Lehu a Lehu (Cenizas a cenizas)</h2><h3 class="description">2015 - Serie | T6 Ep. 2</h3><h3 class="schedule">Lunes 21 de Diciembre  22:20 - 23:08</h3></div><div class="bg-default"></div><img class="bg-image resized" data-src="http://cloudfront-static.totalchannel.tv/epgres/OTT_PromoBg/2012/10/25120659.0_t1_cap10_ott_promobg.jpg" id="home-promo-2" src="./TotalChannel_files/empty.png" onload="$(this).show();" onerror="$(this).hide();" alt=""></div><div id="slider3" class="info-slide hide-this" data-eventid="1e6833fc784cbaf9" data-programid="e3a0c99b8163e57f"><div class="big-slider-info" onclick="Slider.moreInfo();"><span class="channel">FOX  HD</span><h1 class="series">NCIS: Los Ángeles</h1><h2 class="chapter">El largo adiós</h2><h3 class="description">2015 - Serie | T7 Ep. 8</h3><h3 class="schedule">Martes 22 de Diciembre  22:20 - 23:07</h3></div><div class="bg-default"></div><img class="bg-image resized" data-src="http://cloudfront-static.totalchannel.tv/epgres/OTT_PromoBg/2013/09/06127917.jpg" id="home-promo-3" src="./TotalChannel_files/empty.png" onload="$(this).show();" onerror="$(this).hide();" alt=""></div><div id="slider4" class="info-slide hide-this" data-eventid="050de808eddec903" data-programid="b2428afe98835ff4"><div class="big-slider-info" onclick="Slider.moreInfo();"><span class="channel">FOX Life</span><h1 class="series">El diario de Bridget Jones</h1><h2 class="chapter">&nbsp;</h2><h3 class="description">2001 - Película&nbsp;</h3><h3 class="schedule">Lunes 21 de Diciembre  21:58 - 23:34</h3></div><div class="bg-default"></div><img class="bg-image resized" data-src="http://cloudfront-static.totalchannel.tv/epgres/OTT_PromoBg/2012/08/09116995.jpg" id="home-promo-4" src="./TotalChannel_files/empty.png" onload="$(this).show();" onerror="$(this).hide();" alt=""></div><div id="slider5" class="info-slide hide-this" data-eventid="7b295643b8d48b93" data-programid="b1db4b95b2978b84"><div class="big-slider-info" onclick="Slider.moreInfo();"><span class="channel">National Geographic HD</span><h1 class="series">Cómo ganar en todo</h1><h2 class="chapter">&nbsp;</h2><h3 class="description">2015 - Programa&nbsp;</h3><h3 class="schedule">Lunes 21 de Diciembre  23:30 - 00:29</h3></div><div class="bg-default"></div><img class="bg-image resized" data-src="http://cloudfront-static.totalchannel.tv/epgres/OTT_PromoBg/2015/12/02177442.jpg" id="home-promo-5" src="./TotalChannel_files/empty.png" onload="$(this).show();" onerror="$(this).hide();" alt=""></div><div id="slider6" class="info-slide hide-this" data-eventid="76a872a893cb1ccc" data-programid="fd00bc89489085ac"><div class="big-slider-info" onclick="Slider.moreInfo();"><span class="channel">Crimen &amp; Investigación</span><h1 class="series">Dr. G, Médico Forense</h1><h2 class="chapter">&nbsp;</h2><h3 class="description">2015 - Programa&nbsp;</h3><h3 class="schedule">Martes 22 de Diciembre  23:30 - 00:20</h3></div><div class="bg-default"></div><img class="bg-image resized" data-src="http://cloudfront-static.totalchannel.tv/epgres/OTT_PromoBg/2014/03/27134712.jpg" id="home-promo-6" src="./TotalChannel_files/27134712.jpg" onload="$(this).show();" onerror="$(this).hide();" alt=""></div></div>
+    </div>
+
+    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- BOTTOM MAIN PART -->
+    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <div id="small-slider" class="small-slider">
+
+
+        <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+        <!-- FILTER -->
+        <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+        <div id="filter-thumbnail-list-container" class="filter-thumbnail-list-container" onmouseover="ThumbSliderFilter.setFocus(true);">
+            <ul id="filter-thumbs-list" class="filter-thumbs-list"><li id="filter-thumbs0" data-action="content-strip/list/id/BRASIL2014" action="content-strip/list/id/BRASIL2014" class="filter-thumbs active" onmouseover="Commons.setHover(this.id); ThumbSliderFilter.actualFilter=0;" onmouseout="Commons.offHover(this.id);" onclick="ThumbSliderFilter.keyHandler(TVA.tvKey.KEY_ENTER);">Destacados</li><li id="filter-thumbs1" data-action="recommended" action="recommended" class="filter-thumbs" onmouseover="Commons.setHover(this.id); ThumbSliderFilter.actualFilter=1;" onmouseout="Commons.offHover(this.id);" onclick="ThumbSliderFilter.keyHandler(TVA.tvKey.KEY_ENTER);">Recomendados</li><li id="filter-thumbs2" data-action="most-viewed" action="most-viewed" class="filter-thumbs" onmouseover="Commons.setHover(this.id); ThumbSliderFilter.actualFilter=2;" onmouseout="Commons.offHover(this.id);" onclick="ThumbSliderFilter.keyHandler(TVA.tvKey.KEY_ENTER);">Más Vistos</li><li id="filter-thumbs3" data-action="highest-rated" action="highest-rated" class="filter-thumbs" onmouseover="Commons.setHover(this.id); ThumbSliderFilter.actualFilter=3;" onmouseout="Commons.offHover(this.id);" onclick="ThumbSliderFilter.keyHandler(TVA.tvKey.KEY_ENTER);">Mejor Valorados</li></ul>
+        </div>
+
+
+        <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+        <!-- THUMB SLIDER -->
+        <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+        <div id="thumbnail-list" class="thumbnail-list" onmouseover="ThumbSlider.setFocus(true);">
+            <div id="arrow-left-thumb-horizontal" class="arrow-left-thumb-nav" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="ThumbSlider.previous(true);"></div>
+
+            <div id="preview-list-thumbnail-scroller" class="preview-list-thumbnail-scroller">
+                <ul id="preview-list-thumbnail" class="preview-list-thumbnail" style="left: 0px;"><li id="thumb-horizontal0" class="thumb-slider" data-programid="608ca5f360337c30" data-eventid="ea436a7067bd4d58" data-channelid="c158ef589c9a3c1e" data-assetid="null" onmouseover="ThumbSlider.setHover(this.id,false); ThumbSlider.actualThumb=0;" onmouseout="Commons.offHover(this.id);" onclick="ThumbSlider.moreInfo();"><img class="thumb-img-slider" id="thumb-img-slider-0" src="./TotalChannel_files/04175490.jpg" data-img="http://cloudfront-static.totalchannel.tv/epgres/OTT_Thumbnail/2015/11/04175490.jpg" onerror="this.onerror=null;this.src=&#39;./resource/general/generic-thumbnail.jpg&#39;" alt=""><div class="thumb-icon-list"><img src="./TotalChannel_files/1px.png" class="thumb-icon thumb-icon-rec"></div><div class="thumb-description"><h3 class="channel">AXN HD</h3><h4 class="description">Quantico</h4><h5 class="description">T1 Ep. 5</h5><h5 class="description">4 Dic,  04:15 h</h5></div><div class="list-thumb-div-rect"></div></li><li id="thumb-horizontal1" class="thumb-slider" data-programid="0dabcadf00d7abc8" data-eventid="2ce37b9fae8ca876" data-channelid="c158ef589c9a3c1e" data-assetid="null" onmouseover="ThumbSlider.setHover(this.id,false); ThumbSlider.actualThumb=1;" onmouseout="Commons.offHover(this.id);" onclick="ThumbSlider.moreInfo();"><img class="thumb-img-slider" id="thumb-img-slider-1" src="./TotalChannel_files/20134451.jpg" data-img="http://cloudfront-static.totalchannel.tv/epgres/OTT_Thumbnail/2013/09/20134451.jpg" onerror="this.onerror=null;this.src=&#39;./resource/general/generic-thumbnail.jpg&#39;" alt=""><div class="thumb-icon-list"><img src="./TotalChannel_files/1px.png" class="thumb-icon thumb-icon-rec"></div><div class="thumb-description"><h3 class="channel">AXN HD</h3><h4 class="description">Crossing Lines</h4><h5 class="description">T3 Ep. 12</h5><h5 class="description">3 Dic,  21:14 h</h5></div><div class="list-thumb-div-rect"></div></li><li id="thumb-horizontal2" class="thumb-slider" data-programid="4a2e3c8128d54d6b" data-eventid="612b36e5a5f8ac24" data-channelid="c158ef589c9a3c1e" data-assetid="null" onmouseover="ThumbSlider.setHover(this.id,false); ThumbSlider.actualThumb=2;" onmouseout="Commons.offHover(this.id);" onclick="ThumbSlider.moreInfo();"><img class="thumb-img-slider" id="thumb-img-slider-2" src="./TotalChannel_files/21173966.jpg" data-img="http://cloudfront-static.totalchannel.tv/epgres/OTT_Thumbnail/2015/10/21173966.jpg" onerror="this.onerror=null;this.src=&#39;./resource/general/generic-thumbnail.jpg&#39;" alt=""><div class="thumb-icon-list"><img src="./TotalChannel_files/1px.png" class="thumb-icon thumb-icon-rec"></div><div class="thumb-description"><h3 class="channel">AXN HD</h3><h4 class="description">Blindspot</h4><h5 class="description">T1 Ep. 7</h5><h5 class="description">4 Dic,  04:57 h</h5></div><div class="list-thumb-div-rect"></div></li><li id="thumb-horizontal3" class="thumb-slider" data-programid="59c1fd2d74d49308" data-eventid="fb1609e923ef9261" data-channelid="c158ef589c9a3c1e" data-assetid="null" onmouseover="ThumbSlider.setHover(this.id,false); ThumbSlider.actualThumb=3;" onmouseout="Commons.offHover(this.id);" onclick="ThumbSlider.moreInfo();"><img class="thumb-img-slider" id="thumb-img-slider-3" src="./TotalChannel_files/31116824.jpg" data-img="http://cloudfront-static.totalchannel.tv/epgres/OTT_Thumbnail/2012/07/31116824.jpg" onerror="this.onerror=null;this.src=&#39;./resource/general/generic-thumbnail.jpg&#39;" alt=""><div class="thumb-icon-list"><img src="./TotalChannel_files/1px.png" class="thumb-icon thumb-icon-rec"></div><div class="thumb-description"><h3 class="channel">AXN HD</h3><h4 class="description">Castle</h4><h5 class="description">T8 Ep. 7</h5><h5 class="description">1 Dic,  10:40 h</h5></div><div class="list-thumb-div-rect"></div></li><li id="thumb-horizontal4" class="thumb-slider" data-programid="c5fac266c6bcaba6" data-eventid="b1937ef191399e66" data-channelid="c158ef589c9a3c1e" data-assetid="null" onmouseover="ThumbSlider.setHover(this.id,false); ThumbSlider.actualThumb=4;" onmouseout="Commons.offHover(this.id);" onclick="ThumbSlider.moreInfo();"><img class="thumb-img-slider" id="thumb-img-slider-4" src="./TotalChannel_files/13159633.jpg" data-img="http://cloudfront-static.totalchannel.tv/epgres/OTT_Thumbnail/2015/02/13159633.jpg" onerror="this.onerror=null;this.src=&#39;./resource/general/generic-thumbnail.jpg&#39;" alt=""><div class="thumb-icon-list"><img src="./TotalChannel_files/1px.png" class="thumb-icon thumb-icon-rec"></div><div class="thumb-description"><h3 class="channel">AXN HD</h3><h4 class="description">Chicago Fire</h4><h5 class="description">T2 Ep. 21</h5><h5 class="description">26 Nov,  18:32 h</h5></div><div class="list-thumb-div-rect"></div></li><li id="thumb-horizontal5" class="thumb-slider" data-programid="ef5f5a910614699d" data-eventid="bde52ef5b9c879b6" data-channelid="c158ef589c9a3c1e" data-assetid="null" onmouseover="ThumbSlider.setHover(this.id,false); ThumbSlider.actualThumb=5;" onmouseout="Commons.offHover(this.id);" onclick="ThumbSlider.moreInfo();"><img class="thumb-img-slider" id="thumb-img-slider-5" src="./TotalChannel_files/07137052.jpg" data-img="http://cloudfront-static.totalchannel.tv/epgres/OTT_Thumbnail/2014/02/07137052.jpg" onerror="this.onerror=null;this.src=&#39;./resource/general/generic-thumbnail.jpg&#39;" alt=""><div class="thumb-icon-list"><img src="./TotalChannel_files/1px.png" class="thumb-icon thumb-icon-rec"></div><div class="thumb-description"><h3 class="channel">AXN HD</h3><h4 class="description">La Caza</h4><h5 class="description">T2 Ep. 5</h5><h5 class="description">30 Nov,  02:39 h</h5></div><div class="list-thumb-div-rect"></div></li><li id="thumb-horizontal6" class="thumb-slider" data-programid="a52b7dcd1bef9c4c" data-eventid="cb381e30d79f1eb6" data-channelid="022ab038aa418e82" data-assetid="null" onmouseover="ThumbSlider.setHover(this.id,false); ThumbSlider.actualThumb=6;" onmouseout="Commons.offHover(this.id);" onclick="ThumbSlider.moreInfo();"><img class="thumb-img-slider" id="thumb-img-slider-6" src="./TotalChannel_files/generic-thumbnail.jpg" data-img="http://cloudfront-static.totalchannel.tv/epgres/OTT_Thumbnail/2015/10/08173048.jpg" onerror="this.onerror=null;this.src=&#39;./resource/general/generic-thumbnail.jpg&#39;" alt=""><div class="thumb-icon-list"><img src="./TotalChannel_files/1px.png" class="thumb-icon thumb-icon-rec"></div><div class="thumb-description"><h3 class="channel">AXN White HD</h3><h4 class="description">Bienvenidos al sur</h4><h5 class="description"></h5><h5 class="description">2 Dic,  18:53 h</h5></div><div class="list-thumb-div-rect"></div></li><li id="thumb-horizontal7" class="thumb-slider" data-programid="58993221fb857183" data-eventid="5fdba84d7518c83f" data-channelid="022ab038aa418e82" data-assetid="null" onmouseover="ThumbSlider.setHover(this.id,false); ThumbSlider.actualThumb=7;" onmouseout="Commons.offHover(this.id);" onclick="ThumbSlider.moreInfo();"><img class="thumb-img-slider" id="thumb-img-slider-7" src="./TotalChannel_files/generic-thumbnail.jpg" alt=""><div class="thumb-icon-list"><img src="./TotalChannel_files/1px.png" class="thumb-icon thumb-icon-rec"></div><div class="thumb-description"><h3 class="channel">AXN White HD</h3><h4 class="description">El chef, la receta de la felicidad</h4><h5 class="description"></h5><h5 class="description">28 Nov,  18:48 h</h5></div><div class="list-thumb-div-rect"></div></li><li id="thumb-horizontal8" class="thumb-slider" data-programid="3b211bc6bbbdf721" data-eventid="b0a0252449594f39" data-channelid="563445dcc5fa1bc1" data-assetid="null" onmouseover="ThumbSlider.setHover(this.id,false); ThumbSlider.actualThumb=8;" onmouseout="Commons.offHover(this.id);" onclick="ThumbSlider.moreInfo();"><img class="thumb-img-slider" id="thumb-img-slider-8" src="./TotalChannel_files/generic-thumbnail.jpg" alt=""><div class="thumb-icon-list"><img src="./TotalChannel_files/1px.png" class="thumb-icon thumb-icon-rec"></div><div class="thumb-description"><h3 class="channel">beIN SPORTS</h3><h4 class="description">Liga de Campeones femenina</h4><h5 class="description">Atlético de Madrid-Olympique Lyon</h5><h5 class="description">13 Nov,  21:00 h</h5></div><div class="list-thumb-div-rect"></div></li><li id="thumb-horizontal9" class="thumb-slider" data-programid="453d3b9d72431fe9" data-eventid="f3ef0cb071c1d71c" data-channelid="563445dcc5fa1bc1" data-assetid="null" onmouseover="ThumbSlider.setHover(this.id,false); ThumbSlider.actualThumb=9;" onmouseout="Commons.offHover(this.id);" onclick="ThumbSlider.moreInfo();"><img class="thumb-img-slider" id="thumb-img-slider-9" src="./TotalChannel_files/generic-thumbnail.jpg" data-img="http://cloudfront-static.totalchannel.tv/epgres/OTT_Thumbnail/2015/10/22174090.jpg" onerror="this.onerror=null;this.src=&#39;./resource/general/generic-thumbnail.jpg&#39;" alt=""><div class="thumb-icon-list"><img src="./TotalChannel_files/1px.png" class="thumb-icon thumb-icon-rec"></div><div class="thumb-description"><h3 class="channel">beIN SPORTS</h3><h4 class="description">Premier League</h4><h5 class="description">Tottenham-Manchester City</h5><h5 class="description">27 Sep,  05:30 h</h5></div><div class="list-thumb-div-rect"></div></li><li id="thumb-horizontal10" class="thumb-slider" data-programid="94c25b6360570db7" data-eventid="b8dda5ad7989fcdc" data-channelid="ea3e13f730627b55" data-assetid="null" onmouseover="ThumbSlider.setHover(this.id,false); ThumbSlider.actualThumb=10;" onmouseout="Commons.offHover(this.id);" onclick="ThumbSlider.moreInfo();"><img class="thumb-img-slider" id="thumb-img-slider-10" src="./TotalChannel_files/generic-thumbnail.jpg" data-img="http://cloudfront-static.totalchannel.tv/epgres/OTT_Thumbnail/2015/10/07172958.jpg" onerror="this.onerror=null;this.src=&#39;./resource/general/generic-thumbnail.jpg&#39;" alt=""><div class="thumb-icon-list"><img src="./TotalChannel_files/1px.png" class="thumb-icon thumb-icon-rec"></div><div class="thumb-description"><h3 class="channel">Comedy Central HD</h3><h4 class="description">Eres lo peor</h4><h5 class="description">T2 Ep. 3</h5><h5 class="description">29 Nov,  23:49 h</h5></div><div class="list-thumb-div-rect"></div></li></ul>
+            </div>
+
+            <div id="arrow-right-thumb-horizontal" class="arrow-right-thumb-nav" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="ThumbSlider.next(true);"></div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- MULTI PANEL my tv, series movies. -->
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<div id="multi-panel" class="multi-panel hide-this"> <!-- This class will change depending on the page  -->
+
+
+    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- LEFT PANEL -->
+    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <div id="selector-multi-panel" class="hide-this">
+        <div id="left-panel" class="left-panel">
+            <div id="left-panel-describe" class="side-panel-mytv">
+                <h2 id="left-panel-title"></h2>
+
+                <div id="left-panel-actual-pos" class="current-hover-position">
+                    <span id="current-item-left-panel" class="green"></span><span id="total-left-panel"></span>
+                </div>
+                <div class="side-panel">
+                    <div id="left-panel-scroll-up" class="side-panel-scroll-up" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="LeftPanel.previous(true);"></div>
+                    <div class="side-panel-scroll">
+                        <ul id="left-panel-list" class="left-panel-list"></ul>
+                    </div>
+                    <div id="left-panel-scroll-down" class="side-panel-scroll-down" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="LeftPanel.next(true);"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <!-- content multi Panel: contains the (middle - right panel for mytv page) and (grid panel right for series movies) -->
+    <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <div id="content-multi-panel" class="hide-this">
+
+
+        <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+        <!-- Middle Panel -->
+        <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+        <div id="middle-preview-panel" class="preview-panel hide-this" onmouseover=""></div>
+
+
+        <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+        <!-- Right Panel -->
+        <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+        <div id="small-slider-vertical" class="small-slider lateral-slider hide-this">
+            <div id="thumbnail-list-rigt-panel" class="thumbnail-list" onmouseover="ThumbSlider.setFocus(true);">
+                <div class="shadow-top"></div>
+                <div class="shadow-bottom"></div>
+                <span id="arrow-up-thumb-vertical" pclass="shadow-top" class="arrow-top-thumb-nav" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="ThumbSlider.previous(true);"></span>
+
+                <div id="preview-list-thumbnail-scroller-right-panel" class="preview-list-thumbnail-scroller">
+                    <ul id="preview-list-thumbnail-right-panel" class="preview-list-thumbnail"></ul>
+                </div>
+                <span id="arrow-down-thumb-vertical" pclass="shadow-bottom" class="arrow-bottom-thumb-nav" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="ThumbSlider.next(true);"></span>
+            </div>
+        </div>
+
+        <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+        <!-- grid panel right panel -->
+        <!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+        <div id="grid-panel-right" class="grid-panel hide-this">
+            <span class="scroll-up"></span>
+            <span class="scroll-down"></span>
+
+            <div id="scroll-grid-container" class="scroll-grid-container">
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- EPG -->
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+<div id="epg" class="epg hide-this">
+	<div class="epg-panel-style">
+		<div class="bg-default-image-epg"></div>
+		<img id="bg-image-epg-description" class="bg-image" onload="$(this).show();" onerror="$(this).hide();" src="" alt="" style="display: none;">
+		<div class="bg-mask-epg"></div>	
+	</div>
+	
+	<div class="top-panel">						
+		<div id="epg-info" class="info"></div>						
+	</div>
+	
+	<div class="bottom-panel">
+		<div class="epg-line-container grid-horizontal-scroll">
+			<div class="epg-line"></div>
+		</div>
+		
+		<div class="bottom-panel-top">
+			<h2 id="date-epg" class="date"></h2>
+			<div id="hours-row" class="hours-row">
+				<ul class="grid-horizontal-scroll">
+					<li id="hour-00-00" class="hour">00:00</li>
+					<li id="hour-00-5" class="hour">00:30</li>
+					<li id="hour-01-00" class="hour">01:00</li>
+					<li id="hour-01-5" class="hour">01:30</li>
+					<li id="hour-02-00" class="hour">02:00</li>
+					<li id="hour-02-5" class="hour">02:30</li>
+					<li id="hour-03-00" class="hour">03:00</li>
+					<li id="hour-03-5" class="hour">03:30</li>
+					<li id="hour-04-00" class="hour">04:00</li>
+					<li id="hour-04-5" class="hour">04:30</li>
+					<li id="hour-05-00" class="hour">05:00</li>
+					<li id="hour-05-5" class="hour">05:30</li>
+					<li id="hour-06-00" class="hour">06:00</li>
+					<li id="hour-06-5" class="hour">06:30</li>
+					<li id="hour-07-00" class="hour">07:00</li>
+					<li id="hour-07-5" class="hour">07:30</li>
+					<li id="hour-08-00" class="hour">08:00</li>
+					<li id="hour-08-5" class="hour">08:30</li>
+					<li id="hour-09-00" class="hour">09:00</li>
+					<li id="hour-09-5" class="hour">09:30</li>
+					<li id="hour-10-00" class="hour">10:00</li>
+					<li id="hour-10-5" class="hour">10:30</li>
+					<li id="hour-11-00" class="hour">11:00</li>
+					<li id="hour-11-5" class="hour">11:30</li>
+					<li id="hour-12-00" class="hour">12:00</li>
+					<li id="hour-12-5" class="hour">12:30</li>
+					<li id="hour-13-00" class="hour">13:00</li>
+					<li id="hour-13-5" class="hour">13:30</li>
+					<li id="hour-14-00" class="hour">14:00</li>
+					<li id="hour-14-5" class="hour">14:30</li>
+					<li id="hour-15-00" class="hour">15:00</li>
+					<li id="hour-15-5" class="hour">15:30</li>
+					<li id="hour-16-00" class="hour">16:00</li>
+					<li id="hour-16-5" class="hour">16:30</li>
+					<li id="hour-17-00" class="hour">17:00</li>
+					<li id="hour-17-5" class="hour">17:30</li>
+					<li id="hour-18-00" class="hour">18:00</li>
+					<li id="hour-18-5" class="hour">18:30</li>
+					<li id="hour-19-00" class="hour">19:00</li>
+					<li id="hour-19-5" class="hour">19:30</li>
+					<li id="hour-20-00" class="hour">20:00</li>
+					<li id="hour-20-5" class="hour">20:30</li>
+					<li id="hour-21-00" class="hour">21:00</li>
+					<li id="hour-21-5" class="hour">21:30</li>
+					<li id="hour-22-00" class="hour">22:00</li>
+					<li id="hour-22-5" class="hour">22:30</li>
+					<li id="hour-23-00" class="hour">23:00</li>
+					<li id="hour-23-5" class="hour">23:30</li>
+				</ul>
+			</div>
+		</div>
+		<div class="bottom-panel-bottom">
+			<div class="epg-channels">
+				<div id="channel-vertical-scroll" class="grid-vertical-scroll"></div>
+			</div>
+			
+			<div class="epg-rows-wrapper">
+				<div id="epg-list-program" class="epg-rows grid-vertical-scroll grid-horizontal-scroll"></div>
+			</div>
+		</div>				
+		
+	</div>
+</div>
+</div>
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- Footer -->
+<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<div id="footer" class="footer">
+    <div id="directo" class="directo-footer" onmouseover="Footer.setFocus(this.id);" onmouseout="Commons.offHover(this.id);" onclick="Footer.keyHandler(TVA.tvKey.KEY_PLAY);"></div>
+    <div id="clock-footer" class="clock-footer hide-this"></div>
+    <div id="logged-user" class="logged-user"></div>
+    <ul id="left-controls" class="left-controls"><li id="leftFooterButton0" class="leftFooterButton-49 one-button-footer" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="Footer.keyHandler(49);">Ficha</li><li id="leftFooterButton1" class="leftFooterButton-405 yellow-button-footer disabled" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="Footer.keyHandler(405);">Zoom +</li><li id="leftFooterButton2" class="leftFooterButton-406 blue-button-footer notdisabled" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="Footer.keyHandler(406);">Zoom -</li></ul>
+    <ul id="center-controls" class="center-controls"></ul>
+    <ul id="right-controls" class="right-controls"><li id="rightFooterButton0" class="rightFooterButton-48 zero-button-footer" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="Footer.keyHandler(48);">Menu</li><li id="rightFooterButton1" class="rightFooterButton-461 return-button-footer" onmouseover="Commons.setHover(this.id);" onmouseout="Commons.offHover(this.id);" onclick="Footer.keyHandler(461);">Volver</li></ul>
+</div>
+<div class="alert-message" id="alert-message"><div class="alert-message-txt" id="alert-message-txt"></div></div>
+<div class="alert-message-centered" id="alert-message-centered"><div class="alert-message-centered-txt" id="alert-message-centered-txt"><p id="alert-message-centered-txt-p">s</p></div></div>
+</div>
+
+<div id="loadermask" zidx="150" style="display: none; z-index: 150;">
+    <div id="loader">
+        <div id="loaderAnim" class="load1"></div>
+    </div>
+</div>
+
+<div id="platform-id">LG</div>
+<div id="debugLog" style="display: none;"></div>
+<div id="debugWindow" style="position: absolute; top: 10px; right:10px; width: 200px; height: 700px; overflow:hidden; color: lime; font-size: 14px; line-height: 16px; background-color: black; border: none; z-index: 3000; display: none;"></div>
+
+
+<span id="TVA_PlayerBox"><object data="" type="video/mp4" id="LGplayer" autostart="false" style="position:absolute; width: 0; height: 0; top:0; left:0;" height="720" width="1280"></object></span><div id="connectionAlert" style="position: absolute; font-size: 24px; border: 5px solid rgb(238, 238, 238); width: 675px; height: 85px; left: 303px; top: 316px; padding: 15px 0px; z-index: 10000; background-color: rgb(17, 17, 17);"><div style="color: rgb(238, 238, 238); text-align: center;">No Network Connection</div><div style="color: rgb(170, 170, 170); text-align: center;">Please check your internet connection and re-launch this application</div></div></body></html>

@@ -1,0 +1,10 @@
+{
+    "type": "plugin",
+    "name": "videojs4",
+    "ver": "5.1.2",
+    "libVer": "5.1.02",
+    "adnalyzers": {
+        "ima": "1.0.0"
+    },
+    "built": "Wed Mar 09 2016"
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- VideoJS -->
+    <link href="http://vjs.zencdn.net/5.10.2/video-js.css" rel="stylesheet">
+    <script src="http://vjs.zencdn.net/5.10.2/video.js"></script>
+    <!---->
+    <!-- IMA3 -->
+    <link href="../../lib/ads-3.2.0/videojs.ads.css" rel="stylesheet" type="text/css">
+    <link href="../../lib/ima-0.4.0/videojs.ima.css" rel="stylesheet" type="text/css">
+    <script src="http://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+    <script src="../../lib/ads-3.2.0/videojs.ads.js"></script>
+    <script src="../../lib/ima-0.4.0/videojs.ima.js"></script>
+    <style>
+    .vjs-ad-playing.vjs-ad-playing .vjs-control-bar {
+        display: none;
+    }
+    </style>
+    <!---->
+    <!-- YouboraLib -->
+    <script src="/src/v5/libs/last-build/youboralib.js" youbora-debug="4"></script>
+    <script src="/src/v5/plugins/videojs5/last-build/plugin.js"></script>
+    <script src="/src/v5/adnalyzers/ima/last-build/adnalyzer.js"></script>
+    <!---->
+</head>
+
+<body>
+    <h1>VideoJS5 Video</h1>
+    <video id="video1" class="video-js vjs-default-skin" controls preload="none" width="640" height="264" poster="http://media.w3.org/2010/05/sintel/poster.png">
+        <source id='mp4' src="http://deslasexta.antena3.com/mp_series1/2012/09/10/00001.mp4" type='video/mp4'>
+        <p class="vjs-no-js">To view this video please enable JavaScript.</p>
+    </video>
+    <a href="#" onclick="nextVideo('http://deslasexta.antena3.com/mp_series1/2012/09/10/00001.mp4')">Next Video</a>
+    <script>
+    var plugins = {
+        youbora: {
+            accountCode: 'nicedev',
+            username: 'devja',
+            parseCDNNodeHost: true,
+        }
+    };
+
+    window.player = videojs('video1', {
+        plugins: plugins
+    });
+
+    // IMA3
+    player.ima({
+        id: 'video1',
+        adTagUrl: 'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&' +
+            'iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&' +
+            'impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&' +
+            'cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&' +
+            'vid=short_onecue&correlator='
+    }, player.ima.start);
+
+    player.one('click', function() {
+        player.ima.initializeAdDisplayContainer();
+        player.ima.requestAds();
+        player.play();
+    });
+
+    function nextVideo(src) {
+        player.load(src, {});
+    }
+    </script>
+    <script src="/src/v5/util/inspector/inspector.js"></script>
+</body>
+
+</html>

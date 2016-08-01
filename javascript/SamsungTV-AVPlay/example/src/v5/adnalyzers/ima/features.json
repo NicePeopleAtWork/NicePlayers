@@ -1,0 +1,11 @@
+[{
+    "name": "AdBuffer",
+    "since": "1.0.0",
+    "status": "SUPPORTED",
+    "comments": "Nicebuffer"
+}, {
+    "name": "Postrolls",
+    "since": "1.0.0",
+    "status": "LIMITATION",
+    "comments": "Stop will be send before postrolls"
+}]

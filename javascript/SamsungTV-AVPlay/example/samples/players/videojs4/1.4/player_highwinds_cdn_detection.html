@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Video.js | HTML5 Video Player</title>
+
+	<link href="/samples/players/videojs/lib/video-js.css" rel="stylesheet" type="text/css">
+
+	<!-- video.js must be in the <head> for older IEs to work. -->
+	<script src="/samples/players/videojs/lib/video.min.js"></script>
+
+	<!-- Youbora -->
+	<script src="/src/v1/1.4/js/libs/youbora-data-1.4.1.js"></script>
+	<script src="/src/v1/1.4/js/libs/youbora-api-1.4.4.js"></script>
+
+	<!-- SP -->
+	<script src="/src/v1/1.4/js/pc-videojs/3.4.3/sp.js"></script>
+
+	<style>
+		.video-js {
+			height: 344px;
+			width: 610px;
+			margin: 50px auto;
+		}
+	</style>
+
+</head>
+<body>
+
+	<!-- PLAYER -->
+	<video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="640" height="264" data-setup="{}">
+		<source src="http://cds.m6k4q3c7.hwcdn.net/encoded/Meeting%20with%20Alberto%2018-11-14%2013_50_mov/Meeting%20with%20Alberto%2018-11-14%2013.50-2500k.mp4" type='video/mp4' />
+		<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+	</video>
+
+
+	<script>
+		var options = {
+			accountCode: 'nicetv',
+            CDNNodeData: true
+		};
+
+		// PLAYER INSTANTIATION
+		_video = videojs('example_video_1').ready(function() {
+			var player = this;
+			// PLUGIN INSTANTIATION
+			player.youbora( options );
+
+		});
+
+	</script>
+
+
+</body>
+</html>

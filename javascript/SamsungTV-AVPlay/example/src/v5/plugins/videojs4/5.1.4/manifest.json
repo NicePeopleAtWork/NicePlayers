@@ -1,0 +1,11 @@
+{
+    "type": "plugin",
+    "name": "videojs4",
+    "ver": "5.1.4",
+    "libVer": "5.2.01",
+    "adnalyzers": {
+        "ima": "1.0.0",
+        "brightcove-ads": "1.0.0"
+    },
+    "built": "Fri May 06 2016"
+}

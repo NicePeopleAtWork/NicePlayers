@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<tt xmlns='http://www.w3.org/ns/ttml' xml:lang='en' >
+<body>
+<div>
+
+<p begin="00:00:01.878" end="00:00:35.334" >TTML Caption</p>
+<p begin="00:00:38.608" end="00:01:15.296" >Try to break things into <br/>two lines if necessary</p>
+
+<p begin="00:02:05.83" end="00:03:15.00">
+      <metadata ccrow="0" cccol="15"/>
+      On screen for 1 min 10 sec
+</p>
+
+</div>
+
+</body>
+</tt>

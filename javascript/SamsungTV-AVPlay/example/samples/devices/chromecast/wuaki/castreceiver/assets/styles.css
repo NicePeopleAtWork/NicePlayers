@@ -1,0 +1,425 @@
+/*
+ * Copyright 2014 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+**/
+
+/* Player */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  -webkit-font-smoothing: antialiased;
+}
+
+#player {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-image: url('images/bg.jpg');
+  background-color: #212121;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#player.idle .logo {
+  display: block;
+}
+#player.idle .spinit {
+  display: block;
+  margin-left: -250px;
+  width: 500px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0);
+  -webkit-animation: none;
+}
+
+#player.idle .spinit span {
+  padding: 5px 10px;
+  color: #ffffff;
+  font-size: 22px;
+  text-shadow: 0 1px 2px #000000;
+  text-align: center;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.1);
+}
+
+.player video {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.player.playing media video,
+.player.playing video,
+.player.paused video,
+.player.seeking video,
+.player.buffering video,
+.player.stalled video {
+  display: block;
+}
+.player.loading.seeking video {
+  display: none;
+}
+
+.player .overlay {
+  display: none;
+}
+
+.player.launching .overlay,
+.player.idle .overlay {
+  display: block;
+  position: absolute;
+  left: 55px;
+  right: 55px;
+  bottom: 55px;
+  top: 55px;
+}
+.player.idle .media-info,
+.player.idle .controls {
+  display: none;
+}
+
+.player .logo {
+  display: none;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 255px;
+  height: 282px;
+  margin-bottom: -120px;
+  margin-left: -127px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-image: url('images/logo.png');
+}
+
+.player .spinit {
+  display: none;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  margin-bottom: -230px;
+  margin-left: -16px;
+  color: transparent;
+  background-repeat: no-repeat;
+  background-image: url('images/play-state.png');
+  background-position: bottom center;
+  -webkit-animation: spin 1s infinite linear;
+}
+
+.player.launching .spinit,
+.player.launching .logo {
+  display: block;
+}
+
+.player:not(.launching) .logo,
+.player.playing .logo,
+.player:not(.launching) .spinit,
+.player.playing .spinit {
+  display: none;
+}
+
+.player .stamp {
+  position: absolute;
+  right: 0;
+  bottom: 64px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-image: url('images/logo.png');
+  background-size: 130%;
+  background-position: center 1px;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.player.launching .stamp,
+.player.idle .stamp,
+.player.done .stamp {
+  display: none;
+}
+
+/* Media Info */
+.player.seeking .stamp,
+.player.seeking .media-info,
+.player.buffering .stamp,
+.player.buffering .media-info,
+.player.buffering .controls .controls-cur-time,
+.player.buffering .controls .controls-total-time,
+.player.buffering .controls .controls-total-time,
+.player.buffering .controls .controls-progress {
+  display: none;
+}
+
+.player.loading.seeking .stamp,
+.player.loading.seeking .media-info,
+.player.buffering.seeking .controls .controls-cur-time,
+.player.buffering.seeking .controls .controls-total-time,
+.player.buffering.seeking .controls .controls-total-time,
+.player.buffering.seeking .controls .controls-progress {
+  display: block;
+}
+
+.player.buffering .overlay,
+.player.loading .overlay,
+.player.paused .overlay,
+.player.seeking .overlay {
+  display: block;
+  position: absolute;
+  left: 55px;
+  right: 55px;
+  bottom: 55px;
+}
+.player.stalled .overlay {
+  display: none;
+}
+
+.player .media-info .media-title-director {
+  position: absolute;
+  bottom: 61px;
+  left: 195px;
+  z-index: 1;
+}
+
+.player .media-info .media-title {
+  color: #d9d9d9;
+  line-height: 140%;
+  font-size: 32px;
+}
+
+.player .media-info .media-director {
+  color: #6f6f6f;
+  line-height: 100%;
+  font-size: 24px;
+  text-shadow: none;
+}
+
+.player .media-artwork {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  float: left;
+  width: 168px;
+  height: 240px;
+  margin-right: 20px;
+  margin-bottom: 65px;
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  box-shadow: 0 1px 1px #000000;
+  z-index: 1;
+}
+
+.player .media-description {
+  display: none;
+}
+.player .media-description {
+  padding-bottom: 50px;
+  width: 700px;
+  color: #d9d9d9;
+  line-height: 140%;
+  font-size: 18px;
+}
+
+.player .media-info {
+  display: table-cell;
+  text-shadow: 0 1px 1px #000000;
+  vertical-align: bottom;
+  z-index: 1;
+}
+
+.player.launching .controls,
+.player.launching .media-info {
+  display: none;
+}
+
+/* Controls */
+
+.player .controls {
+  height: 45px;
+  z-index: 1;
+}
+
+.player .controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.player .controls-play-pause {
+  background-size: cover;
+  border: 0;
+  height: 40px;
+  width: 40px;
+  float: left;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.player.buffering .controls-play-pause,
+.player.buffering.playing .controls-play-pause,
+.player.stalled .controls-play-pause,
+.player.seeking .controls-play-pause,
+.player.paused.seeking .controls-play-pause {
+  background-image: url('images/play-state.png');
+  background-position: center 40px;
+  -webkit-animation: spin 1s infinite linear;
+}
+
+.player.paused .controls-play-pause {
+  background-image: url('images/play-state.png');
+  background-position: center 0px;
+}
+
+.player.playing .controls-play-pause {
+  display: none;
+}
+.player.buffering.playing .controls-play-pause {
+  display: block;
+}
+
+.player .controls-progress {
+  height: 12px;
+  background-color: rgba(255,255,255,0.2);
+  margin-top: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.player .controls-progress-inner {
+  height: 100%;
+  background-color: #19b16a;
+}
+
+.player .controls-progress-thumb {
+  height: 100%;
+  width: 4px;
+  background-color: #6f6f6f;
+  position: absolute;
+  top: 0;
+  margin-left: -3px;
+  margin-top: -2px;
+  padding-bottom: 4px;
+}
+
+.player .controls-cur-time,
+.player .controls-total-time {
+  font-size: 22px;
+  line-height: 60px;
+  margin: 0 15px;
+  color: #6f6f6f;
+  text-shadow: 0 1px 1px #000000
+}
+.player .controls-total-time {
+  margin-right: 0;
+}
+
+.player .controls-cur-time {
+  float: left;
+}
+
+.player .controls-total-time {
+  float: right;
+}
+
+.player.loading .controls-cur-time,
+.player.loading .controls-total-time,
+.player.loading .controls-progress-thumb,
+.player.loading .controls-play-pause {
+  display: none;
+}
+
+.player.loading .controls-progress-inner {
+  width: 250px !important;
+  -webkit-animation: loading 1s infinite linear;
+}
+
+.player.playing .controls-cur-time {
+  margin-left: 0;
+}
+
+/* Gradient Layer */
+.player.launching .gradient,
+.player.done .gradient,
+.player.idle .gradient {
+  display: none;
+}
+.player .gradient {
+  height: 300px;
+  position: relative;
+  margin-left: -55px;
+  margin-right: -55px;
+  margin-bottom: -55px;
+  background: linear-gradient(transparent, #000000);
+  z-index: 0;
+}
+
+/* Countries Deltas */
+
+body[data-country='es'] #player.done {
+  background-image: url('images/es/static.jpg');
+}
+body[data-country='gb'] #player.done {
+  background-image: url('images/gb/static.jpg');
+}
+body[data-country='fr'] #player.done {
+  background-image: url('images/fr/static.jpg');
+}
+
+/* Development Flag */
+
+#player p {
+  display: block;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  padding: 15px 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.5);
+}
+
+/* Animation */
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes loading {
+  0% {
+    margin-left: -250px;
+  }
+  to {
+    margin-left: 100%;
+  }
+}

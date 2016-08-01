@@ -1,0 +1,97 @@
+<!--
+// Copyright 2014 Google Inc. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+-->
+
+<!DOCTYPE html>
+<head>
+<title>Cast Web/Chrome Sender API Demo</title>
+<link rel="stylesheet" type="text/css" href="css/demo.css">
+<script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+</head>
+<body>
+  <div>
+    <div>
+      <h2 style="display:block">Google Cast SDK Beta Release: Chrome SDK Media Meta Data Sample</h2>
+      <div style="border:1px solid #000; margin:10px; float:left; display:block; width:90%; background-color:#fcf;">
+        <h3 style="float:left; display:block; margin:10px;">Start/Stop Cast session by launching/stopping app</h3>
+        <button style="margin:10px; float:right; font-size:16px;" onclick="launchApp()">Launch app</button>
+        <button style="margin:10px; float:right; font-size:16px;" onclick="stopApp()">Stop app</button>
+        <select style="float:right; font-size:16px; margin-top:10px;" onchange="autoJoin(this.value);">
+          <option value="tab_and_origin_scoped">Auto join in same tab</option>
+          <option value="origin_scoped">Auto join across tabs</option>
+          <option value="page_scoped">No auto join</option>
+        </select>
+        <span style="margin:10px; float:right; font-size:80%;">Set auto join policy</span>
+      </div>
+      <div style="border:1px solid #000; margin:10px; float:left; display:block; width:90%; background-color: #ffc;">
+        <h2 style="display:block; margin:10px; color:#ff0000;">Click on thumbnails to cast video, movie, tv show, music and photo</h2>
+        <div style="margin:20px; float:left;">
+          <div style="font-weight:bold; color:#0000ff; font-size:90%;">Big Buck Buny video</div> 
+          <img src="images/bunny.jpg" width="150" height="80" onclick="loadMedia(0);">
+        </div>
+        <div style="margin:20px; float:left;">
+          <div style="font-weight:bold; color:#0000ff; font-size:90%;">Elephant Dream TV show</div> 
+           <img src="images/ed.jpg" width="150" height="80" onclick="loadMedia(1);">
+        </div>
+        <div style="margin:20px; float:left;">
+          <div style="font-weight:bold; color:#0000ff; font-size:90%;">Tears of Steel movie</div> 
+           <img src="images/Tears.jpg" width="150" height="80" onclick="loadMedia(2);">
+        </div>
+        <div style="margin:20px; float:left;">
+          <div style="font-weight:bold; color:#0000ff; font-size:90%;">Google I/O audio mp3</div> 
+           <img src="images/google-io-2011.jpg" width="150" height="80" onclick="loadMedia(3);">
+        </div>
+        <div style="margin:20px; float:left;">
+          <div style="font-weight:bold; color:#0000ff; font-size:90%;">San Francisco Fog photo</div> 
+           <img src="images/San_Francisco_Fog.jpg" width="100" height="80" onclick="loadMedia(4);">
+        </div>
+      </div>
+
+      <div style="border:1px solid #f00; margin:10px; float:left; display:block; width:90%; background-color: #ccc;">
+        <div style="float:left; margin:10px; float:left; width:50%;" id="media_control">
+          <h3 style="display:block; margin:10px 10px 10px 10px">Media Control</h3>
+          <div style="float:left; margin:10px; width:70%;">
+            <button style="font-size:16px;" id="playpauseresume" onclick="playMedia()">Play</button>
+            <button style="font-size:16px;" onclick="stopMedia()">Stop</button>
+            <span id="muteText">Mute media</span>
+            <input style="font-size:16px;" type="checkbox" onclick="muteMedia(this);"> 
+            <div style="float:right; margin-top:5px;width:40px;">
+	     <input class="vertical"  style="width:100px;"type="range" min="0" max="100" step="1" onmouseup="setReceiverVolume(1-this.value/100,false);">
+             <div class="vertical" style="font-size:15px;">Volume</div>
+            </div>
+          </div>
+          <div style="float:left; margin:10px; width:70%;">
+            Progress : <input id="progress" type="range" min="1" max="100" value="1" step="1" onmouseup="seekMedia(this.value);">
+          </div>
+          <div style="float:left; margin:10px;">
+            State : <span id="playerstate">IDLE</span>
+            <img style="margin:10px;" src="images/cast_icon_idle.png" id="casticon" width="30">
+          </div>
+        </div>
+
+        <div style="float:left; margin:10px;">
+          <textarea rows="20" cols="70" id="debugmessage">
+          </textarea>
+        </div>
+      <div>
+
+
+
+    </div>
+  </div>
+<script src="media.js"></script>
+
+</body>
+</html>

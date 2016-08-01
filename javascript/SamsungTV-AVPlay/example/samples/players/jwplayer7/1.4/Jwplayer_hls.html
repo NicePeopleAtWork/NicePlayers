@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=8; IE=9" />
+    <meta pod-id="" />
+    <link href="http://assets02.desk.com/assets/portal_jqueryui_only-5cfb94385d0d1c1217aa9a7d33e9d4cb.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="http://assets02.desk.com/assets/vendor-25eb61af4992cf238353ac316557ef65.js" type="text/javascript"></script>
+    <script src="http://assets01.desk.com/assets/customer_widget-7ad89f832f39f939ec70cedf521f8a21.js" type="text/javascript"></script>
+    <script src="http://assets04.desk.com/assets/portal-1e9a2310183c6b877150afcad3c4031d.js" type="text/javascript"></script>
+    <script src="http://www.google.com/jsapi?key=ABQIAAAAQO2RPu5r12mVC40HMDIFHRQqrBpdv_jP_dFl8Cw_MxS37sDB3xTXnsXso23z1ROPVCqEVVv6cqz_cA" type="text/javascript"></script>
+    <script src="http://assets03.desk.com/assets/tracking-d2f3e2d35e13b3c313fe7e1cd3057690.js" type="text/javascript"></script>
+    <script src="http://deskwww.s3.amazonaws.com/new/javascripts/deskanalytics.js" type="text/javascript"></script>
+    <script src="http://assets03.desk.com/assets/tracking/settings/production-6a6b78030e48bdca0ea4d2891776259c.js" type="text/javascript"></script>
+    <meta content="authenticity_token" name="csrf-param" />
+    <meta content="Gpqau8k8XMNhg1EK/BXbg+SLrcXjPKRFKTs1uZBRZG8=" name="csrf-token" />
+    <title>
+        JW Player | Using HLS Streaming
+    </title>
+    <script src="http://jwpsrv.com/library/5V3tOP97EeK2SxIxOUCPzg.js"></script>
+    <script type="text/javascript" src="http://pre.smartplugin.youbora.com/src/v1/1.3/js/libs/youbora-data.js"></script>
+    <script type="text/javascript" src="http://pre.smartplugin.youbora.com/src/v1/1.3/sp/spyoubora.js?preProduction=true"></script>
+    <p>For an HLS livestream example, please see below.&nbsp;This stream is being broadcasted from our offices in New York City. Behold! The JW Jellyfish!</p>
+    <style type="text/css">
+    #container {
+        display: block;
+        margin-left: 10px;
+        box-shadow: 0 0 4px #999;
+    }
+    </style>
+    <div id="container">&nbsp;</div>
+    <script type="text/javascript">
+    var system = "demosite";
+
+    var zonecode = "default";
+    var origincode = "pdl";
+    var niceNVA = "3600";
+    var niceNVB = "0";
+
+    var tokenServiceHost = "http://dbb2.nice264.com/niceTokenService/balancedURL.php";
+
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.addEventListener("load", function(httpEvent) {
+
+        try {
+
+            var responseJson = httpEvent.target.response;
+            var response = JSON.parse(responseJson);
+
+            var nva = response.nva;
+            var nvb = response.nvb;
+            var token = response.token;
+
+            youboraData.setZoneCode("default");
+            youboraData.setBalanceOriginCode(origincode);
+            youboraData.setBalanceNVA(nva);
+            youboraData.setBalanceNVB(nvb);
+            youboraData.setBalanceType("balance");
+            youboraData.setBalanceToken(token);
+            //youboraData.setBalanceService(tokenServiceHost);
+            youboraData.setBalanceService("http://smartswitch.youbora.com");
+        } catch (err) {
+            console.log(err);
+        }
+    }, false);
+
+    var urlDataWithCode = tokenServiceHost + "?nva=" + niceNVA +
+        "&nvb=" + niceNVB +
+        "&system=" + system +
+        "&originCode=" + origincode +
+        "&zoneCode=" + zonecode +
+        "&filepath=" + "http://cdn.s1.eu.nice264.com/converted_work6/0082c06e504b0a422bf1_6815f2deeb179c29748af42f8cd5ce95.mp4";
+    xmlHttp.open("GET", urlDataWithCode, true);
+    xmlHttp.send();
+
+    function callback() {
+        alert("Callback de resume");
+    }
+    youboraData.setDebug(true);
+    youboraData.setEnableAnalytics(true);
+    youboraData.setEnableBalancer(false);
+
+    youboraData.setContentId("new");
+    youboraData.setResumeEnabled(false);
+    youboraData.setResumeCallback(callback);
+
+    youboraData.setConcurrencyCode("newCode");
+    youboraData.setConcurrencyMaxCount(1);
+    youboraData.setConcurrencyRedirectUrl("http://www.google.es");
+    youboraData.concurrencyProperties.enabled = false;
+
+    youboraData.setAccountCode(system);
+    youboraData.setUsername('demosite jwplayer');
+    youboraData.setService('http://nqs.nice264.com');
+    youboraData.setLive(false);
+    //youboraData.setHttpSecure(false);
+    youboraData.setProperties({
+        filename: "SS_16_9_404p_1100_MP30/fc642fcbbf910bb50ffb.mp4",
+        content_id: "fc642fcbbf910bb50ffb",
+        content_metadata: {
+            title: "Big Buck Bunny",
+            genre: "Animation",
+            language: "English",
+            year: "2011",
+            cast: "",
+            director: "",
+            owner: "nicepeopleatwork",
+            duration: "09:27",
+            parental: "",
+            price: "0.0�",
+            rating: "",
+            audioType: "",
+            audioChannels: ""
+        },
+        transaction_type: "rental",
+        quality: "SD",
+        content_type: "movie",
+        device: {
+            manufacturer: "JWPlayer6",
+            type: "Browser",
+            year: "2014",
+            firmware: ""
+        }
+    });
+    jwplayer("container").setup({
+        androidhls: true,
+        file: "http://wowza.jwplayer.com:1935/live/jelly.stream/playlist.m3u8",
+        image: "http://support-static.jwplayer.com/images/jellies.jpg",
+        title: "JW Jellies",
+        width: '80%',
+        aspectratio: '16:9',
+        plugins: {
+            "http://pre.smartplugin.youbora.com/src/v1/1.3/js/all-jwplayer/3.1.2/sp.js": youboraData
+        }
+    });
+    </script>
+    </body>
+
+</html>

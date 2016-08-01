@@ -1,0 +1,330 @@
+@charset "utf-8";
+/* CSS Document */
+body 
+{
+
+background-image: -webkit-radial-gradient(center center, ellipse farthest-corner, #CCC, #666 83%);
+	overflow:hidden;
+	font-family: LG Display;
+	font-size:26px;
+	margin:0px;
+	-webkit-user-select:none;
+}
+.playerLayout
+{
+	width:1280px;
+	height:720px;
+	background:#CCC;
+}
+/******************* Control buttons of movie player *************************/
+.playerBottom
+{
+	top:561px;
+	width:1238px;
+	height:148px;
+	background:url(../images/player_playerbg.png) center no-repeat;
+	position:absolute;
+	margin:0px 21px 11px 21px;
+	
+	
+}
+
+.playerButtonLayout
+{
+	margin:0px 15px 15px 15px;
+	width:1208px;
+	height:133px;
+	position:absolute;
+}
+/************** CSS for Button layout   *******************/
+#buttonLayout
+{
+	width:1208px;
+	height:51px;
+	top:82px;
+	position:absolute;
+}
+
+#buttonLayout ul
+{
+	margin:0px;
+	padding:0px;	
+}
+#buttonLayout ul li
+{
+	display:inline;
+	height:51px;
+	float:left;
+	list-style:none;
+}
+/******************** CSS of each control button ****************/
+.stopButton
+{
+	width:242px;
+	height:51px;
+	background:url(../images/player_btn/btn_nor_side_left.png) left no-repeat, url(../images/player_btn/btn_nor_center.png) center repeat-x , url(../images/player_btn/btn_nor_line_left.png) right no-repeat;
+	float:left;
+}
+
+.stopButtonHover
+{
+	background-image:url(../images/player_btn/btn_focus_side_left.png), url(../images/player_btn/btn_focus_center.png), url(../images/player_btn/btn_focus_line_left.png);
+	background-position:left, center, right;
+	background-repeat:no-repeat, repeat-x, no-repeat;
+}
+
+.playButton
+{
+	float:left;
+	width:241px;
+	height:51px;
+	background: url(../images/player_btn/btn_nor_line_right.png) left no-repeat,url(../images/player_btn/btn_nor_center.png) center repeat-x;
+	float:left;
+}
+
+.playButtonHover
+{
+	background:url(../images/player_btn/btn_focus_line_right.png) left no-repeat,url(../images/player_btn/btn_focus_center.png) center repeat-x;
+}
+.forwardButton
+{
+	width:241px;
+	height:51px;
+	background: url(../images/player_btn/btn_nor_line_right.png) left no-repeat,url(../images/player_btn/btn_nor_center.png) center repeat-x;
+float:left;
+}
+
+.forwardButtonHover
+{
+	background: url(../images/player_btn/btn_focus_line_right.png) left no-repeat,url(../images/player_btn/btn_focus_center.png) center repeat-x;
+}
+.rewindButton
+{
+	width:241px;
+	height:51px;
+	background: url(../images/player_btn/btn_nor_line_right.png) left no-repeat,url(../images/player_btn/btn_nor_center.png) center repeat-x;
+	float:left;
+}
+
+.rewindButtonHover
+{
+	background: url(../images/player_btn/btn_focus_line_right.png) left no-repeat,url(../images/player_btn/btn_focus_center.png) center repeat-x;
+}
+/*.viewButton
+{
+	width:201px;
+	height:51px;
+	background: url(../images/player_btn/btn_nor_line_right.png) left no-repeat,url(../images/player_btn/btn_nor_center.png) center repeat-x;
+	float:left;
+	color:rgb(173,173,173);
+	
+}
+
+.viewButtonHover
+{
+		background: url(../images/player_btn/btn_focus_line_right.png) left no-repeat,url(../images/player_btn/btn_focus_center.png) center repeat-x;
+		color:rgb(250,250,250);
+}
+*/
+.optionButton
+{
+	width:242px;
+	height:51px;
+	background: url(../images/player_btn/btn_nor_line_right.png) left no-repeat,url(../images/player_btn/btn_nor_center.png) center repeat-x, url(../images/player_btn/btn_nor_side_right.png) right no-repeat;
+
+	float:left;
+	color:rgb(173,173,173);
+}
+.optionButtonHover
+{
+	background: url(../images/player_btn/btn_focus_line_right.png) left no-repeat,url(../images/player_btn/btn_focus_center.png) center repeat-x, url(../images/player_btn/btn_focus_side_right.png) right no-repeat;
+	color:rgb(250,250,250);
+}
+
+img.center
+{
+	display:block;
+	margin:11px auto 18px auto;
+}
+
+.imgTextCenter
+{
+	display:block;
+	margin:11px 30px 18px 30px;
+	
+}
+.textCenter
+{
+	margin-left:6px;
+	text-align:left;
+	
+}
+/************ CSS for progress bar ************/
+.progressBallInitial
+{
+	bottom:120px;
+	top:-4px;
+	left:0px;
+	width:71px;
+	height:44px;
+	background:url(../images/movie_progress_ball_n_afterimage.png) no-repeat;
+	position:absolute; 
+	
+}
+.progressBall
+{
+	bottom:120px;
+	top:-4px;
+	left:0px;
+	width:71px;
+	height:44px;
+	background:url(../images/movie_progress_ball_n.png) no-repeat;
+	position:absolute; 
+}
+.progressBallHover
+{
+	bottom:112px;
+	top:-12px;
+	left:-14px;
+	width:104px;
+	height:60px;
+	background:url(../images/movie_progress_ball_f.png) no-repeat;
+	position:absolute;
+}
+#ballCoverage
+{
+	bottom:112px;
+	top:-12px;
+	left:0px;
+	height:60px;
+	width:1070px;
+}
+.progressBarLayout
+{
+	width:1208px;
+	height:70px;
+	margin-left:20px;
+}
+.progressBar
+{
+	height:43px;
+}
+.progress
+{
+	height:11px;
+	float:left;
+	margin-top:32px;
+
+}
+.progressBg
+{
+	width:981px;
+	background:url(../images/movie_progress_bar_bg.png) repeat-x;
+}
+.progressBuffer
+{
+	position:absolute;
+	max-width:981px;
+	background:url(../images/movie_progress_bar_buffer.png) repeat-x;
+}
+.progressBarStatus
+{
+	position:absolute;
+	background:url(../images/movie_progress_bar.png) repeat-x;
+}
+.progressBarClick
+{
+	width:981px;
+	height:30px;
+	margin-top:15px;
+	position:absolute;
+}
+/*******  CSS for running video information***********/
+.runningTime
+{
+	width:187px;
+	height:21px;
+	margin-top:22px;
+	margin-right:35px;
+	font-size:20px;
+	color:rgb(203,0,32);
+	float:right;
+	text-align:right;
+}
+#remainingTime
+{
+	color:rgb(203,0,72);
+	font-size:20px;
+}
+#totalTime
+{
+	color:rgb(88,88,88);
+	font-size:20px;
+}
+.runningMovieInfo
+{
+	height:27px;
+	width:1188px;
+	margin-right:20px;
+	position:absolute;
+	float:left;
+	
+}
+.runningMovieName
+{
+  width:950px;
+  height:27px;
+	float:left;
+	font-size:32px;
+	color:rgb(225,225,225);
+	text-align:left;
+
+}
+.runningMovieType
+{
+	width:218px;
+	height:27px;
+	float:right;
+	font-size:19px;
+	color:rgb(59,59,59);
+	text-align:right;
+	margin-right:20px;
+}
+/*******  CSS for Back & exit buttons***********/
+.keyHelp
+{
+	left:1150px;
+	top:12px;
+	right:14px;
+	position:absolute;
+	
+	width:112px;
+}
+.exitKey
+{
+	width:55px;
+	height:55px;
+	background:url(../images/keyhelp/Keyhelp_Btn_Exit_N.png) no-repeat;
+	float:right;
+}
+.exitKeyHover
+{
+	width:55px;
+	height:55px;
+	background:url(../images/keyhelp/Keyhelp_Btn_Exit_F.png) no-repeat;
+	float:right;
+}
+.backKey
+{
+	width:55px;
+	height:55px;
+	background:url(../images/keyhelp/Keyhelp_Btn_Back_N.png) no-repeat;
+	float:left;
+}
+.backKeyHover
+{
+	width:55px;
+	height:55px;
+	background:url(../images/keyhelp/Keyhelp_Btn_Back_F.png) no-repeat;
+	float:left;
+}

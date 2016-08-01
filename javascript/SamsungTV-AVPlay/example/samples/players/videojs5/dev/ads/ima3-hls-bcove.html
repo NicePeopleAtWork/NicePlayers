@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<head>
+</head>
+
+<body>
+    <video data-video-id="4712872493001" data-account="2564185535001" data-player="EkutSUWnl" data-embed="default" class="video-js" id="video1" controls></video>
+    <script src="//players.brightcove.net/2564185535001/EkutSUWnl_default/index.js"></script>
+    <!---->
+    <!-- YouboraLib -->
+    <script src="/src/v5/libs/last-build/youboralib.js" youbora-debug="4"></script>
+    <script src="/src/v5/plugins/videojs5/last-build/plugin.js"></script>
+    <script src="/src/v5/adnalyzers/brightcove-ads/last-build/adnalyzer.js"></script>
+    <!---->
+    <script>
+    var player = videojs('video1');
+    player.youbora({
+        accountCode: 'nicetest',
+        username: 'devja',
+        transactionCode: 'transcode',
+        parseHLS: true,
+    });
+    </script>
+    <script src="/src/v5/util/inspector/inspector.js"></script>
+</body>

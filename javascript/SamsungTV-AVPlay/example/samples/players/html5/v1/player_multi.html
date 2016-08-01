@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset='utf-8'>
+	<title>HTML5 Video</title>
+
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<script src="/src/v1/1.4/js/libs/multiplayer/youbora-data.js"></script>
+	<script src="/src/v1/1.4/js/libs/youbora-api-1.4.3.js"></script>
+	<script src="/src/v1/1.4/js/pc-html5/3.2.1/sp.js"></script>
+
+	<link href="http://www.w3.org/2010/05/video/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<h1>HTML5 Video</h1>
+
+	<div>
+		<video id='video1' controls preload='none' mediagroup='myVideoGroup' poster="http://media.w3.org/2010/05/sintel/poster.png">
+			<source id='liveHLS' src="http://aljazeera-eng-apple-live.adaptive.level3.net/apple/aljazeera/english/appleman.m3u8?dev=website" type='application/x-mpegurl'>
+
+			<p>Your user agent does not support the HTML5 Video element.</p>
+		</video>
+		<video id='video2' controls preload='none' mediagroup='myVideoGroup' poster="http://media.w3.org/2010/05/sintel/poster.png">
+			<source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4'>
+			<source id='webm' src="http://media.w3.org/2010/05/sintel/trailer.webm" type='video/webm'>
+			<source id='ogv' src="http://media.w3.org/2010/05/sintel/trailer.ogv" type='video/ogg'>
+			<source id='HLS' src="http://playertest.longtailvideo.com/adaptive/bbbfull/bbbfull.m3u8" type='application/x-mpegurl'>
+			<source id='liveHLS' src="http://aljazeera-eng-apple-live.adaptive.level3.net/apple/aljazeera/english/appleman.m3u8?dev=website" type='application/x-mpegurl'>
+
+			<p>Your user agent does not support the HTML5 Video element.</p>
+		</video>
+	</div>
+	<div id="console"></div>
+
+</body>
+
+<script>
+	// VIDEO 1
+	var ydata1 = youboraDataMap.get('video1');
+
+	ydata1.setDebug(true);
+	ydata1.setAccountCode('nicetv');
+	ydata1.setUsername('test');
+	ydata1.setTransaction("transacodeAutotest");
+	ydata1.setProperties({
+		filename: "fileNameAutotest",
+		content_metadata: {
+			title: "TitleAutotest"
+		}
+	});
+
+	var sp1 = new SmartPlugin('video1');
+	sp1.Init();
+
+
+	// VIDEO 2
+	var ydata2 = youboraDataMap.get('video2');
+
+	ydata2.setDebug(true);
+	ydata2.setAccountCode('nicetv');
+	ydata2.setUsername('test');
+	ydata2.setTransaction("transacodeAutotest");
+	ydata2.setProperties({
+		filename: "fileNameAutotest",
+		content_metadata: {
+			title: "TitleAutotest"
+		}
+	});
+
+	var sp2 = new SmartPlugin('video2');
+	sp2.Init();
+</script>
+
+</html>

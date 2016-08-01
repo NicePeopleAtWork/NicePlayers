@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Video.js | HTML5 Video Player</title>
+
+	<link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet" type="text/css">
+	<link href="/samples/players/videojs/lib/videojs.ads.css" rel="stylesheet" type="text/css">
+	<link href="/samples/players/videojs/lib/videojs.ima.css" rel="stylesheet" type="text/css">
+
+	<script src="http://vjs.zencdn.net/4.12/video.js"></script>
+	<script src="http://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+	<script src="/samples/players/videojs/lib/videojs.ads.js"></script>
+	<script src="/samples/players/videojs/lib/videojs.ima.js"></script>
+
+	<!-- Youbora -->
+	<script src="/src/v1/1.4/js/libs/youbora-data-1.4.1.min.js" ></script>
+ 	<script src='/1.4/js/libs/youbora-api-1.4.5.min.js'></script>
+ 	<script src='/1.4/js/pc-videojs/3.4.3-vjs-ima/sp.js'></script>
+
+
+	<style>
+		.video-js {
+			height: 344px;
+			width: 610px;
+			margin: 50px auto;
+		}
+	</style>
+
+</head>
+<body>
+
+	<!-- PLAYER -->
+	<video id="video1" class="video-js vjs-default-skin" controls preload="none" width="640" height="264">
+		<source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4' />
+		<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+	</video>
+
+	<script>
+		var options = {
+			accountCode: 'nicetv',
+			user: 'qa',
+			httpSecure: true
+		};
+
+		// PLAYER INSTANTIATION
+		_video = videojs('video1');
+
+		// PLUGIN INSTANTIATION
+		if (typeof _video.youbora != 'undefined'){
+			_video.youbora( options );
+		}
+
+		// IMA3
+		_video.ads({
+			  debug: true,
+			  timeout: 5000,
+			  prerollTimeout: 100
+		});
+
+		_video.ima({
+			id: 'video1',
+			adTagUrl: 'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&' +
+        		'iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&' +
+        		'impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&' +
+        		'cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&' +
+        		'cmsid=496&vid=short_onecue&correlator='
+		})
+		_video.ima.requestAds();
+
+	</script>
+</body>
+</html>

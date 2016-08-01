@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>thePlatform | HTML5 Video Player</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <script src="lib/jquery-1.11.3.min.js"></script>
+    <!-- toLoad javascript files async-->
+    <script src="lib/jquery.getscripts.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="lib/bootstrap.min.js"></script>
+    <!-- Youbora -->
+    <script src="//pre.smartplugin.youbora.com/1.3/js/libs/youbora-data.js"></script>
+    <script src="//pre.smartplugin.youbora.com/1.3/js/libs/youbora-api.js"></script>
+    <script src="../utils/player-form-utils.js"></script>
+    <!-- thePlatform Player -->
+    <script type="text/javascript" src="platform/web/pdk/tpPdk.js"></script>
+    <script>
+    $(function() {
+        loadLibraries();
+    });
+    </script>
+    <style>
+    .video-js {
+        height: 344px;
+        width: 610px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid ">
+        <p>&nbsp;</p>
+        <div class="row">
+            <div class="col-md-7 ">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>Player</h4></div>
+                    <div class="panel-body">
+                        <div id="menu-player" class="btn-group">
+                            <a type="button" class="btn btn-primary active" class-toggle="active">HTML5</a>
+                            <a type="button" class="btn btn-primary" class-toggle="active">Flash</a>
+                        </div>
+                        <div id="menu-video-type" class="btn-group right" role="group" style="float:right;">
+                            <a type="button" class="btn btn-primary active" onclick="changeVideoType('http')" class-toggle="active">HTTP</a>
+                            <a type="button" class="btn btn-primary" onclick="changeVideoType('hls')" class-toggle="active">HLS</a>
+                        </div>
+                        <div class="clear">
+                            <p>&nbsp;</p>
+                        </div>
+                        <div id="video-container">
+                            <script type="text/javascript" src="http://player.theplatform.com/p/TrK7XC/joja4g9LL7WV/select/GiSUk_B9Yy9M?form=javascript"></script>
+                            <script>
+                            $(function() {
+                                var technology = "html5";
+                                var player = new Player("player");
+                                player.pluginYoubora1 = "type=custom|url=http://pre.smartplugin.youbora.com/1.3/js/thePlatform/" + youboraData.pluginVersion['thePlatformHtml5'] + "/sp.js|priority=1";
+                                player.pluginYoubora2 = "type=custom|url=http://pre.smartplugin.youbora.com/1.3/js/thePlatform_flash/" + youboraData.pluginVersion['thePlatformFlash'] + "/SmartPlugin.swf?youboraData=" + encodeURIComponent(JSON.stringify(youboraData)) + "|priority=1";
+                                //	player.pluginYoubora2="type=custom|url=http://192.168.2.220/SmartPlugin.swf?youboraData="+encodeURIComponent(JSON.stringify(youboraData))+"|priority=1";
+
+                                player.bind();
+                            });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 ">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>
+							Plugin Options
+							<button class="btn btn-primary button_update" style="float: right; margin-top: -8px;">Update</button>
+						</h4>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="testType">Test Type:</label>
+                                    <select id="testType" class="form-control">
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <!-- <option value="C">C</option>
+										<option value="D">D</option>
+										<option value="E">E</option>
+										<option value="F">F</option>
+										<option value="G">G</option>
+										<option value="H">H</option>
+										<option value="I">I</option> -->
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="destination">Destination:</label>
+                                    <select id="destination" class="form-control">
+                                        <option value="A">Debug</option>
+                                        <option value="B">Production</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne">
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <h4 class="panel-title">Account Parameters</h4>
+                                    </a>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="accountCode">AccountCode *</label>
+                                                    <input class="form-control" id="accountCode">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="username">Username</label>
+                                                    <input class="form-control" id="username">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="transaction">Transaction</label>
+                                                    <input class="form-control" id="transaction">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="httpSecure">HTTP Secure</label>
+                                                    <select id="httpSecure" class="form-control">
+                                                        <option value="false">False</option>
+                                                        <option value="true">True</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="isp">ISP</label>
+                                                    <input class="form-control" id="isp">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="cdn">CDN</label>
+                                                    <input class="form-control" id="cdn">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <h4 class="panel-title">Media Properties</h4>
+                                    </a>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="duration">Duration</label>
+                                                    <input class="form-control" id="duration">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="isLive">Is Live</label>
+                                                    <select id="isLive" class="form-control">
+                                                        <option value="false">False</option>
+                                                        <option value="true">True</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="title">Title</label>
+                                                    <input class="form-control" id="title">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+                                        <h4 class="panel-title">Extra Parameters</h4>
+                                    </a>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="extraparam1">Extraparam1</label>
+                                                    <input class="form-control" id="extraparam1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="extraparam2">Extraparam2</label>
+                                                    <input class="form-control" id="extraparam2">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tablist -->
+                        <button class="btn btn-primary button_update" style="float: right;">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- PLUGIN INSTANTIATION -->
+    <script>
+    //videojs.options.flash.swf = "video-js.swf";
+
+    var _player = null;
+    var _videoType = null;
+    var _video = null;
+    var _video2 = null;
+
+    var option = null;
+    var options = {
+        accountCode: 'QA',
+        username: 'videojsplugin',
+        isLive: false,
+        debug: true,
+        transaction: 'transactionCode',
+        httpSecure: false,
+        isp: 'Telefonica ESP',
+        cdn: 'maxcdn',
+        extraparam1: 'Extraparam1',
+        extraparam2: 'Extraparam2',
+        properties: {
+            filename: "File Name",
+            content_id: "Content Id",
+            content_metadata: {
+                title: "Title",
+                genre: "Genre",
+                language: "Language",
+                year: "Year",
+                cast: "Cast",
+                director: "Director",
+                owner: "Owner",
+                duration: "Duration",
+                parental: "Parental",
+                price: "Price",
+                rating: "Rating",
+                audioType: "Audio type",
+                audioChannels: "Audio channels"
+            },
+            transaction_type: "Transaction Types",
+            quality: "Quality",
+            content_type: "Content Type",
+            device: {
+                manufacturer: "Manufacturer",
+                type: "Type",
+                year: "Year",
+                firmware: "Firmware"
+            }
+        }
+    };
+
+    //manage active class
+    $("#menu-player > .btn").click(function() {
+        $("#menu-player > .btn").removeClass("active");
+        $(this).addClass("active");
+    });
+
+    $("#menu-video-type > .btn").click(function() {
+        $("#menu-video-type > .btn").removeClass("active");
+        $(this).addClass("active");
+    });
+
+
+
+
+    function changeVideoType(type) {
+        console.log(type);
+        _videoType = type;
+        this.updateVideo(_player, _videoType);
+    }
+
+    function changePlayer(player) {
+        _player = player;
+        console.log("_player " + _player + "   _videoType " + _videoType);
+        this.updateVideo(_player, _videoType);
+    }
+
+    var updateVideo = function(player, videoType) {
+
+        /*player = player || 'html5';
+        videoType = videoType || 'http';
+        _player = player;
+        _videoType = videoType;
+
+        try {
+
+        	_video.youbora.unLoad();
+        	_video.dispose();
+        	_video = null;
+
+        	_video2.youbora.unLoad();
+        	_video2.dispose();
+        	_video2 = null;
+
+        } catch (e) {}
+
+
+        if(videoType === 'http') {
+
+        	loadVideoToContainer('#video-container', 'video-templates/playlist-'+ _player +'-http.html');
+
+        } else if (videoType === 'hls') {
+
+        	loadVideoToContainer('#video-container', 'video-templates/playlist-'+ _player +'-hls.html');
+
+        }*/
+    }
+
+    function loadVideoToContainer(videoContainer, template) {
+
+        try {
+
+            /*$(videoContainer).load(template, function() {
+            	console.log("Loaded template: "+ template);
+            });*/
+
+        } catch (e) {
+            console.log("error loading template: " + e);
+        }
+    }
+
+
+
+    //[Public] Function to load the SmartPlugin libraries depending on the parameters
+    //passed by URL
+    function loadLibraries() {
+        pluginVersion = getParameterByName("forcePluginVersion");
+        var spYouboraParams = "";
+        spYouboraParams += "?preProduction=true";
+        if (pluginVersion != "") {
+            spYouboraParams += "&forcedVersion=" + pluginVersion;
+        }
+        loadJavascriptFile("http://pre.smartplugin.youbora.com/1.3/sp/spyoubora.js" + spYouboraParams);
+    }
+
+    //[Private] Function to get the parameter value from the URL
+    function getParameterByName(name) {
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    function loadJavascriptFile(url, callback) {
+        ScriptLoader.load(url, callback);
+        /*try {
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = url;
+            head.appendChild(script);
+        } catch (error) {
+            console.log("loadJavascriptFile :: Error :: " + error);
+        }*/
+    }
+
+    //[Private] Class in charge of dynamically load scripts
+    var ScriptLoader = {
+        load: function(src, callback) {
+            var script = document.createElement('script'),
+                loaded;
+            script.setAttribute('src', src);
+            if (callback) {
+                script.onreadystatechange = script.onload = function() {
+                    callback();
+                };
+            }
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
+    };
+    </script>
+</body>
+
+</html>

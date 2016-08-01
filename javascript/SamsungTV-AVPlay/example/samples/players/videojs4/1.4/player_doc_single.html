@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Video.js | HTML5 Video Player</title>
+
+	<link href="http://pre.smartplugin.youbora.com/players/videojs/lib/video-js.css" rel="stylesheet" type="text/css">
+
+	<!-- video.js must be in the <head> for older IEs to work. -->
+	<script src="http://pre.smartplugin.youbora.com/players/videojs/lib/video.min.js"></script>
+
+	<!-- Youbora -->
+	<script src="http://pre.smartplugin.youbora.com/src/v1/1.4/js/libs/youbora-data.js"></script>
+	<script src="http://pre.smartplugin.youbora.com/src/v1/1.4/js/libs/youbora-api.js"></script>
+
+	<!-- SP -->
+	<script src="http://pre.smartplugin.youbora.com/src/v1/1.4/js/pc-videojs/3.4.1/sp.js"></script>
+
+	<style>
+		.video-js {
+			height: 344px;
+			width: 610px;
+			margin: 50px auto;
+		}
+	</style>
+
+</head>
+<body>
+
+	<!-- PLAYER -->
+	<video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="640" height="264" data-setup="{}">
+		<source src="http://cdn.s2.eu.nice264.com/converted_work6/0082c06e504b0a422bf1_6815f2deeb179c29748af42f8cd5ce95.mp4" type='video/mp4' />
+		<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+	</video>
+
+
+	<script>
+		var options = {
+			accountCode: 'gaiamdev'
+		};
+
+		// PLAYER INSTANTIATION
+		_video = videojs('example_video_1').ready(function() {
+			var player = this;
+			// PLUGIN INSTANTIATION
+			player.youbora( options );
+
+		});
+
+	</script>
+
+
+</body>
+</html>

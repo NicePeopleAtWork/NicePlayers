@@ -1,0 +1,44 @@
+09:54:07 PlexConnect: started: 09:54:07
+09:54:07 PlexConnect: Version: 0.5-dev-101215
+09:54:07 PlexConnect: Python: 2.7.6 (default, Jun 22 2015, 17:58:13) 
+[GCC 4.8.2]
+09:54:07 PlexConnect: Host OS: linux2
+09:54:07 PlexConnect: PILBackgrounds: Is PIL installed? True
+09:54:07 PlexConnect: IP_self: 192.168.1.42
+09:54:07 DNSServer: started: 09:54:07
+09:54:07 DNSServer: ***
+09:54:07 DNSServer: DNSServer: Serving DNS on 192.168.1.42 port 53.
+09:54:07 DNSServer: ***
+09:54:07 WebServer: started: 09:54:07
+09:54:07 WebServer: ***
+09:54:07 WebServer: WebServer: Serving HTTP on 192.168.1.42 port 80.
+09:54:07 WebServer: ***
+09:54:07 WebServer: started: 09:54:07
+09:54:07 WebServer: ***
+09:54:07 WebServer: WebServer: Serving HTTPS on 192.168.1.42 port 443.
+09:54:07 WebServer: ***
+09:57:05 PlexAPI: ***
+09:57:05 PlexAPI: PlexGDM - looking up Plex Media Server
+09:57:05 PlexAPI: ***
+09:57:06 PlexAPI: GDM: Servers discovered: 1
+09:57:06 PlexAPI: Servers (local, plex.tv, MyPlex): 2
+09:57:27 PlexAPI: ***
+09:57:27 PlexAPI: PlexGDM - looking up Plex Media Server
+09:57:27 PlexAPI: ***
+09:57:28 PlexAPI: GDM: Servers discovered: 1
+09:57:28 PlexAPI: Servers (local, plex.tv, MyPlex): 2
+10:02:14 PlexAPI: ***
+10:02:14 PlexAPI: PlexGDM - looking up Plex Media Server
+10:02:14 PlexAPI: ***
+10:02:15 PlexAPI: GDM: Servers discovered: 1
+10:02:15 PlexAPI: Servers (local, plex.tv, MyPlex): 2
+10:10:38 PlexAPI: ***
+10:10:38 PlexAPI: PlexGDM - looking up Plex Media Server
+10:10:38 PlexAPI: ***
+10:10:39 PlexAPI: GDM: Servers discovered: 1
+10:10:39 PlexAPI: Servers (local, plex.tv, MyPlex): 2
+10:21:49 PlexConnect: Shutting down.
+10:21:49 WebServer: Shutting down (HTTP).
+10:21:50 WebServer: Shutting down (HTTPS).
+10:21:51 DNSServer: Shutting down.
+10:21:51 PlexConnect: shutdown

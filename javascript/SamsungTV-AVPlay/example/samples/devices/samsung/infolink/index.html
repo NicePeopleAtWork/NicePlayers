@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>simple</title>
+    <!-- TODO : Common API -->
+    <script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/Widget.js"></script>
+    <script type="text/javascript" language="javascript" src="$MANAGER_WIDGET/Common/API/TVKeyValue.js"></script>
+    <!-- TODO : Javascript code -->
+    <script language="javascript" type="text/javascript" src="app/javascript/Main.js"></script>
+    <!-- TODO: Plugins -->
+    <object id="pluginPlayer" border=0 classid="clsid:SAMSUNG-INFOLINK-PLAYER"></object>
+    <object id="pluginAudio" border=0 classid="clsid:SAMSUNG-INFOLINK-AUDIO"></object>
+    <object id="pluginTVMW" border=0 classid="clsid:SAMSUNG-INFOLINK-TVMW"></object>
+    <object id='EXTERNALWIDGET' border=0 classid='clsid:SAMSUNG-INFOLINK-EXTERNALWIDGETINTERFACE'></object>
+    <!-- youbora -->
+    <script type="text/javascript" src="http://pre.smartplugin.youbora.com/5.0/plugins/samsungtv/5.1.0/sp.min.js?v=711" youbora-debug="4"></script>
+    <script type="text/javascript">
+    try {
+        $YB.report('<GO>');
+        $YB.plugin = new $YB.plugins.SamsungTv('pluginPlayer', {
+            accountCode: 'qamini',
+            username: 'qases',
+            transactionCode: 'transcode',
+            httpSecure: false,
+            parseHLS: true,
+            parseCDNNodeHost: true,
+
+            // params defined
+            network: {
+                cdn: "AKAMAI",
+                ip: "1.1.1.1",
+                isp: "ISPa"
+            },
+
+            // Media Info
+            media: {
+                title: 'Sintel'
+            },
+
+            // properties
+            properties: {
+                content_metadata: {
+                    genre: "a",
+                    year: "b",
+                    cast: "c",
+                    director: "d",
+                    owner: "e",
+                    parental: "f",
+                    price: "g",
+                    rating: "h",
+                    audioType: "i",
+                    audioChannels: "j",
+                    language: "es"
+                },
+                transaction_type: "k",
+                quality: "l",
+                content_type: "m",
+                device: {
+                    manufacturer: "n",
+                    type: "o",
+                    year: "p",
+                    firmware: "q"
+                }
+            },
+            extraParams: {
+                param1: "param1",
+                param2: "param2"
+            }
+        });
+    } catch (err) {
+        alert(err);
+    }
+    </script>
+    <!--  Player -->
+    <script language="javascript" type="text/javascript" src="app/javascript/Player.js?v=46547"></script>
+    <!-- TODO : Style sheets code -->
+    <link rel="stylesheet" href="app/stylesheets/Main.css" type="text/css">
+</head>
+<!-- If spyoubora is used, it is mandatory to call spYoubora.init() on onload method -->
+
+<body onload="Main.onLoad();" onunload="Main.onUnload();">
+    <!-- Dummy anchor as focus for key events -->
+    <a href="javascript:void(0);" id="anchor" onkeydown="Player.keyHandler();"></a>
+    <script type="text/javascript">
+    Player.init()
+    </script>
+    <h3 style="color: white">Press 1 > VOD (mp4); 2> VOD (HLS); 3 > VOD Widevine; 4 > VOD Playready; 5 > Live (HLS)</h3>
+</body>
+
+</html>

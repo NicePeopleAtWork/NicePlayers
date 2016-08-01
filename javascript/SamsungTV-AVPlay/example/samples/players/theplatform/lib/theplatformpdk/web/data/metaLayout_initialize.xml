@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<controls>
+	<region id="tpTopRegion">
+		<row id="tpTitleContainer">
+			<control id="tpTitle" />
+		</row>
+	</region>
+	<region id="tpBottomRegion" alpha="75">
+		<row>
+			<control id="tpPlay"/>
+			<control id="tpNext"/>
+			<group percentWidth="100" direction="horizontal" verticalAlign="middle">
+				<control id="tpScrubber"/>
+				<spacer/>
+				<control id="tpCurrentTime"/>
+				<control id="tpTimeDivider"/>
+				<control id="tpTotalTime"/>
+				<spacer/>
+			</group>
+			<control id="tpVolume" expandDirection="up"/>
+			<control id="tpCC"/>
+			<control id="tpBandwidth"/>
+			<control id="tpFullScreen"/>
+			<control id="tpMenu"/>
+		</row>
+	</region>
+</controls>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=">
+        <title>Youbora LVL3 HTML5 Demo</title>
+    </head>
+<body>
+    <script type="text/javascript" src="http://smartplugin.youbora.com/1.1/js/libs/youbora-data.js?debug=true"></script>
+    <script type="text/javascript" src="http://smartplugin.youbora.com/1.1/sp/spyoubora.js"></script>
+
+    <script type="text/javascript">
+        // Basic
+        youboraData.setCDNNodeData(true);
+        youboraData.setAccountCode('victorfill');
+        youboraData.setUsername('NewVideoUser');
+        youboraData.setService('http://nqs.nice264.com');
+        youboraData.setContentId('NewVideoContentId2');
+        youboraData.setMediaResource('http://level3test.http.s1.nice264.com/3eb8bfdd426d8cceb9a6_3e2b98ae62764119e634b712d60cc13f.mp4');
+        youboraData.setLive(false);
+
+        // Concurrency
+        /*
+        youboraData.setConcurrencyProperties({
+            enabled: true,
+            concurrencyService: "http://pc.youbora.com/cping/",
+            concurrencyCode: "testHTML",
+            concurrencyMaxCount: 0,
+            concurrencyRedirectUrl: "http;//www.nicepeopleatwork.com",
+            concurrencyIpMode: false
+        });
+
+        // Resume
+        youboraData.setResumeProperties({
+            resumeEnabled:   false,
+            resumeService:   "http://pc.youbora.com/resume/",
+            playTimeService: "http://pc.youbora.com/playTime/",
+            resumeCallback:  function(secs) {
+                var question = confirm("Do you wish to resume video at last known position? ("+secs+"s)");
+                if(question) {
+                   document.getElementById('videoPlayer').currentTime = secs;
+                   document.getElementById('videoPlayer').play();
+                }
+            }
+        });
+        //Balance
+        youboraData.setBalanceProperties({
+            enabled:    true,
+            balanceType:"balanced",
+            service:    "http://smartswitch.youbora.com/",
+            zoneCode:   "default",
+            originCode: "bl3a3_b",
+            niceNVA:    "3600",
+            ncieNVB:    "10",
+            token:      "07dc44a13f74b00d6be6b7a6c44d35c1"
+        });
+        */
+
+        // Metadata
+        youboraData.setProperties({
+            filename: "File Name",
+            content_id: "Content Id",
+            content_metadata: {
+                title: "Title",
+                genre: "Genre",
+                language: "Language",
+                year: "Year",
+                cast: "Cast",
+                director: "Director",
+                owner: "Owner",
+                duration: "Duration",
+                parental: "Parental",
+                price: "Price",
+                rating: "Rating",
+                audioType: "Audio type",
+                audioChannels: "Audio channels"
+            },
+            transaction_type: "Transaction Types",
+            quality: "Quality",
+            content_type: "Content Type",
+            device: {
+                manufacturer: "Manufacturer",
+                type: "Type",
+                year: "Year",
+                firmware: "Firmware"
+            }
+        });
+
+    </script>
+
+    <video id="videoPlayer" controls height="315" width="560">
+        <source src="http://level3test.http.s1.nice264.com/3eb8bfdd426d8cceb9a6_3e2b98ae62764119e634b712d60cc13f.mp4">
+    </video>
+
+</body>
+</html>

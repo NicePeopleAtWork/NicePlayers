@@ -1,0 +1,128 @@
+<html>
+
+	<head>
+		<title>Test Template</title>
+		<h4>Test for Player Kaltura</h4>
+		<script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+		<script type="text/javascript" src="../testUtils.js"></script>
+		<script>
+			//loadLibraries();
+		</script>
+		</head>
+
+	<body>
+
+		<div id="destinationSet">
+			<div style="margin-top:15px">Destination</div>
+			<select id="destination">
+				<option id="Debug">Debug</option>
+				<option id="Production">Production</option>
+			</select>
+		<div>
+		<div id="testTypeSet" style="position: absolute; top: 47px; left: 110px;">
+		<div>TestType</div>
+			<select id="testType">
+				<option id="A">A</option>
+				<option id="B">B</option>
+				<option id="C">C</option>
+				<option id="D">D</option>
+				<option id="E">E</option>
+				<option id="F">F</option>
+				<option id="G">G</option>
+				<option id="H">H</option>
+				<option id="I">I</option>
+			</select>
+		</div>
+		<div id="technologySet" style="position: absolute; top: 47px; left: 180px;">
+		<div>Technology</div>
+			<select id="technology">
+				<option id="html5">HTML5</option>
+				<option id="flash">FLASH</option>
+			</select>
+		</div>
+		<div id="testCodeSet" style="position: absolute; top: 47px; left: 280px;" >
+			<div>TestCode</div>
+			<input type="text" id="testCode"></input>
+		</div>
+		<div id="resourceSet" style="position: absolute; top: 47px; left: 450px;" >
+			<div>ResourceType</div>
+			<select id="resource" disabled>
+				<option value="http://cdnapi.kaltura.com/p/1771851/sp/177185100/playManifest/entryId/1_nay8cxny/flavorId/1_tnwbsl90/format/http/protocol/http/cdnHost/cdnbakmi.kaltura.com/ks/djJ8MTc3MTg1MXxSHvzLOo1oLzc3gwTVOjFENgDIAnc5U1tLh0eMcZXwhmCbTrurxP_DcqQWK_jPlPrb4xNm-WjS5qRobsp8y0AinEBFGVUhB4xOeMALrjaTYQ==/uiConfId/27342201/a/a.f4m">MP4</option>
+			</select>
+		</div>
+		<div id="pluginVersionSet" style="position: absolute; top: 47px; left: 550px;" >
+			<div>PluginVersion</div>
+			<select id="pluginVersion" disabled>
+				<option value="2.1.0">2.1.0</option>
+			</select>
+		</div>
+		<div style="margin-bottom:20px"></div>
+		<button id="play">Play</button>
+		<button id="pause">Pause</button>
+		<button id="stop">Stop</button>
+		<button id="seekfw">SeekForward</button>
+		<button id="seekbd">SeekBackwards</button>
+		<button id="forceError">ForceError</button>
+
+	
+		<div style="width: 480px; height: 270px;" >
+
+			<div id="kaltura_player_1422622420" style="width: 560px; height: 395px;" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
+			<span itemprop="name" content="big_buck_bunny_720p_surround"></span>
+			<span itemprop="description" content=""></span>
+			<span itemprop="duration" content="596"></span>
+			<span itemprop="thumbnail" content="http://cdnbakmi.kaltura.com/p/1771851/sp/177185100/thumbnail/entry_id/1_nay8cxny/version/100000/acv/141"></span>
+			<span itemprop="width" content="560"></span>
+			<span itemprop="height" content="395"></span>
+			</div>
+			<script src="http://cdnapi.kaltura.com/p/1771851/sp/177185100/embedIframeJs/uiconf_id/27342201/partner_id/1771851?autoembed=true&entry_id=1_nay8cxny&playerId=kaltura_player_1422622420&cache_st=1422622420&width=560&height=395"></script>
+
+			<script>
+			player="kaltura";
+			if(getTechnology()=="HTML5"){
+				mw.setConfig( 'KalturaSupport.LeadWithHTML5', true );
+			}
+		    kWidget.appendScriptUrls(
+		    [
+		        "http://pre.smartplugin.youbora.com/1.3/js/libs/youbora-api.js",
+				"http://pre.smartplugin.youbora.com/1.3/js/libs/youbora-data.js?debug=true",
+		        "http://pre.smartplugin.youbora.com/1.3/js/kaltura/sp.js"
+		    ],
+		    function(){
+		        prepareTestEnvironment();
+		    })
+		    
+			</script>
+
+		</div>	
+		<div id="messages" style="position: absolute; top: 117px; left: 600px; width: 100px;" >
+			<div>Button Controls are not available for HTML5 yet</div>
+
+		</div>			
+		<script>
+			var kdp = document.getElementById( "kaltura_player_1422622420" );
+			console.log(kdp);
+			$( "#play" ).click(function() {
+				kdp.sendNotification("doPlay");
+			});
+			$( "#pause" ).click(function() {
+			 	kdp.sendNotification("doPause");
+			});
+			$( "#stop" ).click(function() {
+				kdp.sendNotification("doStop");
+			});
+			$( "#seekfw" ).click(function() {
+				kdp.sendNotification('doSeek', 5 );
+			});
+			$( "#seekbd" ).click(function() {
+				kdp.sendNotification('doSeek', 20 );
+			});
+			$( "#forceError" ).click(function() {
+				kdp.sendNotification("changeMedia", { "entryId" : "asdasdaedcz" });
+			});
+
+		</script>
+	
+	</body>
+
+</html>

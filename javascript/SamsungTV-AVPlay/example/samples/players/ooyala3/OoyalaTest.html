@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script language="javascript"
+    src="http://player.ooyala.com/v3/19ee592babf24a7895cd46e3f27ef572?debug=true&version=8e09f850547e898370eb3936d15796de7e4bb508&platform=flash">
+    </script>
+
+
+    <div id='player' style='width:640px;height:480px'></div>
+    <div id='OOYALA_DEBUG_CONSOLE'></div>
+
+    <script>
+  
+    /*
+        MP4 - VOD : piMXdiczqydplt6ojmhNzdfAERdgVvaj
+        HD2 - VOD : hueXZiczovx-GbpEZzXCNPMGnPmtzdUc
+        HD2 - RemoteAsset : ByaWN1czrauKccf22yxhiklHBC8GTtrG
+        HD2 - Live : FwYmtoczoca0pcissgd8pvTYf44Hzo_t
+        HLS - VOD : 1iMTBiczq1aSXjqJYWW_4AyFRpx1XT1m
+        HDS - VOD : 5wYXRiczr6_ZVEqHt_xRjkx6qYj3t7K0
+        HDS - RemoteAsset : NxdHVnczrFo1RhiSGrV2uYNC_e8B09Ke        
+    */
+
+      OO.ready(function() {
+             // IPA Ads 's2MDVqcjrN7uz25lU5zzWANBcNFAEjmZ'
+             var embedCode = "54NzJ4NTpMvOAm3p-rdp3qttbqkRad9I";
+	           window.pp = OO.Player.create('player', embedCode, {
+          // Google IMA V3
+	  //"google-ima-ads-manager": {
+    //        "adTagUrl":"http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/7521029/pb_preroll_ad&ciu_szs&impl=s&cmsid=949&vid=FjbGRjbzp0DV_5-NtXBVo5Rgp3Sj0R5C&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]"
+	  //},
+
+          // Google Adsense
+          //'google': { tagUrl: 'some url', .... },
+
+          // In-stream Ad Manager
+          // 'in-stream': { tagUrl: 'some url', .... },
+
+          // VAST
+          //'vast': { tagUrl: 'some url', .... },
+
+          // VastAds
+          //'vastAds': [
+          //  { type: "vast",
+          //    url: "http://pubads.g.doubleclick.net/gampad/ads?sz=640x360&iu=/6062/iab_vast_samples/skippable&ciu_szs=300x250,728x90&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&correlator=[timestamp]",
+          //    frequency: 1,
+          //    first_shown: 0,
+          //    time: 0
+          //  }
+          //]
+
+
+          //adRequestTimeout: 1000,
+          //analytics: { "tags": ca_tags },
+	  autoplay: false,
+          //enableChannels: true,
+	  enableDiagnostics:true,
+          //initialTime: 0,
+          //locale: 'en_US',
+          //loop:true
+          //prebuffering: true,
+	  preload: false,
+          //showInAdControlBar: false,
+          //tvRatingsPosition: 'top-left',
+          //tvRatingsTimer: 'always',
+          //useFirstVideoFromPlaylist: true,
+
+	  onCreate: function(player) {
+	    player.mb.subscribe('*', 'test', function(event) {
+
+    	      if (!event.match(/playheadTime/)) {
+		//console.log(event + JSON.stringify(arguments));
+	      }
+
+    	      if (event.match(/playing/)) {
+		window.pp.setVolume(0);
+	      }
+
+    	      if (event.match(/playComplete/)) {
+		//console.log("player completed");
+	      }
+	    });
+	  }
+	});
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Videojs4 -->
+    <link href="../../lib/video-js.css" rel="stylesheet">
+    <script src="../../lib/video.min.js"></script>
+    <!---->
+    <!-- IMA3 -->
+    <link href="../../lib/videojs.ads.css" rel="stylesheet" type="text/css">
+    <link href="../../lib/videojs.ima.css" rel="stylesheet" type="text/css">
+    <script src="http://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+    <script src="../../lib/videojs.ads.js"></script>
+    <script src="../../lib/videojs.ima.js"></script>
+    <style>
+    .vjs-ad-playing.vjs-ad-playing .vjs-control-bar {
+        display: none;
+    }
+    </style>
+    <!---->
+    <!-- YouboraLib -->
+    <script src="/src/v5/plugins/videojs4/last-build/sp.min.js"></script>
+    <!---->
+</head>
+
+<body>
+    <h1>VideoJS4 Video</h1>
+    <video id="video1" class="video-js vjs-default-skin" controls preload="none" width="640" height="264" poster="http://media.w3.org/2010/05/sintel/poster.png">
+        <source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4'>
+        <p class="vjs-no-js">To view this video please enable JavaScript.</p>
+    </video>
+    <a href="#" onclick="nextVideo('http://media.w3.org/2010/05/sintel/trailer.mp4')">Next Video</a>
+    <script>
+    var plugins = {
+        youbora: {
+            accountCode: 'qamini',
+            username: 'qa',
+            transactionCode: 'transcode',
+
+            // params defined
+            network: {
+                ip: "1.1.1.1",
+                isp: "ISPa"
+            },
+
+            ads: {
+                expected: true,
+                campaign: 'Campagna'
+            },
+
+            // properties
+            properties: {
+                content_metadata: {
+                    genre: "a",
+                    year: "b",
+                    cast: "c",
+                    director: "d",
+                    owner: "e",
+                    parental: "f",
+                    price: "g",
+                    rating: "h",
+                    audioType: "i",
+                    audioChannels: "j",
+                    language: "es"
+                },
+                transaction_type: "k",
+                quality: "l",
+                content_type: "m",
+                device: {
+                    manufacturer: "n",
+                    type: "o",
+                    year: "p",
+                    firmware: "q"
+                }
+            },
+
+            // extraparams
+            extraParams: {
+                param1: "param1",
+                param2: "param2"
+            }
+
+        }
+    };
+
+    window.player = videojs('video1', {
+        plugins: plugins
+    });
+
+    // IMA3
+    player.ima({
+        id: 'video1',
+        adTagUrl: 'http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&' +
+            'iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&' +
+            'impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&' +
+            'cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&' +
+            'vid=short_onecue&correlator='
+    }, player.ima.start);
+
+    player.one('click', function() {
+        player.ima.initializeAdDisplayContainer();
+        player.ima.requestAds();
+        player.play();
+    });
+
+    function nextVideo(src) {
+        player.load(src, {});
+    }
+    </script>
+    <script src="/src/v5/util/inspector/inspector.js"></script>
+</body>
+
+</html>

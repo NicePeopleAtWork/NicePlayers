@@ -1,0 +1,165 @@
+<!--
+Copyright (C) 2013 Google Inc. All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Google Cast Sample</title>
+<link rel="stylesheet" type="text/css" href="css/demo.css">
+<script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+<script src="sender.js"></script>
+</head>
+<body>
+  <div>
+    <div>
+      <h2 style="display:block">Google Cast Sample: Chrome, Receiver, Media Player Library with HLS/SS/MPEG-DASH and DRMs </h2>
+      <div style="float:left; width:45%; margin:10px;">
+        <h3 style="display: inline-block">Choose a stream below or enter your own stream URL to cast</h3><br>
+        <span style="font-weight:bold; color:#0000cc;">Enter custom media URL</span>: <input type="text" name="customMediaURL" value="" size="70" id="customMediaURL"><br>
+	<input type="submit" name="loadCustomMeida" value="Load Custom Media" onclick="loadCustomMedia();">
+      </div>
+      <div style="float:left; width:20%; margin:20px; padding:10px; border:1px solid #000; background-color:#ccf;">
+	<input type="button" name="show" value="Show Receiver Debug Message on TV" onclick="showReceiverDebugMessage();">
+	<input type="button" name="hide" value="Hide Receiver Debug Message on TV" onclick="hideReceiverDebugMessage();">
+	<input type="button" name="show" value="Show Video/Audio on TV" onclick="showVideoOnTV();">
+	<input type="button" name="hide" value="Hide Video/Audio on TV" onclick="hideVideoOnTV();">
+      </div>
+      <div style="float:left; width:22%; margin:20px; padding:10px; border:1px solid #000; background-color:#ccf;">
+        <button style="margin:5px; font-size:110%;" onclick="launchApp()">Launch app</button>
+        <button style="margin:5px; font-size:110%;" onclick="stopApp()">Stop app</button>
+        <br>
+        <span style="margin:5px; font-size:100%;">Live Streaming</span>
+        <input id="liveFlag" style="margin:5px; font-size:100%;" type="checkbox" onclick="liveStreaming(this);">
+        <span style="margin:5px; font-size:50%;" id="initialTimeIndexSeconds">initialTimeIndexSeconds: 0</span>
+        <br>
+        <div>
+        <div style="float:left;">
+        <span style="margin:5px; font-size:90%;">Use Credentials</span>
+        </div>
+        <div style="float:left;">
+        <span style="margin:5px; font-size:60%;">Manifest</span><br>
+        <input style="margin:5px; font-size:80%;" type="checkbox" onclick="useCredentialsManifest(this);">
+        </div>
+        <div style="float:left;">
+        <span style="margin:5px; font-size:60%;">Segment</span><br>
+        <input style="margin:5px; font-size:80%;" type="checkbox" onclick="useCredentialsSegment(this);">
+        </div>
+        <div style="float:left;">
+        <span style="margin:5px; font-size:60%;">License</span><br>
+        <input style="margin:5px; font-size:80%;" type="checkbox" onclick="useCredentialsLicense(this);">
+        </div>
+        </div>
+      </div>
+      <br>
+      <div style="float:left; width:100%; margin:10px;">
+        <div style="margin:0px; float:left; width:45%;">
+           <input type="radio" name="media" onclick="selectMedia(0);" checked><b>MPEG-DASH</b>: Big Buck Bunny .mpd<br>
+           <input type="radio" name="media" onclick="selectMedia(1);"><b>MPEG-DASH</b>: CAR .mpd<br>
+           <input type="radio" name="media" onclick="selectMedia(2);"><b>MPEG-DASH with Widevine</b>: CAR .mpd<br>
+           <input type="radio" name="media" onclick="selectMedia(3);"><b>HLS</b>: Big Buck Bunny .m3u8<br>
+           <input type="radio" name="media" onclick="selectMedia(4);"><b>HLS</b>: Bip Bop .m3u8 stream by Apple<br>
+           <input type="radio" name="media" onclick="selectMedia(5);"><b>Smooth Streaming</b>: Super Speedway .ism<br>
+           <input type="radio" name="media" onclick="selectMedia(6);"><b>Smooth Streaming with PlayReady</b>: Super Speedway .ism<br>
+           <input type="radio" name="media" onclick="selectMedia(7);"><b>HLS Live Streaming</b>: PressTV .ism<br>
+           <input type="radio" name="media" onclick="selectMedia(8);"><b>Nice MP4</b>: mp4<br>
+           <input type="radio" name="media" onclick="selectMedia(9);"><b>Nice HLS</b>: m3u8<br>
+           <input type="radio" name="media" onclick="selectMedia(10);"><b>Nice Smooth Streaming </b>: ism<br>
+           <input type="radio" name="media" onclick="selectMedia(11);"><b>Nice HLS Live </b>: m3u8 live<br>
+           <div style="margin:5px 25px 5px 5px; padding:5px; float:left;">
+             <textarea rows="3" cols="50" id="alertmessage" style="font-size:110%; background-color:#ffc;">MPEG-DASH stream
+             </textarea>
+             <div id="license" style="display:block;font-size:80%;"><span style="font-weight:bold; color:#0000cc;">URL</span>: <input type="text" id="licenseUrl" name="licenseUrl" value="license server url when DRM is required" size="70">
+	     <input type="submit" name="submitLicenseUrl" value="Set License Server URL" onclick="setLicenseUrl();"></div>
+             <div id="customDataDiv" style="display:block;font-size:80%;"><span style="font-weight:bold; color:#0000cc;">Custom Data</span>: <input type="text" id="customData" name="customData" value="" size="60">
+	     <input type="submit" name="submitLicenseUrl" value="Set Custom Data" onclick="setLicenseCustomData();"></div>
+           </div>
+        </div>
+
+        <div style="float:left; width:50%; margin:5px; border:1px solid #000; height:240px;">
+          <div style="border:0px solid #000; margin:5px; padding:5px; font-size:90%; float:left; display:block; width:73%;">
+            <div style="font-size:100%; font-weight:bold;">Media Control</div>
+            <button style="margin:5px; font-size:90%;" onclick="loadMedia()">(Re)Load Media</button>
+            <button style="margin:5px; font-size:90%;" id="playpauseresume" onclick="playMedia()">Play Media</button>
+            <button style="margin:5px; font-size:90%;" onclick="stopMedia()">Stop Media</button>
+            <span style="margin:5px; font-size:80%;" id="muteText">Mute media</span>
+            <input style="margin:5px;" type="checkbox" onclick="muteMedia(this);">
+            <div style="float:left; width:98%; margin:5px; border:0px solid #000;">
+              <div style="float:left; width:160px; border:0px solid #00f;">
+                State : <span id="playerstate">IDLE</span>
+              </div>
+              <div style="float:left; width:160px; border:0px solid #00f;">
+                <input id="progress" type="range" min="1" max="100" value="1" step="1" onmouseup="seekMedia(this.value);">
+              </div>
+              <div style="float:left; width:150px; border:0px solid #00f;">
+                <span id="duration"></span>
+              </div>
+            </div>
+            <div style="float:left; font-size:80%; padding-left:180px; width:98%; border:0px solid #000;" id="progress_tick">0
+            </div>
+          </div>
+
+          <div style="margin:33px 0px 0px 0px; float:left; width:21%; border:0px solid #000;">
+	    <input style="font-size:80%; width:60px;" class="vertical" type="range" min="0" max="100" step="1" onmouseup="setReceiverVolume(1-this.value/100,false);">
+            <div class="vertical">Volume</div>
+          </div>
+
+          <div style="float:left; border:0px solid #000; margin:5px; display:block; width:95%; font-size:80%;" id="caption_div">
+              <div style="float:left; margin-left:10px; padding:0px;">
+                External Captions:
+	        <input type="button" name="caption_webvtt" id="caption_webvtt" value="WebVTT" onclick="setExternalCaptions('WebVTT');">
+	        <input type="button" name="caption_ttml" id="caption_ttml" value="TTML" onclick="setExternalCaptions('TTML');">
+              </div>
+          </div>
+          <div style="float:left; border:0px solid #000; margin-left:15px; display:block; width:95%; font-size:80%;" id="video_bitrates_div">Video Bitrates: </div>
+          <div style="float:left; border:0px solid #000; margin-left:15px; display:block; width:95%; font-size:80%;" id="audio_bitrates_div">Audio Bitrates: </div>
+          <div style="float:left; border:0px solid #000; margin-left:15px; padding-right:5px; display:block; width:95%; font-size:80%;">
+          <span style="font-weight:bold; color:#0000cc;">Enter maximum video bandwidth</span>: <input type="text" id="maxBW" name="maxBW" value="200000" size="8">
+	  <input type="submit" name="submitBW" value="Set Max Bandwidth" onclick="setMaxBandwidth();">
+          </div>
+          <div style="float:left; border:0px solid #000; margin-left:15px; padding-right:5px; display:none; width:95%; font-size:80%;" id="instream_caption_div">
+              <div style="float:left; margin:5px; padding:5px;">
+                Enable in-stream captions:
+              </div>
+              <div style="float:left; margin:5px; padding:5px;" id="captions">
+              </div>
+          </div>
+          <div style="float:left; border:0px solid #000; margin:5px; display:block; width:95%; font-size:80%;" id="instream_caption_div">
+          </div>
+        </div>
+       </div>
+
+       <div style="margin:5px; padding:5px; width:98%; float:left;">
+         <div style="margin:5px 5px 5px 5px; padding:5px; width:30%; float:left;">
+           Debug log:<br>
+           <textarea rows="20" cols="50" id="debugmessage">
+           </textarea>
+         </div>
+         <div style="margin:5px; padding:5px; width:30%; float:left;">
+           Sender code:<br>
+           <textarea rows="20" cols="50" id="sendercode">
+           </textarea>
+         </div>
+         <div style="margin:5px; padding:5px; width:35%; float:left;">
+           Receiver code:<br>
+           <textarea rows="20" cols="60" id="receivercode">
+           </textarea>
+         </div>
+       </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+
+body                            {       margin:0px; padding:0px;    }
+.tpAccessibleControls  	        {	 /*position:relative; top:290px;*/	display:none; }
+.blank				{	width:100%; height:100%; position:absolute; z-index:10; top:300px;	}
+#playerDiv			{       /*position:absolute; top:0px; z-index:5;*/  }
+#background 		        {        position:absolute; top:290px; z-index:1;	  }
+#topbg				{	background-color:#CCCCCC; padding:5px; border:1px solid black; height:59px;  }
+#bottombg			{	background-color:#999999; padding:5px; border:1px solid black; border-top:none; top:60px; height:20px; }
+#top				{	padding:5px; /*position:absolute; z-index:6;*/ display:block; background-color:#CCCCCC; border:1px solid black; }
+#bottom				{	/* was 287px*/ padding:5px; /*padding-right:0px; position:absolute; z-index:7; top:60px;*/ display:block; background-color:#999999; border:1px solid black; border-top:none; }
+#hidden				{	position:absolute; left:-9999px;	}
+Button Span			{	position:absolute; left:-9999px;		}
+.hide				{	position:absolute; left:-9999px;	}
+#counter			{	margin-right:10px; float:left; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; text-align:center;	}
+#progressBar		        {	width:252px; height:10px; border:1px solid black; margin-bottom:10px; float:left; background-color:#007AB9; 	}
+#progress			{	width:0px; height:10px; background-color:#AF1805; display:none; 	}
+#duration			{	margin-left:10px; float:left; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; text-align:center;	}
+.play				{	border:none; background-image:url(../images/playBtn.png); width:44px; height:21px;	margin-right:10px; float:left; cursor:pointer; background-color:transparent;	}
+.playHighlight		{	border:none; background-image:url(../images/play_highlight.png); width:44px; height:21px; margin-right:10px; float:left; cursor:pointer; background-color:transparent;	}
+.pause				{	border:none; background-image:url(../images/pauseBtn.png); width:44px; height:21px; margin-right:10px;	float:left; cursor:pointer; background-color:transparent;	}
+.pauseHighlight		{	border:none; background-image:url(../images/pause_highlight.png); width:44px; height:21px; margin-right:10px; float:left; cursor:pointer; background-color:transparent;	}
+.prev				{	border:none; background-image:url(../images/prev.png); width:29px; height:21px; margin-right:5px; float:left; cursor:pointer; background-color:transparent;	}
+.prevHighlight		{	border:none; background-image:url(../images/prev_highlight.png); width:29px; height:21px; margin-right:5px; float:left; cursor:pointer; background-color:transparent;	}
+.next				{	border:none; background-image:url(../images/next.png); width:29px; height:21px;	margin-right:10px; float:left; cursor:pointer; background-color:transparent; }
+.nextHighlight		{	border:none; background-image:url(../images/next_highlight.png); width:29px; height:21px; margin-right:10px; float:left; cursor:pointer; background-color:transparent;	}
+.muteOff			{	border:none; background-image:url(../images/mute_off.png); width:29px; height:21px; margin-right:10px; float:left; cursor:pointer; background-color:transparent;	}
+.muteOffHighlight	{	border:none; background-image:url(../images/mute_off_highlight.png); width:29px; height:21px; margin-right:10px; float:left; cursor:pointer; background-color:transparent;	}
+.muteOn				{	border:none; background-image:url(../images/mute_on.png); width:29px; height:21px; margin-right:10px; float:left; cursor:pointer; background-color:transparent;	}
+.muteOnHighlight	{	border:none; background-image:url(../images/mute_on_highlight.png); width:29px; height:21px; margin-right:10px; float:left; cursor:pointer; background-color:transparent;	}
+.minVolume			{	border:none; background-image:url(../images/min_volume.png); width:29px; height:21px; margin-right:10px; float:left; cursor:pointer; background-color:transparent;	}
+.minVolumeHighlight	{	border:none; background-image:url(../images/min_volume_highlight.png); width:29px; height:21px; margin-right:10px; float:left; cursor:pointer; background-color:transparent;	}
+.maxVolume			{	border:none; background-image:url(../images/max_volume.png); width:29px; height:21px; margin-right:10px; float:left; cursor:pointer; background-color:transparent; }
+.maxVolumeHighlight	{	border:none; background-image:url(../images/max_volume_highlight.png); width:29px; height:21px; margin-right:10px; float:left; cursor:pointer; background-color:transparent;}
+
+#volumeContainer	{	width:92px; float:left;	margin:5px 10px 0px 0px;}
+#volumeBg			{	width:92px; height:6px; border:1px solid black; background-color:#007AB9; 	}
+#volumeText			{	font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; text-align:center;	}
+#redBar				{	width:47px; height:6px; background-color:#AF1805; }
+.tpClosedCaptions   {position: relative;}
+.tpClosedCaptions div                    { border: 1px solid black; background-color:#FFFFFF; margin: 0px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; }
+.tpClosedCaptions div p { display: none; margin: 0; padding: 5px;}
+#embedMenu                      {        margin-left:135px;   }
+
+.fullScreen			{   width:57px; height:21px; border:none; background-color:transparent; position:absolute; left:-9999px;  }
+.share				{	width:57px; height:21px; border:none; background-image:url(../images/share.png); margin-right:5px; float:left; cursor:pointer; background-color:transparent;	}
+.shareHighlight		{	width:57px; height:21px; border:none; background-image:url(../images/share_highlight.png); margin-right:5px; float:left; cursor:pointer; background-color:transparent;	}
+.embed				{	width:62px; height:21px; border:none; background-image:url(../images/embed.png); margin-right:5px; float:left; cursor:pointer; background-color:transparent;	}
+.embedHighlight		{	width:62px; height:21px; border:none; background-image:url(../images/embed_highlight.png); margin-right:5px; float:left; cursor:pointer; background-color:transparent;	}
+.more				{	width:57px; height:21px; border:none; background-image:url(../images/more.png); margin-right:5px; float:left; cursor:pointer; background-color:transparent;	}
+.moreHighlight		{	width:57px; height:21px; border:none; background-image:url(../images/more_highlight.png); margin-right:5px; float:left; cursor:pointer; background-color:transparent;	}
+.info				{	width:57px; height:21px; border:none; background-image:url(../images/info.png); margin-right:5px; float:left; cursor:pointer; background-color:transparent;	}
+.infoHighlight		{	width:57px; height:21px; border:none; background-image:url(../images/info_highlight.png); margin-right:5px; float:left; cursor:pointer; background-color:transparent;	}
+.captionOff			{	width:29px; height:21px; border:none; background-image:url(../images/cc_off.png); margin-right:5px; float:left; cursor:pointer; background-color:transparent;	}
+.captionOffHighlight{	width:29px; height:21px; border:none; background-image:url(../images/cc_off_highlight.png); margin-right:5px; float:left; cursor:pointer; background-color:transparent;	}
+.captionOn                      {	width:29px; height:21px; border:none; background-image:url(../images/cc_on.png); margin-right:5px; float:left; cursor:pointer; background-color:transparent;	}
+.captionOnHighlight             {	width:29px; height:21px; border:none; background-image:url(../images/cc_on_highlight.png); margin-right:5px; float:left; cursor:pointer; background-color:transparent;	}
+.blankWindow		{	padding-left:20px; width:430px; height:250px; background-color:#FFFFFF; border:1px solid black;	position:absolute; top:20px; left:20px; z-index:50;	}
+.blankWindow .heading		{	margin-bottom:10px; font-size:14px; font-weight:bold; text-align:center; font-family:Arial, Helvetica, sans-serif; border:0;	width:400px;	}
+.blankWindow .infoDesc		{	font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center; height:150px; width:400px; margin-bottom:15px; border:1px solid black;  }
+.blankWindow .embedCode		{	font-size:12px; font-family:Arial, Helvetica, sans-serif; text-align:center; height:110px; width:400px; margin-bottom:15px; border:1px solid black;  }
+.copy                           {       width:62px; margin-left:25px;   }			
+.close				{	width:62px; height:21px; background-image:url(../images/close.png); border:none; background-color:transparent;  cursor:pointer; }
+.closeHighlight		        {	width:62px; height:21px; background-image:url(../images/close_highlight.png); border:none; background-color:transparent;  cursor:pointer;	}   
+.submitShare			{	width:69px; height:21px; border:none; background-image:url(../images/submit.png); margin-right:5px; float:left; cursor:pointer; background-color:transparent; 	}
+.submitShareHighlight           {	width:69px; height:21px; border:none; background-image:url(../images/submit_highlight.png); margin-right:5px; float:left; cursor:pointer; background-color:transparent; 	}
+.clear				{	clear:both;	}
+.label                          {       font-size:12px; color:red; border:0; width:400px; text-align:center; display:block;  }
+.textInput                      {       font-size:12px;  width:340px; margin-left:25px; margin-bottom:20px;   }

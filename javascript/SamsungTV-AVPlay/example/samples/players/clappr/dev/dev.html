@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Clappr</title>
+    <!-- Clappr -->
+    <script src="//cdn.clappr.io/0.2.56/clappr.min.js"></script>
+    <!-- Youbora -->
+    <script src="/src/v5/libs/last-build/youboralib.js" youbora-debug="4"></script>
+    <script src="/src/v5/plugins/clappr/last-build/plugin.js"></script>
+</head>
+
+<body>
+    <div id="player"></div>
+    <script>
+    var player = new Clappr.Player({
+        source: {
+            //source: "http://deslasexta.antena3.com/mp_series1/2012/09/10/00001.mp4",
+            source: "https://cdnapisec.kaltura.com/p/1375472/sp/137547200/playManifest/entryId/0_ncvvnzfe/flavorIds/0_obbhtwhw,0_ikr2ob7t/format/applehttp/protocol/https/a.m3u8",
+        },
+        parentId: "#player",
+        //autoPlay: true,
+    });
+
+    if (typeof $YB != "undefined") {
+        var youbora = new $YB.plugins.Clappr(player, {
+            accountCode: "nicedev"
+        });
+    }
+    </script>
+    <script src="/src/v5/util/inspector/inspector.js"></script>
+</body>
+
+</html>

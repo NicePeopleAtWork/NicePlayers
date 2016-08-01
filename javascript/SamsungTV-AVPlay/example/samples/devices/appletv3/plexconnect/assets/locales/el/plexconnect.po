@@ -1,0 +1,698 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plex Connect\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-30 18:25:13+0000\n"
+"PO-Revision-Date: 2015-06-01 12:00+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+""
+
+msgid "ATV firmware version 5.1 or higher required. Please think about updating."
+msgstr "Χρειάζεστε ATV 5.1 firmware ή ανώτερο. "
+
+
+msgid "Actor View"
+msgstr "Προβολή Ηθοποιών"
+
+
+msgid "Actors"
+msgstr "Ηθοποιοί"
+
+
+msgid "Albums"
+msgstr ""
+
+
+msgid "All Movies"
+msgstr "Όλες οι Ταινίες"
+
+
+msgid "All Photos"
+msgstr "Όλες οι Φωτογραφίες"
+
+
+msgid "All Shows"
+msgstr "Όλες οι Σειρές"
+
+
+msgid "All Videos"
+msgstr ""
+
+
+msgid "Aperture"
+msgstr "Άνοιγμα"
+
+
+msgid "Appearance"
+msgstr "Eμφάνιση"
+
+
+msgid "Artists"
+msgstr ""
+
+
+msgid "Audio"
+msgstr "Ήχος"
+
+
+msgid "Audio Boost %"
+msgstr "Ενίσχυση ήχου %"
+
+
+msgid "Audio Playlist"
+msgstr ""
+
+
+msgid "Audio Track"
+msgstr "Audio Track"
+
+
+msgid "Audio/Subs"
+msgstr "Ήχος/Υπότιτλοι"
+
+
+msgid "Authors"
+msgstr "Συγγραφείς"
+
+
+msgid "By Collection"
+msgstr "Συλλογές"
+
+
+msgid "By Content Rating"
+msgstr "Αξιολόγηση περιεχομένου"
+
+
+msgid "By Country"
+msgstr "Με Χώρα"
+
+
+msgid "By First Letter"
+msgstr "Με Πρώτο Γράμμα"
+
+
+msgid "By Folder"
+msgstr "Με Φάκελο"
+
+
+msgid "By Rating"
+msgstr "Με Βαθμολογία"
+
+
+msgid "By Resolution"
+msgstr "Με Ανάλυση"
+
+
+msgid "By Year"
+msgstr "Με Έτος"
+
+
+msgid "Camera Make"
+msgstr "Camera Make"
+
+
+msgid "Camera Model"
+msgstr "Μοντέλο Κάμερας"
+
+
+msgid "Change All Posters"
+msgstr ""
+
+
+msgid "Change Fanart"
+msgstr ""
+
+
+msgid "Change Poster"
+msgstr ""
+
+
+msgid "Channel Search"
+msgstr ""
+
+
+msgid "Channels"
+msgstr "Κανάλια"
+
+
+msgid "Clock Position"
+msgstr "Θέση ρολογιού"
+
+
+msgid "Collections"
+msgstr "Συλλογές"
+
+
+msgid "Decade"
+msgstr ""
+
+
+msgid "Decades"
+msgstr "Δεκαετίες"
+
+
+msgid "Details"
+msgstr "Λεπτομέρειες"
+
+
+msgid "Director"
+msgstr "Σκηνοθέτης"
+
+
+msgid "Directors"
+msgstr "Σκηνοθέτες"
+
+
+msgid "Discover"
+msgstr "Ανακάλυψη"
+
+
+msgid "Duration Format"
+msgstr "Επιλογή διάρκειας"
+
+
+msgid "Enter the MyPlex password for {0}."
+msgstr ""
+
+
+msgid "Enter the PlexHome user pin for {0}."
+msgstr ""
+
+
+msgid "Episodes"
+msgstr "Επεισόδια"
+
+
+msgid "Extras"
+msgstr ""
+
+
+msgid "Failed"
+msgstr "Αποτυχία"
+
+
+msgid "Fanart"
+msgstr ""
+
+
+msgid "Fanart Lower Blur"
+msgstr ""
+
+
+msgid "Flatten Season"
+msgstr ""
+
+
+msgid "Forum"
+msgstr "Φόρουμ"
+
+
+msgid "General Appearance"
+msgstr ""
+
+
+msgid "Genre"
+msgstr "Eίδος"
+
+
+msgid "Genres"
+msgstr "Eίδη"
+
+
+msgid "Home Video Navigation Bar"
+msgstr ""
+
+
+msgid "Home Video Options"
+msgstr ""
+
+
+msgid "Home Video View"
+msgstr ""
+
+
+msgid "Home Videos"
+msgstr ""
+
+
+msgid "Homepage"
+msgstr "Αρχική σελίδα"
+
+
+msgid "ISO"
+msgstr "ISO"
+
+
+msgid "Length"
+msgstr "Διάρκεια"
+
+
+msgid "Lens"
+msgstr "Φακοί"
+
+
+msgid "Library"
+msgstr "Bιβλιοθήκη"
+
+
+msgid "Main Navigation Bar"
+msgstr ""
+
+
+msgid "Mark as Unwatched"
+msgstr "Επισήμανση ως μη προβαλλόμενο"
+
+
+msgid "Mark as Watched"
+msgstr "Επισήμανση ως προβαλλόμενο"
+
+
+msgid "Miscellaneous"
+msgstr ""
+
+
+msgid "More"
+msgstr "Περισσότερα"
+
+
+msgid "More..."
+msgstr "Περισσότερα,,,"
+
+
+msgid "Movie Navigation Bar"
+msgstr "Μπάρα Πλοήγησης Ταινίων"
+
+
+msgid "Movie Options"
+msgstr "Επιλογές ταινίας"
+
+
+msgid "Movie View"
+msgstr ""
+
+
+msgid "Movies"
+msgstr "Ταινίες"
+
+
+msgid "Music"
+msgstr ""
+
+
+msgid "Music Navigation Bar"
+msgstr ""
+
+
+msgid "Music Options"
+msgstr ""
+
+
+msgid "Music View"
+msgstr ""
+
+
+msgid "MyPlex Password"
+msgstr "Κωδικός MyPlex"
+
+
+msgid "MyPlex Sign In"
+msgstr "Σύνδεση με MyPlex"
+
+
+msgid "MyPlex Sign Out"
+msgstr "Αποσύνδεση από MyPlex"
+
+
+msgid "MyPlex Username"
+msgstr "Όνομα Χρήστη MyPlex "
+
+
+msgid "No Plex Channels Available"
+msgstr "Δεν υπάρχει Plex Κανάλι διαθέσιμο "
+
+
+msgid "No Plex Library Sections Available"
+msgstr "Δεν υπάρχει Plex Βιβλιοθήκη διαθέσιμη"
+
+
+msgid "No Plex Playlists Available"
+msgstr ""
+
+
+msgid "No Seasons"
+msgstr "Καμία Σαιζόν"
+
+
+msgid "No Unwatched Shows"
+msgstr "Όλες οι σειρές έχουν προβληθεί"
+
+
+msgid "No Unwatched Shows."
+msgstr "Όλες οι σειρές έχουν προβληθεί"
+
+
+msgid "No episodes"
+msgstr "Κανένα επεισόδιο"
+
+
+msgid "None"
+msgstr "Τίποτα"
+
+
+msgid "Now Playing"
+msgstr ""
+
+
+msgid "Off"
+msgstr ""
+
+
+msgid "On Deck"
+msgstr "Στο Πλατό"
+
+
+msgid "Overscan Adjust"
+msgstr ""
+
+
+msgid "PIL/Pillow not installed"
+msgstr ""
+
+
+msgid "Photo"
+msgstr "Φωτογραφίες"
+
+
+msgid "Photo Transcoder Action"
+msgstr ""
+
+
+msgid "Play"
+msgstr "Αναπαραγωγή"
+
+
+msgid "Playlists"
+msgstr ""
+
+
+msgid "Plex Channels"
+msgstr "Plex Κανάλια"
+
+
+msgid "Plex Home Users"
+msgstr ""
+
+
+msgid "Plex Library"
+msgstr "Plex Βιβλιοθήκη"
+
+
+msgid "Plex Media Server"
+msgstr "Plex Media Server"
+
+
+msgid "Plex Media Server: No Items Available"
+msgstr "Plex Media Server: Δεν υπάρχει κανένα στοιχείο"
+
+
+msgid "Plex Media Server: No Tracks Available"
+msgstr ""
+
+
+msgid "Plex Playlists"
+msgstr ""
+
+
+msgid "PlexConnect"
+msgstr "Plexconnect"
+
+
+msgid "PlexHome User PIN"
+msgstr ""
+
+
+msgid "Poster Titles"
+msgstr ""
+
+
+msgid "PrePlay Bottom Shelf"
+msgstr ""
+
+
+msgid "Producers"
+msgstr "Παραγωγοί"
+
+
+msgid "Recently Added"
+msgstr "Προστέθηκαν Πρόσφατα"
+
+
+msgid "Recently Aired"
+msgstr "Πρόσφατες κυκλοφορίες"
+
+
+msgid "Recently Released"
+msgstr "Πρόσφατα κυκλοφόρησαν"
+
+
+msgid "Recently Viewed"
+msgstr "Προβλήθηκαν πρόσφατα"
+
+
+msgid "Recently Viewed Episodes"
+msgstr "Επεισόδια που προβλήθηκαν πρόσφατα"
+
+
+msgid "Recently Viewed Shows"
+msgstr "Σειρές που προβλήθηκαν πρόσφατα"
+
+
+msgid "Refresh"
+msgstr ""
+
+
+msgid "Related Movies"
+msgstr ""
+
+
+msgid "Remote Bitrate"
+msgstr "Απομακρυσμένη ποιότητα"
+
+
+msgid "Search"
+msgstr "Αναζήτηση"
+
+
+msgid "Season View"
+msgstr "Προβολή σεζόν"
+
+
+msgid "Select Fanart"
+msgstr ""
+
+
+msgid "Select Poster"
+msgstr ""
+
+
+msgid "Select Posters"
+msgstr ""
+
+
+msgid "Select Tracks"
+msgstr ""
+
+
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+
+msgid "Shared Libraries"
+msgstr ""
+
+
+msgid "Show Clock"
+msgstr "Προβολή ρολογιού"
+
+
+msgid "Show End Time"
+msgstr "Ενδειξη υπολοιπόμενης ώρας"
+
+
+msgid "Show Photos"
+msgstr "Προβολή Φωτογραφιών"
+
+
+msgid "Show Unwatched Count"
+msgstr ""
+
+
+msgid "Shows"
+msgstr "Σειρές"
+
+
+msgid "Shuffle"
+msgstr ""
+
+
+msgid "Shutter Speed"
+msgstr "Ταχύτητα κλείστρου"
+
+
+msgid "Sign Out"
+msgstr ""
+
+
+msgid "SlideShow"
+msgstr ""
+
+
+msgid "Studio"
+msgstr ""
+
+
+msgid "Subs"
+msgstr ""
+
+
+msgid "Subtitle Renderer"
+msgstr ""
+
+
+msgid "Subtitle Size %"
+msgstr "Μέγεθος Υπότιτλων %"
+
+
+msgid "Subtitle Track"
+msgstr ""
+
+
+msgid "Switch Home User"
+msgstr ""
+
+
+msgid "Synopsis hidden."
+msgstr "Κρυμμένη υπόθεση"
+
+
+msgid "TV Show Navigation Bar"
+msgstr "Μπάρα Πλοήγησης Σειρών"
+
+
+msgid "TV Show Options"
+msgstr "Επιλογές επεξεργασίας σειρών"
+
+
+msgid "TV Show View"
+msgstr ""
+
+
+msgid "TV Shows"
+msgstr ""
+
+
+msgid "TheMovieDB: No Trailer Info available"
+msgstr "Δεν υπάρχει trailer"
+
+
+msgid "Time Format"
+msgstr "Μορφή ώρας"
+
+
+msgid "To sign in to MyPlex, enter your Email address, username or Plex forum username."
+msgstr "Για να γίνει εγγραφή στο MyPlex ,πρόσθεσαι την ηλεκτρονική σου διεύθυνση ή το όνομα χρήστη"
+
+
+msgid "Trailer"
+msgstr ""
+
+
+msgid "Transcoder"
+msgstr "Μετατροπέας"
+
+
+msgid "Transcoder Action"
+msgstr ""
+
+
+msgid "Transcoder Quality"
+msgstr "Ποιότητα Εικόνας"
+
+
+msgid "Unwatched"
+msgstr "Δεν το έχω παρακολουθήσει"
+
+
+msgid "Unwatched Synopsis"
+msgstr "Mη προβαλλόμενες υποθέσεις"
+
+
+msgid "Version"
+msgstr "Έκδοση"
+
+
+msgid "Video"
+msgstr "Βίντεο"
+
+
+msgid "Video Player OSD"
+msgstr ""
+
+
+msgid "Video Playlist"
+msgstr ""
+
+
+msgid "Video Playlist: No Items Available"
+msgstr ""
+
+
+msgid "View Show"
+msgstr ""
+
+
+msgid "Wiki/Docs"
+msgstr ""
+
+
+msgid "Writers"
+msgstr "Σεναριογράφοι"
+
+
+msgid "Year"
+msgstr "Χρόνος"
+
+
+msgid "refreshing"
+msgstr ""
+
+
+msgid "remote"
+msgstr ""
+
+
+msgid "{0:0d}x{1:02d} {2}"
+msgstr ""
+
+
+msgid "{0:d} Minutes"
+msgstr "Λεπτά"
+
+
+msgid "{0:d}:{1:0>2d}"
+msgstr ""
+
+
+msgid "{0:d}hr {1:d}min"
+msgstr ""
+
+
+msgid "{0} unwatched"
+msgstr "{0} μη προβαλλόμενες"
+
+

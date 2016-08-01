@@ -1,0 +1,698 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plex Connect\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-30 18:25:13+0000\n"
+"PO-Revision-Date: 2015-06-01 12:00+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+""
+
+msgid "ATV firmware version 5.1 or higher required. Please think about updating."
+msgstr "Versiunea de firmware minimă este 5.1. Vă rugam să luați în considerare un update."
+
+
+msgid "Actor View"
+msgstr "Vizualizeaza Actorul"
+
+
+msgid "Actors"
+msgstr "Actori"
+
+
+msgid "Albums"
+msgstr ""
+
+
+msgid "All Movies"
+msgstr "Toate filmele"
+
+
+msgid "All Photos"
+msgstr "Toate Pozele"
+
+
+msgid "All Shows"
+msgstr "Toate Showurile"
+
+
+msgid "All Videos"
+msgstr ""
+
+
+msgid "Aperture"
+msgstr "Apertura"
+
+
+msgid "Appearance"
+msgstr "Aspect"
+
+
+msgid "Artists"
+msgstr ""
+
+
+msgid "Audio"
+msgstr "Audio"
+
+
+msgid "Audio Boost %"
+msgstr "Crestere semnal Audio cu %"
+
+
+msgid "Audio Playlist"
+msgstr ""
+
+
+msgid "Audio Track"
+msgstr "Track Audio"
+
+
+msgid "Audio/Subs"
+msgstr "Audio/Subtitrări"
+
+
+msgid "Authors"
+msgstr "Autori"
+
+
+msgid "By Collection"
+msgstr "După Colecție"
+
+
+msgid "By Content Rating"
+msgstr ""
+
+
+msgid "By Country"
+msgstr "După Țară"
+
+
+msgid "By First Letter"
+msgstr "După Prima Literă"
+
+
+msgid "By Folder"
+msgstr "După Folder"
+
+
+msgid "By Rating"
+msgstr "După Rating"
+
+
+msgid "By Resolution"
+msgstr "După Rezoluție"
+
+
+msgid "By Year"
+msgstr "După An"
+
+
+msgid "Camera Make"
+msgstr ""
+
+
+msgid "Camera Model"
+msgstr "Modelul Camerei"
+
+
+msgid "Change All Posters"
+msgstr ""
+
+
+msgid "Change Fanart"
+msgstr ""
+
+
+msgid "Change Poster"
+msgstr ""
+
+
+msgid "Channel Search"
+msgstr ""
+
+
+msgid "Channels"
+msgstr "Canale"
+
+
+msgid "Clock Position"
+msgstr "Poziția Ceasului"
+
+
+msgid "Collections"
+msgstr "Colecții"
+
+
+msgid "Decade"
+msgstr ""
+
+
+msgid "Decades"
+msgstr "Decade"
+
+
+msgid "Details"
+msgstr "Detalii"
+
+
+msgid "Director"
+msgstr "Director"
+
+
+msgid "Directors"
+msgstr "Directori"
+
+
+msgid "Discover"
+msgstr "Descoperă"
+
+
+msgid "Duration Format"
+msgstr ""
+
+
+msgid "Enter the MyPlex password for {0}."
+msgstr ""
+
+
+msgid "Enter the PlexHome user pin for {0}."
+msgstr ""
+
+
+msgid "Episodes"
+msgstr "Episoade"
+
+
+msgid "Extras"
+msgstr ""
+
+
+msgid "Failed"
+msgstr ""
+
+
+msgid "Fanart"
+msgstr ""
+
+
+msgid "Fanart Lower Blur"
+msgstr ""
+
+
+msgid "Flatten Season"
+msgstr ""
+
+
+msgid "Forum"
+msgstr "Forum"
+
+
+msgid "General Appearance"
+msgstr ""
+
+
+msgid "Genre"
+msgstr "Gen"
+
+
+msgid "Genres"
+msgstr "Genuri"
+
+
+msgid "Home Video Navigation Bar"
+msgstr ""
+
+
+msgid "Home Video Options"
+msgstr ""
+
+
+msgid "Home Video View"
+msgstr ""
+
+
+msgid "Home Videos"
+msgstr ""
+
+
+msgid "Homepage"
+msgstr "Pagina Principală"
+
+
+msgid "ISO"
+msgstr "ISO"
+
+
+msgid "Length"
+msgstr "Lungime"
+
+
+msgid "Lens"
+msgstr "Lentila"
+
+
+msgid "Library"
+msgstr "Librărie"
+
+
+msgid "Main Navigation Bar"
+msgstr ""
+
+
+msgid "Mark as Unwatched"
+msgstr "Marchează ca nevizionat"
+
+
+msgid "Mark as Watched"
+msgstr "Marchează ca vizionat"
+
+
+msgid "Miscellaneous"
+msgstr ""
+
+
+msgid "More"
+msgstr "Mai Mult"
+
+
+msgid "More..."
+msgstr "Mai Multe..."
+
+
+msgid "Movie Navigation Bar"
+msgstr "Bara de navigație a filmelor"
+
+
+msgid "Movie Options"
+msgstr "Opțiunile Filmului"
+
+
+msgid "Movie View"
+msgstr "Vizualizarea Filmului"
+
+
+msgid "Movies"
+msgstr "Filme"
+
+
+msgid "Music"
+msgstr ""
+
+
+msgid "Music Navigation Bar"
+msgstr ""
+
+
+msgid "Music Options"
+msgstr ""
+
+
+msgid "Music View"
+msgstr ""
+
+
+msgid "MyPlex Password"
+msgstr "MyPlex Parola"
+
+
+msgid "MyPlex Sign In"
+msgstr "Logare MyPlex"
+
+
+msgid "MyPlex Sign Out"
+msgstr "Delogare MyPlex"
+
+
+msgid "MyPlex Username"
+msgstr "Nume de utilizator MyPlex"
+
+
+msgid "No Plex Channels Available"
+msgstr "Nici un canal Plex disponibil"
+
+
+msgid "No Plex Library Sections Available"
+msgstr "Nici o librărie selectată Plex nu este disponibilă "
+
+
+msgid "No Plex Playlists Available"
+msgstr ""
+
+
+msgid "No Seasons"
+msgstr "Nici un sezon"
+
+
+msgid "No Unwatched Shows"
+msgstr "Nici un Show nevizionat"
+
+
+msgid "No Unwatched Shows."
+msgstr "Nici un Show nevizionat."
+
+
+msgid "No episodes"
+msgstr "Nici un Episod"
+
+
+msgid "None"
+msgstr "Nimic"
+
+
+msgid "Now Playing"
+msgstr ""
+
+
+msgid "Off"
+msgstr ""
+
+
+msgid "On Deck"
+msgstr ""
+
+
+msgid "Overscan Adjust"
+msgstr "Ajustarea Overscan-ului"
+
+
+msgid "PIL/Pillow not installed"
+msgstr ""
+
+
+msgid "Photo"
+msgstr "Poză"
+
+
+msgid "Photo Transcoder Action"
+msgstr ""
+
+
+msgid "Play"
+msgstr "Redare"
+
+
+msgid "Playlists"
+msgstr ""
+
+
+msgid "Plex Channels"
+msgstr "Canale Plex"
+
+
+msgid "Plex Home Users"
+msgstr ""
+
+
+msgid "Plex Library"
+msgstr "Libraria Plex"
+
+
+msgid "Plex Media Server"
+msgstr "Server Media Plex"
+
+
+msgid "Plex Media Server: No Items Available"
+msgstr "Server Media Plex: Nici un Item Disponibil"
+
+
+msgid "Plex Media Server: No Tracks Available"
+msgstr ""
+
+
+msgid "Plex Playlists"
+msgstr ""
+
+
+msgid "PlexConnect"
+msgstr "PlexConnect"
+
+
+msgid "PlexHome User PIN"
+msgstr ""
+
+
+msgid "Poster Titles"
+msgstr ""
+
+
+msgid "PrePlay Bottom Shelf"
+msgstr ""
+
+
+msgid "Producers"
+msgstr "Producători"
+
+
+msgid "Recently Added"
+msgstr "Adăugate Recent"
+
+
+msgid "Recently Aired"
+msgstr ""
+
+
+msgid "Recently Released"
+msgstr ""
+
+
+msgid "Recently Viewed"
+msgstr "Vizionate Recent"
+
+
+msgid "Recently Viewed Episodes"
+msgstr "Episoade vizionate recent"
+
+
+msgid "Recently Viewed Shows"
+msgstr "Show-urile Vizionate Recent"
+
+
+msgid "Refresh"
+msgstr ""
+
+
+msgid "Related Movies"
+msgstr ""
+
+
+msgid "Remote Bitrate"
+msgstr ""
+
+
+msgid "Search"
+msgstr "Caută"
+
+
+msgid "Season View"
+msgstr "Vizualizează Sezon"
+
+
+msgid "Select Fanart"
+msgstr ""
+
+
+msgid "Select Poster"
+msgstr ""
+
+
+msgid "Select Posters"
+msgstr ""
+
+
+msgid "Select Tracks"
+msgstr "Selecteaza Track-urile"
+
+
+msgid "Settings"
+msgstr "Setări"
+
+
+msgid "Shared Libraries"
+msgstr ""
+
+
+msgid "Show Clock"
+msgstr "Arată Ceasul"
+
+
+msgid "Show End Time"
+msgstr ""
+
+
+msgid "Show Photos"
+msgstr "Arată Pozele"
+
+
+msgid "Show Unwatched Count"
+msgstr ""
+
+
+msgid "Shows"
+msgstr "Show-uri"
+
+
+msgid "Shuffle"
+msgstr ""
+
+
+msgid "Shutter Speed"
+msgstr ""
+
+
+msgid "Sign Out"
+msgstr ""
+
+
+msgid "SlideShow"
+msgstr "Diapozitiv"
+
+
+msgid "Studio"
+msgstr ""
+
+
+msgid "Subs"
+msgstr ""
+
+
+msgid "Subtitle Renderer"
+msgstr ""
+
+
+msgid "Subtitle Size %"
+msgstr "Dimensiunea Subtitrării"
+
+
+msgid "Subtitle Track"
+msgstr "Track-ul Subtitrării"
+
+
+msgid "Switch Home User"
+msgstr ""
+
+
+msgid "Synopsis hidden."
+msgstr "Synopsa ascunsa."
+
+
+msgid "TV Show Navigation Bar"
+msgstr ""
+
+
+msgid "TV Show Options"
+msgstr ""
+
+
+msgid "TV Show View"
+msgstr ""
+
+
+msgid "TV Shows"
+msgstr ""
+
+
+msgid "TheMovieDB: No Trailer Info available"
+msgstr "TheMovieDB: Nu este disponibila nici o informație despre trailer"
+
+
+msgid "Time Format"
+msgstr ""
+
+
+msgid "To sign in to MyPlex, enter your Email address, username or Plex forum username."
+msgstr "Pentru a vă loga în MyPlex, introduceți adresa dumneavoastră de Email, Numele de utilizator sau Numele de utilizator de pe forumul Plex"
+
+
+msgid "Trailer"
+msgstr "Trailer"
+
+
+msgid "Transcoder"
+msgstr ""
+
+
+msgid "Transcoder Action"
+msgstr "Acțiunea Transcoder-ului"
+
+
+msgid "Transcoder Quality"
+msgstr ""
+
+
+msgid "Unwatched"
+msgstr ""
+
+
+msgid "Unwatched Synopsis"
+msgstr "Sinopse Nevizionate"
+
+
+msgid "Version"
+msgstr ""
+
+
+msgid "Video"
+msgstr ""
+
+
+msgid "Video Player OSD"
+msgstr ""
+
+
+msgid "Video Playlist"
+msgstr ""
+
+
+msgid "Video Playlist: No Items Available"
+msgstr ""
+
+
+msgid "View Show"
+msgstr "Vizualizeaza Show-ul"
+
+
+msgid "Wiki/Docs"
+msgstr ""
+
+
+msgid "Writers"
+msgstr ""
+
+
+msgid "Year"
+msgstr "An"
+
+
+msgid "refreshing"
+msgstr ""
+
+
+msgid "remote"
+msgstr ""
+
+
+msgid "{0:0d}x{1:02d} {2}"
+msgstr ""
+
+
+msgid "{0:d} Minutes"
+msgstr "{0:d} Minute"
+
+
+msgid "{0:d}:{1:0>2d}"
+msgstr ""
+
+
+msgid "{0:d}hr {1:d}min"
+msgstr "{0:d}Ore {0:d}Minute"
+
+
+msgid "{0} unwatched"
+msgstr "{0} Nevizionate"
+
+

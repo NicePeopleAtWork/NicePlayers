@@ -1,0 +1,23 @@
+<DATE>		<AUTHOR>		<CHANGES>
+
+Version 5.3.0:
+31/05/16	Jordi Aguilar 	- Compiled with 5.3 lib version
+31/05/16	Jordi Aguilar 	- Added player type (ie: videojs-hls or videojs-ima) to pluginName.
+
+Version 5.1.4:
+14/04/16	Jordi Aguilar	- Compiled with 5.2 lib version
+
+Version 5.1.3:
+11/03/16	Jordi Aguilar	- Added support to adnalyzer: brightcove-ads
+
+Version 5.1.2:
+01/03/16	Jordi Aguilar	- Added support to adnalyzers: ima3
+
+Version 5.1.1:
+15/02/16	Jordi Aguilar	- Added Brightcove
+15/02/16	Jordi Aguilar	- Built with youboralib 5.1.01
+
+Version 5.1.0:
+18/01/16	Jordi Aguilar	- New plugin 5.1.0.
+
+

@@ -1,0 +1,6 @@
+Plugin 2.2.2
+------------
+ 
+YOUB-844		Jordi Aguilar		- Fixed issues about Start and DelayedStart
+ 									- Standarized undefined checks
+ 									- Only reset values during EmbedCodeChanged if the code is different than the last one.

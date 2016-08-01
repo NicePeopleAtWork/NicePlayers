@@ -1,0 +1,698 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plex Connect\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-30 18:25:13+0000\n"
+"PO-Revision-Date: 2015-06-01 12:00+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+""
+
+msgid "ATV firmware version 5.1 or higher required. Please think about updating."
+msgstr "קושחה 5.1 ומעלה נדרשת. בבקשה חשבו לעדכן."
+
+
+msgid "Actor View"
+msgstr "תצוגת שחקן"
+
+
+msgid "Actors"
+msgstr "שחקנים"
+
+
+msgid "Albums"
+msgstr ""
+
+
+msgid "All Movies"
+msgstr "כל הסרטים"
+
+
+msgid "All Photos"
+msgstr "כל התמונות"
+
+
+msgid "All Shows"
+msgstr "כל התוכניות"
+
+
+msgid "All Videos"
+msgstr ""
+
+
+msgid "Aperture"
+msgstr "Aperture"
+
+
+msgid "Appearance"
+msgstr "מראה"
+
+
+msgid "Artists"
+msgstr ""
+
+
+msgid "Audio"
+msgstr "אודיו"
+
+
+msgid "Audio Boost %"
+msgstr "הגברת אודיו %"
+
+
+msgid "Audio Playlist"
+msgstr ""
+
+
+msgid "Audio Track"
+msgstr "רצועת אודיו"
+
+
+msgid "Audio/Subs"
+msgstr "אודיו/כתוביות"
+
+
+msgid "Authors"
+msgstr "יוצרים"
+
+
+msgid "By Collection"
+msgstr "לפי אוסף"
+
+
+msgid "By Content Rating"
+msgstr "לפי דירוג תוכן"
+
+
+msgid "By Country"
+msgstr "לפי מדינה"
+
+
+msgid "By First Letter"
+msgstr "לפי אות ראשונה"
+
+
+msgid "By Folder"
+msgstr "לפי תיקיה"
+
+
+msgid "By Rating"
+msgstr "לפי דירוג"
+
+
+msgid "By Resolution"
+msgstr "לפי רזולוציה"
+
+
+msgid "By Year"
+msgstr "לפי שנה"
+
+
+msgid "Camera Make"
+msgstr ""
+
+
+msgid "Camera Model"
+msgstr "סוג מצלמה"
+
+
+msgid "Change All Posters"
+msgstr ""
+
+
+msgid "Change Fanart"
+msgstr ""
+
+
+msgid "Change Poster"
+msgstr ""
+
+
+msgid "Channel Search"
+msgstr ""
+
+
+msgid "Channels"
+msgstr "ערוצים"
+
+
+msgid "Clock Position"
+msgstr "מיקום השעון"
+
+
+msgid "Collections"
+msgstr "אוספים"
+
+
+msgid "Decade"
+msgstr ""
+
+
+msgid "Decades"
+msgstr "עשורים"
+
+
+msgid "Details"
+msgstr "פרטים"
+
+
+msgid "Director"
+msgstr "במאי"
+
+
+msgid "Directors"
+msgstr "במאים"
+
+
+msgid "Discover"
+msgstr "שרתי Plex שהתגלו"
+
+
+msgid "Duration Format"
+msgstr ""
+
+
+msgid "Enter the MyPlex password for {0}."
+msgstr "הכנס את סיסמת MyPlex עבור {0}."
+
+
+msgid "Enter the PlexHome user pin for {0}."
+msgstr ""
+
+
+msgid "Episodes"
+msgstr "פרקים"
+
+
+msgid "Extras"
+msgstr ""
+
+
+msgid "Failed"
+msgstr "נכשל"
+
+
+msgid "Fanart"
+msgstr ""
+
+
+msgid "Fanart Lower Blur"
+msgstr ""
+
+
+msgid "Flatten Season"
+msgstr ""
+
+
+msgid "Forum"
+msgstr "פורום"
+
+
+msgid "General Appearance"
+msgstr ""
+
+
+msgid "Genre"
+msgstr "ז'אנר"
+
+
+msgid "Genres"
+msgstr "ז'אנרים"
+
+
+msgid "Home Video Navigation Bar"
+msgstr ""
+
+
+msgid "Home Video Options"
+msgstr ""
+
+
+msgid "Home Video View"
+msgstr ""
+
+
+msgid "Home Videos"
+msgstr ""
+
+
+msgid "Homepage"
+msgstr "דף הבית"
+
+
+msgid "ISO"
+msgstr "ISO"
+
+
+msgid "Length"
+msgstr "אורך"
+
+
+msgid "Lens"
+msgstr "עדשה"
+
+
+msgid "Library"
+msgstr "ספריה"
+
+
+msgid "Main Navigation Bar"
+msgstr ""
+
+
+msgid "Mark as Unwatched"
+msgstr "סמן כלא נצפה"
+
+
+msgid "Mark as Watched"
+msgstr "סמן כנצפה"
+
+
+msgid "Miscellaneous"
+msgstr ""
+
+
+msgid "More"
+msgstr "עוד"
+
+
+msgid "More..."
+msgstr "עוד..."
+
+
+msgid "Movie Navigation Bar"
+msgstr "סרגל ניווט של סרט"
+
+
+msgid "Movie Options"
+msgstr "אפשרויות סרט"
+
+
+msgid "Movie View"
+msgstr "תצוגת סרט"
+
+
+msgid "Movies"
+msgstr "סרטים"
+
+
+msgid "Music"
+msgstr ""
+
+
+msgid "Music Navigation Bar"
+msgstr ""
+
+
+msgid "Music Options"
+msgstr ""
+
+
+msgid "Music View"
+msgstr ""
+
+
+msgid "MyPlex Password"
+msgstr "סיסמת MyPlex"
+
+
+msgid "MyPlex Sign In"
+msgstr "התחברות אל MyPlex"
+
+
+msgid "MyPlex Sign Out"
+msgstr "התנתקות מMyPlex"
+
+
+msgid "MyPlex Username"
+msgstr "שם המשתמש בMyPlex"
+
+
+msgid "No Plex Channels Available"
+msgstr "אין ערוצי Plex זמינים"
+
+
+msgid "No Plex Library Sections Available"
+msgstr "אין ספריות Plex זמינות"
+
+
+msgid "No Plex Playlists Available"
+msgstr ""
+
+
+msgid "No Seasons"
+msgstr "אין עונות"
+
+
+msgid "No Unwatched Shows"
+msgstr "אין תוכניות שלא נצפו"
+
+
+msgid "No Unwatched Shows."
+msgstr "אין תוכניות שלא נצפו."
+
+
+msgid "No episodes"
+msgstr "אין פרקים"
+
+
+msgid "None"
+msgstr "כלום"
+
+
+msgid "Now Playing"
+msgstr ""
+
+
+msgid "Off"
+msgstr ""
+
+
+msgid "On Deck"
+msgstr "בצפייה"
+
+
+msgid "Overscan Adjust"
+msgstr "Overscan Adjust"
+
+
+msgid "PIL/Pillow not installed"
+msgstr ""
+
+
+msgid "Photo"
+msgstr "תמונה"
+
+
+msgid "Photo Transcoder Action"
+msgstr ""
+
+
+msgid "Play"
+msgstr "נגן/י"
+
+
+msgid "Playlists"
+msgstr ""
+
+
+msgid "Plex Channels"
+msgstr "ערוצי Plex"
+
+
+msgid "Plex Home Users"
+msgstr ""
+
+
+msgid "Plex Library"
+msgstr "ספריית Plex"
+
+
+msgid "Plex Media Server"
+msgstr "שרת המדיה של פלקס"
+
+
+msgid "Plex Media Server: No Items Available"
+msgstr "שרת המדיה של פלקס: אין פריטים זמינים"
+
+
+msgid "Plex Media Server: No Tracks Available"
+msgstr ""
+
+
+msgid "Plex Playlists"
+msgstr ""
+
+
+msgid "PlexConnect"
+msgstr "PlexConnect"
+
+
+msgid "PlexHome User PIN"
+msgstr ""
+
+
+msgid "Poster Titles"
+msgstr ""
+
+
+msgid "PrePlay Bottom Shelf"
+msgstr ""
+
+
+msgid "Producers"
+msgstr "מפיקים"
+
+
+msgid "Recently Added"
+msgstr "נוסף לאחרונה"
+
+
+msgid "Recently Aired"
+msgstr "שודר לאחרונה"
+
+
+msgid "Recently Released"
+msgstr "שוחרר לאחרונה"
+
+
+msgid "Recently Viewed"
+msgstr "נצפה לאחרונה"
+
+
+msgid "Recently Viewed Episodes"
+msgstr "פרקים שנצפו לאחרונה"
+
+
+msgid "Recently Viewed Shows"
+msgstr "תוכניות שנצפו לאחרונה"
+
+
+msgid "Refresh"
+msgstr ""
+
+
+msgid "Related Movies"
+msgstr ""
+
+
+msgid "Remote Bitrate"
+msgstr "קצב העברת קבצים משותפים"
+
+
+msgid "Search"
+msgstr "חיפוש"
+
+
+msgid "Season View"
+msgstr "תצוגת עונה"
+
+
+msgid "Select Fanart"
+msgstr ""
+
+
+msgid "Select Poster"
+msgstr ""
+
+
+msgid "Select Posters"
+msgstr ""
+
+
+msgid "Select Tracks"
+msgstr "בחר רצועות"
+
+
+msgid "Settings"
+msgstr "הגדרות"
+
+
+msgid "Shared Libraries"
+msgstr ""
+
+
+msgid "Show Clock"
+msgstr "הצג'י שעון"
+
+
+msgid "Show End Time"
+msgstr "הצג/י זמן סיום"
+
+
+msgid "Show Photos"
+msgstr "הצג/י תמונות"
+
+
+msgid "Show Unwatched Count"
+msgstr "הצג/י מונה תוכן שלא נצפה"
+
+
+msgid "Shows"
+msgstr "תוכניות"
+
+
+msgid "Shuffle"
+msgstr ""
+
+
+msgid "Shutter Speed"
+msgstr ""
+
+
+msgid "Sign Out"
+msgstr ""
+
+
+msgid "SlideShow"
+msgstr "מצגת"
+
+
+msgid "Studio"
+msgstr ""
+
+
+msgid "Subs"
+msgstr ""
+
+
+msgid "Subtitle Renderer"
+msgstr ""
+
+
+msgid "Subtitle Size %"
+msgstr "גודל כתוביות %"
+
+
+msgid "Subtitle Track"
+msgstr "קובץ תרגום"
+
+
+msgid "Switch Home User"
+msgstr ""
+
+
+msgid "Synopsis hidden."
+msgstr "תקציר מוסתר."
+
+
+msgid "TV Show Navigation Bar"
+msgstr "סרגל ניווט של תוכנית טלוויזיה"
+
+
+msgid "TV Show Options"
+msgstr "אפשרויות תוכנית טלוויזיה"
+
+
+msgid "TV Show View"
+msgstr "תצוגת תוכנית טלוויזיה"
+
+
+msgid "TV Shows"
+msgstr ""
+
+
+msgid "TheMovieDB: No Trailer Info available"
+msgstr "TheMovieDB:אין מידע זמין על טריילר"
+
+
+msgid "Time Format"
+msgstr "פורמט זמן"
+
+
+msgid "To sign in to MyPlex, enter your Email address, username or Plex forum username."
+msgstr "על מנת להתחבר לMyPlex, הזן את כתובת הEmail/שם משתמש/שם המשתמש בפורום Plex."
+
+
+msgid "Trailer"
+msgstr "פרומו"
+
+
+msgid "Transcoder"
+msgstr "מקודד"
+
+
+msgid "Transcoder Action"
+msgstr "פעולת המקודד"
+
+
+msgid "Transcoder Quality"
+msgstr "איכות המקודד"
+
+
+msgid "Unwatched"
+msgstr "לא נצפה"
+
+
+msgid "Unwatched Synopsis"
+msgstr "תקציר לא נצפה"
+
+
+msgid "Version"
+msgstr "גירסה"
+
+
+msgid "Video"
+msgstr "וידאו"
+
+
+msgid "Video Player OSD"
+msgstr "OSD של נגן הוידאו"
+
+
+msgid "Video Playlist"
+msgstr ""
+
+
+msgid "Video Playlist: No Items Available"
+msgstr ""
+
+
+msgid "View Show"
+msgstr "צפייה בתכנית"
+
+
+msgid "Wiki/Docs"
+msgstr "ויקי/מסמכים/מדריכים"
+
+
+msgid "Writers"
+msgstr "כותבים"
+
+
+msgid "Year"
+msgstr "שנה"
+
+
+msgid "refreshing"
+msgstr ""
+
+
+msgid "remote"
+msgstr ""
+
+
+msgid "{0:0d}x{1:02d} {2}"
+msgstr "{0:0d}x{1:02d} {2}"
+
+
+msgid "{0:d} Minutes"
+msgstr "{0:d} דקות"
+
+
+msgid "{0:d}:{1:0>2d}"
+msgstr ""
+
+
+msgid "{0:d}hr {1:d}min"
+msgstr "{0:d}ש' {1:d}דק'"
+
+
+msgid "{0} unwatched"
+msgstr "{0} לא נצפה"
+
+

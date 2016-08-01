@@ -1,0 +1,698 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plex Connect\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-30 18:25:13+0000\n"
+"PO-Revision-Date: 2015-06-01 12:00+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+""
+
+msgid "ATV firmware version 5.1 or higher required. Please think about updating."
+msgstr "Требуется версия прошивки ATV 5.1 или выше. Пожалуйста, подумайте об обновлении."
+
+
+msgid "Actor View"
+msgstr "Просмотр актёров"
+
+
+msgid "Actors"
+msgstr "Актеры"
+
+
+msgid "Albums"
+msgstr "Альбомы"
+
+
+msgid "All Movies"
+msgstr "Все фильмы"
+
+
+msgid "All Photos"
+msgstr "Все фотографии"
+
+
+msgid "All Shows"
+msgstr "Все сериалы"
+
+
+msgid "All Videos"
+msgstr "Все видео"
+
+
+msgid "Aperture"
+msgstr "Апертура"
+
+
+msgid "Appearance"
+msgstr "Внешний вид"
+
+
+msgid "Artists"
+msgstr "Артисты"
+
+
+msgid "Audio"
+msgstr "Звук"
+
+
+msgid "Audio Boost %"
+msgstr "Усиление звука %"
+
+
+msgid "Audio Playlist"
+msgstr "Аудио плейлист"
+
+
+msgid "Audio Track"
+msgstr "Звуковая дорожка"
+
+
+msgid "Audio/Subs"
+msgstr "Звук/Субтитры"
+
+
+msgid "Authors"
+msgstr "Авторы"
+
+
+msgid "By Collection"
+msgstr "По коллекции"
+
+
+msgid "By Content Rating"
+msgstr "По рейтингу"
+
+
+msgid "By Country"
+msgstr "По стране"
+
+
+msgid "By First Letter"
+msgstr "По первой букве"
+
+
+msgid "By Folder"
+msgstr "По папке"
+
+
+msgid "By Rating"
+msgstr "По рейтингу"
+
+
+msgid "By Resolution"
+msgstr "По разрешению"
+
+
+msgid "By Year"
+msgstr "По годам"
+
+
+msgid "Camera Make"
+msgstr "Производитель камеры"
+
+
+msgid "Camera Model"
+msgstr "Модель камеры"
+
+
+msgid "Change All Posters"
+msgstr "Сменить все обложки"
+
+
+msgid "Change Fanart"
+msgstr "Сменить фон"
+
+
+msgid "Change Poster"
+msgstr "Сменить обложку"
+
+
+msgid "Channel Search"
+msgstr "Поиск каналов"
+
+
+msgid "Channels"
+msgstr "Каналы"
+
+
+msgid "Clock Position"
+msgstr "Позиция часов"
+
+
+msgid "Collections"
+msgstr "Коллекции"
+
+
+msgid "Decade"
+msgstr "Декада"
+
+
+msgid "Decades"
+msgstr "Декады"
+
+
+msgid "Details"
+msgstr "Подробности"
+
+
+msgid "Director"
+msgstr "Режиссер"
+
+
+msgid "Directors"
+msgstr "Режисеры"
+
+
+msgid "Discover"
+msgstr "Узнать"
+
+
+msgid "Duration Format"
+msgstr "Формат длительности"
+
+
+msgid "Enter the MyPlex password for {0}."
+msgstr "Введите MyPlex пароль для {0}"
+
+
+msgid "Enter the PlexHome user pin for {0}."
+msgstr "Введите пароль для MyPlex для {0}."
+
+
+msgid "Episodes"
+msgstr "Эпизоды"
+
+
+msgid "Extras"
+msgstr "Дополнительно"
+
+
+msgid "Failed"
+msgstr "Не удалось"
+
+
+msgid "Fanart"
+msgstr "Фон"
+
+
+msgid "Fanart Lower Blur"
+msgstr "Интенсивность Blur`а фона"
+
+
+msgid "Flatten Season"
+msgstr "Убрать сезоны"
+
+
+msgid "Forum"
+msgstr "Форум"
+
+
+msgid "General Appearance"
+msgstr "Внешний вид - Основные"
+
+
+msgid "Genre"
+msgstr "Жанр"
+
+
+msgid "Genres"
+msgstr "Жанры"
+
+
+msgid "Home Video Navigation Bar"
+msgstr "Панель навигации по домашнему видео"
+
+
+msgid "Home Video Options"
+msgstr "Настройки домашнего видео"
+
+
+msgid "Home Video View"
+msgstr "Просмотр домашнего видео"
+
+
+msgid "Home Videos"
+msgstr "Домашние видео"
+
+
+msgid "Homepage"
+msgstr "Домашняя страница"
+
+
+msgid "ISO"
+msgstr "ISO"
+
+
+msgid "Length"
+msgstr "Длительность"
+
+
+msgid "Lens"
+msgstr "Линзы"
+
+
+msgid "Library"
+msgstr "Библиотека"
+
+
+msgid "Main Navigation Bar"
+msgstr "Основная панель навигации"
+
+
+msgid "Mark as Unwatched"
+msgstr "Отметить как непросмотренное"
+
+
+msgid "Mark as Watched"
+msgstr "Отметить как просмотренное"
+
+
+msgid "Miscellaneous"
+msgstr "Прочие"
+
+
+msgid "More"
+msgstr "Ещё"
+
+
+msgid "More..."
+msgstr "Еще..."
+
+
+msgid "Movie Navigation Bar"
+msgstr "Панель навигации по фильмам"
+
+
+msgid "Movie Options"
+msgstr "Настройки фильмов"
+
+
+msgid "Movie View"
+msgstr "Просмотр фильмов"
+
+
+msgid "Movies"
+msgstr "Фильмы"
+
+
+msgid "Music"
+msgstr "Музыка"
+
+
+msgid "Music Navigation Bar"
+msgstr "Навигация по музыке"
+
+
+msgid "Music Options"
+msgstr "Настройки музыки"
+
+
+msgid "Music View"
+msgstr "Просмотр музыки"
+
+
+msgid "MyPlex Password"
+msgstr "MyPlex пароль"
+
+
+msgid "MyPlex Sign In"
+msgstr "Войти в MyPlex"
+
+
+msgid "MyPlex Sign Out"
+msgstr "Выйти из MyPlex"
+
+
+msgid "MyPlex Username"
+msgstr "MyPlex Логин"
+
+
+msgid "No Plex Channels Available"
+msgstr "Нет доступных каналов Plex"
+
+
+msgid "No Plex Library Sections Available"
+msgstr "Нет доступных разделов библиотеки Plex"
+
+
+msgid "No Plex Playlists Available"
+msgstr "Нет доступных плейлистов"
+
+
+msgid "No Seasons"
+msgstr "Нет сезонов"
+
+
+msgid "No Unwatched Shows"
+msgstr "Нет непросмотренных сериалов"
+
+
+msgid "No Unwatched Shows."
+msgstr "Нет непросмотренных сериалов."
+
+
+msgid "No episodes"
+msgstr "Нет эпизодов"
+
+
+msgid "None"
+msgstr "Пусто"
+
+
+msgid "Now Playing"
+msgstr "Сейчас воспроизводится"
+
+
+msgid "Off"
+msgstr "Выкл"
+
+
+msgid "On Deck"
+msgstr "На главной"
+
+
+msgid "Overscan Adjust"
+msgstr "Настройка развертки"
+
+
+msgid "PIL/Pillow not installed"
+msgstr "PIL/Pillow не установлен"
+
+
+msgid "Photo"
+msgstr "Фото"
+
+
+msgid "Photo Transcoder Action"
+msgstr "Действие фото транскодера"
+
+
+msgid "Play"
+msgstr "Воспроизвести"
+
+
+msgid "Playlists"
+msgstr "Плейлисты"
+
+
+msgid "Plex Channels"
+msgstr "Каналы Plex"
+
+
+msgid "Plex Home Users"
+msgstr "Пользователи Plex Home"
+
+
+msgid "Plex Library"
+msgstr "Библиотека Plex"
+
+
+msgid "Plex Media Server"
+msgstr "Plex Media Server"
+
+
+msgid "Plex Media Server: No Items Available"
+msgstr "Plex Media Server: Нет доступных дополнений."
+
+
+msgid "Plex Media Server: No Tracks Available"
+msgstr "Plex Media Server: Нет доступных треков"
+
+
+msgid "Plex Playlists"
+msgstr "Плейлисты Plex"
+
+
+msgid "PlexConnect"
+msgstr "PlexConnect"
+
+
+msgid "PlexHome User PIN"
+msgstr "PIN пользователя Plex Home"
+
+
+msgid "Poster Titles"
+msgstr "Заголовки плакатов"
+
+
+msgid "PrePlay Bottom Shelf"
+msgstr "Панель воспроизведения перед фильмами"
+
+
+msgid "Producers"
+msgstr "Продюсеры"
+
+
+msgid "Recently Added"
+msgstr "Недавно добавленные"
+
+
+msgid "Recently Aired"
+msgstr "Недавно показанные"
+
+
+msgid "Recently Released"
+msgstr "Недавно вышедшие"
+
+
+msgid "Recently Viewed"
+msgstr "Недавно просмотренные"
+
+
+msgid "Recently Viewed Episodes"
+msgstr "Недавно просмотренные серии"
+
+
+msgid "Recently Viewed Shows"
+msgstr "Недавно просмотренные сериалы"
+
+
+msgid "Refresh"
+msgstr "Обновить"
+
+
+msgid "Related Movies"
+msgstr "Похожие фильмы"
+
+
+msgid "Remote Bitrate"
+msgstr "Качество по внешней сети"
+
+
+msgid "Search"
+msgstr "Поиск"
+
+
+msgid "Season View"
+msgstr "Просмотр сезона"
+
+
+msgid "Select Fanart"
+msgstr "Выбрать фон"
+
+
+msgid "Select Poster"
+msgstr "Выбрать обложку"
+
+
+msgid "Select Posters"
+msgstr "Выбрать обложки"
+
+
+msgid "Select Tracks"
+msgstr "Выбрать дорожки"
+
+
+msgid "Settings"
+msgstr "Настройки"
+
+
+msgid "Shared Libraries"
+msgstr "Общие библиотеки"
+
+
+msgid "Show Clock"
+msgstr "Показать часы"
+
+
+msgid "Show End Time"
+msgstr "Показать время завершения"
+
+
+msgid "Show Photos"
+msgstr " Просмотр Фотографий"
+
+
+msgid "Show Unwatched Count"
+msgstr "Показать количество непросмотренных"
+
+
+msgid "Shows"
+msgstr "Сериалы"
+
+
+msgid "Shuffle"
+msgstr "Перемешать"
+
+
+msgid "Shutter Speed"
+msgstr "Скорость затвора"
+
+
+msgid "Sign Out"
+msgstr "Выйти"
+
+
+msgid "SlideShow"
+msgstr "Слайдшоу"
+
+
+msgid "Studio"
+msgstr "Студия"
+
+
+msgid "Subs"
+msgstr "Субтитры"
+
+
+msgid "Subtitle Renderer"
+msgstr "Отрисовка субтитров"
+
+
+msgid "Subtitle Size %"
+msgstr "Размер субтитров %"
+
+
+msgid "Subtitle Track"
+msgstr "Дорожка субтитров"
+
+
+msgid "Switch Home User"
+msgstr "Сменить пользователя Home"
+
+
+msgid "Synopsis hidden."
+msgstr "Краткий обзор скрыт."
+
+
+msgid "TV Show Navigation Bar"
+msgstr "Панель навигации по сериалам"
+
+
+msgid "TV Show Options"
+msgstr "Настройки сериалов"
+
+
+msgid "TV Show View"
+msgstr "Просмотр сериалов"
+
+
+msgid "TV Shows"
+msgstr "Сериалы"
+
+
+msgid "TheMovieDB: No Trailer Info available"
+msgstr "TheMovieDB: Нет информации по трейлеру"
+
+
+msgid "Time Format"
+msgstr "Формат времени"
+
+
+msgid "To sign in to MyPlex, enter your Email address, username or Plex forum username."
+msgstr "Чтобы войти в MyPlex, введите свой ​​адрес электронной почты, имя пользователя или логин на форуме Plex."
+
+
+msgid "Trailer"
+msgstr "Трейлер"
+
+
+msgid "Transcoder"
+msgstr "Транскодер"
+
+
+msgid "Transcoder Action"
+msgstr "Действие транскодера"
+
+
+msgid "Transcoder Quality"
+msgstr "Качество транскодера"
+
+
+msgid "Unwatched"
+msgstr "Непросмотренные"
+
+
+msgid "Unwatched Synopsis"
+msgstr "Непросмотренные краткие обзоры"
+
+
+msgid "Version"
+msgstr "Версия"
+
+
+msgid "Video"
+msgstr "Видео"
+
+
+msgid "Video Player OSD"
+msgstr "Экранный видео плеер"
+
+
+msgid "Video Playlist"
+msgstr "Видео плейлист"
+
+
+msgid "Video Playlist: No Items Available"
+msgstr "Видео плейлист: Нет доступных объектов"
+
+
+msgid "View Show"
+msgstr "Просмотр сериала"
+
+
+msgid "Wiki/Docs"
+msgstr "Wiki/Docs"
+
+
+msgid "Writers"
+msgstr "Сценаристы"
+
+
+msgid "Year"
+msgstr "Год"
+
+
+msgid "refreshing"
+msgstr "Обновление"
+
+
+msgid "remote"
+msgstr "Удаленно"
+
+
+msgid "{0:0d}x{1:02d} {2}"
+msgstr "{0:0d}x{1:02d} {2}"
+
+
+msgid "{0:d} Minutes"
+msgstr "{0:d} минут "
+
+
+msgid "{0:d}:{1:0>2d}"
+msgstr "{0:d}{1:0>2d}"
+
+
+msgid "{0:d}hr {1:d}min"
+msgstr "{0:d}ч {1:d}мин"
+
+
+msgid "{0} unwatched"
+msgstr "{0} непросмотренных"
+
+

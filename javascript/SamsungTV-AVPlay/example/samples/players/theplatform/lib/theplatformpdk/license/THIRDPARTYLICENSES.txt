@@ -1,0 +1,32 @@
+THIRD-PARTY SOFTWARE LICENSE INFORMATION
+
+1) Software from the following project is included in this product. 
+
+JSON.org
+
+Use of the above software is governed by the terms of the license available in the file JSON.txt.
+
+2) Software from the following project is included in this product. 
+
+Yahoo Developer Network, Flash Developer Center
+
+Use of the above software is governed by the terms of the license available here: http://developer.yahoo.com/flash/license.html.
+
+3) Software from the following projects is included in this product. 
+
+SWFObject, version 1.5
+LogBook 
+
+Use of the above software is governed by the terms of the license available here: http://www.opensource.org/licenses/mit-license.php.
+
+4) Software from the following project is included in the product.
+
+as3crypto
+
+Use of the above software is governed by the terms of the license available here: http://as3crypto.googlecode.com/svn/trunk/as3crypto/LICENSE.txt
+
+5) Software from the following project is included in the product.
+
+Google Web Toolkit
+
+Use of the above software is governed by the terms of the license available here: http://code.google.com/webtoolkit/terms.html

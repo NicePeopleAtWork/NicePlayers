@@ -1,0 +1,98 @@
+<html>
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>Brightcove Aljazeera Youbora Test</title>
+  <style>
+    .video-js {
+      height: 720px;
+      width: 1280px;
+    }
+  </style>
+
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="/src/v1/1.4/js/libs/youbora-data-1.4.1.min.js"></script>
+<script src="/src/v1/1.4/js/libs/youbora-api-1.4.4.min.js"></script>
+
+</head>
+
+<body>
+
+ <video
+ 	id="bcove-player"
+ 	data-account="665003303001"
+ 	data-player="e2ed494f-cc59-4bb2-8e2e-cf64e56a9b6f"
+ 	data-embed="default"
+ 	class="video-js"
+ 	controls=""
+ 	style="width: 50%; height: 50%; top: 0px; bottom: 0px; right: 0px; left: 0px;">
+
+ </video>
+
+<script src="http://players.brightcove.net/665003303001/e2ed494f-cc59-4bb2-8e2e-cf64e56a9b6f_default/index.min.js"></script>
+<script src='/1.4/js/pc-videojs/3.4.3-vjs-bc-ima/sp.min.js'></script>
+
+
+    <!-- PLUGIN INSTANTIATION -->
+    <script>
+        var options = {
+            accountCode: 'QA',
+            username: '',
+            isLive: false,
+            transaction: '<transaction_code>',
+            contentId: '<content_id>',
+            isp: '<isp>',
+            cdn: '<cdn>',
+            ip: '<ip>',
+
+
+            properties: {
+                filename: "File Name",
+                content_id: "Content Id",
+                content_metadata: {
+                        title: "Title",
+                        genre: "Genre",
+                        language: "Language",
+                        year: "Year",
+                        cast: "Cast",
+                        director: "Director",
+                        owner: "Owner",
+                        duration: "Duration",
+                        parental: "Parental",
+                        price: "Price",
+                        rating: "Rating",
+                        audioType: "Audio type",
+                        audioChannels: "Audio channels"
+                },
+                transaction_type: "Transaction Types",
+                quality: "Quality",
+                content_type: "Content Type",
+                device: {
+                        manufacturer: "Manufacturer",
+                        type: "Type",
+                        year: "Year",
+                        firmware: "Firmware"
+                }
+            },
+
+			extraparam1: '<Extraparam1>',
+            extraparam2: '<Extraparam2>',
+
+        };
+
+        // load player, video to catalog, and instantiate youbora plugin
+        var video = videojs("bcove-player").ready(function(){
+            var bcp = this;
+            var videoID = '4446250216001';
+            bcp.catalog.getVideo(videoID, function(error, video) {
+            	bcp.youbora(options);
+ 				bcp.catalog.load(video);
+            });
+        });
+    </script>
+
+    <div id="console"></div>
+</body>
+</html>

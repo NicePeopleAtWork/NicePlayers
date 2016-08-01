@@ -1,0 +1,698 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plex Connect\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-30 18:25:13+0000\n"
+"PO-Revision-Date: 2015-06-01 12:00+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+""
+
+msgid "ATV firmware version 5.1 or higher required. Please think about updating."
+msgstr "ATV firmware 5.1 ou maior é requerido. Por favor, observe antes de atualizar."
+
+
+msgid "Actor View"
+msgstr "Visualizar Atores"
+
+
+msgid "Actors"
+msgstr "Atores"
+
+
+msgid "Albums"
+msgstr "Álbuns"
+
+
+msgid "All Movies"
+msgstr "Todos os Filmes"
+
+
+msgid "All Photos"
+msgstr "Todas as Fotos"
+
+
+msgid "All Shows"
+msgstr "Todas as Séries"
+
+
+msgid "All Videos"
+msgstr "Todos os Vídeos"
+
+
+msgid "Aperture"
+msgstr "Aperture"
+
+
+msgid "Appearance"
+msgstr "Aparência"
+
+
+msgid "Artists"
+msgstr "Artistas"
+
+
+msgid "Audio"
+msgstr "Áudio"
+
+
+msgid "Audio Boost %"
+msgstr "Aumento do Áudio %"
+
+
+msgid "Audio Playlist"
+msgstr "Lista de Reprodução de Áudio"
+
+
+msgid "Audio Track"
+msgstr "Faixa de Áudio"
+
+
+msgid "Audio/Subs"
+msgstr "Áudio/Legendas"
+
+
+msgid "Authors"
+msgstr "Autores"
+
+
+msgid "By Collection"
+msgstr "Por Coleção"
+
+
+msgid "By Content Rating"
+msgstr "Por Classificação de Conteúdo"
+
+
+msgid "By Country"
+msgstr "Por País"
+
+
+msgid "By First Letter"
+msgstr "Por Ordem Alfabética"
+
+
+msgid "By Folder"
+msgstr "Por Pasta"
+
+
+msgid "By Rating"
+msgstr "Por Classificação"
+
+
+msgid "By Resolution"
+msgstr "Por Resolução"
+
+
+msgid "By Year"
+msgstr "Por Ano"
+
+
+msgid "Camera Make"
+msgstr "Fabricante da Câmera"
+
+
+msgid "Camera Model"
+msgstr "Modelo da Câmera"
+
+
+msgid "Change All Posters"
+msgstr "Trocar Todos os Posters"
+
+
+msgid "Change Fanart"
+msgstr "Trocar Fanart"
+
+
+msgid "Change Poster"
+msgstr "Trocar Poster"
+
+
+msgid "Channel Search"
+msgstr "Busca nos Canais"
+
+
+msgid "Channels"
+msgstr "Canais"
+
+
+msgid "Clock Position"
+msgstr "Posição do Tempo"
+
+
+msgid "Collections"
+msgstr "Coleções"
+
+
+msgid "Decade"
+msgstr "Década"
+
+
+msgid "Decades"
+msgstr "Décadas"
+
+
+msgid "Details"
+msgstr "Detalhes"
+
+
+msgid "Director"
+msgstr "Diretor"
+
+
+msgid "Directors"
+msgstr "Diretores"
+
+
+msgid "Discover"
+msgstr "Descobrir"
+
+
+msgid "Duration Format"
+msgstr "Formato da Duração"
+
+
+msgid "Enter the MyPlex password for {0}."
+msgstr "Entre com a senha para o MyPlex {0}."
+
+
+msgid "Enter the PlexHome user pin for {0}."
+msgstr "Digite o pin do PlexHome para o usuário {0}"
+
+
+msgid "Episodes"
+msgstr "Episódios"
+
+
+msgid "Extras"
+msgstr "Extras"
+
+
+msgid "Failed"
+msgstr "Falhou"
+
+
+msgid "Fanart"
+msgstr "Fanart"
+
+
+msgid "Fanart Lower Blur"
+msgstr "Fanart Blur Baixo"
+
+
+msgid "Flatten Season"
+msgstr "Nivelar Temporada"
+
+
+msgid "Forum"
+msgstr "Fórum"
+
+
+msgid "General Appearance"
+msgstr "Aparência Geral"
+
+
+msgid "Genre"
+msgstr "Gênero"
+
+
+msgid "Genres"
+msgstr "Gêneros"
+
+
+msgid "Home Video Navigation Bar"
+msgstr "Barra de Navegação de Vídeos Caseiros"
+
+
+msgid "Home Video Options"
+msgstr "Opções dos Vídeos Caseiros"
+
+
+msgid "Home Video View"
+msgstr "Ver Vídeos Caseiros"
+
+
+msgid "Home Videos"
+msgstr "Vídeos Caseiros"
+
+
+msgid "Homepage"
+msgstr "Página Principal"
+
+
+msgid "ISO"
+msgstr "ISO"
+
+
+msgid "Length"
+msgstr "Duração"
+
+
+msgid "Lens"
+msgstr "Lentes"
+
+
+msgid "Library"
+msgstr "Biblioteca"
+
+
+msgid "Main Navigation Bar"
+msgstr "Barra de Navegação Principal"
+
+
+msgid "Mark as Unwatched"
+msgstr "Marcar como Não Assistido"
+
+
+msgid "Mark as Watched"
+msgstr "Marcar como Assistido"
+
+
+msgid "Miscellaneous"
+msgstr "Variados"
+
+
+msgid "More"
+msgstr "Mais"
+
+
+msgid "More..."
+msgstr "Mais..."
+
+
+msgid "Movie Navigation Bar"
+msgstr "Barra de Navegação de Filmes"
+
+
+msgid "Movie Options"
+msgstr "Opções dos Filmes"
+
+
+msgid "Movie View"
+msgstr "Visualização dos Filmes"
+
+
+msgid "Movies"
+msgstr "Filmes"
+
+
+msgid "Music"
+msgstr "Música"
+
+
+msgid "Music Navigation Bar"
+msgstr "Barra de Navegação de Música"
+
+
+msgid "Music Options"
+msgstr "Opções de Música"
+
+
+msgid "Music View"
+msgstr "Visualização de Músicas"
+
+
+msgid "MyPlex Password"
+msgstr "MyPlex Senha"
+
+
+msgid "MyPlex Sign In"
+msgstr "MyPlex Login"
+
+
+msgid "MyPlex Sign Out"
+msgstr "MyPlex Logout"
+
+
+msgid "MyPlex Username"
+msgstr "MyPlex Nome do Usuário"
+
+
+msgid "No Plex Channels Available"
+msgstr "Nenhum Canal Plex Disponível"
+
+
+msgid "No Plex Library Sections Available"
+msgstr "Nenhuma Seção de Biblioteca Plex Disponível"
+
+
+msgid "No Plex Playlists Available"
+msgstr "Nenhuma Lista de Reprodução Plex Disponível"
+
+
+msgid "No Seasons"
+msgstr "Sem Temporadas"
+
+
+msgid "No Unwatched Shows"
+msgstr "Séries Não Vistas"
+
+
+msgid "No Unwatched Shows."
+msgstr "Séries Não Vistas."
+
+
+msgid "No episodes"
+msgstr "Sem Episódios"
+
+
+msgid "None"
+msgstr "Nenhuma"
+
+
+msgid "Now Playing"
+msgstr "Tocando Agora"
+
+
+msgid "Off"
+msgstr "Off"
+
+
+msgid "On Deck"
+msgstr "Em Progresso"
+
+
+msgid "Overscan Adjust"
+msgstr "Ajuste"
+
+
+msgid "PIL/Pillow not installed"
+msgstr "PIL/Pillow não instalado"
+
+
+msgid "Photo"
+msgstr "Foto"
+
+
+msgid "Photo Transcoder Action"
+msgstr "Atividade do Transcoder de Foto"
+
+
+msgid "Play"
+msgstr "Play"
+
+
+msgid "Playlists"
+msgstr "Listas de Reprodução"
+
+
+msgid "Plex Channels"
+msgstr "Canais Plex"
+
+
+msgid "Plex Home Users"
+msgstr "Usuários Locais Plex"
+
+
+msgid "Plex Library"
+msgstr "Biblioteca Plex"
+
+
+msgid "Plex Media Server"
+msgstr "Plex Media Server"
+
+
+msgid "Plex Media Server: No Items Available"
+msgstr "Plex Media Server: Sem Ítens Disponíveis"
+
+
+msgid "Plex Media Server: No Tracks Available"
+msgstr "Plex Media Server: Não Há Faixas Disponíveis"
+
+
+msgid "Plex Playlists"
+msgstr "Listas de Reprodução Plex"
+
+
+msgid "PlexConnect"
+msgstr "PlexConnect"
+
+
+msgid "PlexHome User PIN"
+msgstr "PIN do Usuário Plex Local"
+
+
+msgid "Poster Titles"
+msgstr "Título Original"
+
+
+msgid "PrePlay Bottom Shelf"
+msgstr "Reprodução da Prateleira Inferior"
+
+
+msgid "Producers"
+msgstr "Produtores"
+
+
+msgid "Recently Added"
+msgstr "Adicionado Recentemente"
+
+
+msgid "Recently Aired"
+msgstr "No Ar"
+
+
+msgid "Recently Released"
+msgstr "Lançado Recentemente"
+
+
+msgid "Recently Viewed"
+msgstr "Visto Recentemente"
+
+
+msgid "Recently Viewed Episodes"
+msgstr "Episódios Assistidos Recentemente"
+
+
+msgid "Recently Viewed Shows"
+msgstr "Séries Vistas Recentementes"
+
+
+msgid "Refresh"
+msgstr "Recarregar"
+
+
+msgid "Related Movies"
+msgstr "Filmes Relacionados"
+
+
+msgid "Remote Bitrate"
+msgstr "Bitrate Remoto"
+
+
+msgid "Search"
+msgstr "Procurar"
+
+
+msgid "Season View"
+msgstr "Visualização da Temporada"
+
+
+msgid "Select Fanart"
+msgstr "Seleção de Fanart"
+
+
+msgid "Select Poster"
+msgstr "Seleção de Poster"
+
+
+msgid "Select Posters"
+msgstr "Seleção de Posters"
+
+
+msgid "Select Tracks"
+msgstr "Selecione entre as Trilhas"
+
+
+msgid "Settings"
+msgstr "Ajustes"
+
+
+msgid "Shared Libraries"
+msgstr "Bibliotecas Compartilhadas"
+
+
+msgid "Show Clock"
+msgstr "Mostrar Relógio"
+
+
+msgid "Show End Time"
+msgstr "Mostrar Hora de Finalização"
+
+
+msgid "Show Photos"
+msgstr "Mostrar Fotos"
+
+
+msgid "Show Unwatched Count"
+msgstr "Mostrar Contador de Não Vistos"
+
+
+msgid "Shows"
+msgstr "Séries"
+
+
+msgid "Shuffle"
+msgstr "Embaralhar"
+
+
+msgid "Shutter Speed"
+msgstr "Velocidade Shutter"
+
+
+msgid "Sign Out"
+msgstr "Sair"
+
+
+msgid "SlideShow"
+msgstr "SlideShow"
+
+
+msgid "Studio"
+msgstr "Estúdio"
+
+
+msgid "Subs"
+msgstr "Legendas"
+
+
+msgid "Subtitle Renderer"
+msgstr "Renderizador das Legendas"
+
+
+msgid "Subtitle Size %"
+msgstr "Tamanho da Legenda %"
+
+
+msgid "Subtitle Track"
+msgstr "Trilha de legenda"
+
+
+msgid "Switch Home User"
+msgstr "Trocar usuário local"
+
+
+msgid "Synopsis hidden."
+msgstr "Sinopse oculta"
+
+
+msgid "TV Show Navigation Bar"
+msgstr "Barra de Navegação do Seriado"
+
+
+msgid "TV Show Options"
+msgstr "Opções do Seriado"
+
+
+msgid "TV Show View"
+msgstr "Visualização do Seriado"
+
+
+msgid "TV Shows"
+msgstr "Séries de TV"
+
+
+msgid "TheMovieDB: No Trailer Info available"
+msgstr "TheMovieDB: Informação do Trailer Indisponível"
+
+
+msgid "Time Format"
+msgstr "Formato do Relógio"
+
+
+msgid "To sign in to MyPlex, enter your Email address, username or Plex forum username."
+msgstr "Para logar no MyPlex, entre com seu endereço de email, nome de usuário ou nome de usuário do fórum Plex."
+
+
+msgid "Trailer"
+msgstr "Trailer"
+
+
+msgid "Transcoder"
+msgstr "Transcoder"
+
+
+msgid "Transcoder Action"
+msgstr "Atividade do Transcoder"
+
+
+msgid "Transcoder Quality"
+msgstr "Qualidade do Transcode"
+
+
+msgid "Unwatched"
+msgstr "Não Visto"
+
+
+msgid "Unwatched Synopsis"
+msgstr "Sinopses Não Vistas"
+
+
+msgid "Version"
+msgstr "Versão"
+
+
+msgid "Video"
+msgstr "Vídeo"
+
+
+msgid "Video Player OSD"
+msgstr "OSD do Reprodutor"
+
+
+msgid "Video Playlist"
+msgstr "Lista de Reprodução de Vídeo"
+
+
+msgid "Video Playlist: No Items Available"
+msgstr "Lista de Reprodução de Vídeo: Sem Itens Disponíveis"
+
+
+msgid "View Show"
+msgstr "Visualizar Séries"
+
+
+msgid "Wiki/Docs"
+msgstr "Wiki/Documentos"
+
+
+msgid "Writers"
+msgstr "Escritores"
+
+
+msgid "Year"
+msgstr "Ano"
+
+
+msgid "refreshing"
+msgstr "recarregando"
+
+
+msgid "remote"
+msgstr "remoto"
+
+
+msgid "{0:0d}x{1:02d} {2}"
+msgstr "{0:0d}x{1:02d} {2}"
+
+
+msgid "{0:d} Minutes"
+msgstr "{0:d} Minutos"
+
+
+msgid "{0:d}:{1:0>2d}"
+msgstr "{0:d}:{1:0>2d}"
+
+
+msgid "{0:d}hr {1:d}min"
+msgstr "{0:d}hr {1:d}min"
+
+
+msgid "{0} unwatched"
+msgstr "{0} não visto"
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>PS3 Video</title>
+    <!-- Consoleio. Adjust IP before launching -->
+    <script type="text/javascript" src="http://192.168.1.47:8082/console.io.js"></script>
+    <!-- Youbora -->
+    <script type="text/javascript" src="http://pre.smartplugin.youbora.com/5.0/plugins/ps-webmaf/last-build/sp.min.js" youbora-debug="4"></script>
+    <script type="text/javascript">
+    var options = {
+        accountCode: 'qa',
+        username: 'qaps',
+        media: {
+            resource: 'http://global-s3-sl-cdn.wuaki.tv/ondemand/9/a/3/9a398a88cf66956fcca65d20f6095106-mf-0-46-0-0_PR/Manifest_sd.ism/Manifest?wrid=0d78df5657f4efc12059214c3171edfa',
+            title: 'Playready'
+        },
+        properties: {
+            content_id: "Content Id",
+            content_metadata: {
+                genre: "Genre",
+                language: "Language",
+                year: "Year",
+                cast: "Cast",
+                director: "Director",
+                owner: "Owner",
+                parental: "Parental",
+                price: "Price",
+                rating: "Rating",
+                audioType: "Audio type",
+                audioChannels: "Audio channels"
+            },
+            transaction_type: "Transaction Types",
+            quality: "Quality",
+            content_type: "Content Type",
+            device: {
+                manufacturer: "Manufacturer",
+                type: "Type",
+                year: "Year",
+                firmware: "Firmware"
+            }
+        }
+    };
+
+    var plugin = new $YB.plugins.PsWebmaf(options);
+
+    window.external.user('{"command":"load","contentUri":"http://global-s3-sl-cdn.wuaki.tv/ondemand/9/a/3/9a398a88cf66956fcca65d20f6095106-mf-0-46-0-0_PR/Manifest_sd.ism/Manifest?wrid=0d78df5657f4efc12059214c3171edfa","licenseUri":"","customData":"bGljZW5zZT1aSFZ5WVhScGIyNDlNVGN5TmpJekpuQjFjbU5vWVhObFJIVnlZWFJwYjI0OU1UY3lOakl6Sm1oaWRYSnNQU1pvWW1sdWREMG1ZV05yZFhKc1BTWmpiM1Z1ZEhKcFpYTTkmY29udGVudElkPTlhMzk4YTg4Y2Y2Njk1NmZjY2E2NWQyMGY2MDk1MTA2LW1mLTAtNDYtMC0wJmFjY291bnRDb2RlPXd1YWtpdHYmZXhwaXJlVGltZT0xNDUwNzA3NDg5NDMzJmlwPSZtZWRpYUlkPSZ0cmFuc2FjdGlvbklkPWVzX3Byb2R1Y3Rpb25fMTYwMzA5MDgmdHJhbnNhY3Rpb25UaW1lPTE0NTA2OTg4NDkmbmljZVRva2VuPWZkNjI1NGQ0YjU4MGRkMDA0Y2QyZjM3NmYxOWY3NmJm"}');
+
+    window.accessfunction = function(json) {
+        plugin.accessfunctionHandler(json);
+    }
+    </script>
+</head>
+
+<body id="body" class="ps3body">
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+Version 5.1.2:
+13/07/16	Jordi Aguilar	- Built with lib 5.3.0
+
+Version 5.1.2:
+06/05/16	Jordi Aguilar	- Downgraded to lib 5.2-RC as 5.2 is broken.
+
+Version 5.1.1:
+19/04/16	Jordi Aguilar	- Built with lib 5.2.
+19/04/16	Jordi Aguilar	- youbora config can be defined in player.setup(). youbora config defined in playlist items will prevail.
+
+
+Version 5.1.0:
+06/11/15	Jordi Aguilar	- New plugin 3.3.0.
+22/03/16	Jordi Aguilar	- Recompiled with lib 5.1.02, renamed to 5.1.0

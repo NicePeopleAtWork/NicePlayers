@@ -1,0 +1,185 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="language" content="en">
+
+	
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	
+	<!-- check if demosite or abertis -->
+	<script>
+	if (window.location.hostname == "demosite.nicepeopleatwork.com"){	
+		document.write('<link rel="stylesheet" type="text/css" href="../css/main.css">');
+	}else if (window.location.hostname == "qos.abertistelecom.com")	{
+		document.write('<link rel="stylesheet" type="text/css" href="../css/main_abertis.css">');
+	}
+	</script> 
+ 
+	<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+
+	<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://smartplugin.youbora.com/1.2/js/libs/youbora-data.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="http://smartplugin.youbora.com/1.2/sp/spyoubora.js" charset="UTF-8"></script>
+
+	<!-- scripts framework silverlight -->
+	<script src="js/playerframework.min.js"></script>
+    <link rel="stylesheet" href="css/playerframework.min.css">
+	<!-- end scripts framework silverlight -->
+	
+	<script>
+	if (window.location.hostname == "demosite.nicepeopleatwork.com"){	
+		document.write('<title>Demosite - PLAYREADY - Silverlight</title>');
+	}else if (window.location.hostname == "qos.abertistelecom.com")	{
+		document.write('<title>Analytics Demo - Abertis - PLAYREADY - Silverlight</title>');
+	}
+	</script>
+	
+	</head>
+
+	<body>
+	<div class="wrapper">
+		<nav class="navbar navbar-default" role="navigation">
+	        <div class="nice-navbar-header">
+	        	<script>
+				if (window.location.hostname == "demosite.nicepeopleatwork.com"){	
+					document.write('<a class="navbar-brand" href="http://demosite.nicepeopleatwork.com"><img src="../images/logo-header.png" height="60" border="0"></a>');
+				}else if (window.location.hostname == "qos.abertistelecom.com")	{
+					document.write('<a class="navbar-brand" href="http://qos.abertistelecom.com"><img src="../images/logo-header-abertis.png" height="60" border="0"></a>');
+				}
+				</script>	            
+	        </div> 
+		</nav>
+
+		<div id="content" style="height:798px">
+	
+		<!-- Content -->
+		<div class="container" style="z-index: 100;">      
+
+			<!-- player -->
+			<div class="row nice-product-box">              
+				<p>
+					<img src="../images/silverlight.png" height="30" style="margin-top: -10px;">
+					<span class="nice-product-title"><strong>PLAYREADY - Silverlight</strong></span>
+				</p>
+				<p style="height:25px;">
+					<a href="../index.html" target="_self" class="pull-right" style="font-size: 17px;">
+						<small>Return to Demosite</small>
+						<img src="../images/back.png">
+					</a>
+				</p>
+
+
+				<!-- object player -->
+				<div id="myVideoContainer" class="pf-container"></div>
+				<script type="text/javascript" src="js/Nice264Plugins.js"></script>
+
+				<script>
+					var system = "";
+					if (window.location.hostname == "demosite.nicepeopleatwork.com"){	
+						system = "demosite";
+					}else if (window.location.hostname == "qos.abertistelecom.com")	{
+						system = "abdemo";
+					}
+				</script>
+
+				<script>
+
+					function createPlayer (userResource) {
+
+						var player= new PlayerFramework.Player("myVideoContainer",
+						{
+							mediaPluginFallbackOrder: [ "VideoElementMediaPlugin", "SilverlightMediaPlugin" ], 
+							width: "100%",
+							height: "420px",
+							poster: "http://nws.nice264.com/image/demosite/fc642fcbbf910bb50ffb.jpg",
+							sources:
+							[
+								{
+									src: userResource, 
+									type: "text/xml"
+								}
+							]
+						});
+						return player;
+					}
+
+
+					var myPlayer = createPlayer("http://ptv-hss.streaming.overon.es/livefeed/presstv/ch03.isml/Manifest");
+
+				//	createPlayer("http://s1.smooth.origin.level3.nice264.com/npaw/bbb_test/Manifest"); //"http://playready.directtaps.net/smoothstreaming/SSWSS720H264PR/SuperSpeedway_720.ism/Manifest"
+
+					//plugins
+					var playInfo = {
+						username: 'demosite',
+						transaction: '',
+						interval: 0
+					};
+					youboraData.setSilverlightPlayer(myPlayer);
+					youboraData.setExtraParam(1,"Hola");
+					youboraData.setProperties({
+					    filename: "File Name",
+					    content_id: "Content Id", 
+					    content_metadata: { 
+						title: "Title", 
+						genre: "Genre", 
+						language: "Language", 
+						year: "Year", 
+						cast: "Cast", 
+						director: "Director", 
+						owner: "Owner", 
+						duration: "Duration", 
+						parental: "Parental", 
+						price: "Price",
+						rating: "Rating",
+						audioType: "Audio type", 
+						audioChannels: "Audio channels"
+					    },
+					    transaction_type: "Transaction Types", 
+					    quality: "Quality", 
+					    content_type: "Content Type", 
+					    device: { 
+						manufacturer: "Manufacturer", 
+						type: "Type", 
+						year: "Year", 
+						firmware: "Firmware" 
+					    }
+					});
+				
+				</script>
+					
+				</div>
+				<!-- end specs -->
+			   
+			</div>
+			<div class="row">
+				<div class="nice-product-boxbottom"></div>
+			</div>    
+		</div>
+	</div><!-- content -->
+	<footer class="row footer">
+        <div class="col-xs-12 col-sm-12 col-md-12 footer-bg-1"></div>
+        <div class="col-xs-12 col-sm-12 col-md-12 footer-bg-2">
+            <script>
+			if (window.location.hostname == "demosite.nicepeopleatwork.com"){	
+				document.write('<p class="pull-left">(c) 2008-2014 NicePeopleAtWork, All rights reserved.</p>');
+			}
+			</script>
+            <div class="nice-legal pull-right">
+            	<a href="http://youbora.com/index.php?r=site/termsService">Terms of Service</a>    <span>|</span>
+                <a href="http://youbora.com/index.php?r=site/privacyPolicy">Privacy Policy Rights</a>            
+			</div>
+        </div>
+
+		<!-- GA -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		  ga('create', 'UA-4272748-3', 'nicepeopleatwork.com');
+		  ga('send', 'pageview');
+		</script>
+    </footer>   
+	</body>
+</html>

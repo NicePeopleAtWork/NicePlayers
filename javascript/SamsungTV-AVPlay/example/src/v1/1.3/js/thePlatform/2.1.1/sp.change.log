@@ -1,0 +1,8 @@
+18-11-2015	- YOUB-706		- Biel Conde		- duration, urlResource and Title, now set it on youboraData if == ''. With this, we can send correct duration, urlResource and title on errors after plugin reset. 
+18-11-2015	- YOUB-706		- Biel Conde		- Now support sendAdvancedError().
+16-11-2015	- YOUB-706		- Biel Conde		- Following the advice of thePlatform, now we listen "OnReleaseStart" event. Now, the logic of start() is performed in the onReleaseStart() method. The old onMediaStart() method only checks whether the current clip is an advertisement, and if it is not, start the buffer jointime.
+12-11-2015	- YOUB-706		- Biel Conde		- isAdvertisement -> in start send duration=0 and sendit latter in jointime. Now, duration is also obtained in the method onMediaPlaying()
+11-11-2015	- YOUB-706		- Biel Conde		- In method onMediaStart(): if not isAdvertisement -> send BUFFER_BEGIN
+20-10-2015	- YOUB-706		- Biel Conde		- Add try/catch blocks to prevent plugin crash when youbora-api fails
+20-10-2015	- YOUB-706		- Biel Conde		- In flash player version, fix duration of plugins = 0
+20-10-2015	- YOUB-706		- Biel Conde		- Add isAdvertisement flag to prevent multiple views in resources with ads

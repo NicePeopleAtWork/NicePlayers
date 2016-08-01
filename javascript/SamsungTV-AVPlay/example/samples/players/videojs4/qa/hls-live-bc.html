@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<head>
+</head>
+
+<body>
+    <video id="video1" data-video-id="4767225993001" data-account="2564185535001" data-player="4JmcMNudl" data-embed="default" controls="" style="width: 960px; height: 540px;"></video>
+    <script src="//players.brightcove.net/2564185535001/4JmcMNudl_default/index.min.js"></script>
+    <!---->
+    <!-- YouboraLib -->
+    <script src="/src/v5/plugins/videojs4/last-build/sp.min.js" youbora-debug="4"></script>
+    <!---->
+    <script>
+    videojs('video1').youbora({
+        accountCode: 'qamini',
+        username: 'qases',
+        transactionCode: 'transcode',
+        httpSecure: false,
+        parseHLS: true,
+        parseCDNNodeHost: false,
+
+        //media
+        /*media: {
+            isLive: true
+        },*/
+
+        // properties
+        properties: {
+            content_metadata: {
+                genre: "a",
+                year: "b",
+                cast: "c",
+                director: "d",
+                owner: "e",
+                parental: "f",
+                price: "g",
+                rating: "h",
+                audioType: "i",
+                audioChannels: "j",
+                language: "es"
+            },
+            transaction_type: "k",
+            quality: "l",
+            content_type: "m",
+            device: {
+                manufacturer: "n",
+                type: "o",
+                year: "p",
+                firmware: "q"
+            }
+        },
+
+        // extraparams
+        extraParams: {
+            param1: "param1",
+            param2: "param2"
+        }
+    });
+
+    videojs('video1').play();
+    </script>
+    <script src="http://pre-smartplugin.youbora.com//src/v5/util/inspector/inspector.js"></script>
+</body>

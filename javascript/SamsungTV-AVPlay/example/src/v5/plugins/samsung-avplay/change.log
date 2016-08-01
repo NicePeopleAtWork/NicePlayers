@@ -1,0 +1,9 @@
+Version 5.3.0:
+23/08/16	Jordi Aguilar	- Corrected a bug showing bitrate 0 instead of -1.
+23/06/16	Jordi Aguilar	- Built with lib 5.3.01
+
+Version 5.1.1:
+23/06/16	Jordi Aguilar	- Name changed from tizen-avplay to samsung-avplay.
+
+Version 5.1.0:
+27/01/16	Jordi Aguilar	- New plugin 5.1.0.

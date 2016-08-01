@@ -1,0 +1,698 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plex Connect\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-03-30 18:25:13+0000\n"
+"PO-Revision-Date: 2015-06-01 12:00+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+""
+
+msgid "ATV firmware version 5.1 or higher required. Please think about updating."
+msgstr "ATVのファームウェア5.1以上の更新が必要です。アップデートをしてください。"
+
+
+msgid "Actor View"
+msgstr "俳優の表示設定"
+
+
+msgid "Actors"
+msgstr ""
+
+
+msgid "Albums"
+msgstr ""
+
+
+msgid "All Movies"
+msgstr "全ての映画"
+
+
+msgid "All Photos"
+msgstr "全ての写真"
+
+
+msgid "All Shows"
+msgstr ""
+
+
+msgid "All Videos"
+msgstr ""
+
+
+msgid "Aperture"
+msgstr ""
+
+
+msgid "Appearance"
+msgstr ""
+
+
+msgid "Artists"
+msgstr ""
+
+
+msgid "Audio"
+msgstr ""
+
+
+msgid "Audio Boost %"
+msgstr ""
+
+
+msgid "Audio Playlist"
+msgstr ""
+
+
+msgid "Audio Track"
+msgstr ""
+
+
+msgid "Audio/Subs"
+msgstr ""
+
+
+msgid "Authors"
+msgstr ""
+
+
+msgid "By Collection"
+msgstr ""
+
+
+msgid "By Content Rating"
+msgstr ""
+
+
+msgid "By Country"
+msgstr ""
+
+
+msgid "By First Letter"
+msgstr ""
+
+
+msgid "By Folder"
+msgstr ""
+
+
+msgid "By Rating"
+msgstr ""
+
+
+msgid "By Resolution"
+msgstr ""
+
+
+msgid "By Year"
+msgstr ""
+
+
+msgid "Camera Make"
+msgstr ""
+
+
+msgid "Camera Model"
+msgstr ""
+
+
+msgid "Change All Posters"
+msgstr ""
+
+
+msgid "Change Fanart"
+msgstr ""
+
+
+msgid "Change Poster"
+msgstr ""
+
+
+msgid "Channel Search"
+msgstr ""
+
+
+msgid "Channels"
+msgstr ""
+
+
+msgid "Clock Position"
+msgstr ""
+
+
+msgid "Collections"
+msgstr ""
+
+
+msgid "Decade"
+msgstr ""
+
+
+msgid "Decades"
+msgstr ""
+
+
+msgid "Details"
+msgstr ""
+
+
+msgid "Director"
+msgstr ""
+
+
+msgid "Directors"
+msgstr ""
+
+
+msgid "Discover"
+msgstr ""
+
+
+msgid "Duration Format"
+msgstr ""
+
+
+msgid "Enter the MyPlex password for {0}."
+msgstr ""
+
+
+msgid "Enter the PlexHome user pin for {0}."
+msgstr ""
+
+
+msgid "Episodes"
+msgstr ""
+
+
+msgid "Extras"
+msgstr ""
+
+
+msgid "Failed"
+msgstr ""
+
+
+msgid "Fanart"
+msgstr ""
+
+
+msgid "Fanart Lower Blur"
+msgstr ""
+
+
+msgid "Flatten Season"
+msgstr ""
+
+
+msgid "Forum"
+msgstr ""
+
+
+msgid "General Appearance"
+msgstr ""
+
+
+msgid "Genre"
+msgstr ""
+
+
+msgid "Genres"
+msgstr ""
+
+
+msgid "Home Video Navigation Bar"
+msgstr ""
+
+
+msgid "Home Video Options"
+msgstr ""
+
+
+msgid "Home Video View"
+msgstr ""
+
+
+msgid "Home Videos"
+msgstr ""
+
+
+msgid "Homepage"
+msgstr ""
+
+
+msgid "ISO"
+msgstr ""
+
+
+msgid "Length"
+msgstr ""
+
+
+msgid "Lens"
+msgstr ""
+
+
+msgid "Library"
+msgstr ""
+
+
+msgid "Main Navigation Bar"
+msgstr ""
+
+
+msgid "Mark as Unwatched"
+msgstr ""
+
+
+msgid "Mark as Watched"
+msgstr ""
+
+
+msgid "Miscellaneous"
+msgstr ""
+
+
+msgid "More"
+msgstr ""
+
+
+msgid "More..."
+msgstr ""
+
+
+msgid "Movie Navigation Bar"
+msgstr "映画のナビゲーションバー"
+
+
+msgid "Movie Options"
+msgstr "映画の設定"
+
+
+msgid "Movie View"
+msgstr "映画の表示設定"
+
+
+msgid "Movies"
+msgstr "映画"
+
+
+msgid "Music"
+msgstr ""
+
+
+msgid "Music Navigation Bar"
+msgstr ""
+
+
+msgid "Music Options"
+msgstr ""
+
+
+msgid "Music View"
+msgstr ""
+
+
+msgid "MyPlex Password"
+msgstr ""
+
+
+msgid "MyPlex Sign In"
+msgstr ""
+
+
+msgid "MyPlex Sign Out"
+msgstr ""
+
+
+msgid "MyPlex Username"
+msgstr ""
+
+
+msgid "No Plex Channels Available"
+msgstr ""
+
+
+msgid "No Plex Library Sections Available"
+msgstr ""
+
+
+msgid "No Plex Playlists Available"
+msgstr ""
+
+
+msgid "No Seasons"
+msgstr ""
+
+
+msgid "No Unwatched Shows"
+msgstr ""
+
+
+msgid "No Unwatched Shows."
+msgstr ""
+
+
+msgid "No episodes"
+msgstr ""
+
+
+msgid "None"
+msgstr ""
+
+
+msgid "Now Playing"
+msgstr ""
+
+
+msgid "Off"
+msgstr ""
+
+
+msgid "On Deck"
+msgstr "最近"
+
+
+msgid "Overscan Adjust"
+msgstr ""
+
+
+msgid "PIL/Pillow not installed"
+msgstr ""
+
+
+msgid "Photo"
+msgstr "写真"
+
+
+msgid "Photo Transcoder Action"
+msgstr ""
+
+
+msgid "Play"
+msgstr ""
+
+
+msgid "Playlists"
+msgstr ""
+
+
+msgid "Plex Channels"
+msgstr ""
+
+
+msgid "Plex Home Users"
+msgstr ""
+
+
+msgid "Plex Library"
+msgstr ""
+
+
+msgid "Plex Media Server"
+msgstr ""
+
+
+msgid "Plex Media Server: No Items Available"
+msgstr ""
+
+
+msgid "Plex Media Server: No Tracks Available"
+msgstr ""
+
+
+msgid "Plex Playlists"
+msgstr ""
+
+
+msgid "PlexConnect"
+msgstr ""
+
+
+msgid "PlexHome User PIN"
+msgstr ""
+
+
+msgid "Poster Titles"
+msgstr ""
+
+
+msgid "PrePlay Bottom Shelf"
+msgstr ""
+
+
+msgid "Producers"
+msgstr ""
+
+
+msgid "Recently Added"
+msgstr ""
+
+
+msgid "Recently Aired"
+msgstr ""
+
+
+msgid "Recently Released"
+msgstr ""
+
+
+msgid "Recently Viewed"
+msgstr "最近表示した"
+
+
+msgid "Recently Viewed Episodes"
+msgstr "最近表示したエピソード"
+
+
+msgid "Recently Viewed Shows"
+msgstr "最近表示したドラマ"
+
+
+msgid "Refresh"
+msgstr ""
+
+
+msgid "Related Movies"
+msgstr ""
+
+
+msgid "Remote Bitrate"
+msgstr ""
+
+
+msgid "Search"
+msgstr ""
+
+
+msgid "Season View"
+msgstr "シーズンの表示設定"
+
+
+msgid "Select Fanart"
+msgstr ""
+
+
+msgid "Select Poster"
+msgstr ""
+
+
+msgid "Select Posters"
+msgstr ""
+
+
+msgid "Select Tracks"
+msgstr ""
+
+
+msgid "Settings"
+msgstr ""
+
+
+msgid "Shared Libraries"
+msgstr ""
+
+
+msgid "Show Clock"
+msgstr ""
+
+
+msgid "Show End Time"
+msgstr ""
+
+
+msgid "Show Photos"
+msgstr "写真を表示"
+
+
+msgid "Show Unwatched Count"
+msgstr ""
+
+
+msgid "Shows"
+msgstr ""
+
+
+msgid "Shuffle"
+msgstr ""
+
+
+msgid "Shutter Speed"
+msgstr ""
+
+
+msgid "Sign Out"
+msgstr ""
+
+
+msgid "SlideShow"
+msgstr ""
+
+
+msgid "Studio"
+msgstr ""
+
+
+msgid "Subs"
+msgstr ""
+
+
+msgid "Subtitle Renderer"
+msgstr ""
+
+
+msgid "Subtitle Size %"
+msgstr ""
+
+
+msgid "Subtitle Track"
+msgstr ""
+
+
+msgid "Switch Home User"
+msgstr ""
+
+
+msgid "Synopsis hidden."
+msgstr ""
+
+
+msgid "TV Show Navigation Bar"
+msgstr "ドラマのナビゲーションバー"
+
+
+msgid "TV Show Options"
+msgstr "ドラマの設定"
+
+
+msgid "TV Show View"
+msgstr "ドラマの表示設定"
+
+
+msgid "TV Shows"
+msgstr ""
+
+
+msgid "TheMovieDB: No Trailer Info available"
+msgstr "TheMovieDB: トレーラーのインフォメーションがありません"
+
+
+msgid "Time Format"
+msgstr ""
+
+
+msgid "To sign in to MyPlex, enter your Email address, username or Plex forum username."
+msgstr ""
+
+
+msgid "Trailer"
+msgstr "トレーラー"
+
+
+msgid "Transcoder"
+msgstr ""
+
+
+msgid "Transcoder Action"
+msgstr ""
+
+
+msgid "Transcoder Quality"
+msgstr ""
+
+
+msgid "Unwatched"
+msgstr ""
+
+
+msgid "Unwatched Synopsis"
+msgstr ""
+
+
+msgid "Version"
+msgstr ""
+
+
+msgid "Video"
+msgstr ""
+
+
+msgid "Video Player OSD"
+msgstr ""
+
+
+msgid "Video Playlist"
+msgstr ""
+
+
+msgid "Video Playlist: No Items Available"
+msgstr ""
+
+
+msgid "View Show"
+msgstr "ショーの表示"
+
+
+msgid "Wiki/Docs"
+msgstr ""
+
+
+msgid "Writers"
+msgstr ""
+
+
+msgid "Year"
+msgstr ""
+
+
+msgid "refreshing"
+msgstr ""
+
+
+msgid "remote"
+msgstr ""
+
+
+msgid "{0:0d}x{1:02d} {2}"
+msgstr ""
+
+
+msgid "{0:d} Minutes"
+msgstr ""
+
+
+msgid "{0:d}:{1:0>2d}"
+msgstr ""
+
+
+msgid "{0:d}hr {1:d}min"
+msgstr ""
+
+
+msgid "{0} unwatched"
+msgstr ""
+
+

@@ -1,0 +1,136 @@
+<html>
+
+	<head>
+		<title>Test Template</title>
+		<h4>Test for Player BrightCove</h4>
+		<script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+		<script type="text/javascript" src="../../testUtils.js"></script>
+		<script type="text/javascript" src="http://pre.smartplugin.youbora.com/1.3/js/libs/youbora-data.js?debug=true"></script>
+		<script>
+			//loadLibraries();
+		</script>
+		<script>
+			
+		</script> 
+		</head>
+
+	<body>
+
+		<div id="destinationSet">
+			<div style="margin-top:15px">Destination</div>
+			<select id="destination" disabled>
+				<option id="Debug">Debug</option>
+				<option id="Production">Production</option>
+			</select>
+		<div>
+		<div id="testTypeSet" style="position: absolute; top: 47px; left: 110px;">
+		<div>TestType</div>
+			<select id="testType" disabled>
+				<option id="A" selected>A</option>
+				<option id="B">B</option>
+				<option id="C">C</option>
+				<option id="D">D</option>
+				<option id="E">E</option>
+				<option id="F">F</option>
+				<option id="G">G</option>
+				<option id="H">H</option>
+				<option id="I">I</option>
+			</select>
+		</div>
+		<div id="technologySet" style="position: absolute; top: 47px; left: 180px;">
+		<div>Technology</div>
+			<select id="technology">
+				<option id="flash">FLASH</option>
+			</select>
+		</div>
+		<div id="testCodeSet" style="position: absolute; top: 47px; left: 280px;" >
+			<div>TestCode</div>
+			<input type="text" id="testCode"></input>
+		</div>
+		<div id="resourceSet" style="position: absolute; top: 47px; left: 450px;" >
+			<div>ResourceType</div>
+			<select id="resource" disabled>
+				<option value="http://cdn.s1.eu.nice264.com/converted_work6/0082c06e504b0a422bf1_6815f2deeb179c29748af42f8cd5ce95.mp4">MP4</option>
+			</select>
+		</div>
+		<div id="pluginVersionSet" style="position: absolute; top: 47px; left: 550px;" >
+			<div>PluginVersion</div>
+			<select id="pluginVersion" disabled>
+				<option value="3.1.5_BrightCove-SWF">3.1.6_BrightCove-SWF</option>
+			</select>
+		</div>
+
+				
+
+		<div style="margin-bottom:20px"></div>
+		<button id="play">Play</button>
+		<button id="pause">Pause</button>
+		<button id="stop">Stop</button>
+		<button id="seekfw">SeekForward</button>
+		<button id="seekbd">SeekBackwards</button>
+		<button id="forceError">ForceError</button>
+
+		
+		<div style="width: 480px; height: 270px;" >
+			
+		<script language="JavaScript" type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+
+		<object id="myExperience3979559775001" class="BrightcoveExperience">
+		  <param name="bgcolor" value="#FFFFFF" />
+		  <param name="width" value="480" />
+		  <param name="height" value="270" />
+		  <param name="playerID" value="4039164599001" />
+  		  <param name="playerKey" value="AQ~~,AAAB97f6OPk~,fKhESbpOoDBNd7cv6p5ZxM_dLyXG1Nt-" />
+		  <param name="isVid" value="true" />
+		  <param name="isUI" value="true" />
+		  <param name="dynamicStreaming" value="true" />
+		  <param name="includeAPI" value="true" />
+		  <param name="@videoPlayer" value="2174693116001" />
+		  <param name="service" value="http://db8.pam.nice264.com:8991"/>
+		</object>
+
+		<!-- Start of Brightcove Player -->
+
+<div style="display:none">
+
+</div>
+
+
+<script type="text/javascript">brightcove.createExperiences();</script>
+
+		</div>
+
+			
+				
+		<script>
+			player="bcove";
+			prepareTestEnvironment();
+			
+			/*$( "#play" ).click(function() {
+				player.play();
+			});
+			$( "#pause" ).click(function() {
+			  player.pause();
+			});
+			$( "#stop" ).click(function() {
+				player.currentTime(player.duration());
+			});
+			$( "#seekfw" ).click(function() {
+				player.currentTime(player.currentTime()+10);
+			});
+			$( "#seekbd" ).click(function() {
+				player.currentTime(player.currentTime()-10);
+			});
+			$( "#forceError" ).click(function() {
+
+				player.src("http://fakeUrl.com");
+				player.load();
+				player.play();
+				
+			});*/
+
+		</script>
+	
+	</body>
+
+</html>

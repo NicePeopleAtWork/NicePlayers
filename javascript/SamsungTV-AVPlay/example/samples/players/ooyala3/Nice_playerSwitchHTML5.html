@@ -1,0 +1,113 @@
+<html>
+
+	<head>
+		<title>Test Player</title>
+
+		<script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+		<script type="text/javascript" src="libs/youbora-api.js"></script>
+		<script src="http://player.ooyala.com/v3/4fb3ec42a0414630830d5b000ab9de10?platform=html5&namespace=OO"></script>
+		
+		<script type="text/javascript" src="utils/testUtils.js"></script>
+	</head>
+
+	<body>
+
+		<h1>SwitchPlayer for HTML5</h1>
+
+		<div style="width: 100%; height: 300px;" >
+			
+			<div style="display: block; overflow: hidden;" >
+
+				<div style="width: 400px; height: 300px; padding-right: 20px;" >
+
+					<div id="player"></div>
+
+				</div>
+
+				<div id="switchEmbedCodes" style="padding: 10px;">
+
+					<select id="codeSelector" >
+						<option value="54NzJ4NTpMvOAm3p-rdp3qttbqkRad9I" selected="selected" >Avatar Widevine</option>
+						<option value="Y1ZHB1ZDqfhCPjYYRbCEOz0GR8IsVRm1" >HLS Video</option>
+						<option value="h4aHB1ZDqV7hbmLEv4xSOx3FdUUuephx" >MP4 Video</option>
+						<option value="ZtZmtmbjpLGohvF5zBLvDyWexJ70KsL-" >Encrypted HLS</option>
+						<option value="5jNzJuazpFtKmloYZQmgPeC_tqDKHX9r" >Ooyala-Ingested Playready Smooth VOD</option>
+						<option value="Fua2tmcjqpz9g6tBUEHukAOLuXaVZ7Lw" >Freewheel Podded Preroll</option>
+						<option value="Fsa2tmcjpvD21CN9WthbTbE4MIpWJoaK" >Freewheel Podded Midroll</option>
+						<option value="Fqa2tmcjrWml7baw9R0-RD5aT-2ku-LJ" >Freewheel Podded Postroll</option>
+						<option value="Fwa2tmcjohJwe-A-plwLw6We8JILCGXR" >Freewheel Podded PreMidPost</option>
+						<option value="Zlcmp0ZDrpHlAFWFsOBsgEXFepeSXY4c" >VAST Preroll</option>
+						<option value="pncmp0ZDp7OKlwTPJlMZzrI59j8Imefa" >VAST Midroll</option>
+						<option value="Zpcmp0ZDpaB-90xK8MIV9QF973r1ZdUf" >VAST Postroll</option>
+						<option value="1wNjE3cDox0G3hQIWxTjsZ8MPUDLSkDY" >IMA Podded Preroll</option>
+						<option value="1yNjE3cDodUEfUfp2WNzHkCZCMb47MUP" >IMA Podded Midroll</option>
+						<option value="1sNjE3cDoN3ZewFm1238ce730J4BMrEJ" >IMA Podded Postroll</option>
+						<option value="f0ecaeeccddf46bc8d68c97d4877e783" >PlayList</option>
+					</select>
+
+				</div>
+
+				<script>
+
+					var getResource = getParameterByName("resource");
+
+					if ( getResource != undefined && getResource != "" )
+						 $("#codeSelector").val(getResource);
+
+				</script>
+
+			</div>
+			
+			<script>
+
+				player="ooyala";
+				
+				prepareTestEnvironment();
+
+				loadJavascriptFile("plugin/sp.js",loadEnvironment);
+
+				function loadEnvironment()
+				{
+					try{
+							
+						nameSpaces = {};
+						nameSpaces["OO"] = "OO";
+
+						loadYouboraPlugin ( nameSpaces );
+
+						var embedCode = getSelectedResource();
+
+						OO.ready(function()
+						{
+							var player={};
+							if(embedCode=="f0ecaeeccddf46bc8d68c97d4877e783")
+							{
+								var playerConfiguration = {
+						            playlistsPlugin: {"data":["f0ecaeeccddf46bc8d68c97d4877e783"]},
+						            autoplay: false,
+						            loop: false,
+						            height: 369,
+						            width: 481,
+						            useFirstVideoFromPlaylist: true,
+						            'playerID': "player"
+				        		};
+				    			player = OO.Player.create('player', '', playerConfiguration);
+							}else{
+								player = OO.Player.create('player',embedCode,{
+									'playerID': "player"
+								});
+							}
+				        });	
+	            
+					}catch(err){
+						console.log(err);
+					}	    
+				}
+					
+			</script>
+
+		</div>	
+
+	</body>
+
+</html>

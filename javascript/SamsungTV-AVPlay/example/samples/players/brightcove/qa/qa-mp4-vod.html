@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>Brightcove HTML5 Test</title>
+    <meta http-equiv="content-type" content="text/html; charset=">
+    <title>Youbora HTML5 Demo</title>
+    <script type="text/javascript" src="/src/v5/libs/last-build/youboralib.js" youbora-debug="4"></script>
+    <script type="text/javascript" src="/src/v5/plugins/brightcove/last-build/plugin.js"></script>
+</head>
+
+<body>
+    <!-- Start of Brightcove Player -->
+    <div style="display:none">
+        QA PLAYER FOR TESTING, PLEASE DON'T CHANGE
+    </div>
+    <!--
+    By use of this code snippet, I agree to the Brightcove Publisher T and C
+    found at https://accounts.brightcove.com/en/terms-and-conditions/.
+    -->
+    <script language="JavaScript" type="text/javascript" src="http://admin.brightcove.com/js/BrightcoveExperiences.js"></script>
+    <object id="myExperience4712872493001" class="BrightcoveExperience">
+        <param name="bgcolor" value="#FFFFFF" />
+        <param name="width" value="500" />
+        <param name="height" value="470" />
+        <param name="playerID" value="4446637111001" />
+        <param name="playerKey" value="AQ~~,AAACVQVeMhk~,GLyy0jnd70i4NYON10KsUrT3cfkUwwIq" />
+        <param name="isVid" value="true" />
+        <param name="isUI" value="true" />
+        <param name="dynamicStreaming" value="true" />
+        <!-- Youbora  mandatory tags -->
+        <param name="forceHTML" value="true" />
+        <param name="includeAPI" value="true" />
+        <param name="templateReadyHandler" value="initYoubora" />
+        <param name="@videoPlayer" value="4712872493001" />
+    </object>
+    <!--
+    This script tag will cause the Brightcove Players defined above it to be created as soon
+    as the line is read by the browser. If you wish to have the player instantiated only after
+    the rest of the HTML is processed and the page load is complete, remove the line.
+    -->
+    <script type="text/javascript">
+    brightcove.createExperiences();
+    </script>
+    <!-- End of Brightcove Player -->
+    <script type="text/javascript">
+    function initYoubora() {
+        window.youbora = new $YB.plugins.Brightcove("myExperience4712872493001", {
+            accountCode: "qamini"
+        });
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=">
+    <title>HTML5 Video</title>
+    <!-- youbora -->
+    <script src="/src/v5/plugins/html5/5.3.0/sp.min.js"></script>
+</head>
+
+<body>
+    <video id="video1" controls height="315" width="560">
+        <source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4'>
+    </video>
+    <script>
+    var options = {
+        // account setings
+        accountCode: "qamini",
+        service: "nqs.nice264.com",
+        username: "default",
+        transactionCode: "dgdfgd",
+        isBalanced: 0,
+        parseCDNNodeHost: true,
+
+        // params defined
+        network: {
+            cdn: "",
+            ip: "",
+            isp: ""
+        },
+
+        // Media Info
+        media: {
+            title: "One title",
+            isLive: false
+        },
+
+        // properties
+        properties: {
+            filename: "",
+            content_id: "",
+            content_metadata: {
+                title: "",
+                genre: "",
+                language: "",
+                year: "",
+                cast: "",
+                director: "",
+                owner: "",
+                duration: "",
+                parental: "",
+                price: "",
+                rating: "",
+                audioType: "",
+                audioChannels: ""
+            },
+            transaction_type: "",
+            quality: "",
+            content_type: "",
+            device: {
+                manufacturer: "",
+                type: "",
+                year: "",
+                firmware: ""
+            }
+        },
+
+        //extraparams
+        //extraparams
+        extraParams: {
+            param1: undefined,
+            param2: undefined,
+            param3: undefined,
+            param4: undefined,
+            param5: undefined,
+            param6: undefined,
+            param7: undefined,
+            param8: undefined,
+            param9: undefined,
+            param10: undefined
+        }
+    };
+
+    var youbora = new $YB.plugins.Html5('video1', options);
+    </script>
+    <script src="/src/v5/libs/debug-util.js"></script>
+</body>
+
+</html>

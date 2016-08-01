@@ -1,0 +1,144 @@
+<html>
+
+	<head>
+		<title>Test Template</title>
+		<h4>Ooyala Flash</h4>
+		<script src="http://code.jquery.com/jquery-1.10.1.js"></script>
+		<script type="text/javascript" src="../../testUtils.js"></script>
+		<script type="text/javascript" src="http://pre.smartplugin.youbora.com/1.3/js/libs/youbora-data.js"></script>
+		<script type="text/javascript" src="http://pre.smartplugin.youbora.com/1.3/js/libs/youbora-api.js"></script>
+
+		<script src="http://player.ooyala.com/v3/4fb3ec42a0414630830d5b000ab9de10?platform=flash"></script>
+		<!--<script type="text/javascript" src="http://pre.smartplugin.youbora.com/1.3/js/pc-ooyala/3.2.0/sp.js"></script>-->
+		
+	</head>
+
+	<body>
+
+		<div id="destinationSet">
+			<div style="margin-top:15px">Destination</div>
+			<select id="destination">
+				<option id="Debug">Debug</option>
+				<option id="Production">Production</option>
+			</select>
+		<div>
+		<div id="testTypeSet" style="position: absolute; top: 47px; left: 110px;">
+		<div>TestType</div>
+			<select id="testType">
+				<option id="A">A</option>
+				<option id="B">B</option>
+				<option id="C">C</option>
+				<option id="D">D</option>
+				<option id="E">E</option>
+				<option id="F">F</option>
+				<option id="G">G</option>
+				<option id="H">H</option>
+				<option id="I">I</option>
+			</select>
+		</div>
+		<div id="technologySet" style="position: absolute; top: 47px; left: 180px;">
+		<div>Technology</div>
+			<select id="technology">
+				<option id="flash">FLASH</option>
+			</select>
+		</div>
+		<div id="testCodeSet" style="position: absolute; top: 47px; left: 280px;" >
+			<div>TestCode</div>
+			<input type="text" id="testCode"></input>
+		</div>
+		<div id="resourceSet" style="position: absolute; top: 47px; left: 450px;" >
+			<div>ResourceType</div>
+			<select id="resource">
+				<option value="RnMjVuazoiEKyUzW7cIRLai3_m8iCcBV">RTMP</option>
+				<option value="V1MjVuazpCoTGp0xk5pYDYtdeOHPCG-G">RTMP_ADS</option>
+				<option value="c4cGVibjpwhBnz14x3UUUin1Oyr8_qC5">HD2</option>
+				<option value="x0OW81czqWKV-g3yfqeacuI3M2cz8b4U">HDS</option>
+				<option value="J2aG81czrvP91qCG-3Ao2RzEnSpexuHM">HDS_ADS</option>
+				<option value="hneHJybToLXEB293En3IugzfB_ifv-zY">HDS_DVR</option>
+				<option value="hhbjJqaTrEIpVo0GAigt0N0YX7LGrN0l">HDS_WIDEVINE</option>
+				<option value="8ydzVzbTphtcq1xzfeIWd7nfAfwPAsI9">HDS_WIDEVINE_ADS</option>
+				<option value="f0ecaeeccddf46bc8d68c97d4877e783">PlayList</option>
+			</select>
+		</div>
+		<div id="pluginVersionSet" style="position: absolute; top: 47px; left: 620px;" >
+			<div>PluginVersion</div>
+			<select id="pluginVersion">
+				<option value="3.2.0">3.2.0</option>
+				<option value="3.1.0">3.1.0</option>
+			</select>
+		</div>
+		<div style="margin-bottom:20px"></div>
+		<button id="play">Play</button>
+		<button id="pause">Pause</button>
+		<button id="stop">Stop</button>
+		<button id="seekfw">SeekForward</button>
+		<button id="seekbd">SeekBackwards</button>
+		<button id="forceError">ForceError</button>
+
+
+	
+		<div style="width: 480px; height: 270px;" >
+			<div id="player"></div>
+			<script>
+			player="ooyala";
+			prepareTestEnvironment();
+			var pluginVersion =  getForcedPluginVersion();
+			loadJavascriptFile("http://pre.smartplugin.youbora.com/1.3/js/pc-ooyala/"+pluginVersion+"/sp.js",loadEnvironment);
+				function loadEnvironment(){
+					try{
+						
+						var embedCode =getSelectedResource();
+						OO.ready(function(){
+							var player={};
+							if(embedCode=="f0ecaeeccddf46bc8d68c97d4877e783"){
+								var playerConfiguration = {
+						            playlistsPlugin: {"data":["f0ecaeeccddf46bc8d68c97d4877e783"]},
+						            autoplay: false,
+						            loop: false,
+						            height: 369,
+						            width: 481,
+						            useFirstVideoFromPlaylist: true
+				        		};
+				    			player = OO.Player.create('player', '', playerConfiguration);
+							}else{
+								player =  OO.Player.create('player',embedCode, youboraData);
+							}
+			    			
+			    			$( "#play" ).click(function() {
+			    				player.play();
+							});
+							$( "#pause" ).click(function() {
+								player.pause();
+							});
+							$( "#stop" ).click(function() {
+								player.seek(player.duration);
+							});
+							$( "#seekfw" ).click(function() {
+								console.log(player.playheadTime);
+								player.seek(player.playheadTime +10 );
+							});
+							$( "#seekbd" ).click(function() {
+								player.seek(player.playheadTime -10 );
+							});
+							$( "#forceError" ).click(function() {
+								player.setEmbedCode("asdfasdasdasdfszefawerdaw");
+							});
+			            });
+
+			            
+					}catch(err){
+						console.log(err);
+					}	    
+				}
+				
+				
+			</script>
+		</div>	
+
+		<h4>HD2 Works only in Flash</h4>
+		<h4>HDS Works only in Flash, Android Apps and some Android-Web</h4>
+		<h4>RTMP works only in devices that support Flash</h4>
+		
+	</body>
+
+</html>

@@ -1,0 +1,2 @@
+25-08-2015 - Biel	- YOUB-699	- Now jointime depend of events "canplay" or "progress" because it depends on the device. (CanplayFired || isProgressFired)
+25-08-2015 - Biel	- YOUB-699	- Add support to new events "adstart", "adend" to detect when AD start/end, an activate method isAd(true/false). Also, to launch /jointime now considers (isCanplayFired || isAdEndFired)
