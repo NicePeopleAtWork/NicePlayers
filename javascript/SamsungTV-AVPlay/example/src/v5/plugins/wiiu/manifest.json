@@ -1,0 +1,7 @@
+{
+    "type": "plugin",
+	"name": "wiiu",
+    "ver": "5.1.0",
+    "lastStable": "-",
+    "libVer": "5.1.01"
+}

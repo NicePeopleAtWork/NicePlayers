@@ -1,0 +1,26 @@
+[{
+    "name": "Buffer",
+    "since": "5.1.0",
+    "status": "SUPPORTED",
+    "comments": "Nicebuffer"
+}, {
+    "name": "Resource",
+    "since": "5.1.0",
+    "status": "LIMITATION",
+    "comments": "Should be specified in options"
+}, {
+    "name": "Bitrate",
+    "since": "5.1.0",
+    "status": "UNAVAILABLE",
+    "comments": ""
+}, {
+    "name": "Throughput",
+    "since": "5.1.0",
+    "status": "UNAVAILABLE",
+    "comments": ""
+}, {
+    "name": "Rendition",
+    "since": "5.1.0",
+    "status": "UNAVAILABLE",
+    "comments": ""
+}]

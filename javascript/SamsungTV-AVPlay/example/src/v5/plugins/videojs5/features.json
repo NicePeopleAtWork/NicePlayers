@@ -1,0 +1,31 @@
+[{
+    "name": "Buffer",
+    "since": "5.1.0",
+    "status": "SUPPORTED",
+    "comments": "Nicebuffer"
+}, {
+    "name": "Duration",
+    "since": "5.1.0",
+    "status": "LIMITATION",
+    "comments": "Sent in joinTime"
+}, {
+    "name": "Bitrate",
+    "since": "5.1.0",
+    "status": "SUPPORTED",
+    "comments": "Depends on manifest"
+}, {
+    "name": "Throughput",
+    "since": "5.1.0",
+    "status": "SUPPORTED",
+    "comments": "Depends on manifest"
+}, {
+    "name": "Rendition",
+    "since": "5.1.0",
+    "status": "SUPPORTED",
+    "comments": "Depends on manifest"
+}, {
+    "name": "Title",
+    "since": "5.1.1",
+    "status": "SUPPORTED",
+    "comments": "Brightcove OVP"
+}]

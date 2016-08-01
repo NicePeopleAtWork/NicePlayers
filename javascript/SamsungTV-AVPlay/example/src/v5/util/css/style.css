@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'ProximaNovaLight';
+    font-style: normal;
+    font-weight: 400;
+    src: url(proximanova-light.eot);
+    src: local('Arvo'), url(ProximaNova-Light.otf) format('truetype'), url(proximanova-light.woff) format('woff'), url(proximanova-light.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    font-style: normal;
+    font-weight: 400;
+    src: url(proximanova-regular.eot);
+    src: local('Raleway'), url(ProximaNova-Regular.otf) format('truetype'), url(proximanova-regular.woff) format('woff'), url(proximanova-regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'ProximaNovaBold';
+    font-style: normal;
+    font-weight: 400;
+    src: url(proximanova-bold.eot);
+    src: local('Raleway'), url(ProximaNova-Bold.otf) format('truetype'), url(proximanova-bold.woff) format('woff'), url(proximanova-bold.ttf) format('truetype');
+}
+
+body {
+    font-family: 'ProximaNovaRegular' !important;
+}
+
+h1,
+h2,
+h3,
+th {
+    font-family: 'ProximaNovaBold' !important;
+}
+
+.bordered {
+    padding: 10px;
+    border: solid #292929 1px;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: separate;
+    border: solid #292929 1px;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+tr:hover {
+    background-color: #F3D2E1;
+}
+
+td,
+th {
+    border-left: solid black 1px;
+    border-top: solid black 1px;
+}
+
+th {
+    background-color: #292929;
+    color: white;
+    padding: 15px;
+    border-top: none;
+}
+
+th:first-child {
+    text-align: left;
+}
+
+td {
+    padding: 5px 15px;
+}
+
+td.notice {
+    font-weight: bold;
+}
+
+tr.notice {
+    background-color: aliceblue;
+}
+
+td:first-child {
+    border-left: none;
+    text-align: left;
+    font-family: 'ProximaNovaBold' !important;
+}
+
+.LIMITATION {
+    background: #ffd351;
+    color: #000;
+    font-weight: bold;
+    font-size: 11pt;
+    text-align: center;
+}
+
+.SUPPORTED {
+    background: #14892c;
+    color: #fff;
+    font-weight: bold;
+    font-size: 11pt;
+    text-align: center;
+}
+
+.UNAVAILABLE {
+    background: #d04437;
+    color: #fff;
+    font-weight: bold;
+    font-size: 11pt;
+    text-align: center;
+}
+
+.comments {
+    font-size: 11pt;
+}

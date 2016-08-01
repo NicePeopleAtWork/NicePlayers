@@ -1,0 +1,6 @@
+[{
+    "name": "Buffer",
+    "since": "[plugin_ver]",
+    "status": "SUPPORTED",
+    "comments": "Native / Nicebuffer"
+}]
