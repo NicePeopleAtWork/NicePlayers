@@ -1,0 +1,79 @@
+
+<!doctype html>
+
+<head>
+    <script src="http://cdn.dashjs.org/latest/dash.all.min.js"></script>
+    <script src="http://pre.smartplugin.youbora.com/src/v5/plugins/dashjs/last-build/sp.min.js"></script>
+    <style>
+    video {
+        width: 640px;
+        height: 360px;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <video id="videoPlayer" controls></video>
+    </div>
+    <script>
+    (function() {
+        window.player = dashjs.MediaPlayer().create();
+
+        // youbora
+        window.youbora = new $YB.plugins.Dashjs(player, {
+            // account setings
+            accountCode: "qamini",
+            username: "userTest",
+            transactionCode: "transcodeTest",
+
+            // params defined
+            network: {
+                ip: "1.1.1.1",
+                isp: "ISP"
+            },
+
+            // Media Info
+            media: {
+                title: "TitleTest",
+                isLive: false,
+                //duration: 123,
+                //cdn: "AMAZON",
+            },
+
+            // properties
+            properties: {
+                contentId: "value",
+                type: "value",
+                transaction_type: "value",
+                genre: "value",
+                language: "value",
+                year: "value",
+                cast: "value",
+                director: "value",
+                owner: "value",
+                parental: "value",
+                price: "value",
+                rating: "value",
+                audioType: "value",
+                audioChannels: "value",
+                device: "value",
+                quality: "value"
+            },
+
+            //httpSecure: true,
+
+            //extraparams
+            extraParams: {
+                param1: "a",
+                param2: "b",
+            }
+        });
+
+        var url = "http://dash.edgesuite.net/envivio/EnvivioDash3/manifest.mpd";
+        player.initialize(document.querySelector("#videoPlayer"), url, false);
+    })();
+    </script>
+</body>
+
+</html>
