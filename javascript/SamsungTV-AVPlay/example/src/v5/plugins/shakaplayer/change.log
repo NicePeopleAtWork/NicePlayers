@@ -1,5 +1,0 @@
-<DATE>		<AUTHOR>		<CHANGES>
-
-Version 3.0.0:
-28/10/15	Jordi Aguilar	- New plugin 3.0.0
-21/12/15	Jordi Aguilar	- Pings will now send throughput correctly (before it was send as bitrate). It will now build with 5.0 lib.

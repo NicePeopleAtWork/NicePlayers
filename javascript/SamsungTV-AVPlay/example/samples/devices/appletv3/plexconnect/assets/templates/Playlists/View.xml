@@ -1,3 +1,0 @@
-<atv>
-  <redirect template="Playlists/{{VAL($playlistsview)}}.xml" />
-</atv>

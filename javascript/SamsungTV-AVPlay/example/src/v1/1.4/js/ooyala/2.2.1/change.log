@@ -1,9 +1,0 @@
-Plugin 2.2.1
-------------
-
-	- On onPlayerCreate method, now get the extraParam values
-	- Improve joinTime measures
-	- The replayOoyalaEvent method use timestamp from data object 
-	- Improve bufferTime measures in HTML5 scenarios
-	- Fixed a bug about EmbedCodeChanged setting duration to undefined
-	- Save Resource if not present during ContentTreeChanged

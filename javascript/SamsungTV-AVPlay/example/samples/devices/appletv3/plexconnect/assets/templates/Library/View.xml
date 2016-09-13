@@ -1,3 +1,0 @@
-<atv>
-  <redirect template="Library/{{VAL($libraryview)}}.xml" />
-</atv>

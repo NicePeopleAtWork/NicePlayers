@@ -1,6 +1,0 @@
-*.class
-/src/v5/util/config.json
-/src/v5/util/logs/*
-node_modules/
-.metadata
-/.git/

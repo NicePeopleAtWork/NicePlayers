@@ -1,9 +1,0 @@
-25-08-2015 - Biel	- YOUB-650	- videoPlayer.playlist() doesn't exist on Player Videojs. 
-25-08-2015 - Biel	- YOUB-650	- On event "loadstart", comment validation playlist. It seems that it is not necessary
-05-08-2015 - Biel	- YOUB-569	- Change resource detection on "loadeddata" for playlist HLS
-04-08-2015 - Biel	- YOUB-569	- Add flags isProgressFired || isStalledFired to send Jointime, because depending on the environment, the player throws the event stalled or progress in jointime.
-30-07-2015 - Biel	- YOUB-529	- Add mediaEvents.BUFFER_BEGIN on "start" event to calculate jointime correctly
-27-07-2015 - Biel	- YOUB-529	- "loadeddata" event, add send Start for playlists.
-27-07-2015 - Biel	- YOUB-529	- "play" event, remove sendJoin.
-27-07-2015 - Biel	- YOUB-529	- 347: remove playlists validation to send Join BUFFER_END
-27-07-2015 - Biel	- YOUB-529	- create new version 3.4.1 to fix bug in playlists because filmin are using 3.4.0.

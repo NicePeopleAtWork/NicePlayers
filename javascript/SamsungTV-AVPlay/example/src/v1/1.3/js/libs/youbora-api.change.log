@@ -1,5 +1,0 @@
-09-07-2015 - Biel	- In method getRealResourceHLS() - add support HTTPS row.indexOf('https://') > -1 and change loop method
-
-02-07-2015 - Biel 	- Remove createParamsUrl(). This method should only be in v1.4
-					- Method createParamsUrl() add return statement and remove this.sendAnalytics(...)
-01-07-2015 - Biel 	- Remove all youboraData.log()

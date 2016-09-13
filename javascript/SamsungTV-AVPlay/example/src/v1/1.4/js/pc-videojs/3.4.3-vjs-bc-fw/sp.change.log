@@ -1,7 +1,0 @@
-07-10-2015  - Biel  - #YOUB-868       - Fix jointime and buffer after jointime on timeupdate event when adblock active. For Android, buffer afterjointime fixed with isAndroidOrCanPlayFired(). 
-                                        "playing" comment checkBuffering().
-07-10-2015  - Biel  - #YOUB-868       - Disabled "abort" event because in Safari and Android causes double views. 
-07-10-2015  - Biel  - #YOUB-868       - Add try/catch on setProperties
-07-10-2015  - Biel  - #YOUB-868       - Add multiplayer support
-05-10-2015  - Biel  - #YOUB-868       - Add startTime for prevent random big jointime
-02-10-2015  - Biel	- #YOUB-852       - Fix player crash without youbora-data

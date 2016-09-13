@@ -1,3 +1,0 @@
-16-11-2015	- #YOUB-706		- Biel Conde		- Following the advice of thePlatform, now we listen "OnReleaseStart" event. Now, exists the new method releaseStartListener() to parse Playlist information. If flag titleFromPlaylist it has not been fired, title, duration and urlResource are obtained as before.
-20-10-2015	- #YOUB-706		- Biel Conde		- Modified to send duration = 0 in Start when have ads to send it latter in jointime
-20-10-2015	- #YOUB-706		- Biel Conde		- On method mediaStartListener(), comment buffer(BUFFER_BEGIN) because when you start the video, he began a buffer and sent the first buffer is always wrong.

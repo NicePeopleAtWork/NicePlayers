@@ -1,7 +1,0 @@
-{
-    "type": "plugin",
-	"name": "[plugin_name_min]",
-    "ver": "[plugin_ver]",
-    "lastStable": "-",
-    "libVer": "[lib]"
-}

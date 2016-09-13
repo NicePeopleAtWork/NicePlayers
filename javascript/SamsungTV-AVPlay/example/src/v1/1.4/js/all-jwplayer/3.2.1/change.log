@@ -1,5 +1,0 @@
-20-10-2015	-	YOUB-768	- Jordi Aguilar		- Added Multiplayer support
-04-11-2015	-	YOUB-768	- Jordi Aguilar		- Duration will be sent in the joinTime
-												- Added support for advanced error
-												- Added Seek support
-13/11/15	-	YOUB-768	- Jordi Aguilar		- Moved Play/seek/buffer logic to timeupdate instead of play

@@ -1,7 +1,0 @@
-{
-    "name": "tizen",
-    "ver": "5.1.0",
-    "lastStable": "5.1.0",
-    "libVer": "5.0.002",
-    "export": ["../../devices/tizen/filmin/js/"]
-}

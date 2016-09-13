@@ -1,2 +1,0 @@
-23-09-2015 - Biel	- 		- Created var seekingControlTrigger, whereby to prevent buffer after seek on setBufferEvent()
-22-09-2015 - Biel	- 		- Add duration on jointime

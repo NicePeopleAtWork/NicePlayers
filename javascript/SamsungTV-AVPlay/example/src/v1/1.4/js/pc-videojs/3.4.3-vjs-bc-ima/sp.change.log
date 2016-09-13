@@ -1,5 +1,0 @@
-03-11-2015  - Biel	- #YOUB-1023	- Remove videoPlayer.duration() form sendAdvanceError()
-29-10-2015  - Biel	- #YOUB-1023	- Fix jointime bugs on diferent devices
-29-10-2015  - Biel	- #YOUB-1023	- Get title first from youboraData, next from OVP
-19-10-2015  - Biel	- #YOUB-699     - Add try/catch blocks to prevent plugin crashes when youbora-data not loaded
-19-10-2015  - Biel	- #YOUB-699     - Add player.currentTime() > 0 to determine joinTime when isAdsEnd not fired (iOS, Android and AdBlock)
