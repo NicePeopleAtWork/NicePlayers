@@ -1,80 +1,146 @@
+
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>JWPlayer 7</title>
     <meta content="authenticity_token" name="csrf-param" />
-    <script src="http://p.jwpcdn.com/7/beta/2/jwplayer.js"> </script>
-    <script type="text/javascript">jwplayer.key="Owmy+U4JnLEIqwyRXmCiRcluVGH2JPCc4KhpJA==";</script>
-</head>
-<body>
-	<div id="video1"></div>
+    <script src="http://pre.smartplugin.youbora.com/samples/players/jwplayer7/lib/7.6.1/jwplayer.js"></script>
     <script type="text/javascript">
-		var options = {
-			//Account parameters
-			accountCode: 'nicedev',
-			enableAnalytics: true,
-			//View parameters
-			username: 'dev',
-			transactionCode: "transactionTest",
-			//Optional features
-			parseCDNNodeHost: true,
-			httpSecure: false,
-			network: {
-				ip: "1.1.1.1",
-				isp: "ISPTest"
-			}
+    jwplayer.key = "T6MatRxWammykFGZao3kalmbgK8YhSDR1U6MEg==";
+    </script>
+</head>
 
-	    },
+<body>
+    <div id="video1"></div>
+    <script type="text/javascript">
+    var url = window.location.search.match(/ads=([^&]+)/);
+    if (url && url.length > 1) {
+        url = url[1];
+    }
 
-		plugin = {
-	        "http://smartplugin.youbora.com/5.0/js/jwplayer7/5.1.1/sp.min.js": options
-	   	};
+    var ads = undefined;
+    switch (url) {
+        case 'ima':
+            ads = {
+                client: "googima",
+                schedule: "http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator="
+            }
+            break;
+        case 'vast':
+            ads = {
+                client: "vast",
+                schedule: {
+                    "myAds": {
+                        "offset": "pre",
+                        "tag": "http://www.adotube.com/php/services/player/OMLService.php?avpid=oRYYzvQ&platform_version=vast20&ad_type=linear&groupbypass=1&HTTP_REFERER=http://www.longtailvideo.com&video_identifier=longtailvideo.com,test"
+                    }
+                }
+            }
 
-		jwplayer ("video1").setup({
-			title: "JWPlayer7 MP4",
-			file: "http://media.w3.org/2010/05/sintel/trailer.mp4",
-            //file: "http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch1/appleman.m3u8",
+            break;
+    }
+    </script>
+    <br/>
+    <div>
+        Reload with:
+        <button onclick="location.href='?ads=none'">No Ads</button>
+        <button onclick="location.href='?ads=ima'">IMA3</button>
+        <button onclick="location.href='?ads=vast'">VAST</button>
+    </div>
+    <script type="text/javascript">
+    var options = {
+            accountCode: 'qamini',
+            username: 'userTest',
+            parseHLS: true,
+            parseCDNNodeHost: true,
+            httpSecure: true,
+            network: {
+                isp: "Airtel",
+                ip: "1.1.1.1"
+            },
+            media: {
+                cdn: "Akamai"
+            },
+        },
+
+        plugin = {
+            "http://pre.smartplugin.youbora.com/src/v5/plugins/jwplayer7/5.3.0/sp.min.js": options
+        };
+
+    jwplayer("video1").setup({
+        playlist: [{
+            title: "MP4 + NodeHost",
+            file: "http://deslasexta.antena3.com/mp_series1/2012/09/10/00001.mp4",
             image: "http://support-static.jwplayer.com/images/jellies.jpg",
-	        youbora: {
-				// Media info
-				media: {
-					title: "titleTest",
-					cdn: "Amazon",
-					duration: 3600,
-					isLive: false,
-					resource: "http://deslasexta.antena3.com/mp_series1/2012/09/10/00001.mp4"
-				},
+            youbora: {
+                transactionCode: "Transcode1",
 
-				// Media and device extra info
-				properties: {
-					filename: "test.mp4",
-					content_id: "contentTest",
-					content_metadata: {
-						genre: "genreTest",
-						language: "languageTest",
-						year: "yearTest",
-						cast: "castTest",
-						director: "directorTest",
-						owner: "ownerTest",
-						parental: "parentalTest",
-						price: "priceTest",
-						rating: "ratingTest",
-						audioType: "typeTest",
-						audioChannels: "channelTest"
-					},
-					transaction_type: "transactionTest",
-					quality: "qualityTest",
-					content_type: "contentTest",
-					device: {
-						manufacturer: "manufacturerTest",
-						type: "typeTest",
-						year: "yearTest",
-						firmware: "firmwareTest"
-					}
-				},
+                media: {
+                    title: 'A3 Noticias',
+                    isLive: false
+                },
 
-			},
-			plugins: plugin	
-		})
+                properties: {
+                    custom: "This is an MP4 resource"
+                },
+				extraParams: {
+					param1: 'param1',
+					param2: 'param2',
+				},				
+            }
+        }, {
+            title: "VOD HLS",
+            file: "http://c.brightcove.com/services/mobile/streaming/index/master.m3u8?videoId=3747024716001&pubId=2564185535001",
+            image: "http://support-static.jwplayer.com/images/jellies.jpg",
+            youbora: {
+                transactionCode: "Transcode2",
+                media: {
+                    title: 'Grabyo',
+                    isLive: false
+                },
 
-</script>
+                properties: {
+                    custom: "This is a VOD HLS resource"
+                }
+            }
+        }, {
+            title: "Live HLS",
+            file: "http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch1/appleman.m3u8",
+            image: "http://support-static.jwplayer.com/images/jellies.jpg",
+            youbora: {
+                transactionCode: "Transcode3",
+                media: {
+                    title: 'Vevo Playlist',
+                    isLive: true
+                },
+
+                properties: {
+                    custom: "This is a Live HLS resource"
+                }
+            }
+		}, {
+            title: "MPEG Dash",
+            file: "http://yt-dash-mse-test.commondatastorage.googleapis.com/media/car-20120827-manifest.mpd",
+            image: "http://support-static.jwplayer.com/images/jellies.jpg",
+            youbora: {
+                transactionCode: "Transcode4",
+                media: {
+                    title: 'Dash test',
+                    isLive: false
+                },
+
+                properties: {
+                    custom: "This is an MPEG-Dash resource"
+                }
+            }
+        }],
+
+        plugins: plugin,
+
+        advertising: ads
+    });
+    </script>
+</body>
+
+</html>
