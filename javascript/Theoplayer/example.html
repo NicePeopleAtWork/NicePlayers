@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type='text/javascript' src='http://cdn.theoplayer.com/latest/242b3c8a-39ea-4446-bdd6-5a977909a3cf/theoplayer.loader.js'></script>
+    <!-- YouboraLib -->
+    <script src="http://smartplugin.youbora.com/v5/javascript/theoplayer/5.3.0/sp.min.js"></script>
+    <!---->
+</head>
+
+<body>
+    <h1>Video</h1>
+    <video id="video1" controls>
+        <source src="http://deslasexta.antena3.com/mp_series1/2012/09/10/00001.mp4" />
+    </video>
+    <script>
+    theoplayer.onReady = function() {
+        var youbora = new $YB.plugins.THEOplayer(theoplayer.player('video1'), {
+            accountCode: 'qamini',
+            enableAnalytics: true,
+            username: "userTest",
+            transactionCode: "transactionTest",
+            parseHLS: true,
+            parseCDNNodeHost: true,
+
+            media: {
+                 title: "Title: All options set",
+                 duration: 3600,
+                 isLive: true,
+                 resource: "http://yourhost.com/yourmedia.m3u8",
+                 cdn: "AKAMAI",
+            },
+            properties: {
+                 filename: "test.m3u8",
+                 content_id: "contentTest",
+                 genre: "genreTest",
+                 language: "languageTest",
+                 year: "yearTest",
+                 cast: "castTest",
+                 director: "directorTest",
+                 owner: "ownerTest",
+                 parental: "parentalTest",
+                 price: "priceTest",
+                 rating: "ratingTest",
+                 audioType: "typeTest",
+                 audioChannels: "channelTest"
+            },
+            network: {
+                ip: "195.154.179.101",
+                isp: "ISPTest"
+            },
+            extraParams: {
+                 param1: 'param1',
+                 param2: 'param2',
+                 param3: 'param3',
+                 param4: 'param4',
+                 param5: 'param5',
+                 param6: 'param6',
+                 param7: 'param7',
+                 param8: 'param8',
+                 param9: 'param9',
+                 param10: 'param10'
+            }
+        });
+    }
+    </script>
+    <script src="http://pre.smartplugin.youbora.com/src/v5/util/inspector/inspector.js"></script>
+</body>
+
+</html>
