@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>TurtleTube - Basic Test</title>
+    <!-- Load the Shaka Player library. -->
+    <script src="link.to/shaka-player.compiled.js"></script>
+    <!---->
+    <!-- YouboraLib -->
+    <script src="http://smartplugin.youbora.com/v5/javascript/shakaplayer2/5.3.2/sp.min.js"></script>
+    <!---->
+</head>
+
+<body>
+    <video id="video1" width="640" height="480" crossorigin="anonymous" controls>
+        Your browser does not support HTML5 video.
+    </video>
+    <script>
+    function initPlayer() {
+        // Install polyfills.
+        shaka.polyfill.installAll();
+
+        // Find the video element.
+        var video = document.getElementById('video1');
+
+        // Construct a Player to wrap around it.
+        var player = new shaka.player.Player(video);
+
+        // Attach the player to the window so that it can be easily debugged.
+        window.player = player;
+
+        //video error
+        player.addEventListener("error", function(e) {
+            console.log(e);
+        });
+
+        /* Dash */
+        var mpdUrl = 'https://turtle-tube.appspot.com/t/t2/dash.mpd';
+        var estimator = new shaka.util.EWMABandwidthEstimator();
+        var source = new shaka.player.DashVideoSource(mpdUrl, null, estimator);
+
+        /* http * /
+        var source = new shaka.player.HttpVideoSource("assets/bear-av-enc.webm", "", {
+            'keySystem': 'org.w3.clearkey',
+            'licenseServerUrl': 'assets/test_license.json'
+        });
+        /**/
+
+        // Load the source into the Player.
+        player.load(source);
+
+        // init youbora
+        window.youbora = new $YB.plugins.Shaka2(player, {
+            // Account code and enable YOUBORA Analytics
+            accountCode: "accountTest",
+            enableAnalytics: true,
+            
+            //View parameters
+            username: "userTest",
+            transactionCode: "transactionTest",
+            
+            // Media info
+            media: {
+                title: "titleTest",
+                duration: "durationTest",
+                isLive: true,
+                resource: "http://yourhost.com/yourmedia.m3u8",
+                cdn: "AKAMAI",
+            },
+
+
+            // Media and device extra info
+            properties: {
+                filename: "test.m3u8",
+                content_id: "contentTest",
+                content_metadata: {
+                genre: "genreTest",
+                language: "languageTest",
+                year: "yearTest",
+                cast: "castTest",
+                director: "directorTest",
+                owner: "ownerTest",
+                parental: "parentalTest",
+                price: "priceTest",
+                rating: "ratingTest",
+                audioType: "typeTest",
+                audioChannels: "channelTest"
+                },
+                transaction_type: "transactionTest",
+                quality: "qualityTest",
+                content_type: "contentTest",
+                device: {
+                manufacturer: "manufacturerTest",
+                type: "typeTest",
+                year: "yearTest",
+                firmware: "firmwareTest"
+                }
+            },
+
+
+            // Optional features
+            parseHLS: false,
+            parseCDNNodeHost: false,
+            httpSecure: undefined,
+            network: {
+                ip: "1.1.1.1",
+                isp: "ISPTest"
+            },
+
+            //extraparams
+            extraParams: {
+                param1: undefined,
+                param2: undefined,
+                param3: undefined,
+                param4: undefined,
+                param5: undefined,
+                param6: undefined,
+                param7: undefined,
+                param8: undefined,
+                param9: undefined,
+                param10: undefined
+            }
+        });
+    }
+    document.addEventListener('DOMContentLoaded', initPlayer);
+    </script>
+</body>
+
+</html>
