@@ -396,6 +396,7 @@ Returns  -void
 */
 
 function selectedButton() {
+    console.log("PLAAAY")
     if (rowID == 1) {
         switch (cntIndex) {
             case 0: //stops the playing video
@@ -539,6 +540,7 @@ Returns- none
 */
 function loadDataSrc(auto) {
     var vidPath = videoArray[vidIndex];
+    console.log("LOADING ASSET: " + vidPath)
     if (checkFileExtensions(vidPath)) {
         if (vidPath.indexOf('http') === -1) {
             video.data = "media/" + vidPath;
