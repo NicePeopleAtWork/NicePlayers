@@ -186,6 +186,10 @@ var Player = {
         var movie_url = "http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch1/appleman.m3u8|COMPONENT=HLS";
 
         Player.Play(movie_url);
+        
+        setTimeout(function(){
+        	$YB.notice($YB.plugin.yapi.resourceParser.realResource);
+        }, 5000);
     },
 
 

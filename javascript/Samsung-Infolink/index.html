@@ -16,18 +16,18 @@
     <object id="pluginTVMW" border=0 classid="clsid:SAMSUNG-INFOLINK-TVMW"></object>
     <object id='EXTERNALWIDGET' border=0 classid='clsid:SAMSUNG-INFOLINK-EXTERNALWIDGETINTERFACE'></object>
     <!-- youbora -->
-    <script type="text/javascript" src="http://smartplugin.youbora.com/5.0/js/samsungtv/5.1.0/sp.min.js" youbora-debug="4"></script>
+    <script type="text/javascript" src="http://smartplugin.youbora.com/v5/javascript/samsungtv-infolink/5.3.0/sp.min.js" youbora-debug="4"></script>
     <script type="text/javascript">
     try {
         $YB.report('<GO>');
-    	$YB.plugin = new $YB.plugins.SamsungTv('pluginPlayer', {
-        	accountCode: 'qamini',
-        	username: 'qases',
-        	transactionCode: 'transcode',
-        	httpSecure: false,
+        $YB.plugin = new $YB.plugins.SamsungInfolink('pluginPlayer', {
+            accountCode: 'qamini',
+            username: 'qases',
+            transactionCode: 'transcode',
+            httpSecure: false,
             parseHLS: true,
-            parseCDNNodeHost: false,
-            
+            parseCDNNodeHost: true,
+
             // params defined
             network: {
                 cdn: "AKAMAI",
@@ -37,7 +37,8 @@
 
             // Media Info
             media: {
-                title: 'Sintel'
+                title: 'Sintel',
+                duration: 120
             },
 
             // properties
@@ -67,7 +68,7 @@
             },
             extraParams: {
                 param1: "param1",
-            	param2: "param2"
+                param2: "param2"
             }
         });
     } catch (err) {
@@ -75,7 +76,7 @@
     }
     </script>
     <!--  Player -->
-    <script language="javascript" type="text/javascript" src="app/javascript/Player.js"></script>
+    <script language="javascript" type="text/javascript" src="app/javascript/Player.js?v=46547"></script>
     <!-- TODO : Style sheets code -->
     <link rel="stylesheet" href="app/stylesheets/Main.css" type="text/css">
 </head>
