@@ -3,144 +3,118 @@
 <html>
 
 <head>
-    <title>JWPlayer 7</title>
-    <meta content="authenticity_token" name="csrf-param" />
-    <script src="http://pre.smartplugin.youbora.com/samples/players/jwplayer7/lib/7.10.1/jwplayer.js"></script>
-    <script type="text/javascript">
-    jwplayer.key = "T6MatRxWammykFGZao3kalmbgK8YhSDR1U6MEg==";
-    </script>
+  <title>JWPlayer 7</title>
+  <meta content="authenticity_token" name="csrf-param" />
+  <script src="http://pre.smartplugin.youbora.com/samples/players/jwplayer7/lib/7.10.1/jwplayer.js"></script>
+  <script src="http://pre.smartplugin.youbora.com/src/v5/plugins/jwplayer7/last-build/sp.min.js" youbora-debug="4"></script>
+  <script type="text/javascript">jwplayer.key = "T6MatRxWammykFGZao3kalmbgK8YhSDR1U6MEg==";</script>
+  <script youbora-debug="4"></script>
 </head>
 
 <body>
-    <div id="video1"></div>
-    <script type="text/javascript">
-    var url = window.location.search.match(/ads=([^&]+)/);
-    if (url && url.length > 1) {
-        url = url[1];
-    }
+  <div id="video1"></div>
+  <script type="text/javascript">
+  var url = window.location.search.match(/ads=([^&]+)/);
+  if (url && url.length > 1) {
+      url = url[1];
+  }
 
-    var ads = undefined;
-    switch (url) {
-        case 'ima':
-            ads = {
-                client: "googima",
-                schedule: "http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator="
-            }
-            break;
-        case 'vast':
-            ads = {
-                client: "vast",
-                schedule: {
-                    "myAds": {
-                        "offset": "pre",
-                        "tag": "http://www.adotube.com/php/services/player/OMLService.php?avpid=oRYYzvQ&platform_version=vast20&ad_type=linear&groupbypass=1&HTTP_REFERER=http://www.longtailvideo.com&video_identifier=longtailvideo.com,test"
-                    }
-                }
-            }
+  var ads = undefined;
+  switch (url) {
+    case 'ima':
+      ads = {
+        client: "googima",
+        schedule: "http://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=xml_vmap1&unviewed_position_start=1&cust_params=sample_ar%3Dpremidpostpod%26deployment%3Dgmf-js&cmsid=496&vid=short_onecue&correlator="
+      }
+      break;
+    case 'vast':
+      ads = {
+        client: "vast",
+        schedule: {
+          "myAds": {
+            "offset": "pre",
+            "tag": "http://www.adotube.com/php/services/player/OMLService.php?avpid=oRYYzvQ&platform_version=vast20&ad_type=linear&groupbypass=1&HTTP_REFERER=http://www.longtailvideo.com&video_identifier=longtailvideo.com,test"
+          }
+        }
+      }
+      break;
+  }
+  </script>
+  <br/>
+  <div>
+    Reload with:
+    <button onclick="location.href='?ads=none'">No Ads</button>
+    <button onclick="location.href='?ads=ima'">IMA3</button>
+    <button onclick="location.href='?ads=vast'">VAST</button>
+  </div>
+  <script type="text/javascript">
+    // Load the player
+    var player = jwplayer("video1").setup({
+      playlist: [{
+        title: "MP4 + NodeHost",
+        file: "http://fastly.nicepeopleatwork.com.global.prod.fastly.net/video/sintel-1024-surround.mp4",
 
-            break;
-    }
-    </script>
-    <br/>
-    <div>
-        Reload with:
-        <button onclick="location.href='?ads=none'">No Ads</button>
-        <button onclick="location.href='?ads=ima'">IMA3</button>
-        <button onclick="location.href='?ads=vast'">VAST</button>
-    </div>
-    <script type="text/javascript">
-    var options = {
-            accountCode: 'qamini',
-            username: 'userTest',
-            parseHLS: true,
-            parseCDNNodeHost: true,
-            httpSecure: true,
-            network: {
-                isp: "Airtel",
-                ip: "1.1.1.1"
-            },
+        // You can set the metadata per-video in a playlist using the 'youbora' property:
+        youbora: {
+          media: {
+            title: 'Sintel',
+            isLive: false
+          }
+        }
+      }, {
+        title: "HLS VOD",
+        file: "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8",
+        youbora: {
+          media: {
+            title: 'HLS',
+            isLive: false
+          }
+        }
+      },       {
+        title: "Dash",
+        file: "https://storage.googleapis.com/wvmedia/clear/h264/tears/tears.mpd",
+        youbora: {
+          media: {
+            title: 'Tears',
+            isLive: true
+          }
+        }
+      },
+      {
+        title: "Live HLS",
+        file: "http://cdn3.viblast.com/streams/hls/airshow/playlist.m3u8",
+        youbora: {
             media: {
-                cdn: "Akamai"
-            },
-        },
-
-        plugin = {
-            "http://pre.smartplugin.youbora.com/src/v5/plugins/jwplayer7/5.3.2/sp.min.js": options
-        };
-
-    jwplayer("video1").setup({
-        playlist: [{
-            title: "MP4 + NodeHost",
-            file: "http://deslasexta.antena3.com/mp_series1/2012/09/10/00001.mp4",
-            image: "http://support-static.jwplayer.com/images/jellies.jpg",
-            youbora: {
-                transactionCode: "Transcode1",
-
-                media: {
-                    title: 'A3 Noticias',
-                    isLive: false
-                },
-
-                properties: {
-                    custom: "This is an MP4 resource"
-                },
-				extraParams: {
-					param1: 'param1',
-					param2: 'param2',
-				},				
+              title: 'planes',
+              isLive: true
             }
-        }, {
-            title: "VOD HLS",
-            file: "http://c.brightcove.com/services/mobile/streaming/index/master.m3u8?videoId=3747024716001&pubId=2564185535001",
-            image: "http://support-static.jwplayer.com/images/jellies.jpg",
-            youbora: {
-                transactionCode: "Transcode2",
-                media: {
-                    title: 'Grabyo',
-                    isLive: false
-                },
+        }
+      }, {
+        title: "Error",
+        file: "http://falsedomain123.com/novideohere.mp4",
+        youbora: {
+          media: {
+            title: 'Novideo',
+            isLive: false
+          }
+        }
+      }],
 
-                properties: {
-                    custom: "This is a VOD HLS resource"
-                }
-            }
-        }, {
-            title: "Live HLS",
-            file: "http://vevoplaylist-live.hls.adaptive.level3.net/vevo/ch1/appleman.m3u8",
-            image: "http://support-static.jwplayer.com/images/jellies.jpg",
-            youbora: {
-                transactionCode: "Transcode3",
-                media: {
-                    title: 'Vevo Playlist',
-                    isLive: true
-                },
-
-                properties: {
-                    custom: "This is a Live HLS resource"
-                }
-            }
-		}, {
-            title: "MPEG Dash",
-            file: "http://yt-dash-mse-test.commondatastorage.googleapis.com/media/car-20120827-manifest.mpd",
-            image: "http://support-static.jwplayer.com/images/jellies.jpg",
-            youbora: {
-                transactionCode: "Transcode4",
-                media: {
-                    title: 'Dash test',
-                    isLive: false
-                },
-
-                properties: {
-                    custom: "This is an MPEG-Dash resource"
-                }
-            }
-        }],
-
-        plugins: plugin,
-
-        advertising: ads
+      advertising: ads
     });
-    </script>
+
+    // Init plugin
+    if (typeof $YB != 'undefined') {
+      var plugin = new $YB.plugins.Jwplayer7(player, {
+        accountCode: 'powerdev',
+        username: 'dev',
+        parseHLS: true,
+        parseCDNNodeHost: true,
+        haltOnError: false
+      })
+
+    }
+  </script>
 </body>
 
 </html>
